@@ -1,6 +1,10 @@
 ﻿using System;
 using System.IO.Ports;
 using System.Windows;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
+using System.Diagnostics;
 
 namespace IsuzuDiagnostic.Desktop;
 
@@ -9,6 +13,9 @@ public partial class MainWindow : Window
     private const int SerialBaudRate = 115200;
 
     private SerialPort? _serialPort;
+
+    private readonly StringBuilder _receiveBuffer = new();
+    private readonly object _receiveBufferLock = new();
 
     public MainWindow()
     {
@@ -152,10 +159,7 @@ public partial class MainWindow : Window
         }
     }
 
-    private void SerialPort_DataReceived(
-        object sender,
-        SerialDataReceivedEventArgs e
-    )
+    private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
     {
         if (sender is not SerialPort serialPort)
         {
@@ -171,10 +175,27 @@ public partial class MainWindow : Window
                 return;
             }
 
+            List<string> completeLines = ExtractCompleteLines(receivedText);
+
             Dispatcher.BeginInvoke(
                 new Action(() =>
                 {
+                    /*
+                    * Eski veya kapatılmış bir porttan gecikmeli event
+                    * geldiyse arayüzü güncelleme.
+                    */
+                    if (!ReferenceEquals(_serialPort, serialPort) || (!serialPort.IsOpen))
+                    {
+                        return;
+                    }
+
                     SerialOutputTextBox.AppendText(receivedText);
+
+                    foreach (string line in completeLines)
+                    {
+                        ProcessProtocolLine(line);
+                    }
+
                     SerialOutputTextBox.ScrollToEnd();
                 })
             );
@@ -189,11 +210,136 @@ public partial class MainWindow : Window
         }
     }
 
+    private List<string> ExtractCompleteLines(string receivedText)
+    {
+        List<string> completeLines = new();
+
+        lock (_receiveBufferLock)
+        {
+            _receiveBuffer.Append(receivedText);
+
+            while (true)
+            {
+                int newLineIndex = FindNewLineIndex(_receiveBuffer);
+
+                if (newLineIndex < 0)
+                {
+                    break;
+                }
+
+                string completeLine = _receiveBuffer.ToString(0, newLineIndex).TrimEnd('\r');
+                /*
+                * İşlenen satırı ve onun \n karakterini
+                * tamponun başından kaldır.
+                */
+
+                _receiveBuffer.Remove(0, newLineIndex + 1);
+
+                if (completeLine.Length > 0)
+                {
+                    completeLines.Add(completeLine);
+                }
+            }
+        }
+        return completeLines;
+    }
+
+    private static int FindNewLineIndex(StringBuilder buffer)
+    {
+        for (int index = 0; index < buffer.Length; index++)
+        {
+            if (buffer[index] == '\n')
+            {
+                return index;
+            }
+        }
+        return -1;
+    }
+
+    private void ProcessProtocolLine(String line)
+    {
+        string[] parts = line.Split(':', 3, StringSplitOptions.None);
+
+        /*
+        * Beklenen yapı:
+        *
+        * LIVE:RPM:750
+        *   0    1   2
+        */
+
+        if (parts.Length != 3)
+        {
+            return;
+        }
+
+        if (!parts[0].Equals("LIVE", StringComparison.Ordinal))
+        {
+            return;
+        }
+
+        string dataName = parts[1];
+        string valueText = parts[2];
+
+        switch (dataName)
+        {
+            case "RPM":
+                if (int.TryParse(
+                        valueText,
+                        NumberStyles.Integer,
+                        CultureInfo.InvariantCulture,
+                        out int rpm))
+                {
+                    RpmValueTextBlock.Text =
+                        rpm.ToString(
+                            CultureInfo.InvariantCulture
+                        );
+                }
+
+                break;
+
+            case "COOLANT_TEMP":
+                if (int.TryParse(
+                        valueText,
+                        NumberStyles.Integer,
+                        CultureInfo.InvariantCulture,
+                        out int coolantTemperature))
+                {
+                    CoolantTemperatureValueTextBlock.Text =
+                        coolantTemperature.ToString(
+                            CultureInfo.InvariantCulture
+                        );
+                }
+
+                break;
+
+            case "BATTERY_VOLTAGE":
+                if (double.TryParse(
+                        valueText,
+                        NumberStyles.Float,
+                        CultureInfo.InvariantCulture,
+                        out double batteryVoltage))
+                {
+                    BatteryVoltageValueTextBlock.Text =
+                        batteryVoltage.ToString(
+                            "F1",
+                            CultureInfo.InvariantCulture
+                        );
+                }
+
+                break;
+        }
+    }
+
     private void DisconnectSerialPort()
     {
         SerialPort? serialPortToClose = _serialPort;
 
         _serialPort = null;
+
+        lock (_receiveBufferLock)
+        {
+            _receiveBuffer.Clear();
+        }
 
         if (serialPortToClose is not null)
         {
@@ -219,7 +365,16 @@ public partial class MainWindow : Window
         RefreshPortsButton.IsEnabled = true;
         DisconnectButton.IsEnabled = false;
         ConnectButton.IsEnabled =
-            PortComboBox.Items.Count > 0;
+        PortComboBox.Items.Count > 0;
+
+        /*
+        * Clear values that are no longer being received
+        * from the diagnostic gateway.
+        */
+        RpmValueTextBlock.Text = "--";
+        CoolantTemperatureValueTextBlock.Text = "--";
+        BatteryVoltageValueTextBlock.Text = "--";
+
     }
 
     private void AppendApplicationMessage(string message)

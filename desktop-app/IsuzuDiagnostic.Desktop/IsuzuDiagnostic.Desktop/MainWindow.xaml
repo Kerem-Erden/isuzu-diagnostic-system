@@ -15,6 +15,8 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="20"/>
+            <RowDefinition Height="170"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -87,9 +89,99 @@
                            FontWeight="SemiBold"/>
             </Grid>
         </Border>
+        
+        <!--Parsed live-data values -->
+        <GroupBox Grid.Row="4"
+                  Header="Live Data"
+                  MinHeight="160">
+            <UniformGrid Columns="3"
+                         Margin="10">
+                <!-- Engine RPM -->
+                <Border Margin="5"
+                        Padding="16"
+                        BorderThickness="1"
+                        BorderBrush="Gray"
+                        CornerRadius="6">
+
+                    <StackPanel>
+                        <TextBlock Text="Engine RPM"
+                                   HorizontalAlignment="Center"
+                                   FontSize="14"
+                                   Opacity="0.70"/>
+                        <TextBlock x:Name="RpmValueTextBlock"
+                                   HorizontalAlignment="Center"
+                                   FontSize="30"
+                                   FontWeight="SemiBold"
+                                   Margin="0,8,0,0"
+                                   Text="--"/>
+                        <TextBlock Text="RPM"
+                                   HorizontalAlignment="Center"
+                                   FontSize="13"
+                                   Opacity="0.70"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Coolant Temperature -->
+                <!-- Coolant temperature -->
+                <Border Margin="5"
+                        Padding="16"
+                        BorderThickness="1"
+                        BorderBrush="Gray"
+                        CornerRadius="6">
+
+                    <StackPanel>
+                        <TextBlock Text="Coolant temperature"
+                                   HorizontalAlignment="Center"
+                                   FontSize="14"
+                                   Opacity="0.70"/>
+
+                        <TextBlock x:Name="CoolantTemperatureValueTextBlock"
+                                   Text="--"
+                                   Margin="0,8,0,0"
+                                   HorizontalAlignment="Center"
+                                   FontSize="30"
+                                   FontWeight="SemiBold"/>
+
+                        <TextBlock Text="°C"
+                                   HorizontalAlignment="Center"
+                                   FontSize="13"
+                                   Opacity="0.70"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Battery voltage -->
+                <Border Margin="5"
+                        Padding="16"
+                        BorderThickness="1"
+                        BorderBrush="Gray"
+                        CornerRadius="6">
+
+                    <StackPanel>
+                        <TextBlock Text="Battery voltage"
+                                   HorizontalAlignment="Center"
+                                   FontSize="14"
+                                   Opacity="0.70"/>
+
+                        <TextBlock x:Name="BatteryVoltageValueTextBlock"
+                                   Text="--"
+                                   Margin="0,8,0,0"
+                                   HorizontalAlignment="Center"
+                                   FontSize="30"
+                                   FontWeight="SemiBold"/>
+
+                        <TextBlock Text="V"
+                                   HorizontalAlignment="Center"
+                                   FontSize="13"
+                                   Opacity="0.70"/>
+                    </StackPanel>
+                </Border>
+
+            </UniformGrid>
+        </GroupBox>
+
 
         <!-- Raw serial output -->
-        <GroupBox Grid.Row="4"
+        <GroupBox Grid.Row="6"
                   Header="Raw serial output">
 
             <Grid Margin="10">
