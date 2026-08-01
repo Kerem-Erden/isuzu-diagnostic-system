@@ -40,7 +40,7 @@ Protocol parser
 WPF live-data display
 
 
-##3. Validated Protocol Messages
+## 3. Validated Protocol Messages
 
 The desktop application successfully received and processed:
 
@@ -56,7 +56,7 @@ LIVE:COOLANT_TEMP:86
 LIVE:BATTERY_VOLTAGE:13.8
 
 
-##4. Test Results
+## 4. Test Results
 Test	                    Expected Result	                                                        Result
 ESP-IDF baseline build	    Firmware builds successfully	                                        Passed
 Firmware flash	            Firmware is written to the ESP32	                                    Passed
@@ -76,7 +76,7 @@ Raw-output limit	        Old raw log content is removed after the configured lim
 Receive-buffer limit	    An oversized incomplete message cannot grow the buffer indefinitely	    Passed
 
 
-##5. Reliability Controls Added
+## 5. Reliability Controls Added
 
 The desktop application currently includes:
 
@@ -93,7 +93,7 @@ Physical COM device removal monitoring
 Live-value reset after disconnection
 
 
-##6. Current Limitations
+## 6. Current Limitations
 
 The prototype currently has the following limitations:
 
