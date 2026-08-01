@@ -1,25 +1,40 @@
 ﻿using System;
-using System.IO.Ports;
-using System.Windows;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
 using System.Diagnostics;
+using System.Globalization;
+using System.IO.Ports;
+using System.Text;
+using System.Windows;
+using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace IsuzuDiagnostic.Desktop;
 
 public partial class MainWindow : Window
 {
     private const int SerialBaudRate = 115200;
-
     private SerialPort? _serialPort;
 
     private readonly StringBuilder _receiveBuffer = new();
     private readonly object _receiveBufferLock = new();
 
+    private readonly DispatcherTimer _connectionMonitorTimer;
+
+    private const int MaxSerialOutputCharacters = 50_000;
+    private const int SerialOutputTrimTargetCharacters = 40_000;
+    
+    private const int MaxReceiveBufferCharacters = 4_096;
+
     public MainWindow()
     {
         InitializeComponent();
+
+        _connectionMonitorTimer = new DispatcherTimer
+        {
+            Interval = TimeSpan.FromSeconds(1)
+        };
+
+        _connectionMonitorTimer.Tick += ConnectionMonitorTimer_Tick;
 
         LoadAvailablePorts();
     }
@@ -71,6 +86,76 @@ public partial class MainWindow : Window
         }
     }
 
+    private void ConnectionMonitorTimer_Tick(
+    object? sender,
+    EventArgs e
+)
+    {
+        SerialPort? activeSerialPort = _serialPort;
+
+        if (activeSerialPort is null)
+        {
+            return;
+        }
+
+        string connectedPortName =
+            activeSerialPort.PortName;
+
+        bool portIsOpen =
+            activeSerialPort.IsOpen;
+
+        bool connectedPortStillExists;
+
+        try
+        {
+            string[] currentlyAvailablePorts =
+                SerialPort.GetPortNames();
+
+            connectedPortStillExists =
+                Array.Exists(
+                    currentlyAvailablePorts,
+                    portName => string.Equals(
+                        portName,
+                        connectedPortName,
+                        StringComparison.OrdinalIgnoreCase
+                    )
+                );
+        }
+        catch
+        {
+            /*
+             * If the operating system temporarily fails to return
+             * the port list, preserve an otherwise open connection.
+             */
+            if (portIsOpen)
+            {
+                return;
+            }
+
+            connectedPortStillExists = false;
+        }
+
+        /*
+         * The connection is healthy only while the SerialPort object
+         * is open and the COM port still exists in Windows.
+         */
+        if (portIsOpen &&
+            connectedPortStillExists)
+        {
+            return;
+        }
+
+        DisconnectSerialPort();
+        LoadAvailablePorts();
+
+        ConnectionStatusTextBlock.Text =
+            "Device disconnected";
+
+        AppendApplicationMessage(
+            $"Serial device removed: {connectedPortName}."
+        );
+    }
+
     private void RefreshPortsButton_Click(
         object sender,
         RoutedEventArgs e
@@ -116,6 +201,8 @@ public partial class MainWindow : Window
             _serialPort.DataReceived += SerialPort_DataReceived;
 
             _serialPort.Open();
+            
+            _connectionMonitorTimer.Start();
 
             ConnectionStatusTextBlock.Text =
                 $"Connected: {selectedPortName}";
@@ -175,7 +262,7 @@ public partial class MainWindow : Window
                 return;
             }
 
-            List<string> completeLines = ExtractCompleteLines(receivedText);
+            List<string> completeLines = ExtractCompleteLines(receivedText, out bool receiveBufferWasReset);
 
             Dispatcher.BeginInvoke(
                 new Action(() =>
@@ -189,14 +276,17 @@ public partial class MainWindow : Window
                         return;
                     }
 
-                    SerialOutputTextBox.AppendText(receivedText);
+                    AppendSerialOutput(receivedText);
+
+                    if (receiveBufferWasReset)
+                    {
+                        AppendApplicationMessage("Receive buffer was reset because an incomplete " + "line exceeded the safety limit.");
+                    }
 
                     foreach (string line in completeLines)
                     {
                         ProcessProtocolLine(line);
                     }
-
-                    SerialOutputTextBox.ScrollToEnd();
                 })
             );
         }
@@ -210,9 +300,10 @@ public partial class MainWindow : Window
         }
     }
 
-    private List<string> ExtractCompleteLines(string receivedText)
+    private List<string> ExtractCompleteLines(string receivedText, out bool receiveBufferWasReset)
     {
         List<string> completeLines = new();
+        receiveBufferWasReset = false;
 
         lock (_receiveBufferLock)
         {
@@ -228,9 +319,10 @@ public partial class MainWindow : Window
                 }
 
                 string completeLine = _receiveBuffer.ToString(0, newLineIndex).TrimEnd('\r');
+                
                 /*
-                * İşlenen satırı ve onun \n karakterini
-                * tamponun başından kaldır.
+                *Remove the processed line together with
+                * its newline character.
                 */
 
                 _receiveBuffer.Remove(0, newLineIndex + 1);
@@ -239,6 +331,18 @@ public partial class MainWindow : Window
                 {
                     completeLines.Add(completeLine);
                 }
+            }
+
+            /*
+            * A valid protocol line must eventually end with '\n'.
+            * Clear an excessively large incomplete message so that
+            * malformed input cannot grow memory usage indefinitely.
+            */
+
+            if (_receiveBuffer.Length > MaxReceiveBufferCharacters)
+            {
+                _receiveBuffer.Clear();
+                receiveBufferWasReset = true;
             }
         }
         return completeLines;
@@ -332,6 +436,8 @@ public partial class MainWindow : Window
 
     private void DisconnectSerialPort()
     {
+        _connectionMonitorTimer.Stop();
+
         SerialPort? serialPortToClose = _serialPort;
 
         _serialPort = null;
@@ -377,13 +483,39 @@ public partial class MainWindow : Window
 
     }
 
-    private void AppendApplicationMessage(string message)
+    private void AppendSerialOutput(string text)
     {
-        SerialOutputTextBox.AppendText(
-            $"[APP] {message}{Environment.NewLine}"
-        );
+        SerialOutputTextBox.AppendText(text);
+
+        if (SerialOutputTextBox.Text.Length > MaxSerialOutputCharacters)
+        {
+            int chartersToRemove =
+                SerialOutputTextBox.Text.Length -
+                SerialOutputTrimTargetCharacters;
+
+            /*
+            * Try to finish trimming at the end of a complete line
+            * instead of cutting a protocol message in the middle.
+            */
+
+            int nextNewLineIndex = SerialOutputTextBox.Text.IndexOf('\n', chartersToRemove);
+
+            if (nextNewLineIndex > 0)
+            {
+                chartersToRemove = nextNewLineIndex + 1;
+            }
+
+            SerialOutputTextBox.Text = SerialOutputTextBox.Text.Remove(0, chartersToRemove);
+
+            SerialOutputTextBox.CaretIndex = SerialOutputTextBox.Text.Length;
+        }
 
         SerialOutputTextBox.ScrollToEnd();
+    }
+
+    private void AppendApplicationMessage(string message)
+    {
+        AppendSerialOutput($"[App] {message}{Environment.NewLine}");
     }
 
     protected override void OnClosed(EventArgs e)

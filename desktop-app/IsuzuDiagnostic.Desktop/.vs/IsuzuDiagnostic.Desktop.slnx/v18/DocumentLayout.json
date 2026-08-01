@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D4855246-D127-3F73-97D8-B93DF4D32CC8}|IsuzuDiagnostic.Desktop\\IsuzuDiagnostic.Desktop.csproj|c:\\users\\erden\\source\\repos\\isuzu-diagnostic-system\\desktop-app\\isuzudiagnostic.desktop\\isuzudiagnostic.desktop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D4855246-D127-3F73-97D8-B93DF4D32CC8}|IsuzuDiagnostic.Desktop\\IsuzuDiagnostic.Desktop.csproj|solutionrelative:isuzudiagnostic.desktop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4855246-D127-3F73-97D8-B93DF4D32CC8}|IsuzuDiagnostic.Desktop\\IsuzuDiagnostic.Desktop.csproj|c:\\users\\erden\\source\\repos\\isuzu-diagnostic-system\\desktop-app\\isuzudiagnostic.desktop\\isuzudiagnostic.desktop\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{D4855246-D127-3F73-97D8-B93DF4D32CC8}|IsuzuDiagnostic.Desktop\\IsuzuDiagnostic.Desktop.csproj|solutionrelative:isuzudiagnostic.desktop\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -44,43 +40,9 @@
               "RelativeDocumentMoniker": "IsuzuDiagnostic.Desktop\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\erden\\source\\repos\\isuzu-diagnostic-system\\desktop-app\\IsuzuDiagnostic.Desktop\\IsuzuDiagnostic.Desktop\\MainWindow.xaml.cs",
               "RelativeToolTip": "IsuzuDiagnostic.Desktop\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAFoBAAAAAAAAAAAQwHEBAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAEMBAAAAAAAAAAAwwF0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-30T17:13:11.175Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "d4c4a144-1853-4dc8-9c79-156f9414b20a",
-        "Display": 0,
-        "X": 1054,
-        "Y": 138,
-        "Width": 800,
-        "Height": 600,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\erden\\source\\repos\\isuzu-diagnostic-system\\desktop-app\\IsuzuDiagnostic.Desktop\\IsuzuDiagnostic.Desktop\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "IsuzuDiagnostic.Desktop\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\erden\\source\\repos\\isuzu-diagnostic-system\\desktop-app\\IsuzuDiagnostic.Desktop\\IsuzuDiagnostic.Desktop\\MainWindow.xaml",
-              "RelativeToolTip": "IsuzuDiagnostic.Desktop\\MainWindow.xaml",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAhwLcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-31T17:02:32.68Z",
               "EditorCaption": ""
             }
           ]
