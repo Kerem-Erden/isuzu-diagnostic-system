@@ -39,3 +39,17 @@ C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.
 C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\bin\Debug\net10.0-windows\runtimes\unix\lib\net10.0\System.IO.Ports.dll
 C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\bin\Debug\net10.0-windows\runtimes\win\lib\net10.0\System.IO.Ports.dll
 C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\IsuzuDia.8F9455E8.Up2Date
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\DeveloperConsoleView.g.cs
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\DiagnosticDashboardView.g.cs
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\DtcDetailView.g.cs
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\DtcListView.g.cs
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\LiveDataView.g.cs
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\VehicleConnectionView.g.cs
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\DeveloperConsoleView.baml
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\DiagnosticDashboardView.baml
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\DtcDetailView.baml
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\DtcListView.baml
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\LiveDataView.baml
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\Views\VehicleConnectionView.baml
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\AppShellWindow.baml
+C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\obj\Debug\net10.0-windows\AppShellWindow.g.cs
