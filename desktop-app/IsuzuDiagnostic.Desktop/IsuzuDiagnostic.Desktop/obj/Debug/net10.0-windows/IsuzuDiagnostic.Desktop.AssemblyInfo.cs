@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IsuzuDiagnostic.Desktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bea57895ed9d981b76ff46a8fe0f341e0b9723c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88e53845dfb93ba790b2e8b3581566e49f331ef2")]
 [assembly: System.Reflection.AssemblyProductAttribute("IsuzuDiagnostic.Desktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IsuzuDiagnostic.Desktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

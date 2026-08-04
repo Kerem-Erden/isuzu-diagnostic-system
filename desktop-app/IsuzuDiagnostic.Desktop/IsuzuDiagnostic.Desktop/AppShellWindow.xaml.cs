@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System;
 using IsuzuDiagnostic.Desktop.Views;
+using IsuzuDiagnostic.Desktop.Models;
 
 namespace IsuzuDiagnostic.Desktop
 {
@@ -8,6 +9,8 @@ namespace IsuzuDiagnostic.Desktop
     {
         private object? _contentBeforeDeveloperConsole;
         private string? _titleBeforeDeveloperConsole = "Vehicle Connection";
+
+        private DiagnosticSession? _activeSession;
 
         public AppShellWindow()
         {
@@ -29,12 +32,34 @@ namespace IsuzuDiagnostic.Desktop
 
         private void VehicleConnectionView_ContinueRequested(object? sender, EventArgs e)
         {
+            if (sender is not VehicleConnectionView connectionView)
+            {
+                MessageBox.Show("The vehicle connection screen could not be identified.", "Session Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (connectionView.CreatedSession is null)
+            {
+                MessageBox.Show("The diagnostic session could not be created.", "Session Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return; 
+            }
+
+            _activeSession = connectionView.CreatedSession;
+
             ShowDiagnosticDashboardView();
         }
 
         private void ShowDiagnosticDashboardView()
         {
+            if (_activeSession is null)
+            {
+                ShowVehicleConnectionView();
+                return;
+            }
+
             DiagnosticDashboardView view = new DiagnosticDashboardView();
+
+            view.DataContext = _activeSession;
 
             view.EndSessionRequested += DiagnosticDashboardView_EndSessionRequested;
 
@@ -49,6 +74,14 @@ namespace IsuzuDiagnostic.Desktop
 
         private void DiagnosticDashboardView_EndSessionRequested(object? sender, EventArgs e)
         {
+            if (_activeSession is not null)
+            {
+                _activeSession.End();
+            }
+
+            _activeSession = null;
+            _contentBeforeDeveloperConsole = null;
+
             ShowVehicleConnectionView();
         }
 

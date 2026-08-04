@@ -18,10 +18,29 @@
                        FontSize="30"
                        FontWeight="SemiBold"/>
 
-            <TextBlock Text="Isuzu NPR 66 — 4JZ1 — 2018"
-                       Margin="0,8,0,0"
-                       FontSize="15"
-                       Foreground="#68707C"/>
+            <StackPanel Margin="0,8,0,0">
+
+                <TextBlock Text="{Binding Vehicle.DisplayName, Mode=OneWay}"
+                           FontSize="15"
+                           FontWeight="SemiBold"
+                           Foreground="#30323B"/>
+
+                <TextBlock Margin="0,6,0,0"
+                           FontSize="13"
+                           Foreground="#68707C">
+
+                <Run Text="ECU: "/>
+                <Run Text="{Binding Vehicle.EcuType, Mode=OneWay}"/>
+
+                <Run Text="   •   Port: "/>
+                <Run Text="{Binding SerialPortName, Mode=OneWay}"/>
+
+                <Run Text="   •   State: "/>
+                <Run Text="{Binding State, Mode=OneWay}"/>
+
+                </TextBlock>
+
+            </StackPanel>
 
         </StackPanel>
 
@@ -53,7 +72,6 @@
                 HorizontalAlignment="Left"
                 Content="End Session"
                 Click="EndSessionButton_Click"/>
-
     </Grid>
 
 </UserControl>
