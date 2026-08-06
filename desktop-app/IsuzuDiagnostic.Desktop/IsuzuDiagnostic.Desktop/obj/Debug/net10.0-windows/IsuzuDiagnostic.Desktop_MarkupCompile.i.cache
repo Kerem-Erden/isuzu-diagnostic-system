@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_O
 C:\Users\erden\source\repos\isuzu-diagnostic-system\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\App.xaml
 8-460944958
 
-17-915824183
+261100885783
 2071813313790
 AppShellWindow.xaml;MainWindow.xaml;Views\DeveloperConsoleView.xaml;Views\DiagnosticDashboardView.xaml;Views\DtcDetailView.xaml;Views\DtcListView.xaml;Views\LiveDataView.xaml;Views\VehicleConnectionView.xaml;
 

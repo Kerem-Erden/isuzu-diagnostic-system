@@ -2,6 +2,7 @@
 using System;
 using IsuzuDiagnostic.Desktop.Views;
 using IsuzuDiagnostic.Desktop.Models;
+using IsuzuDiagnostic.Desktop.Communication.Serial;
 
 namespace IsuzuDiagnostic.Desktop
 {
@@ -11,10 +12,14 @@ namespace IsuzuDiagnostic.Desktop
         private string? _titleBeforeDeveloperConsole = "Vehicle Connection";
 
         private DiagnosticSession? _activeSession;
+        
+        private readonly SerialGatewayService _serialGatewayService = new SerialGatewayService();
 
         public AppShellWindow()
         {
             InitializeComponent();
+
+            Closed += AppShellWindow_Closed;
 
             ShowVehicleConnectionView();
         }
@@ -77,6 +82,11 @@ namespace IsuzuDiagnostic.Desktop
             if (_activeSession is not null)
             {
                 _activeSession.End();
+            }
+
+            if (_serialGatewayService.IsConnected)
+            {
+                _serialGatewayService.Disconnect();
             }
 
             _activeSession = null;
@@ -167,7 +177,7 @@ namespace IsuzuDiagnostic.Desktop
 
         private void ShowDeveloperConsoleView()
         {
-            DeveloperConsoleView view = new DeveloperConsoleView();
+            DeveloperConsoleView view = new DeveloperConsoleView( _serialGatewayService);
 
             view.BackRequested += DeveloperConsoleView_BackRequested;
 
@@ -189,6 +199,16 @@ namespace IsuzuDiagnostic.Desktop
                 return;
             }
             ShowVehicleConnectionView();
+        }
+
+        private void AppShellWindow_Closed(object sender, EventArgs e)
+        {
+            if (_serialGatewayService.IsConnected)
+            {
+                _serialGatewayService.Disconnect();
+            }
+
+            _serialGatewayService.Dispose();
         }
     }
 }
