@@ -1,7 +1,17 @@
 #include <stdio.h>
+#include <stdint.h>
+
+#include "driver/uart.h"
+#include "esp_err.h"
+#include "gateway_protocol.h"
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+
+#define SERIAL_UART UART_NUM_0
+#define UART_RX_BUFFER_SIZE 256
+#define REQUEST_LINE_BUFFER_SIZE 128
+#define RESPONSE_BUFFER_SIZE 128
 
 /*
  * Sends one group of simulated vehicle values to the serial output.
@@ -9,6 +19,39 @@
  * This function is static because it is used only inside this source file.
  * It returns void because it only sends data and does not calculate a result.
  */
+
+ static void initialize_serial_input(void)
+ {
+    const uart_config_t uart_configuration = {
+                .baud_rate = 115200,
+                .data_bits = UART_DATA_8_BITS,
+                .parity = UART_PARITY_DISABLE,
+                .stop_bits = UART_STOP_BITS_1,
+                .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+                .source_clk = UART_SCLK_DEFAULT
+            };
+
+            ESP_ERROR_CHECK(
+                uart_param_config(SERIAL_UART, &uart_configuration));
+            
+            ESP_ERROR_CHECK(
+                uart_set_pin(
+                        SERIAL_UART,
+                        UART_PIN_NO_CHANGE,
+                        UART_PIN_NO_CHANGE,
+                        UART_PIN_NO_CHANGE,
+                        UART_PIN_NO_CHANGE));
+
+            ESP_ERROR_CHECK(
+                uart_driver_install(
+                        SERIAL_UART,
+                        UART_RX_BUFFER_SIZE,
+                        0,
+                        0,
+                        NULL,
+                        0));
+ }
+
 
 static void send_live_data(int rpm, int coolant_temperature, float battery_voltage)
 {
@@ -23,8 +66,77 @@ static void send_live_data(int rpm, int coolant_temperature, float battery_volta
 	fflush(stdout);
 }
 
+static void process_serial_input(gateway_protocol_t *protocol)
+{
+    static char request_line[REQUEST_LINE_BUFFER_SIZE];
+    static size_t request_length = 0;
+
+    uint8_t received_bytes[32];
+
+    int received_bytes_count = uart_read_bytes(SERIAL_UART, received_bytes, sizeof(received_bytes), pdMS_TO_TICKS(20));
+
+    for (int index = 0; index < received_bytes_count; index++)
+    {
+        char received_character = (char)received_bytes[index];
+
+        /*if (received_character == '\r')
+        {
+            continue;
+        }*/
+
+        if (received_character == '\n' || received_character == '\r')
+        {
+            if (request_length > 0 )
+            {
+                request_line[request_length] = '\0';
+
+                char response_buffer[RESPONSE_BUFFER_SIZE];
+
+                bool response_created = gateway_protocol_handle_line(protocol, request_line, response_buffer, sizeof(response_buffer));
+
+                if (response_created)
+                {
+                    printf("%s\n", response_buffer);
+                }
+                else
+                {
+                    printf("SYS:INVALID_REQUEST\n");
+                }
+
+                fflush(stdout);
+                request_length = 0;
+            }
+
+            continue;
+        }
+
+        if (request_length < REQUEST_LINE_BUFFER_SIZE - 1)
+        {
+            request_line[request_length] = received_character;
+
+            request_length++;
+        }
+        else
+        {
+            request_length = 0;
+            
+            printf("SYS:REQUEST_TOO_LONG\n");
+
+            fflush(stdout);
+        }
+    }
+}
+
 void app_main(void)
 {
+gateway_protocol_t gateway_protocol;
+
+gateway_protocol_init(&gateway_protocol);
+
+initialize_serial_input();
+
+TickType_t previous_live_data_time = xTaskGetTickCount();
+
 	int rpm = 750;
 	int coolant_temperature = 86;
 	float battery_voltage = 13.6f;
@@ -39,35 +151,46 @@ void app_main(void)
 
 	while(1) 
 	{
-		send_live_data(rpm, coolant_temperature, battery_voltage);
-        rpm += 25;
-        coolant_temperature += 1;
-        battery_voltage += 0.1f;
+        process_serial_input(&gateway_protocol);
+
+        TickType_t current_time = xTaskGetTickCount();
+
+        if (gateway_protocol.state == GATEWAY_STATE_STREAMING && current_time - previous_live_data_time >= pdMS_TO_TICKS(1000))
+        {
+
+
+            send_live_data(rpm, coolant_temperature, battery_voltage);
+            rpm += 25;
+            coolant_temperature += 1;
+            battery_voltage += 0.1f;
+
+            previous_live_data_time = current_time;
 
         /*
          * Keep the simulated values within a realistic test range.
          * These are not real Isuzu reference values; they are only
          * temporary communication test data.
          */
-        if (rpm > 900)
-        {
-            rpm = 750;
-        }
+            if (rpm > 900)
+            {
+                rpm = 750;
+            }
 
-        if (coolant_temperature > 90)
-        {
-            coolant_temperature = 86;
-        }
+            if (coolant_temperature > 90)
+            {
+                coolant_temperature = 86;
+            }
 
-        if (battery_voltage > 14.2f)
-        { 
-            battery_voltage = 13.8f;
-        }
+            if (battery_voltage > 14.2f)
+            { 
+                battery_voltage = 13.8f;
+            }
 
+        }
         /*
          * Pause only this FreeRTOS task for one second.
          * The CPU is not trapped in an empty busy-wait loop.
          */
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        vTaskDelay(pdMS_TO_TICKS(10));
     }
 }
