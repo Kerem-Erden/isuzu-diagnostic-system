@@ -144,7 +144,7 @@
                        FontSize="28"
                        FontWeight="SemiBold"/>
 
-            <TextBlock Text="Genareta and inspect diagnostic gateway protocol messages."
+            <TextBlock Text="Genarate and inspect diagnostic gateway protocol messages."
                        Margin="0,8,0,0"
                        FontSize="14"
                        Foreground="#68707C"

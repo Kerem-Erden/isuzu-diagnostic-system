@@ -21,23 +21,28 @@ Bu protokol MVP geliştirme sürecinde güncellenebilir.
 
 Her mesaj:
 
-- Tek bir satırda gönderilmelidir.
-- Yeni satır karakteriyle sonlandırılmalıdır.
-- Alanlar `:` karakteriyle ayrılmalıdır.
+- Her mesaj tek bir satırda gönderilmelidir.
+- Her mesaj yeni satır karakteriyle sonlandırılmalıdır.
+- Request ve response mesajlarında alanlar `|` karakteriyle ayrılır.
+- Live data ve system mesajlarında alanlar `:` karakteriyle ayrılır.
 - Ondalıklı sayılarda nokta kullanılmalıdır.
 - Gereksiz boşluk içermemelidir.
 
 Genel mesaj yapısı:
 
-```text
 MESSAGE_TYPE:FIELD_1:FIELD_2
-```
+
+Request:
+
+```text
+REQ|REQUEST_ID|COMMAND
 
 Örnek:
 
-```text
+REQ|12|PING
+RES|12|OK|PONG
 LIVE:RPM:750
-```
+SYS:READY
 
 Bu mesajın anlamı:
 
@@ -61,8 +66,9 @@ Metin tabanlı protokolün bazı sınırlamaları vardır:
 - Mesaj bütünlüğünü doğrulayan bir checksum içermez.
 - Karmaşık veri yapılarında yönetilmesi zorlaşabilir.
 
-Bu sınırlamalar MVP için kabul edilmektedir. İhtiyaç oluşması durumunda
-protokole mesaj kimliği, checksum veya ikili veri formatı eklenebilir.
+Bu sınırlamalar MVP için kabul edilmektedir. Request/response eşleştirmesi
+için protokole request ID eklenmiştir. İhtiyaç oluşması durumunda ileride
+checksum veya ikili veri formatı değerlendirilebilir.
 
 ## 4. Character and Number Rules
 
@@ -396,29 +402,67 @@ Bozuk mesaj uygulamanın çökmesine neden olmamalıdır.
 
 Mesaj reddedilebilir ve geliştirme loguna kaydedilebilir.
 
-## 12. Initial State Flow
+## 12. Current State Flow
 
-Beklenen ilk bağlantı akışı:
+### 12.1 Gateway Handshake
 
 ```text
 ESP32 -> SYS:READY
 
-PC    -> CMD:PING
-ESP32 -> SYS:PONG
+PC    -> REQ|1|PING
+ESP32 -> RES|1|OK|PONG
+```
 
-PC    -> CMD:LIVE:START
+Windows uygulaması yalnızca geçerli PONG cevabını aldıktan sonra
+DiagnosticSession durumunu `Connected` olarak işaretler ve Dashboard
+ekranına geçer.
+
+PING cevabı timeout süresi içinde alınamazsa session `Faulted` durumuna
+geçer ve seri port kapatılır.
+
+### 12.2 Live Data Start
+
+```text
+PC    -> REQ|2|START
+ESP32 -> RES|2|OK|STREAMING
+
 ESP32 -> LIVE:RPM:750
 ESP32 -> LIVE:COOLANT_TEMP:86
 ESP32 -> LIVE:BATTERY_VOLTAGE:13.8
 ```
 
-DTC okuma akışı:
+Live Data ekranı açıldığında Windows uygulaması START request'ini otomatik
+olarak gönderir.
+
+### 12.3 Live Data Stop
+
+Live Data ekranından çıkıldığında:
 
 ```text
-PC    -> CMD:DTC:READ
-ESP32 -> DTC:BEGIN
-ESP32 -> DTC:CODE:P0401
-ESP32 -> DTC:END
+PC    -> REQ|3|STOP
+ESP32 -> RES|3|OK|STOPPED
+```
+
+Windows uygulaması STOP request'ini otomatik olarak gönderir.
+
+### 12.4 Status Request
+
+```text
+PC    -> REQ|4|STATUS
+ESP32 -> RES|4|OK|IDLE
+```
+
+veya:
+
+```text
+ESP32 -> RES|4|OK|STREAMING
+```
+
+### 12.5 Invalid Command
+
+```text
+PC    -> REQ|5|HELLO
+ESP32 -> RES|5|ERR|UNKNOWN_COMMAND
 ```
 
 ## 13. Deferred Protocol Features
@@ -426,7 +470,6 @@ ESP32 -> DTC:END
 Aşağıdaki özellikler ilk protokol sürümünde bulunmayacaktır:
 
 - Checksum
-- Mesaj sıra numarası
 - Mesaj zaman damgası
 - Binary encoding
 - JSON mesaj formatı
@@ -442,8 +485,19 @@ değerlendirilecektir.
 İlk protokol sürümü:
 
 ```text
-Version: 0.1
+Version: 0.2
 ```
 
 Protokolde geriye dönük uyumluluğu etkileyen bir değişiklik yapılırsa
 sürüm numarası güncellenecektir.
+
+
+### Version 0.2 Changes
+
+- Request/response message format introduced.
+- Request IDs introduced.
+- PING/PONG handshake implemented.
+- START, STOP and STATUS commands implemented.
+- Standard OK/ERR responses introduced.
+- UNKNOWN_COMMAND error response implemented.
+- Live data streaming integrated with START/STOP state.

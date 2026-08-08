@@ -1,0 +1,160 @@
+[1mdiff --git a/docs/architecture/serial-protocol.md b/docs/architecture/serial-protocol.md[m
+[1mindex 412ffc8..4946640 100644[m
+[1m--- a/docs/architecture/serial-protocol.md[m
+[1m+++ b/docs/architecture/serial-protocol.md[m
+[36m@@ -21,23 +21,28 @@[m [mBu protokol MVP geliştirme sürecinde güncellenebilir.[m
+ [m
+ Her mesaj:[m
+ [m
+[31m-- Tek bir satırda gönderilmelidir.[m
+[31m-- Yeni satır karakteriyle sonlandırılmalıdır.[m
+[31m-- Alanlar `:` karakteriyle ayrılmalıdır.[m
+[32m+[m[32m- Her mesaj tek bir satırda gönderilmelidir.[m
+[32m+[m[32m- Her mesaj yeni satır karakteriyle sonlandırılmalıdır.[m
+[32m+[m[32m- Request ve response mesajlarında alanlar `|` karakteriyle ayrılır.[m
+[32m+[m[32m- Live data ve system mesajlarında alanlar `:` karakteriyle ayrılır.[m
+ - Ondalıklı sayılarda nokta kullanılmalıdır.[m
+ - Gereksiz boşluk içermemelidir.[m
+ [m
+ Genel mesaj yapısı:[m
+ [m
+[31m-```text[m
+ MESSAGE_TYPE:FIELD_1:FIELD_2[m
+[31m-```[m
+ [m
+[31m-Örnek:[m
+[32m+[m[32mRequest:[m
+ [m
+ ```text[m
+[32m+[m[32mREQ|REQUEST_ID|COMMAND[m
+[32m+[m
+[32m+[m[32mÖrnek:[m
+[32m+[m
+[32m+[m[32mREQ|12|PING[m
+[32m+[m[32mRES|12|OK|PONG[m
+ LIVE:RPM:750[m
+[31m-```[m
+[32m+[m[32mSYS:READY[m
+ [m
+ Bu mesajın anlamı:[m
+ [m
+[36m@@ -61,8 +66,9 @@[m [mMetin tabanlı protokolün bazı sınırlamaları vardır:[m
+ - Mesaj bütünlüğünü doğrulayan bir checksum içermez.[m
+ - Karmaşık veri yapılarında yönetilmesi zorlaşabilir.[m
+ [m
+[31m-Bu sınırlamalar MVP için kabul edilmektedir. İhtiyaç oluşması durumunda[m
+[31m-protokole mesaj kimliği, checksum veya ikili veri formatı eklenebilir.[m
+[32m+[m[32mBu sınırlamalar MVP için kabul edilmektedir. Request/response eşleştirmesi[m
+[32m+[m[32miçin protokole request ID eklenmiştir. İhtiyaç oluşması durumunda ileride[m
+[32m+[m[32mchecksum veya ikili veri formatı değerlendirilebilir.[m
+ [m
+ ## 4. Character and Number Rules[m
+ [m
+[36m@@ -396,29 +402,67 @@[m [mBozuk mesaj uygulamanın çökmesine neden olmamalıdır.[m
+ [m
+ Mesaj reddedilebilir ve geliştirme loguna kaydedilebilir.[m
+ [m
+[31m-## 12. Initial State Flow[m
+[32m+[m[32m## 12. Current State Flow[m
+ [m
+[31m-Beklenen ilk bağlantı akışı:[m
+[32m+[m[32m### 12.1 Gateway Handshake[m
+ [m
+ ```text[m
+ ESP32 -> SYS:READY[m
+ [m
+[31m-PC    -> CMD:PING[m
+[31m-ESP32 -> SYS:PONG[m
+[32m+[m[32mPC    -> REQ|1|PING[m
+[32m+[m[32mESP32 -> RES|1|OK|PONG[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mWindows uygulaması yalnızca geçerli PONG cevabını aldıktan sonra[m
+[32m+[m[32mDiagnosticSession durumunu `Connected` olarak işaretler ve Dashboard[m
+[32m+[m[32mekranına geçer.[m
+[32m+[m
+[32m+[m[32mPING cevabı timeout süresi içinde alınamazsa session `Faulted` durumuna[m
+[32m+[m[32mgeçer ve seri port kapatılır.[m
+[32m+[m
+[32m+[m[32m### 12.2 Live Data Start[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mPC    -> REQ|2|START[m
+[32m+[m[32mESP32 -> RES|2|OK|STREAMING[m
+ [m
+[31m-PC    -> CMD:LIVE:START[m
+ ESP32 -> LIVE:RPM:750[m
+ ESP32 -> LIVE:COOLANT_TEMP:86[m
+ ESP32 -> LIVE:BATTERY_VOLTAGE:13.8[m
+ ```[m
+ [m
+[31m-DTC okuma akışı:[m
+[32m+[m[32mLive Data ekranı açıldığında Windows uygulaması START request'ini otomatik[m
+[32m+[m[32molarak gönderir.[m
+[32m+[m
+[32m+[m[32m### 12.3 Live Data Stop[m
+[32m+[m
+[32m+[m[32mLive Data ekranından çıkıldığında:[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mPC    -> REQ|3|STOP[m
+[32m+[m[32mESP32 -> RES|3|OK|STOPPED[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mWindows uygulaması STOP request'ini otomatik olarak gönderir.[m
+[32m+[m
+[32m+[m[32m### 12.4 Status Request[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mPC    -> REQ|4|STATUS[m
+[32m+[m[32mESP32 -> RES|4|OK|IDLE[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mveya:[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mESP32 -> RES|4|OK|STREAMING[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m### 12.5 Invalid Command[m
+ [m
+ ```text[m
+[31m-PC    -> CMD:DTC:READ[m
+[31m-ESP32 -> DTC:BEGIN[m
+[31m-ESP32 -> DTC:CODE:P0401[m
+[31m-ESP32 -> DTC:END[m
+[32m+[m[32mPC    -> REQ|5|HELLO[m
+[32m+[m[32mESP32 -> RES|5|ERR|UNKNOWN_COMMAND[m
+ ```[m
+ [m
+ ## 13. Deferred Protocol Features[m
+[36m@@ -426,7 +470,6 @@[m [mESP32 -> DTC:END[m
+ Aşağıdaki özellikler ilk protokol sürümünde bulunmayacaktır:[m
+ [m
+ - Checksum[m
+[31m-- Mesaj sıra numarası[m
+ - Mesaj zaman damgası[m
+ - Binary encoding[m
+ - JSON mesaj formatı[m
+[36m@@ -442,8 +485,19 @@[m [mdeğerlendirilecektir.[m
+ İlk protokol sürümü:[m
+ [m
+ ```text[m
+[31m-Version: 0.1[m
+[32m+[m[32mVersion: 0.2[m
+ ```[m
+ [m
+ Protokolde geriye dönük uyumluluğu etkileyen bir değişiklik yapılırsa[m
+ sürüm numarası güncellenecektir.[m
+[32m+[m
+[32m+[m
+[32m+[m[32m### Version 0.2 Changes[m
+[32m+[m
+[32m+[m[32m- Request/response message format introduced.[m
+[32m+[m[32m- Request IDs introduced.[m
+[32m+[m[32m- PING/PONG handshake implemented.[m
+[32m+[m[32m- START, STOP and STATUS commands implemented.[m
+[32m+[m[32m- Standard OK/ERR responses introduced.[m
+[32m+[m[32m- UNKNOWN_COMMAND error response implemented.[m
+[32m+[m[32m- Live data streaming integrated with START/STOP state.[m
+\ No newline at end of file[m

@@ -1,4 +1,4 @@
-﻿using System.Threading;
+using System.Threading;
 using System;
 
 namespace IsuzuDiagnostic.Desktop.Communication.Protocol;

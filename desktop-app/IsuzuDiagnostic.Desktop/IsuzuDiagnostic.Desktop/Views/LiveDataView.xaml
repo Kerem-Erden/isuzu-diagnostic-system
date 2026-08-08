@@ -40,7 +40,8 @@
                                HorizontalAlignment="Center"
                                FontSize="15"/>
 
-                    <TextBlock Text="--"
+                    <TextBlock x:Name="RpmValueTextBlock"
+                               Text="--"
                                Margin="0,10,0,0"
                                HorizontalAlignment="Center"
                                FontSize="32"
@@ -66,7 +67,8 @@
                                HorizontalAlignment="Center"
                                FontSize="15"/>
 
-                    <TextBlock Text="--"
+                    <TextBlock x:Name="CoolantValueTextBlock"
+                               Text="--"
                                Margin="0,10,0,0"
                                HorizontalAlignment="Center"
                                FontSize="32"
@@ -92,7 +94,8 @@
                                HorizontalAlignment="Center"
                                FontSize="15"/>
 
-                    <TextBlock Text="--"
+                    <TextBlock x:Name="BatteryValueTextBlock"
+                               Text="--"
                                Margin="0,10,0,0"
                                HorizontalAlignment="Center"
                                FontSize="32"

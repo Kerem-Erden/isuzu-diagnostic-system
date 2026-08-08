@@ -9,17 +9,20 @@ namespace IsuzuDiagnostic.Desktop.Views
 {
     public partial class DeveloperConsoleView : UserControl
     {
-        private readonly RequestIdGenerator _requestIdGenerator = new RequestIdGenerator();
+        private readonly RequestIdGenerator _requestIdGenerator;
 
         private readonly SerialGatewayService _serialGatewayService;
+
            
         public event EventHandler? BackRequested;
 
-        public DeveloperConsoleView(SerialGatewayService serialGatewayService)
+        public DeveloperConsoleView(SerialGatewayService serialGatewayService, RequestIdGenerator requestIdGenerator)
         {
             InitializeComponent();
 
             _serialGatewayService = serialGatewayService  ?? throw new ArgumentNullException(nameof(serialGatewayService));
+
+            _requestIdGenerator = requestIdGenerator ?? throw new ArgumentNullException(nameof(requestIdGenerator));
 
             _serialGatewayService.LineReceived += SerialGatewayService_LineReceived;
                
@@ -245,6 +248,13 @@ namespace IsuzuDiagnostic.Desktop.Views
 
         {
             AppendConsoleLine( $"RX < {line}" );
+
+            GatewayLineType lineType = GatewayLineRouter.Classify(line);
+
+            if (lineType != GatewayLineType.Response)
+            {
+                return;
+            }
 
             bool parsed =
                 GatewayResponseParser.TryParse(line, out GatewayResponse? response, out string errorMessage);

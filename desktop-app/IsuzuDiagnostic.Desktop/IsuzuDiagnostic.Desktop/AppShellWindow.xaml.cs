@@ -3,6 +3,7 @@ using System;
 using IsuzuDiagnostic.Desktop.Views;
 using IsuzuDiagnostic.Desktop.Models;
 using IsuzuDiagnostic.Desktop.Communication.Serial;
+using IsuzuDiagnostic.Desktop.Communication.Protocol;
 
 namespace IsuzuDiagnostic.Desktop
 {
@@ -15,6 +16,8 @@ namespace IsuzuDiagnostic.Desktop
         
         private readonly SerialGatewayService _serialGatewayService = new SerialGatewayService();
 
+        private readonly RequestIdGenerator _requestIdGenerator = new RequestIdGenerator();
+
         public AppShellWindow()
         {
             InitializeComponent();
@@ -26,7 +29,7 @@ namespace IsuzuDiagnostic.Desktop
 
         private void ShowVehicleConnectionView()
         {
-            VehicleConnectionView view = new VehicleConnectionView();
+            VehicleConnectionView view = new VehicleConnectionView(_serialGatewayService, _requestIdGenerator);
 
             view.ContinueRequested += VehicleConnectionView_ContinueRequested;
 
@@ -102,7 +105,13 @@ namespace IsuzuDiagnostic.Desktop
 
         private void ShowLiveDataView()
         {
-            LiveDataView view = new LiveDataView();
+            if (_activeSession is null)
+            {
+                ShowVehicleConnectionView();
+                return;
+            }
+
+            LiveDataView view = new LiveDataView(_activeSession, _serialGatewayService, _requestIdGenerator);
 
             view.BackRequested += LiveDataView_BackRequested;
 
@@ -177,7 +186,7 @@ namespace IsuzuDiagnostic.Desktop
 
         private void ShowDeveloperConsoleView()
         {
-            DeveloperConsoleView view = new DeveloperConsoleView( _serialGatewayService);
+            DeveloperConsoleView view = new DeveloperConsoleView( _serialGatewayService, _requestIdGenerator);
 
             view.BackRequested += DeveloperConsoleView_BackRequested;
 
@@ -201,7 +210,7 @@ namespace IsuzuDiagnostic.Desktop
             ShowVehicleConnectionView();
         }
 
-        private void AppShellWindow_Closed(object sender, EventArgs e)
+        private void AppShellWindow_Closed(object? sender, EventArgs e)
         {
             if (_serialGatewayService.IsConnected)
             {
