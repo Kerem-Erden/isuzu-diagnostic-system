@@ -93,7 +93,7 @@ namespace IsuzuDiagnostic.Desktop.Views
                 return;
             }
 
-            CreatedSession.MarkConnecting();
+            CreatedSession.MarkConnected();
 
             ContinueRequested?.Invoke(this, EventArgs.Empty);
         }

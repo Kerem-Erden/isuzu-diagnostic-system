@@ -51,14 +51,10 @@ namespace IsuzuDiagnostic.Desktop.Views
 
             string request = GatewayProtocol.CreateRequest(requestId, GatewayCommand.Start);
 
-            _serialGatewayService.SendLine(request);
+            _serialGatewayService.SendLine(request); 
 
         }
 
-        private void _serialGatewayService_LineReceived(string obj)
-        {
-            throw new NotImplementedException();
-        }
 
         private void SerialGatewayService_LineReceived(string line)
         {
