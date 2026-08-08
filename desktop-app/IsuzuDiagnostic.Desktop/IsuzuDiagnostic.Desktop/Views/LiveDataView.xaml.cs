@@ -104,6 +104,9 @@ namespace IsuzuDiagnostic.Desktop.Views
             int requestId = _requestIdGenerator.GetNext();
 
             string request = GatewayProtocol.CreateRequest(requestId, GatewayCommand.Stop);
+
+            _serialGatewayService.SendLine(request);
+
         }
 
 
