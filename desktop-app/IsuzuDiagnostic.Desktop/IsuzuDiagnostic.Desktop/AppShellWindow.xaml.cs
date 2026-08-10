@@ -22,6 +22,8 @@ namespace IsuzuDiagnostic.Desktop
         {
             InitializeComponent();
 
+            _serialGatewayService.CommunicationError += SerialGatewayService_CommunicationError;
+
             Closed += AppShellWindow_Closed;
 
             ShowVehicleConnectionView();
@@ -74,6 +76,8 @@ namespace IsuzuDiagnostic.Desktop
             view.LiveDataRequested += DiagnosticDashboardView_LiveDataRequested;
 
             view.DtcListRequested += DiagnosticDashboardView_DtcListRequested;
+
+            view.VehicleInformationRequested += DiagnosticDashboardView_VehicleInformationRequested;
 
             MainContent.Content = view;
 
@@ -130,6 +134,28 @@ namespace IsuzuDiagnostic.Desktop
             ShowDtcListView();
         }
 
+        private void DiagnosticDashboardView_VehicleInformationRequested(object? sender, EventArgs e)
+        {
+            if (_activeSession is null)
+            {
+                ShowVehicleConnectionView();
+                return;
+            }
+
+            VehicleInformationView view = new VehicleInformationView(_activeSession);
+
+            view.BackRequested += VehicleInformationView_BackRequested;
+
+            MainContent.Content = view;
+
+            PageTitleTextBlock.Text = "Vehicle Information";
+        }
+
+        private void VehicleInformationView_BackRequested(Object? sender, EventArgs e)
+        {
+            ShowDiagnosticDashboardView();
+        }
+
         private void ShowDtcListView()
         {
             DtcListView view = new DtcListView();
@@ -144,9 +170,9 @@ namespace IsuzuDiagnostic.Desktop
 
         }
 
-        private void DtcListView_DtcDetailsRequested(string dtcCode)
+        private void DtcListView_DtcDetailsRequested(DiagnosticTroubleCode dtc)
         {
-            ShowDtcDetailsView(dtcCode);
+            ShowDtcDetailsView(dtc);
         }
 
         private void DtcListView_BackRequested(object? sender, EventArgs e)
@@ -154,15 +180,15 @@ namespace IsuzuDiagnostic.Desktop
             ShowDiagnosticDashboardView();
         }
 
-        private void ShowDtcDetailsView(string dtcCode)
+        private void ShowDtcDetailsView(DiagnosticTroubleCode dtc)
         {
-            DtcDetailView view = new DtcDetailView(dtcCode);
+            DtcDetailView view = new DtcDetailView(dtc);
 
             view.BackRequested += DtcDetailView_BackRequested;
 
             MainContent.Content = view;
 
-            PageTitleTextBlock.Text = $"DTC Details - {dtcCode}";
+            PageTitleTextBlock.Text = $"DTC Details - {dtc.Code}";
         }
 
         private void DtcDetailView_BackRequested(object? sender, EventArgs e)
@@ -212,12 +238,46 @@ namespace IsuzuDiagnostic.Desktop
 
         private void AppShellWindow_Closed(object? sender, EventArgs e)
         {
+            _serialGatewayService.CommunicationError -= SerialGatewayService_CommunicationError;
+
             if (_serialGatewayService.IsConnected)
             {
                 _serialGatewayService.Disconnect();
             }
 
             _serialGatewayService.Dispose();
+        }
+
+        private void SerialGatewayService_CommunicationError(string errorMessage)
+        {
+            Dispatcher.InvokeAsync(() =>
+            {
+                if (_activeSession is null)
+                {
+                    return;
+                }
+
+                if (_activeSession.State == DiagnosticSessionState.Faulted)
+                {
+                    return;
+                }
+
+                _activeSession.MarkFaulted();
+
+                if (_serialGatewayService.IsConnected)
+                {
+                    _serialGatewayService.Disconnect();
+                }
+
+                MessageBox.Show("Communication with the ESP32 wa lost.\n\n" + errorMessage,
+                                "Diagnostic Connection Error",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Error);
+
+                _activeSession = null;
+
+                ShowVehicleConnectionView();
+            });
         }
     }
 }

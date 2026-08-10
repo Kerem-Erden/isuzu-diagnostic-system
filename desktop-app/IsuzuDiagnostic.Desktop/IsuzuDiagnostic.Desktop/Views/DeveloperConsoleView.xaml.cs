@@ -365,8 +365,6 @@ namespace IsuzuDiagnostic.Desktop.Views
             _serialGatewayService.CommunicationError -= SerialGatewayService_CommunicationError;
                
 
-            _serialGatewayService.Dispose();
-
             Unloaded -= DeveloperConsoleView_Unloaded;
         }
     }

@@ -26,107 +26,86 @@
         </StackPanel>
 
         <ScrollViewer Grid.Row="2"
-                      VerticalScrollBarVisibility="Auto">
+              VerticalScrollBarVisibility="Auto">
 
-            <StackPanel>
+            <ItemsControl x:Name="DtcItemsControl">
 
-                <!-- Mock DTC: P003A -->
-                <Border Margin="0,0,0,12"
+                <ItemsControl.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Border Margin="0,0,0,12"
                         Padding="20"
                         BorderBrush="#D5D8DE"
                         BorderThickness="1"
                         CornerRadius="8">
 
-                    <Grid>
+                            <Grid>
 
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
 
-                        <StackPanel>
+                                <StackPanel>
 
-                            <TextBlock Text="P003A"
+                                    <TextBlock Text="{Binding Code}"
                                        FontSize="22"
                                        FontWeight="SemiBold"
                                        Foreground="#A5001E"/>
 
-                            <TextBlock Text="Turbocharger boost control position exceeded learning limit"
+                                    <TextBlock Text="{Binding Description}"
                                        Margin="0,6,20,0"
                                        FontSize="14"
                                        TextWrapping="Wrap"/>
 
-                            <TextBlock Text="Status: Active"
-                                       Margin="0,8,0,0"
-                                       Foreground="#68707C"/>
+                                    <TextBlock Text="{Binding Status, Mode=OneWay, StringFormat='Status: {0}'}"
+                                               Margin="0,8,0,0"
+                                               Foreground="#68707C"/>   
 
-                        </StackPanel>
+                                </StackPanel>
 
-                        <Button Grid.Column="1"
+                                <Button Grid.Column="1"
                                 Width="110"
                                 Height="38"
                                 VerticalAlignment="Center"
                                 Content="Details"
-                                Tag="P003A"
+                                Tag="{Binding }"
                                 Click="DetailsButton_Click"/>
 
-                    </Grid>
+                            </Grid>
 
-                </Border>
+                        </Border>
 
-                <!-- Mock DTC: P2080 -->
-                <Border Padding="20"
-                        BorderBrush="#D5D8DE"
-                        BorderThickness="1"
-                        CornerRadius="8">
+                    </DataTemplate>
 
-                    <Grid>
+                </ItemsControl.ItemTemplate>
 
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-
-                        <StackPanel>
-
-                            <TextBlock Text="P2080"
-                                       FontSize="22"
-                                       FontWeight="SemiBold"
-                                       Foreground="#A5001E"/>
-
-                            <TextBlock Text="Exhaust gas temperature sensor circuit range/performance"
-                                       Margin="0,6,20,0"
-                                       FontSize="14"
-                                       TextWrapping="Wrap"/>
-
-                            <TextBlock Text="Status: Stored"
-                                       Margin="0,8,0,0"
-                                       Foreground="#68707C"/>
-
-                        </StackPanel>
-
-                        <Button Grid.Column="1"
-                                Width="110"
-                                Height="38"
-                                VerticalAlignment="Center"
-                                Content="Details"
-                                Tag="P2080"
-                                Click="DetailsButton_Click"/>
-
-                    </Grid>
-
-                </Border>
-
-            </StackPanel>
+            </ItemsControl>
 
         </ScrollViewer>
 
-        <Button Grid.Row="4"
-                Width="130"
-                Height="40"
-                HorizontalAlignment="Left"
-                Content="Back"
-                Click="BackButton_Click"/>
+        <StackPanel Grid.Row="4"
+                    Orientation="Horizontal">
+
+            <Button Width="130"
+            Height="40"
+            Content="Rescan"
+            Click="RescanButton_Click"/>
+
+            <Button Width="180"
+            Height="40"
+            Margin="10,0,0,0"
+            Content="Clear DTC Memory"
+            Click="ClearDtcMemoryButton_Click"/>
+
+            <Button Width="130"
+            Height="40"
+            Margin="10,0,0,0"
+            Content="Back"
+            Click="BackButton_Click"/>
+
+        </StackPanel>
 
     </Grid>
 

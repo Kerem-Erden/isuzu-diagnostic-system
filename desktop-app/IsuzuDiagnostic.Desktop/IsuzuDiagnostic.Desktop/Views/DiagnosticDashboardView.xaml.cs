@@ -9,6 +9,7 @@ namespace IsuzuDiagnostic.Desktop.Views
         public event EventHandler? EndSessionRequested;
         public event EventHandler? LiveDataRequested;
         public event EventHandler? DtcListRequested;
+        public event EventHandler? VehicleInformationRequested;
 
         public DiagnosticDashboardView()
         {
@@ -28,6 +29,11 @@ namespace IsuzuDiagnostic.Desktop.Views
         private void ReadDtcsButton_Click(object sender, RoutedEventArgs e)
         {
             DtcListRequested?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void VehicleInformationButton_Click(object sender, RoutedEventArgs e)
+        {
+            VehicleInformationRequested?.Invoke(this, EventArgs.Empty);
         }
     }
 }

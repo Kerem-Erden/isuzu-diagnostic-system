@@ -70,6 +70,8 @@ namespace IsuzuDiagnostic.Desktop.Views
 
             Dispatcher.InvokeAsync(() =>
             {
+                LastReceivedTextBlock.Text = $"Last received: {DateTimeOffset.Now:HH:mm:ss}";
+
                 switch (message.Parameter)
                 {
                     case "RPM":

@@ -4,7 +4,7 @@ using IsuzuDiagnostic.Desktop.Models;
 
 namespace IsuzuDiagnostic.Desktop.Catalogs
 {
-    public sealed class MockDtcCatalog
+    public static class MockDtcCatalog
     {
         public static IReadOnlyList<DiagnosticTroubleCode> Items { get; } = Array.AsReadOnly(new[]
         {
@@ -32,6 +32,13 @@ namespace IsuzuDiagnostic.Desktop.Catalogs
                     new RelatedLiveDataItem("TURBO_ACTUAL_POSITION", "Actual Turbo Position", "%"),
                     new RelatedLiveDataItem("BOOST_PRESSURE", "Boost Pressure", "kPa"),
                     new RelatedLiveDataItem("RPM", "Engine RPM", "rpm")
+                },
+                possibleSolutions: new[]
+{
+                        new DtcSolution("Repair damaged wiring or connector faults."),
+                        new DtcSolution("Repair or replace a faulty VGT actuator if confirmed by diagnosis."),
+                        new DtcSolution("Repair a sticking turbocharger mechanism if confirmed."),
+                        new DtcSolution("Perform the required actuator adaptation or relearn procedure when applicable.")
                 }),
 
             new DiagnosticTroubleCode(
@@ -56,6 +63,12 @@ namespace IsuzuDiagnostic.Desktop.Catalogs
                         new RelatedLiveDataItem("EGT", "Exhaust Gas Temperature", "°C" ),
                         new RelatedLiveDataItem("RPM", "Engine RPM", "rpm"),
                         new RelatedLiveDataItem("COOLANT_TEMP", "Coolant Temperature", "°C" )
+                    },
+                    possibleSolutions: new[]
+{
+                        new DtcSolution("Repair damaged sensor wiring or connectors."),
+                        new DtcSolution("Replace the exhaust gas temperature sensor if testing confirms a sensor fault."),
+                        new DtcSolution("Correct exhaust or installation issues that cause implausible temperature readings.")
                     }
                 )
         });

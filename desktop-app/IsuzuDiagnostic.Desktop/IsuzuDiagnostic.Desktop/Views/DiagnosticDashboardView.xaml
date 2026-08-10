@@ -62,7 +62,8 @@
             <Button Margin="8"
                     Content="Vehicle Information"
                     FontSize="18"
-                    FontWeight="SemiBold"/>
+                    FontWeight="SemiBold"
+                    Click="VehicleInformationButton_Click"/>
 
         </UniformGrid>
 

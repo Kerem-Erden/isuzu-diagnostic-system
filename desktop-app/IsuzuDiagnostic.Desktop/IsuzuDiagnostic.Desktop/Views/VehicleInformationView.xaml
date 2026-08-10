@@ -1,0 +1,146 @@
+﻿<UserControl x:Class="IsuzuDiagnostic.Desktop.Views.VehicleInformationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Margin="40">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+
+            <TextBlock Text="Vehicle Information"
+                       FontSize="30"
+                       FontWeight="SemiBold"/>
+
+            <TextBlock Text="Information for the active diagnostic session."
+                       Margin="0,8,0,0"
+                       FontSize="15"
+                       Foreground="#68707C"/>
+
+        </StackPanel>
+
+        <Border Grid.Row="2"
+                Padding="24"
+                BorderBrush="#D5D8DE"
+                BorderThickness="1"
+                CornerRadius="8"
+                Background="#F8F9FA">
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                           Text="Manufacturer"
+                           FontWeight="SemiBold"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="0"
+                           Grid.Column="1"
+                           Text="{Binding Vehicle.Manufacturer, Mode=OneWay}"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="1"
+                           Text="Model"
+                           FontWeight="SemiBold"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding Vehicle.Model, Mode=OneWay}"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="2"
+                           Text="Model Year"
+                           FontWeight="SemiBold"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="2"
+                           Grid.Column="1"
+                           Text="{Binding Vehicle.ModelYear, Mode=OneWay}"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="3"
+                           Text="Engine Code"
+                           FontWeight="SemiBold"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="3"
+                           Grid.Column="1"
+                           Text="{Binding Vehicle.EngineCode, Mode=OneWay}"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="4"
+                           Text="ECU Type"
+                           FontWeight="SemiBold"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="4"
+                           Grid.Column="1"
+                           Text="{Binding Vehicle.EcuType, Mode=OneWay}"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="5"
+                           Text="Serial Port"
+                           FontWeight="SemiBold"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="5"
+                           Grid.Column="1"
+                           Text="{Binding SerialPortName, Mode=OneWay}"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="6"
+                           Text="Connection State"
+                           FontWeight="SemiBold"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="6"
+                           Grid.Column="1"
+                           Text="{Binding State, Mode=OneWay}"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="7"
+                           Text="Session Started"
+                           FontWeight="SemiBold"
+                           Margin="0,8"/>
+
+                <TextBlock Grid.Row="7"
+                           Grid.Column="1"
+                           Text="{Binding StartedAt, Mode=OneWay, StringFormat='{}{0:dd.MM.yyyy HH:mm:ss}'}"
+                           Margin="0,8"/>
+
+            </Grid>
+
+        </Border>
+
+        <Button Grid.Row="4"
+                Width="130"
+                Height="40"
+                HorizontalAlignment="Left"
+                Content="Back"
+                Click="BackButton_Click"/>
+
+    </Grid>
+
+</UserControl>

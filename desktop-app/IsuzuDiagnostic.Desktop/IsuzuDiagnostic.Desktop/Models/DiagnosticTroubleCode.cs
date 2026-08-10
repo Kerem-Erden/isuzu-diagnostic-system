@@ -18,7 +18,10 @@ namespace IsuzuDiagnostic.Desktop.Models
 
         public IReadOnlyList<RelatedLiveDataItem> RelatedLiveData { get; }
 
-        public DiagnosticTroubleCode(string code, string description, string status, IReadOnlyList<DtcCause> possibleCauses, IReadOnlyList<DiagnosticStep> diagnosticSteps, IReadOnlyList<RelatedLiveDataItem> relatedLiveData)
+        public IReadOnlyList<DtcSolution> PossibleSolutions { get; }
+
+
+        public DiagnosticTroubleCode(string code, string description, string status, IReadOnlyList<DtcCause> possibleCauses, IReadOnlyList<DiagnosticStep> diagnosticSteps, IReadOnlyList<RelatedLiveDataItem> relatedLiveData, IReadOnlyList<DtcSolution> possibleSolutions)
         {
             if (string.IsNullOrWhiteSpace(code))
             {
@@ -35,6 +38,7 @@ namespace IsuzuDiagnostic.Desktop.Models
                 throw new ArgumentException("DTC status cannot be empty", nameof(status));
             }
 
+
             Code = code;
             Description = description;
             Status = status;
@@ -42,6 +46,7 @@ namespace IsuzuDiagnostic.Desktop.Models
             PossibleCauses = possibleCauses ?? throw new ArgumentNullException(nameof(possibleCauses));
             DiagnosticSteps = diagnosticSteps ?? throw new ArgumentNullException(nameof(diagnosticSteps));
             RelatedLiveData = relatedLiveData ?? throw new ArgumentNullException(nameof(relatedLiveData));
+            PossibleSolutions = possibleSolutions ?? throw new ArgumentNullException(nameof(possibleSolutions));
         }
     }
 }

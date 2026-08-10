@@ -23,6 +23,12 @@
                        FontSize="15"
                        Foreground="#68707C"/>
 
+            <TextBlock x:Name="LastReceivedTextBlock"
+                       Text="Last received: No data received yet"
+                       Margin="0,8,0,0"
+                       FontSize="13"
+                       Foreground="#68707C"/>   
+
         </StackPanel>
 
         <UniformGrid Grid.Row="2"
