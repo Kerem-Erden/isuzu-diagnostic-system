@@ -1,4 +1,4 @@
-# Isuzu Diognastic System 
+# Isuzu Diognostic System 
 
 ESP32 tabanli CAN/OBD-II arac ariza teshis, cozum onerisi sistemi ve Windows uygulamasi.
 
@@ -65,12 +65,37 @@ Windows Desktop Application
     |
     v
 SQLite Diagnostic Database
+```
 
+## Current Status
 
-Current Status:
+Week 2 desktop application integration has been completed.
 
-Project planning and initial system definition are in progress
+Implemented so far:
 
+- ESP32 ↔ Windows USB serial communication
+- Request/response protocol with request IDs
+- PING/PONG gateway handshake
+- START / STOP / STATUS gateway commands
+- Live data streaming and parsing
+- Vehicle selection and diagnostic session management
+- Diagnostic dashboard navigation
+- Live Data screen with last-received timestamp
+- DTC list and DTC detail screens
+- Possible causes, diagnostic steps, solutions and related live-data metadata
+- Mock DTC rescan and clear-memory workflow
+- Vehicle Information screen
+- Developer Console
+- Automatic serial-port discovery
+- Connection heartbeat/watchdog
+- Connection-loss detection
+- Automatic gateway reconnection
+
+Real vehicle CAN/OBD-II communication and ECU data reading are not implemented yet.
+The current DTC and live-data values are development/mock data used to validate
+the desktop and serial communication architecture.
+
+## Scope
 
 Scope:
 
