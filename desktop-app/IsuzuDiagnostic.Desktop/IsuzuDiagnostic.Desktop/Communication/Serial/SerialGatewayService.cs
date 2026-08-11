@@ -123,6 +123,8 @@ public sealed class SerialGatewayService : IDisposable
             );
         }
 
+        SerialPort serialPort; 
+
         lock (_syncRoot)
         {
             if (_serialPort?.IsOpen != true)
@@ -132,10 +134,11 @@ public sealed class SerialGatewayService : IDisposable
                 );
             }
 
-            _serialPort.WriteLine(
-                message.TrimEnd('\r', '\n')
-            );
+            serialPort = _serialPort;
+            
         }
+            _serialPort.WriteLine(message.TrimEnd('\r', '\n'));
+
     }
 
     public void Disconnect()

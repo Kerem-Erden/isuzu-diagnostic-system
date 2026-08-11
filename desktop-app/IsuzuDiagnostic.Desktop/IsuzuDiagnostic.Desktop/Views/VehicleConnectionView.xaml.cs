@@ -29,6 +29,8 @@ namespace IsuzuDiagnostic.Desktop.Views
             _requestIdGenarator = requestIdGenarator ?? throw new ArgumentNullException(nameof(requestIdGenarator));
 
             LoadVehicleCatalog();
+
+            LoadSerialPorts();
         }
 
         private async void ContinueButton_Click(object sender, RoutedEventArgs e)
@@ -109,6 +111,10 @@ namespace IsuzuDiagnostic.Desktop.Views
 
                 _serialGatewayService.Connect(serialPortName);
 
+                // Give the ESP32 serial gateway a short time to become ready
+                // after opening the COM port.
+                await Task.Delay(750);
+
                 int requestId = _requestIdGenarator.GetNext();
 
                 string expectedResponse = $"RES|{requestId}|OK|PONG";
@@ -131,7 +137,7 @@ namespace IsuzuDiagnostic.Desktop.Views
 
                     _serialGatewayService.SendLine(request);
 
-                    Task timeoutTask = Task.Delay(2000);
+                    Task timeoutTask = Task.Delay(3000);
 
                     Task completeTask = await Task.WhenAny(pongReceived.Task, timeoutTask);
 
@@ -180,6 +186,23 @@ namespace IsuzuDiagnostic.Desktop.Views
         private static void ShowValidationMessage(string message)
         {
             MessageBox.Show(message, "Missing vehicle information", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+
+        private void LoadSerialPorts()
+        {
+            var portNames = SerialGatewayService.GetAvailablePortNames();
+
+            SerialPortComboBox.ItemsSource = portNames;
+
+            if (portNames.Count > 0 )
+            {
+                SerialPortComboBox.SelectedIndex = 0;
+            }
+            else
+            {
+                SerialPortComboBox.SelectedIndex = -1;
+            }
+
         }
     }
 }

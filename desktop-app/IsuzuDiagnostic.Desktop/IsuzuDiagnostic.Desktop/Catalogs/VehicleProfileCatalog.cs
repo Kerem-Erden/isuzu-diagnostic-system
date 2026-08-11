@@ -23,18 +23,26 @@ public static class VehicleProfileCatolog
 
     public static IReadOnlyList<int> ModelYears { get; } = Array.AsReadOnly(new[]
     {
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
         2020,
         2021,
         2022,
         2023,
-        2024
+        2024,
+        2025
     });
 
     public static IReadOnlyList<string> EngineCodes { get; } = Array.AsReadOnly(new[]
     {
         "4JJ1-TC",
         "4HK1-TC",
-        "4JJ1-TCX",
         "4JZ1-TC",
     });
 
