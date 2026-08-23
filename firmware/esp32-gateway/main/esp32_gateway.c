@@ -4,6 +4,7 @@
 #include "driver/uart.h"
 #include "esp_err.h"
 #include "gateway_protocol.h"
+#include "can_bus.h"
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -127,6 +128,54 @@ static void process_serial_input(gateway_protocol_t *protocol)
     }
 }
 
+static void run_can_startup_test(void)
+{
+    esp_err_t result = can_bus_init();
+
+    if (result != ESP_OK)
+    {
+        printf("CAN:ERROR:INIT:%s\n", esp_err_to_name(result));
+        fflush(stdout);
+        return;
+    }
+
+    printf("\nCAN:INITIALIZED\n");
+
+    result = can_bus_start();
+
+    if(result != ESP_OK)
+    {
+        printf("CAN:ERROR:START:%s\n", esp_err_to_name(result));
+        can_bus_deinit();
+        fflush(stdout);
+        return;
+    }
+
+    result = can_bus_run_loopback_test();
+
+    if (result == ESP_OK)
+    {
+        printf("CAN_LOOPBACK_OK\n");
+    }
+    else
+    {
+        printf("CAN:ERROR:LOOPBACK:%s\n", esp_err_to_name(result));
+    }
+
+    esp_err_t stop_result = can_bus_stop();
+
+    if (stop_result == ESP_OK)
+    {
+        printf("CAN:STOPPED\n");
+    }
+    else
+    {
+        printf("CAN:ERROR:STOP:%s\n", esp_err_to_name(stop_result));
+    }
+
+    fflush(stdout);
+}
+
 void app_main(void)
 {
 gateway_protocol_t gateway_protocol;
@@ -134,6 +183,8 @@ gateway_protocol_t gateway_protocol;
 gateway_protocol_init(&gateway_protocol);
 
 initialize_serial_input();
+
+run_can_startup_test();
 
 TickType_t previous_live_data_time = xTaskGetTickCount();
 
