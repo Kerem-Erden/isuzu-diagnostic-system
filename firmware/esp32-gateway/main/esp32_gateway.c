@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <inttypes.h>
 
 #include "driver/uart.h"
 #include "esp_err.h"
@@ -13,6 +14,7 @@
 #define UART_RX_BUFFER_SIZE 256
 #define REQUEST_LINE_BUFFER_SIZE 128
 #define RESPONSE_BUFFER_SIZE 128
+#define CAN_MAX_FRAMES_PER_CYCLE 8
 
 /*
  * Sends one group of simulated vehicle values to the serial output.
@@ -128,7 +130,7 @@ static void process_serial_input(gateway_protocol_t *protocol)
     }
 }
 
-static void run_can_startup_test(void)
+static void start_can_listener(void)
 {
     esp_err_t result = can_bus_init();
 
@@ -150,43 +152,66 @@ static void run_can_startup_test(void)
         fflush(stdout);
         return;
     }
-
-    result = can_bus_run_loopback_test();
-
-    if (result == ESP_OK)
-    {
-        printf("CAN_LOOPBACK_OK\n");
-    }
-    else
-    {
-        printf("CAN:ERROR:LOOPBACK:%s\n", esp_err_to_name(result));
-    }
-
-    esp_err_t stop_result = can_bus_stop();
-
-    if (stop_result == ESP_OK)
-    {
-        printf("CAN:STOPPED\n");
-    }
-    else
-    {
-        printf("CAN:ERROR:STOP:%s\n", esp_err_to_name(stop_result));
-    }
-
+    
+    printf("CAN:LISTENING\n");
     fflush(stdout);
+}
+
+static void process_can_input(void)
+{
+    can_bus_frame_t frame;
+
+    for (int i = 0; i < CAN_MAX_FRAMES_PER_CYCLE; i++)
+    {
+        esp_err_t result = can_bus_receive(&frame, 0);
+
+        if (result == ESP_ERR_TIMEOUT)
+        {
+            break;
+        }
+
+        if (result != ESP_OK)
+        {
+            printf("CAN:RX:EXT:%08" PRIX32 ":%u:", frame.id, frame.data_length);
+        }
+        else
+        {
+            printf("CAN:RX:STD:%3" PRIX32 ":%u:", frame.id, frame.data_length);
+        }
+
+        if (frame.is_remote)
+        {
+            printf("RTR");
+        }
+        else
+        {
+            for (uint8_t byte_index = 0; byte_index < frame.data_length; byte_index++)
+            {
+                printf("%02X", frame.data[byte_index]);
+
+                if (byte_index + 1 < frame.data_length)
+                {
+                    printf(":");
+                }
+            }
+        }
+
+        printf("\n");
+        fflush(stdout);
+    }
 }
 
 void app_main(void)
 {
-gateway_protocol_t gateway_protocol;
+    gateway_protocol_t gateway_protocol;
 
-gateway_protocol_init(&gateway_protocol);
+    gateway_protocol_init(&gateway_protocol);
 
-initialize_serial_input();
+    initialize_serial_input();
 
-run_can_startup_test();
+    start_can_listener();
 
-TickType_t previous_live_data_time = xTaskGetTickCount();
+    TickType_t previous_live_data_time = xTaskGetTickCount();
 
 	int rpm = 750;
 	int coolant_temperature = 86;
@@ -238,6 +263,9 @@ TickType_t previous_live_data_time = xTaskGetTickCount();
             }
 
         }
+
+        process_can_input();
+
         /*
          * Pause only this FreeRTOS task for one second.
          * The CPU is not trapped in an empty busy-wait loop.

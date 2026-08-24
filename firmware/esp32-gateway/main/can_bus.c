@@ -6,9 +6,11 @@
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "freertos/queue.h"
 
 #define CAN_BUS_TX_GPIO 21
 #define CAN_BUS_RX_GPIO 22
+#define CAN_RX_QUEUE_DEPTH 32
 
 
 /*
@@ -24,6 +26,7 @@ static volatile bool s_rx_frame_received = false;
 static twai_frame_header_t s_rx_header;
 static uint8_t s_rx_data[8];
 static size_t s_rx_data_length = 0;
+static QueueHandle_t s_rx_queue = NULL;
 
 /*
  * Run a controlled internal CAN/TWAI loopback test.
@@ -35,6 +38,14 @@ esp_err_t can_bus_init(void)
     if (s_twai_node != NULL)
     {
         return ESP_ERR_INVALID_STATE;
+    }
+
+    s_rx_queue = xQueueCreate(CAN_RX_QUEUE_DEPTH, sizeof(can_bus_frame_t));
+
+    if (s_rx_queue == NULL)
+    {
+        s_can_status = CAN_BUS_STATUS_ERROR;
+        return ESP_ERR_NO_MEM;
     }
 
     twai_onchip_node_config_t node_config = 
@@ -59,8 +70,9 @@ esp_err_t can_bus_init(void)
          * Loopback lets the controller receive its own frames.
          */
         .flags = {
-            .enable_self_test = 1,
-            .enable_loopback = 1,
+            .enable_self_test = 0,
+            .enable_loopback = 0,
+            .enable_listen_only = 1,
         },
     };
 
@@ -68,8 +80,12 @@ esp_err_t can_bus_init(void)
 
     if (result != ESP_OK)
         {
+            vQueueDelete(s_rx_queue);
+            s_rx_queue = NULL;
+
             s_twai_node = NULL;
             s_can_status = CAN_BUS_STATUS_ERROR;
+
             return result;
         }
 
@@ -83,6 +99,10 @@ esp_err_t can_bus_init(void)
     {
         twai_node_delete(s_twai_node);
         s_twai_node = NULL;
+
+        vQueueDelete(s_rx_queue);
+        s_rx_queue = NULL;
+
         s_can_status = CAN_BUS_STATUS_ERROR;
         return result;
     }
@@ -96,6 +116,11 @@ esp_err_t can_bus_deinit(void)
 {
     if (s_twai_node == NULL)
     {
+        if (s_rx_queue != NULL)
+        {
+            vQueueDelete(s_rx_queue);
+            s_rx_queue = NULL;
+        }
         s_can_status = CAN_BUS_STATUS_UNINITIALIZED;
         return ESP_OK;
     }
@@ -119,6 +144,11 @@ esp_err_t can_bus_deinit(void)
     }
 
     s_twai_node = NULL;
+    if (s_rx_queue != NULL)
+    {
+        vQueueDelete(s_rx_queue);
+        s_rx_queue = NULL;
+    }
     s_can_status = CAN_BUS_STATUS_UNINITIALIZED;
 
     return ESP_OK;
@@ -190,8 +220,6 @@ static bool can_bus_rx_callback(twai_node_handle_t handle, const twai_rx_done_ev
         return false;
     }
 
-    s_rx_header = rx_frame.header;
-
     size_t data_length = twaifd_dlc2len(rx_frame.header.dlc);
 
     if (data_length > sizeof(s_rx_data))
@@ -199,15 +227,38 @@ static bool can_bus_rx_callback(twai_node_handle_t handle, const twai_rx_done_ev
         data_length = sizeof(s_rx_data);
     }
 
+    can_bus_frame_t received_frame = {
+        .id = rx_frame.header.id,
+        .dlc = rx_frame.header.dlc,
+        .data_length = (uint8_t)data_length,
+        .is_extended = rx_frame.header.ide != 0,
+        .is_remote = rx_frame.header.rtr != 0,
+    };
+
+    s_rx_header = rx_frame.header;
+
     for (size_t i = 0; i < data_length; i++)
     {
+        received_frame.data[i] = rx_buffer[i];
+
+        /*
+        * Keep a copy for the bench loopback test.
+        */
+
         s_rx_data[i] = rx_buffer[i];
     }
 
     s_rx_data_length = data_length;
     s_rx_frame_received = true;
 
-    return false;
+    BaseType_t higher_priority_task_woken = pdFALSE;
+
+    if (s_rx_queue != NULL)
+    {
+        xQueueSendFromISR(s_rx_queue, &received_frame, &higher_priority_task_woken);
+    }
+
+    return higher_priority_task_woken == pdTRUE;
 }
 
 esp_err_t can_bus_run_loopback_test(void)
@@ -275,6 +326,28 @@ esp_err_t can_bus_run_loopback_test(void)
     if (s_rx_data[0] != 0xAA ||  s_rx_data[1] != 0xBB || s_rx_data[2] != 0xCC)
     {
         return ESP_FAIL;
+    }
+
+    return ESP_OK;
+}
+
+esp_err_t can_bus_receive(can_bus_frame_t *frame, uint32_t timeout_ms)
+{
+    if (frame == NULL)
+    {
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    if (s_rx_queue == NULL || s_can_status != CAN_BUS_STATUS_RUNNING)
+    {
+        return ESP_ERR_INVALID_STATE;
+    }
+
+    BaseType_t result = xQueueReceive(s_rx_queue, frame, pdMS_TO_TICKS(timeout_ms));
+
+    if (result != pdTRUE)
+    {
+        return ESP_ERR_TIMEOUT;
     }
 
     return ESP_OK;
