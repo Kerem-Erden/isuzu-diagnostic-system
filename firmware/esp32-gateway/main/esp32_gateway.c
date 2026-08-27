@@ -165,18 +165,41 @@ static void process_can_input(void)
     {
         esp_err_t result = can_bus_receive(&frame, 0);
 
+        /*
+         * No CAN frame is currently waiting in the RX queue.
+         * This is normal and is not treated as an error.
+         */
+
         if (result == ESP_ERR_TIMEOUT)
         {
             break;
         }
 
+        /*
+         * A real receive error occurred.
+         * Do not use frame here because it may not contain valid data.
+         */
+
         if (result != ESP_OK)
         {
-            printf("CAN:RX:EXT:%08" PRIX32 ":%u:", frame.id, frame.data_length);
+            printf("CAN:ERROR:RECEIVE:%s\n", esp_err_to_name(result));
+
+            fflush(stdout);
+            break;
+        }
+
+        /*
+         * At this point the receive operation succeeded,
+         * so frame contains valid CAN frame information.
+         */
+
+        if (frame.is_extended)
+        {
+            printf("CAN:RX:EXT:%08" PRIX32 ":%u:", frame.id, (unsigned)frame.data_length);
         }
         else
         {
-            printf("CAN:RX:STD:%3" PRIX32 ":%u:", frame.id, frame.data_length);
+            printf("CAN:RX:STD:%03" PRIX32 ":%u:", frame.id, (unsigned)frame.data_length);
         }
 
         if (frame.is_remote)
@@ -187,7 +210,7 @@ static void process_can_input(void)
         {
             for (uint8_t byte_index = 0; byte_index < frame.data_length; byte_index++)
             {
-                printf("%02X", frame.data[byte_index]);
+                printf("%02X", (unsigned)frame.data[byte_index]);
 
                 if (byte_index + 1 < frame.data_length)
                 {
