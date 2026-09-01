@@ -3,10 +3,12 @@ idf_component_register(
         "esp32_gateway.c"
         "gateway_protocol.c"
         "can_bus.c"
+        "can_stats.c"
 
     INCLUDE_DIRS "."
 
     PRIV_REQUIRES
         esp_driver_uart
         esp_driver_twai
+        esp_timer
 )

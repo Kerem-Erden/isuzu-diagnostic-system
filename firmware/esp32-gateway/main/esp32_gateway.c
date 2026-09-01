@@ -4,8 +4,10 @@
 
 #include "driver/uart.h"
 #include "esp_err.h"
+
 #include "gateway_protocol.h"
 #include "can_bus.h"
+#include "can_stats.h"
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -189,9 +191,12 @@ static void process_can_input(void)
         }
 
         /*
-         * At this point the receive operation succeeded,
-         * so frame contains valid CAN frame information.
-         */
+        * Record statistics only after a CAN frame has been received successfully.
+        * The statistics module keeps its own internal state and tracks values such as
+        * frame count and first/last reception timestamps for each CAN identifier.
+        */
+
+        can_stats_record_frame(&frame);
 
         if (frame.is_extended)
         {
@@ -223,6 +228,47 @@ static void process_can_input(void)
         fflush(stdout);
     }
 }
+    /*
+        * Print a read-only snapshot of the currently collected CAN statistics.
+    *
+    * The statistics module keeps its internal table private. This function
+    * requests a copy and is responsible only for formatting that data for
+    * the serial console.
+    */
+
+    static void print_can_stats_snapshot(void)
+    {
+            static can_stats_entry_t snapshot[CAN_STATS_MAX_IDS];
+
+            size_t entry_count = can_stats_snapshot(snapshot, CAN_STATS_MAX_IDS);
+
+            printf("CAN:STATS:BEGIN:%u\n", (unsigned)entry_count);
+
+            for (size_t i = 0; i < entry_count; i++)
+        {
+            const can_stats_entry_t *entry = &snapshot[i];
+
+            int64_t average_period_us = 0;
+
+            if (entry->count > 1)
+            {
+                average_period_us = (entry->last_seen_us - entry->first_seen_us) / (entry->count - 1);
+            }
+
+            if (entry->is_extended)
+            {
+                printf("CAN:STATS:EXT:%08" PRIX32 ":%" PRIu32 ":%" PRId64 "\n", entry->id, entry->count, average_period_us);
+            }
+            else
+            {
+                printf("CAN:STATS:STD:%03" PRIX32 ":%" PRIu32 ":%" PRId64 "\n", entry->id, entry->count, average_period_us);
+            }
+        }
+
+        printf("CAN:STATS:END\n");
+        fflush(stdout);
+    }
+
 
 void app_main(void)
 {
@@ -235,6 +281,7 @@ void app_main(void)
     start_can_listener();
 
     TickType_t previous_live_data_time = xTaskGetTickCount();
+    TickType_t previous_can_data_stats_time = xTaskGetTickCount();
 
 	int rpm = 750;
 	int coolant_temperature = 86;
@@ -265,11 +312,11 @@ void app_main(void)
 
             previous_live_data_time = current_time;
 
-        /*
-         * Keep the simulated values within a realistic test range.
-         * These are not real Isuzu reference values; they are only
-         * temporary communication test data.
-         */
+            /*
+            * Keep the simulated values within a realistic test range.
+            * These are not real Isuzu reference values; they are only
+            * temporary communication test data.
+            */
             if (rpm > 900)
             {
                 rpm = 750;
@@ -290,9 +337,21 @@ void app_main(void)
         process_can_input();
 
         /*
-         * Pause only this FreeRTOS task for one second.
-         * The CPU is not trapped in an empty busy-wait loop.
+        * Print the collected CAN traffic statistics every five seconds.
+        * A FreeRTOS tick timestamp is sufficient here because this interval
+        * does not require microsecond-level precision.
+        */
+
+        if (current_time - previous_can_data_stats_time >= pdMS_TO_TICKS(5000))
+        {
+            print_can_stats_snapshot();
+            previous_can_data_stats_time = current_time; 
+        }
+
+        /*
+         * Pause this FreeRTOS task briefly to avoid a busy-wait loop.
          */
+
         vTaskDelay(pdMS_TO_TICKS(10));
     }
 }

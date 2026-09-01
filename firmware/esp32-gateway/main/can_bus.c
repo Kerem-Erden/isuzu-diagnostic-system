@@ -7,8 +7,9 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
+#include "esp_timer.h"
 
-#define CAN_BUS_TX_GPIO 21
+#define CAN_BUS_TX_GPIO -1
 #define CAN_BUS_RX_GPIO 22
 #define CAN_RX_QUEUE_DEPTH 32
 
@@ -61,7 +62,7 @@ esp_err_t can_bus_init(void)
             .bitrate = CAN_BUS_BITRATE,
         },
 
-        .tx_queue_depth = 5,
+        .tx_queue_depth = 0,
         .fail_retry_cnt = 0,
 
          /*
@@ -233,6 +234,7 @@ static bool can_bus_rx_callback(twai_node_handle_t handle, const twai_rx_done_ev
         .data_length = (uint8_t)data_length,
         .is_extended = rx_frame.header.ide != 0,
         .is_remote = rx_frame.header.rtr != 0,
+        .timestamp_us = esp_timer_get_time(),
     };
 
     s_rx_header = rx_frame.header;

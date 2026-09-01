@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include "esp_err.h"
+#include "freertos/FreeRTOS.h"
 
 typedef enum
 {
@@ -24,6 +25,8 @@ typedef struct
     bool is_remote;
 
     uint8_t data[8];
+
+    int64_t timestamp_us;
 } can_bus_frame_t;
 
 
