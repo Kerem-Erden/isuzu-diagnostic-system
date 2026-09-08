@@ -8,6 +8,7 @@
 #include "gateway_protocol.h"
 #include "can_bus.h"
 #include "can_stats.h"
+#include "obd_protocol.h"
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -17,6 +18,8 @@
 #define REQUEST_LINE_BUFFER_SIZE 128
 #define RESPONSE_BUFFER_SIZE 128
 #define CAN_MAX_FRAMES_PER_CYCLE 8
+
+#define OBD_VEHICLE_TEST_ENABLE 0
 
 /*
  * Sends one group of simulated vehicle values to the serial output.
@@ -132,9 +135,9 @@ static void process_serial_input(gateway_protocol_t *protocol)
     }
 }
 
-static void start_can_listener(void)
+static void start_can_bus(can_bus_mode_t mode)
 {
-    esp_err_t result = can_bus_init();
+    esp_err_t result = can_bus_init(mode);
 
     if (result != ESP_OK)
     {
@@ -154,8 +157,16 @@ static void start_can_listener(void)
         fflush(stdout);
         return;
     }
+
+    if (mode == CAN_BUS_MODE_PASSIVE)
+    {
+        printf("CAN:LISTENING\n");
+    }
+    else
+    {
+        printf("CAN:DIAGNOSTIC_MODE\n");
+    }
     
-    printf("CAN:LISTENING\n");
     fflush(stdout);
 }
 
@@ -269,6 +280,163 @@ static void process_can_input(void)
         fflush(stdout);
     }
 
+    /*
+    * Build a sample OBD-II PID request without transmitting it.
+    *
+    * This verifies that the OBD layer converts a logical PID request
+    * into the expected CAN frame before active CAN transmission is enabled.
+    */
+
+    static void test_obd_pid_builder(void)
+    {
+        obd_pid_request_t request = {.mode = OBD_MODE_CURRENT_DATA, .pid = OBD_PID_ENGINE_RPM};
+
+        can_bus_frame_t frame;
+
+        if (!obd_build_pid_request(&request, &frame))
+        {
+            printf("OBD:TEST:BUILD_FAILED\n");;
+            return;
+        }
+
+        printf("OBD:TEST:STD:%03" PRIX32 ":%u:", frame.id, frame.data_length);
+
+        for (uint8_t i = 0; i < frame.data_length; i++)
+        {
+            printf("%02X", frame.data[i]);
+
+            if (i + 1 < frame.data_length)
+            {
+                printf(":");
+            }
+        }
+
+        printf("\n");
+        fflush(stdout);
+
+    }
+
+    /*
+    * Test the OBD-II response decoder with a synthetic RPM response.
+    *
+    * No CAN frame is transmitted. The frame below represents data that
+    * could have been received from an ECU.
+    */
+
+    static void test_obd_pid_decoder(void)
+{
+    const can_bus_frame_t frames[] = {
+        {
+            .id = 0x7E8,
+            .dlc = 8,
+            .data_length = 8,
+            .is_extended = false,
+            .is_remote = false,
+            .data = {0x04, 0x41, 0x0C, 0x1A, 0xF8, 0, 0, 0}
+        },
+        {
+            .id = 0x7E8,
+            .dlc = 8,
+            .data_length = 8,
+            .is_extended = false,
+            .is_remote = false,
+            .data = {0x03, 0x41, 0x05, 0x7E, 0, 0, 0, 0}
+        },
+        {
+            .id = 0x7E8,
+            .dlc = 8,
+            .data_length = 8,
+            .is_extended = false,
+            .is_remote = false,
+            .data = {0x03, 0x41, 0x0D, 0x64, 0, 0, 0, 0}
+        },
+        {
+            .id = 0x7E8,
+            .dlc = 8,
+            .data_length = 8,
+            .is_extended = false,
+            .is_remote = false,
+            .data = {0x03, 0x41, 0x04, 0x80, 0, 0, 0, 0}
+        }
+    };
+
+    for (size_t i = 0; i < sizeof(frames) / sizeof(frames[0]); i++)
+    {
+        obd_pid_value_t value;
+
+        if (!obd_decode_pid_response(&frames[i], &value))
+        {
+            printf("OBD:TEST:DECODE_FAILED\n");
+            continue;
+        }
+
+        printf(
+            "OBD:TEST:DECODE:PID:%02X:VALUE:%.2f\n",
+            (unsigned int)value.pid,
+            value.value
+        );
+    }
+
+    fflush(stdout);
+}
+
+static void test_obd_passive_tx_guard(void)
+{
+    esp_err_t result = obd_request_pid(OBD_PID_ENGINE_RPM, 100);
+
+    if (result == ESP_ERR_NOT_SUPPORTED)
+    {
+        printf("OBD:TEST:PASSIVE_TX_BLOCKED\n");
+        return;
+    }
+
+    printf("OBD:TEST:PASSSIVE_TX_GUARD_FAILED:%s\n", esp_err_to_name(result));
+}
+
+#if OBD_VEHICLE_TEST_ENABLE
+
+static void test_obd_vehicle_rpm_once(void)
+{
+    esp_err_t result =
+        obd_request_pid(OBD_PID_ENGINE_RPM, 100);
+
+    if (result != ESP_OK)
+    {
+        printf(
+            "OBD:VEHICLE:REQUEST_ERROR:%s\n",
+            esp_err_to_name(result)
+        );
+        return;
+    }
+
+    printf("OBD:VEHICLE:RPM_REQUEST_SENT\n");
+
+    obd_pid_value_t value;
+
+    result = obd_wait_pid_response(
+        OBD_PID_ENGINE_RPM,
+        &value,
+        1000
+    );
+
+    if (result != ESP_OK)
+    {
+        printf(
+            "OBD:VEHICLE:RESPONSE_ERROR:%s\n",
+            esp_err_to_name(result)
+        );
+        return;
+    }
+
+    printf(
+        "OBD:VEHICLE:RPM:%.2f\n",
+        value.value
+    );
+
+    fflush(stdout);
+}
+
+#endif
 
 void app_main(void)
 {
@@ -278,8 +446,18 @@ void app_main(void)
 
     initialize_serial_input();
 
-    start_can_listener();
+    #if OBD_VEHICLE_TEST_ENABLE
 
+        start_can_bus(CAN_BUS_MODE_DIAGNOSTIC);
+        test_obd_vehicle_rpm_once();
+    #else
+        start_can_bus(CAN_BUS_MODE_PASSIVE);
+    #endif
+    
+    // test_obd_pid_builder();
+    // test_obd_pid_decoder();
+    // test_obd_passive_tx_guard();
+    
     TickType_t previous_live_data_time = xTaskGetTickCount();
     TickType_t previous_can_data_stats_time = xTaskGetTickCount();
 

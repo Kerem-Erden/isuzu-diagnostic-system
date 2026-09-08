@@ -9,33 +9,52 @@
 #include "freertos/queue.h"
 #include "esp_timer.h"
 
-#define CAN_BUS_TX_GPIO -1
+#define CAN_BUS_DIAGNOSTIC_TX_GPIO 21
 #define CAN_BUS_RX_GPIO 22
 #define CAN_RX_QUEUE_DEPTH 32
+#define CAN_STANDARD_MAX_ID 0x7FF
+#define CAN_EXTENDED_MAX_ID 0x1FFFFFFF
+#define CAN_CLASSIC_MAX_DATA_LENGTH 8
 
 
 /*
- * Temporary bitrate for internal loopback testing.
- * This is not yet assumed to be the vehicle CAN Bitrate. 
+ * Normal vehicle CAN configuration.
+ * Passive mode enables listen-only operation.
+ * Diagnostic mode enables normal CAN participation.
  */
+
 #define CAN_BUS_BITRATE 500000
 
 static twai_node_handle_t s_twai_node = NULL;
 static can_bus_status_t s_can_status = CAN_BUS_STATUS_UNINITIALIZED;
 static bool can_bus_rx_callback(twai_node_handle_t handle, const twai_rx_done_event_data_t *event_data, void *user_ctx);
-static volatile bool s_rx_frame_received = false;
-static twai_frame_header_t s_rx_header;
-static uint8_t s_rx_data[8];
-static size_t s_rx_data_length = 0;
 static QueueHandle_t s_rx_queue = NULL;
+static can_bus_mode_t s_can_mode = CAN_BUS_MODE_PASSIVE;
 
-/*
- * Run a controlled internal CAN/TWAI loopback test.
- */
-esp_err_t can_bus_run_loopback_test(void);
 
-esp_err_t can_bus_init(void)
+esp_err_t can_bus_init(can_bus_mode_t mode)
 {
+    int tx_gpio;
+    uint32_t tx_queue_depth;
+    bool listen_only;
+
+    if (mode == CAN_BUS_MODE_PASSIVE)
+    {
+        tx_gpio = -1;
+        tx_queue_depth = 0;
+        listen_only = true;
+    }
+    else if (mode == CAN_BUS_MODE_DIAGNOSTIC)
+    {
+        tx_gpio = CAN_BUS_DIAGNOSTIC_TX_GPIO;
+        tx_queue_depth = 5; 
+        listen_only = false;
+    }
+    else
+    {
+        return ESP_ERR_INVALID_ARG;
+    }
+
     if (s_twai_node != NULL)
     {
         return ESP_ERR_INVALID_STATE;
@@ -52,7 +71,7 @@ esp_err_t can_bus_init(void)
     twai_onchip_node_config_t node_config = 
     {
         .io_cfg = {
-            .tx = CAN_BUS_TX_GPIO,
+            .tx = tx_gpio,
             .rx = CAN_BUS_RX_GPIO,
             .quanta_clk_out = -1,
             .bus_off_indicator = -1,
@@ -62,18 +81,13 @@ esp_err_t can_bus_init(void)
             .bitrate = CAN_BUS_BITRATE,
         },
 
-        .tx_queue_depth = 0,
+        .tx_queue_depth = tx_queue_depth,
         .fail_retry_cnt = 0,
 
-         /*
-         * Temporary test configuration.
-         * Self-test removes the ACK requirement.
-         * Loopback lets the controller receive its own frames.
-         */
         .flags = {
             .enable_self_test = 0,
             .enable_loopback = 0,
-            .enable_listen_only = 1,
+            .enable_listen_only = listen_only,
         },
     };
 
@@ -109,6 +123,7 @@ esp_err_t can_bus_init(void)
     }
 
     s_can_status = CAN_BUS_STATUS_STOPPED;
+    s_can_mode = mode;
 
     return ESP_OK;
 }
@@ -117,6 +132,8 @@ esp_err_t can_bus_deinit(void)
 {
     if (s_twai_node == NULL)
     {
+        s_can_mode = CAN_BUS_MODE_PASSIVE;
+
         if (s_rx_queue != NULL)
         {
             vQueueDelete(s_rx_queue);
@@ -151,6 +168,8 @@ esp_err_t can_bus_deinit(void)
         s_rx_queue = NULL;
     }
     s_can_status = CAN_BUS_STATUS_UNINITIALIZED;
+
+    s_can_mode = CAN_BUS_MODE_PASSIVE;
 
     return ESP_OK;
 }
@@ -223,9 +242,9 @@ static bool can_bus_rx_callback(twai_node_handle_t handle, const twai_rx_done_ev
 
     size_t data_length = twaifd_dlc2len(rx_frame.header.dlc);
 
-    if (data_length > sizeof(s_rx_data))
+    if (data_length > sizeof(rx_buffer))
     {
-        data_length = sizeof(s_rx_data);
+        data_length = sizeof(rx_buffer);
     }
 
     can_bus_frame_t received_frame = {
@@ -237,21 +256,10 @@ static bool can_bus_rx_callback(twai_node_handle_t handle, const twai_rx_done_ev
         .timestamp_us = esp_timer_get_time(),
     };
 
-    s_rx_header = rx_frame.header;
-
     for (size_t i = 0; i < data_length; i++)
     {
         received_frame.data[i] = rx_buffer[i];
-
-        /*
-        * Keep a copy for the bench loopback test.
-        */
-
-        s_rx_data[i] = rx_buffer[i];
     }
-
-    s_rx_data_length = data_length;
-    s_rx_frame_received = true;
 
     BaseType_t higher_priority_task_woken = pdFALSE;
 
@@ -263,74 +271,71 @@ static bool can_bus_rx_callback(twai_node_handle_t handle, const twai_rx_done_ev
     return higher_priority_task_woken == pdTRUE;
 }
 
-esp_err_t can_bus_run_loopback_test(void)
+esp_err_t can_bus_transmit(const can_bus_frame_t *frame, uint32_t timeout_ms)
 {
+    if (frame == NULL)
+    {
+        return ESP_ERR_INVALID_ARG;
+    }
+
     if (s_twai_node == NULL || s_can_status != CAN_BUS_STATUS_RUNNING)
     {
         return ESP_ERR_INVALID_STATE;
     }
 
-    static uint8_t tx_data[3] = {
-        0xAA,
-        0xBB,
-        0xCC
-    };
+    if (s_can_mode != CAN_BUS_MODE_DIAGNOSTIC)
+    {
+        return ESP_ERR_NOT_SUPPORTED;
+    }
+    
+    if (frame->data_length > CAN_CLASSIC_MAX_DATA_LENGTH || frame->dlc > CAN_CLASSIC_MAX_DATA_LENGTH)
+    {
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    if (!frame->is_extended)
+    {
+        if (frame->id > CAN_STANDARD_MAX_ID)
+        {
+            return ESP_ERR_INVALID_ARG;
+        }
+    }
+    else
+    {
+        if (frame->id > CAN_EXTENDED_MAX_ID)
+        {
+            return ESP_ERR_INVALID_ARG;
+        }
+    }
+
+    uint8_t tx_data[CAN_CLASSIC_MAX_DATA_LENGTH] = {0};
+
+    for (uint8_t i = 0; i < frame->data_length; i++)
+    {
+        tx_data[i] = frame->data[i];
+    }
 
     twai_frame_t tx_frame = {
         .header = {
-            .id =0x123,
-            .dlc = 3,
-            .ide = 0,
-            .rtr = 0,
+            .id = frame->id,
+            .dlc = frame->dlc,
+            .ide = frame->is_extended ? 1 : 0,
+            .rtr = frame->is_remote ? 1 : 0,
             .fdf = 0,
         },
         .buffer = tx_data,
-        .buffer_len = sizeof(tx_data),
+        .buffer_len = frame->data_length,
     };
 
-    s_rx_frame_received = false;
-    s_rx_data_length = 0;
-
-    esp_err_t result = twai_node_transmit(s_twai_node, &tx_frame, 100);
+    esp_err_t result = twai_node_transmit(s_twai_node, &tx_frame, timeout_ms);
 
     if (result != ESP_OK)
     {
         return result;
     }
 
-    result = twai_node_transmit_wait_all_done(s_twai_node, 1000);
+    return twai_node_transmit_wait_all_done(s_twai_node, timeout_ms);
 
-    if (result != ESP_OK)
-    {
-        return result;
-    }
-
-    for (int attempt = 0; attempt < 10; attempt++)
-    {
-        if (s_rx_frame_received)
-        {
-            break;
-        }
-
-        vTaskDelay(pdMS_TO_TICKS(10));
-    }
-
-    if (!s_rx_frame_received)
-    {
-        return ESP_ERR_TIMEOUT;
-    }
-
-    if (s_rx_header.id != 0x123)
-    {
-        return ESP_FAIL;
-    }
-
-    if (s_rx_data[0] != 0xAA ||  s_rx_data[1] != 0xBB || s_rx_data[2] != 0xCC)
-    {
-        return ESP_FAIL;
-    }
-
-    return ESP_OK;
 }
 
 esp_err_t can_bus_receive(can_bus_frame_t *frame, uint32_t timeout_ms)

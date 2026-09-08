@@ -14,6 +14,12 @@ typedef enum
     CAN_BUS_STATUS_ERROR
 } can_bus_status_t;
 
+typedef enum 
+{
+    CAN_BUS_MODE_PASSIVE = 0,
+    CAN_BUS_MODE_DIAGNOSTIC
+} can_bus_mode_t;
+
 typedef struct 
 {
     uint32_t id;
@@ -34,7 +40,7 @@ typedef struct
  * Allocate and configure the CAN/TWAI controller.
  * The controller remains stopped after initialization.
  */
-esp_err_t can_bus_init(void);
+esp_err_t can_bus_init(can_bus_mode_t mode);
 
 /*
  * Start CAN/TWAI communication.
@@ -63,5 +69,7 @@ can_bus_status_t can_bus_get_status(void);
  * Runs a controlled internal CAN/TWAI loopback test.
  */
 esp_err_t can_bus_run_loopback_test(void);
+
+esp_err_t can_bus_transmit(const can_bus_frame_t *frame, uint32_t timeout_ms);
 
 #endif

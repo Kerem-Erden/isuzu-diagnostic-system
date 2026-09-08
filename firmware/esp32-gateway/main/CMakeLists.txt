@@ -4,6 +4,7 @@ idf_component_register(
         "gateway_protocol.c"
         "can_bus.c"
         "can_stats.c"
+        "obd_protocol.c"
 
     INCLUDE_DIRS "."
 
