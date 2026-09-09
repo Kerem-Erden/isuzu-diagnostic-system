@@ -19,7 +19,7 @@
 #define RESPONSE_BUFFER_SIZE 128
 #define CAN_MAX_FRAMES_PER_CYCLE 8
 
-#define OBD_VEHICLE_TEST_ENABLE 0
+#define OBD_VEHICLE_TEST_ENABLED 0
 
 /*
  * Sends one group of simulated vehicle values to the serial output.
@@ -393,7 +393,7 @@ static void test_obd_passive_tx_guard(void)
     printf("OBD:TEST:PASSSIVE_TX_GUARD_FAILED:%s\n", esp_err_to_name(result));
 }
 
-#if OBD_VEHICLE_TEST_ENABLE
+#if OBD_VEHICLE_TEST_ENABLED
 
 static void test_obd_vehicle_rpm_once(void)
 {
@@ -438,6 +438,77 @@ static void test_obd_vehicle_rpm_once(void)
 
 #endif
 
+static void test_obd_dtc_decoder(void)
+{
+    const can_bus_frame_t frame = {
+        .id = 0x7E8,
+        .dlc = 8,
+        .data_length = 8,
+        .is_extended = false,
+        .is_remote = false,
+        .data = {
+            0x05,   // payload length = 5
+            0x43,   // Mode 03 positive response
+            0x01, 0x0A,   // P010A  
+            0x04, 0x01,   // P0401 
+            0x00, 0x00
+        }
+    };
+
+    obd_dtc_list_t list;
+
+    if (!obd_decode_dtc_response(&frame, &list))
+    {
+        printf("OBD:TEST:DTC_DECODE_FAILED\n");
+        return;
+    }
+
+    printf("OBD:TEST:DTC_COUNT:%u\n", (unsigned int)list.count);
+
+    for (uint8_t i = 0; i < list.count; i++)
+    {
+        printf("OBD:TEST:DTC:%s\n", list.dtcs[i].code);
+    }
+
+    fflush(stdout);
+}
+
+#if OBD_VEHICLE_TEST_ENABLED
+
+static void test_obd_vehicle_dtcs_once(void)
+{
+    esp_err_t result = obd_request_dtcs(100);
+
+    if (result != ESP_OK)
+    {
+        printf("OBD:VEHICLE:DTC_REQUEST_ERROR:%s\n", esp_err_to_name(result));
+        return;
+    }
+
+    printf("OBD:VEHICLE:DTC_REQUEST_SENT\n");
+
+    obd_dtc_list_t list;
+
+    result = obd_wait_dtc_response(&list, 1500);
+
+    if (result != ESP_OK)
+    {
+        printf("OBD:VEHICLE:DTC_RESPONSE_ERROR:%s\n", esp_err_to_name(result));
+        return;
+    }
+
+    printf("OBD:VEHICLE:DTC_COUNT:%u\n", (unsigned int)list.count);
+
+    for (uint8_t i = 0; i < list.count; i++)
+    {
+        printf("OBD:VEHICLE:DTC:%s\n", list.dtcs[i].code);
+    }
+
+    fflush(stdout);
+}
+
+#endif
+
 void app_main(void)
 {
     gateway_protocol_t gateway_protocol;
@@ -446,14 +517,19 @@ void app_main(void)
 
     initialize_serial_input();
 
-    #if OBD_VEHICLE_TEST_ENABLE
+    #if OBD_VEHICLE_TEST_ENABLED
 
         start_can_bus(CAN_BUS_MODE_DIAGNOSTIC);
+
+        vTaskDelay(pdMS_TO_TICKS(200));
+
         test_obd_vehicle_rpm_once();
+        test_obd_vehicle_dtcs_once();
     #else
         start_can_bus(CAN_BUS_MODE_PASSIVE);
     #endif
     
+    // test_obd_dtc_decoder();
     // test_obd_pid_builder();
     // test_obd_pid_decoder();
     // test_obd_passive_tx_guard();
