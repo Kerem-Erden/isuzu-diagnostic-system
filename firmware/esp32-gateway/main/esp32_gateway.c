@@ -19,7 +19,10 @@
 #define RESPONSE_BUFFER_SIZE 128
 #define CAN_MAX_FRAMES_PER_CYCLE 8
 
-#define OBD_VEHICLE_TEST_ENABLED 0
+#define OBD_VEHICLE_TEST_ENABLED 1
+
+#define CAN_TEST_BITRATE CAN_BUS_BITRATE_500K
+#define CAN_AUTO_BITRATE_PROBE_ENABLED 1
 
 /*
  * Sends one group of simulated vehicle values to the serial output.
@@ -135,9 +138,9 @@ static void process_serial_input(gateway_protocol_t *protocol)
     }
 }
 
-static void start_can_bus(can_bus_mode_t mode)
+static void start_can_bus(can_bus_mode_t mode, can_bus_bitrate_t bitrate)
 {
-    esp_err_t result = can_bus_init(mode);
+    esp_err_t result = can_bus_init(mode, bitrate);
 
     if (result != ESP_OK)
     {
@@ -147,6 +150,7 @@ static void start_can_bus(can_bus_mode_t mode)
     }
 
     printf("\nCAN:INITIALIZED\n");
+    printf("CAN:BITRATE:%u\n", (unsigned int)bitrate);
 
     result = can_bus_start();
 
@@ -170,8 +174,84 @@ static void start_can_bus(can_bus_mode_t mode)
     fflush(stdout);
 }
 
+static uint32_t probe_can_bitrate(can_bus_bitrate_t bitrate, uint32_t duration_ms)
+{
+    printf("\nCAN:PROBE:START:%u\n", (unsigned int)bitrate);
+
+    start_can_bus(CAN_BUS_MODE_PASSIVE, bitrate);
+
+    if (can_bus_get_status() != CAN_BUS_STATUS_RUNNING)
+    {
+        printf("CAN:PROBE:START_FAILED:%u\n", (unsigned int)bitrate);
+
+        can_bus_deinit();
+        return 0;
+    }
+
+    uint32_t total_frames = 0;
+    uint32_t standard_frames = 0;
+    uint32_t extended_frames = 0;
+
+    TickType_t start_time = xTaskGetTickCount();
+    TickType_t duration_ticks = pdMS_TO_TICKS(duration_ms);
+
+    while ((xTaskGetTickCount() - start_time) < duration_ticks)
+    {
+        can_bus_frame_t frame;
+
+        esp_err_t result = can_bus_receive(&frame, 50);
+
+        if (result == ESP_ERR_TIMEOUT)
+        {
+            continue;
+        }
+
+        if (result != ESP_OK)
+        {
+            printf("CAN:PROBE:RX_ERROR:%s\n",
+            esp_err_to_name(result));
+
+            break;
+        }
+
+        total_frames++;
+
+        if (frame.is_extended)
+        {
+            extended_frames++;
+        }
+        else 
+        {
+            standard_frames++;
+        }
+    }
+
+    printf("CAN:PROBE:RESULT:%u:TOTAL:%lu:STD:%lu:EXT:%lu\n",
+        (unsigned int)bitrate,
+        (unsigned long)total_frames,
+        (unsigned long)standard_frames,
+        (unsigned long)extended_frames
+    );
+
+    esp_err_t result = can_bus_deinit();
+
+    if (result != ESP_OK)
+    {
+        printf("CAN:PROBE:DEINIT_ERROR:%s\n", esp_err_to_name(result));
+    }
+
+    fflush(stdout);
+
+    return total_frames;
+}
+
 static void process_can_input(void)
 {
+    if (can_bus_get_status() != CAN_BUS_STATUS_RUNNING)
+    {
+        return;
+    }
+
     can_bus_frame_t frame;
 
     for (int i = 0; i < CAN_MAX_FRAMES_PER_CYCLE; i++)
@@ -517,16 +597,86 @@ void app_main(void)
 
     initialize_serial_input();
 
-    #if OBD_VEHICLE_TEST_ENABLED
+    can_bus_bitrate_t detected_bitrate = CAN_BUS_BITRATE_500K;
+    bool bitrate_detected = false;
 
-        start_can_bus(CAN_BUS_MODE_DIAGNOSTIC);
+    #if CAN_AUTO_BITRATE_PROBE_ENABLED
+        printf("\nCAN:PROBE:BEGIN\n");
+
+        uint32_t frames_500k = probe_can_bitrate(CAN_BUS_BITRATE_500K, 1500);
 
         vTaskDelay(pdMS_TO_TICKS(200));
 
-        test_obd_vehicle_rpm_once();
-        test_obd_vehicle_dtcs_once();
+        uint32_t frames_250k = probe_can_bitrate(CAN_BUS_BITRATE_250K, 1500);
+
+        printf("CAN:PROBE:SUMMARY:500K:%lu:250K:%lu\n",
+            (unsigned long)frames_500k,
+            (unsigned long)frames_250k
+        );
+
+        if (frames_500k > 0 || frames_250k > 0)
+        {
+            bitrate_detected = true;
+
+            if (frames_250k > frames_500k)
+            {
+                detected_bitrate = CAN_BUS_BITRATE_250K;
+            }
+            else
+            {
+                detected_bitrate = CAN_BUS_BITRATE_500K;
+            } 
+            
+            printf("CAN:PROBE:SELECTED:%u\n", (unsigned int)detected_bitrate);
+        }
+        else
+        {
+            printf("CAN:PROBE:NO_TRAFFIC_DETECTED\n");
+        }
+        
+        printf("CAN:PROBE:END\n\n");
+
+    #endif
+
+    #if OBD_VEHICLE_TEST_ENABLED
+
+        if (!bitrate_detected)
+        {
+            printf("CAN:DIAG:SKIPPED:NO_BITRATE\n");
+        }
+        else
+        {
+            start_can_bus(CAN_BUS_MODE_DIAGNOSTIC, detected_bitrate);
+
+            vTaskDelay(pdMS_TO_TICKS(200));
+
+            printf("CAN:DIAG:PRE_TX_RX_CHECK\n");
+            
+            for (int i = 0; i < 20; i++)
+            {
+                process_can_input();
+                vTaskDelay(pdMS_TO_TICKS(25));
+            }
+
+            printf("CAN:DIAG:BEFORE_TX\n");
+            can_bus_print_diagnostics();
+
+            test_obd_vehicle_rpm_once();
+
+            printf("CAN:DIAG:AFTER_RPM\n");
+            can_bus_print_diagnostics();
+            
+            test_obd_vehicle_dtcs_once();
+
+            printf("CAN:DIAG:AFTER_DTC\n");
+            can_bus_print_diagnostics();
+        }
+        
     #else
-        start_can_bus(CAN_BUS_MODE_PASSIVE);
+        if (bitrate_detected)
+        {
+            start_can_bus(CAN_BUS_MODE_PASSIVE, detected_bitrate);
+        }  
     #endif
     
     // test_obd_dtc_decoder();

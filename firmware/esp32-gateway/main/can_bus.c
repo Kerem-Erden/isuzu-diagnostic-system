@@ -23,8 +23,6 @@
  * Diagnostic mode enables normal CAN participation.
  */
 
-#define CAN_BUS_BITRATE 500000
-
 static twai_node_handle_t s_twai_node = NULL;
 static can_bus_status_t s_can_status = CAN_BUS_STATUS_UNINITIALIZED;
 static bool can_bus_rx_callback(twai_node_handle_t handle, const twai_rx_done_event_data_t *event_data, void *user_ctx);
@@ -32,11 +30,16 @@ static QueueHandle_t s_rx_queue = NULL;
 static can_bus_mode_t s_can_mode = CAN_BUS_MODE_PASSIVE;
 
 
-esp_err_t can_bus_init(can_bus_mode_t mode)
+esp_err_t can_bus_init(can_bus_mode_t mode, can_bus_bitrate_t bitrate)
 {
     int tx_gpio;
     uint32_t tx_queue_depth;
     bool listen_only;
+
+    if (bitrate != CAN_BUS_BITRATE_250K && bitrate != CAN_BUS_BITRATE_500K)
+    {
+        return ESP_ERR_INVALID_ARG;
+    }
 
     if (mode == CAN_BUS_MODE_PASSIVE)
     {
@@ -78,7 +81,7 @@ esp_err_t can_bus_init(can_bus_mode_t mode)
         },
 
         .bit_timing = {
-            .bitrate = CAN_BUS_BITRATE,
+            .bitrate = (uint32_t)bitrate,
         },
 
         .tx_queue_depth = tx_queue_depth,
@@ -365,5 +368,66 @@ can_bus_status_t can_bus_get_status(void)
     return s_can_status;
 }
 
+static const char *can_bus_error_states_name(twai_error_state_t state)
+{
+    switch (state)
+    {
+        case TWAI_ERROR_ACTIVE:
+            return "ACTIVE";
+            
+        case TWAI_ERROR_WARNING:
+            return "WARNING";
+        
+        case TWAI_ERROR_PASSIVE:
+            return "PASSIVE";
+
+        case TWAI_ERROR_BUS_OFF:
+            return "BUS_OFF";
+
+        default:
+            return "UNKNOWN";
+    }
+}
+
+void can_bus_print_diagnostics(void)
+{
+    if (s_twai_node == NULL)
+    {
+        printf("CAN:DIAG:NO_NODE\n");
+        fflush(stdout);
+        return;
+    }
+
+    if (s_can_mode != CAN_BUS_MODE_DIAGNOSTIC)
+    {
+        printf("CAN:DIAG:SKIPPED:PASSIVE_MODE\n");
+        fflush(stdout);
+        return;
+    }
+
+
+    twai_node_status_t status;
+    twai_node_record_t statistics;
+
+    esp_err_t result = twai_node_get_info(s_twai_node, &status, &statistics);
+
+    if (result != ESP_OK)
+    {
+        printf("CAN:DIAG:ERROR:%s\n", esp_err_to_name(result));
+        fflush(stdout);
+        return;
+    }
+
+    printf(
+        "CAN:DIAG:STATE:%s:TEC:%u:REC:%u:BUS_ERRORS:%lu:TX_QUEUE_FREE:%lu\n",
+        can_bus_error_states_name(status.state),
+        (unsigned int)status.tx_error_count,
+        (unsigned int)status.rx_error_count,
+        (unsigned long)statistics.bus_err_num,
+        (unsigned long)status.tx_queue_remaining
+    );
+
+    fflush(stdout);
+}
 
  

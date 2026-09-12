@@ -35,12 +35,17 @@ typedef struct
     int64_t timestamp_us;
 } can_bus_frame_t;
 
+typedef enum
+{
+    CAN_BUS_BITRATE_250K = 250000,
+    CAN_BUS_BITRATE_500K = 500000
+} can_bus_bitrate_t;
 
 /*
  * Allocate and configure the CAN/TWAI controller.
  * The controller remains stopped after initialization.
  */
-esp_err_t can_bus_init(can_bus_mode_t mode);
+esp_err_t can_bus_init(can_bus_mode_t mode, can_bus_bitrate_t bitrate);
 
 /*
  * Start CAN/TWAI communication.
@@ -71,5 +76,7 @@ can_bus_status_t can_bus_get_status(void);
 esp_err_t can_bus_run_loopback_test(void);
 
 esp_err_t can_bus_transmit(const can_bus_frame_t *frame, uint32_t timeout_ms);
+
+void can_bus_print_diagnostics(void);
 
 #endif
