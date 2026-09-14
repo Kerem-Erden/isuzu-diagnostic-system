@@ -23,6 +23,7 @@ public static class VehicleProfileCatolog
 
     public static IReadOnlyList<int> ModelYears { get; } = Array.AsReadOnly(new[]
     {
+        2011,
         2012,
         2013,
         2014,
@@ -41,9 +42,10 @@ public static class VehicleProfileCatolog
 
     public static IReadOnlyList<string> EngineCodes { get; } = Array.AsReadOnly(new[]
     {
-        "4JJ1-TC",
+        "4JJ1",
         "4HK1-TC",
-        "4JZ1-TC",
+        "4HK1",
+        "4JZ1",
     });
 
     public static IReadOnlyList<string> EcuTypes { get; } = Array.AsReadOnly(new[]

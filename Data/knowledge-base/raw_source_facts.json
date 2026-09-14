@@ -1,0 +1,821 @@
+[
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 22,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 22 Motor Ana Verileri ve Teknik Özellikleri Motor Modeli 4JZ1 Motor tipi Dizel, dört çevrim Silindir düzeni /silindir sayısı Inline / dört silindir Yakıt enjeksiyon sırası 1 - 3 - 4 - 2 Toplam hacim(cc) 2,999 Bore x stroke (mm / in) 95.4 x 104.9 / 3.76 x 4.13 Sıkıştırma oranı 17.3 Marş sırasında sıkıştırma basıncı(MPa / psi) 3,0 / 435'ten fazla Combustion chamber type Doğrudan enjeksiyon Silindir gömleği Astarsız tip Rölanti hızı (rpm) 600 rpm"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 23,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 23 Motor Ana Verileri ve Teknik Özellikleri Motor Modeli 4JZ1 Yakıt sistemi Common Rail yakıt sistemi Enjeksiyon pompası tipi Denso yakıt besleme pompası (HP5S tipi) Enjeksiyon nozul tipi G4S i-ART enjektör Enjeksiyon deliği sayısı 10 Enjeksiyon deliği çap 0.112 / 0.00441 Yakıt filtresi Su ile kartuş kağıt elemanı"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 24,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 24 Motor Ana Verileri ve Teknik Özellikleri Motor Modeli 4JZ1 Valf sistemi Valf düzeni Çift Üstten Eksantrik Mili (DOHC) Sürücü tipi Dişli tahrik BTDC'de emme supabı açıklığı (º) 28 ABDC'de emme valfi kapanışı (º) 56 BBDC'de egzoz valfi açık (º) 43 (VVT çalışması: 73 - 43) ATDC 'de egzoz valfi kapanışı (º) 23 (VVT çalışması: -7 - 23) Intake valve clearance when cold (between camshaft & roller) (mm / in) 0.15 / 0.006 Exhaust valve clearance when cold (between camshaft & roller) (mm / in) 0.15 / 0.006"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 25,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 25 Motor Ana Verileri ve Teknik Özellikleri Motor Modeli 4JZ1 Soğutma sistemi Soğutma yöntemi Su soğutmalı Su kapasitesi (l) (Radyatör dahil) NLR, NMR modelleri 11.7 NNR, NPR modelleri 12.2 Su pompası tipi Santrifüj çark tipi Termostat tipi Wax pellet type, with jiggle valve Termostat açılış sıcaklığı(ºC / ºF) 82 / 180"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 26,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 26 Motor Ana Verileri ve Teknik Özellikleri Engine Model 4JZ1 Yağlama sistemi Yağlama yöntemi Basınç sirkülasyonu Yağ pompası tipi Dişli Yağ kapasitesi (l) 9.4 Yağ filtresi tipi Kağıt Yağ soğutucu tipi Su soğutmalı EGR sistemi Elektrik kontrollü EGR valfi Hava temizleyici tipi Kuru kağıt elemanı PCV sistemi Kapalı tip"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 91,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Motor Yağı Sıcaklık Sensörü Motor yağı sıcaklık sensörü karakteristiği -referans- Sıcaklık (ºC) Sayfa 91 Direnç (kΩ) Yağ sıcaklığı (ºC) Yağ sıcaklığı (ºF) Sensör direnci (kΩ) -20 -4 15.13 20 68 2.645 100 212 0.2156 200 392 0.0283"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 92,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Motor Yağı Sıcaklık Sensörü • Motor yağı sıcaklık sensörü yağ soğutucusuna monte edilmiştir • Motor yağı sıcaklık sensörü değişken bir dirençtir ve motor yağının sıcaklığını ölçer Tarama aleti veri ekranı • Hesaplanan motor yağı sıcaklığı (\"ºC\" veya \"ºF\") • Çıkış gerilimi Motor yağı sıcaklık sensöründe açık devre veya kısa devre ile ilgili bir DTC ayarlandığında \"ºC\" veya \"ºF\" fiziksel veri parametresi varsayılan bir değere sabitlenecektir Bu DTC'yi teşhis etmekiçin,veri ekranındaki \"Volt \"u gözlemleyin Motor yağı sıcaklığı Çıkış gerilimi Direnç Motor Yağı Sıcaklık sensörü Düşük Yüksek Yüksek Yüksek Düşük Düşük Sayfa 92"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 94,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Motor Yağ Basıncı Sensörü Yağ basınç sensörü karakteristiği -referans- Yağ basıncı (MPa) Çıkış (Volt) Tarama aleti veri ekranı • Çıkış Gerilimi Yağ basıncı Çıkış gerilimi (V) Motor yağı basınç sensörü Düşük Düşük Yüksek Yüksek Sayfa 94"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 112,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Motor Kontrol Ünitesi (ECM) Önemli! \"!\" sembolü sizi elektrik çarpması riskine karşı uyarır. Şoktan ve olası ciddi yaralanmalardan kaçınmak için terminallere DOKUNMAYIN. Kablo demeti konnektörlerini ayırırken, daima kontak anahtarını KAPALI konuma getirin veya akü kablosunu ayırın. Dikkat edin! ECM kablo demetini veya akü kablosunu ayırmadan önce kontak anahtarını KAPALI konuma getirin ve 3 dakika bekleyin. Bu, kontrol ünitelerinin iş süreçlerini düzgün bir şekilde tamamlamalarını sağlar. Bu bekleme süresi göz ardı edilirse kontrol üniteleri arızalanabilir ve/veya DTC P1621 verilebilir. ECM değiştirilirse, lütfen WSM'deki talimatları izleyin ve yazılım güncellemelerini kontrol edin. Sayfa 112"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 118,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor ECM Konnektörü Pim Pin konfigürasyonu konektör A Pim Pin konfigürasyonu konektör A 1 - 13 EGT sensörü (egzoz manifoldu) sinyali 2 - 14 - 3 - 15 - 4 - 16 - 5 - 17 Emme gaz kelebeği konum sensörü sinyali 6 - 18 Takviye basınç sensörü sinyali 7 EGR konum sensörü, yağ basınç sensörü, EGR gaz basınç sensörü (5V referans) 19 Yağ basınç sensörü sinyali 20 Yakıt filtresi basınç sensörü sinyali 8 - 21 Yağ seviye sensörü sinyali 9 - 22 - 10 - 23 - 11 - 24 - 12 ECT sensörü sinyali 25 - Konektör A Konektör B Sayfa 118"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 119,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Pim Pin konfigürasyonu konektör A Pim Pin konfigürasyonu konektör A 26 Takviye basınç sensörü, emme gaz kelebeği konum sensörü, yakıt filtresi basınç sensörü (5V referans) 38 O2 sensörü sinyali (VM) 39 - 40 EGR gaz basınç sensörü (sinyal) 27 - 41 - 28 Turboşarj çıkış sıcaklık sensörü (sinyal) 42 VVT kontrol valfi Düşük 43 - 29 - 44 - 30 Motor yağı sıcaklık sensörü (sinyal) 45 - 31 EGR gazı sıcaklık sensörü (sinyal) 46 - 32 - 47 - 33 - 48 EGR konum sensörü, yağ basınç sensörü, EGR gaz basınç sensörü (düşük referans) 34 Yağ seviye sensörü (sinyal) 35 - 38 O2 sensörü sinyali (VM) 36 O2 sensörü pompa akımı (IP) 39 - 37 O2 sensörü sinyali (UN) Konektör A ECM Konnektörü Konektör B Sayfa 119"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 120,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor ECM Konnektörü Konektör A Konektör B Pim Pin konfigürasyonu konektör A Pim Pin konfigürasyonu konektör A 49 Takviye basınç sensörü, emme gaz kelebeği konum sensörü, yakıt filtresi basınç sensörü, ECT sensörü, EGT sensörü (egzoz manifoldu) düşük referans 57 Su çökeltici şalter sinyali 58 - 59 - 60 - 50 Turboşarj çıkış sıcaklık sensörü, motor yağı sıcaklık sensörü, EGR gazı sıcaklık sensörü (düşük referans) 61 - 62 - 63 VVT kontrol valfi Yüksek 64 - 51 - 65 - 52 Yağ seviye sensörü (düşük referans) 66 - 53 - 67 - 54 EGR konum sensörü (sinyal 1) 68 - 55 EGR konum sensörü (sinyal 2) 69 - 56 EGR konum sensörü (sinyal 3) 70 - Sayfa 120"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 121,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor ECM Konnektörü Konektör A Konektör B Pim Pin konfigürasyonu konektör A Pim Pin konfigürasyonu konektör A 71 - 85 - 72 Egzoz diferansiyel basınç sensörü (koruma topraklaması) 86 O2 sensörü ısıtıcı kontrolü 87 O2 sensörü ısıtıcı tahriki 73 - 88 - 74 - 89 Emme gaz kelebeği motoru 1 75 - 90 Emme gaz kelebeği motoru 2 76 - 91 - 77 CMP sensörü (sinyal) 92 - 78 CKP sensörü (sinyal) 93 EGR motoru 3 79 - 94 EGR motoru 2 80 - 95 EGR motoru 1 81 - 96 - 82 - 97 - 83 - 98 - 84 Yağ çek valfi düşük 99 - Sayfa 121"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 122,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor ECM Konnektörü Konektör A Konektör B Pim Pin konfigürasyonu konektör A 100 - 101 - 102 - 103 - 104 - 105 Yağ çek valfi Yüksek Sayfa 122"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 123,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Konektör A Konektör B Pim Pin konfigürasyonu konektör B Pim Pin konfigürasyonu konektör B 24 CAC sıcaklık sensörü, EGT sensörü (DPD) düşük referans 38 - 39 - 25 MAF sensörü, IAT sensörü düşük referans 40 ECM röle kontrolü 26 APP sensörü 1 sinyali 41 ECM sinyal topraklaması 27 Rölanti sensörü sinyali 42 ECM sinyal topraklaması 28 Egzoz diferansiyel basınç sensörü sinyali 43 - 29 APP sensörü 2 sinyali 44 - 30 - 45 MAF sensörü sinyali 31 - 46 Motor uyarı ışığı kontrolünü kontrol edin 32 - 47 - 33 EGT sensörü (DPD) sinyali 48 Çalıştırma yardım anahtarı sinyali 34 CAC sıcaklık sensörü sinyali 49 Motor hızı sinyal çıkışı 35 IAT sensörü sinyali 50 - 36 J1939 CAN Yüksek 2 51 PM sensörü röle kontrolü 37 J1939 CAN Düşük 2 52 Egzoz freni solenoid valf kontrolü Sayfa 123 ECM Konnektörü"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 124,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Konektör A Konektör B Pim Pin konfigürasyonu konektör B Pim Pin konfigürasyonu konektör B 53 - 66 - 54 - 67 J1939 CAN Yüksek 3 55 - 68 PTO anahtarı sinyali 56 Kızdırma rölesi kontrolü 69 Kontak anahtarı sinyali 57 ECM röle kontrolü 70 - 58 ECM kasa topraklaması 71 - 59 APP sensörü 1, egzoz diferansiyel basınç sensörü blendajı topraklaması 72 - 73 - 60 J1939 CAN Yüksek 1 74 - 61 APP sensörü 1, 2 kalkan topraklaması 75 - 62 VSS sinyali (ABS olmadan) veya EHCU'dan araç hızı sinyali (ABS ile) 76 Kontak anahtarı AÇIK sinyali 77 J1939 CAN Düşük 1 63 - 78 Ground 64 ISO CAN Yüksek 79 Teşhis anahtarı 65 - 80 - Sayfa 124 ECM Konnektörü"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 125,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Konektör A Pim Pin konfigürasyonu konektör B 81 ISO CAN Düşük 82 Stop lambası anahtarı 2 sinyal 83 Egzoz fren anahtarı sinyali 84 J1939 CAN Düşük 3 85 - 86 - 87 DPD anahtar sinyali 88 - 89 - 90 - 91 - ECM Konnektörü Sayfa 125 Konektör B"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 126,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor CAN Bus Haberleşme ECM 24V DCU TCM Bilgi. modül NOx 1 NOx 2 EDU EHCU Otomatik ışkıkontrol FCG İmmobilizer SAS VNT SRS Stereo Kamer a BCM ISO CAN (500 kbps) Local CAN (250 kbps) SAE J1939 CAN (500 kbps) Motor local CAN (1000 kbps) Keyword communication Sayfa 126 IP cluster Urea sensor PM sensor"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 130,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Kabin içi Kabin arkası AM2 Sayfa 130 Akü voltajı ECM Güç Beslemesi ve Toprak Devresi IGN main ECM ECM B40 B57 Şasi GND Akü voltajı Ateşle me gerilimi Güç GND Şasi GND Kasa Sinyali Şasi GND GND GND B1 B3 B5 B76 ECM ana röle kontrolü Tarama aleti veri ekranı Akü Voltajı Ateşleme Gerilimi ECM ECM main IGN switch"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 135,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Kütle Hava Akışı (MAF) Sensörü • MAF ve IAT sensörleri hava filtresi muhafazasına takılır • Her iki sensör de tek bir gövdeye entegre edilmiştir • MAF sensörü algılanan hava miktarını dönüştürür ve ECM'ye bir sinyal gönderir • ECM, hava miktarı az olduğunda düşük voltaj ve hava miktarı fazla olduğunda yüksek voltaj algılar • ECM bu değeri yanma odasına EGR gazı akış hızını hesaplamak için kullanır ve bir DPD kontrolü kullanır (diğer girdilerle birlikte PM birikim miktarının hesaplanması) Dikkat edin! Gerçek MAF sensörü frekansı hesaplanan MAF değerinin önceden belirlenmiş bir aralığında değilse, örneğin endüksiyon sistemi sorunu veya eğri sensör, DTC P0100 verilecektir. Sayfa 135 Tarama aleti veri ekranı - Hesaplanan Kütle Hava Akışı (g/cyl.) - Çıkış gerilimi (V) MAF sensöründe açık veya kısa devre ile ilgili bir DTC ayarlandığında fiziksel veri parametresi \"g/cyl\" varsayılan bir değere sabitlenecektir."
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 136,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Emme Havası Sıcaklık (IAT) Sensörü IAT sensörü karakteristiği -referans- Çıkış (Volt) Volt ºC ºF 0.96 -39.6 -39.3 1.12 -30.7 -23.3 1.28 -22.2 -7.96 1.44 -13.1 8.4 1.60 -4.1 24.6 1.76 4.9 40.8 1.92 14.0 57.2 2.08 23.0 73.4 2.24 32.0 89.6 2.40 41.0 105.8 2.56 50.2 122.4 2.72 59.0 138.2 2.88 68.1 154.6 3.04 77.1 170.8 3.20 85.5 185.9 3.36 94.2 201.6 3.52 104.0 219.2 3.68 113.6 236.5 3.84 121.9 251.4 4.00 132.1 269.8 Sıcaklık (ºC) Tarama aleti veri ekranı Tarama aletindeki \"Toplam emme havası sıcaklığı aşırı sıcaklık olayları\" parametresi aşırı yüksek durumların sayısını gösterir. Sayfa 136"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 137,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Emme havası sıcaklığı Çıkış gerilimi (V) Direnç (Ω) Emme Havası Sıcaklık sensörü (IAT) Düşük Düşük Düşük Yüksek Yüksek Yüksek Emme Havası Sıcaklık (IAT) Sensörü • Negatif Sıcaklık Katsayısı (NTC) tipi sensör • Motora giren havanın sıcaklığını ölçer • Sensörün bir sinyal devresi ve bir düşük referans devresi vardır • ECM, emme havası sıcaklık sinyalini kontrol etmek için kullanır  yakıt enjeksiyonu, EGR ve DPD sistemi (örn. PM birikimi hesaplaması) Tarama aleti veri ekranı • Hesaplanan emme havası sıcaklığı (ºC / ºF) • Çıkış gerilimi IAT sensörünün açık veya kısa devresiyle ilgili bir DTC ayarlandığında \"hesaplanan emme havası sıcaklığı\" 130 °C'ye sabitlenecektir Sayfa 137"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 138,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Motor Soğutma Sıvısı Sıcaklık (ECT) Sensörü ECT sensörü Tarama aleti veri Motor soğutma suyu sıcaklığı Çıkış gerilimi (V) Direnç (Ω) Motor Soğutma Suyu Sıcaklık sensörü (ECT) Düşük Yüksek Yüksek Yüksek Düşük Düşük Sayfa 138 - Hesaplanan soğutma sıvısı sıcaklığı (ºC / ºF) - Çıkış gerilimi (V) ECT sensörünün açık veya kısa devresiyle ilgili bir DTC ayarlandığında \"Hesaplanan Soğutma Sıvısı Sıcaklığı\" varsayılan bir değere sabitlenecektir ECT sensörü termostat muhafazasının yakınına monte edilmiştir Termistör tipi bir sensördür ve motor soğutma suyu sıcaklığını ölçer Bir sinyal devresi ve bir düşük referans devresi vardır Bu sinyal yakıt enjeksiyonunu hesaplamak, EGR ve ön ısıtma sistemini kontrol etmek için kullanılır"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 139,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Motor Soğutma Sıvısı Sıcaklık (ECT) Sensörü ECT sensörü karakteristiği -referans- Sıcaklık (ºC) Sıcaklık (ºF) Direnç (Ω) 130 266 93 120 248 116.3 110 230 147.1 100 212 188.4 90 194 244.6 80 176 322.2 70 158 431.1 60 140 586.5 50 122 812.6 40 104 1148 30 86 1658 20 68 2450 10 50 3714 0 32 5790 -10 14 9308 -20 -4 15480 -30 -22 26740 -40 -40 48140 Sıcaklık (ºC) Direnç (kOhms) Sayfa 139"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 140,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Pozisyon ºC / ºF Gösterge açısı (º ) A 120 / 248 80 B 115 / 239 72.5 C 110 / 230 55 D 106 / 223 38.0 E 78 / 172 38.0 F 50 / 122 0 Motor Soğutma Sıvısı Sıcaklık Göstergesi A B C, D, E Sayfa 140 F • ECM, motor soğutma suyu sıcaklığı verilerini CAN Bus üzerinden IP kümesine gönderir • IP kümesi bu verilere dayanarak güncel motor soğutma suyu sıcaklığını gösterir"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 141,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Motor Soğutma Sıvısı Sıcaklık Göstergesi ●●● AÇIK KAPALI 120 ºC (248 ºF) 115 ºC (239 ºF) Dikkat edin! ECT sensörü tarafından algılanan motor soğutma suyu sıcaklığı aşağıdakilerden biriyse, DTC P0217 ayarlanacaktır • 110ºC'den (230ºF) yüksek (motorun aşırı ısınması) • 120ºC'den (248ºF) yüksek (DPD rejenerasyonu sırasında) Tarama aleti veri ekranı \"Toplam motor soğutma suyu aşırı sıcaklık olayları\" aşırı ısınma olaylarının sayısını gösterir Sayfa 141"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 142,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Barometrik Basınç (Baro) Sensörü • Sensör ECM'ye takılır ve barometrik basınç değerlerini voltaj sinyallerine dönüştürür • ECM kalibrasyon için bu voltaj sinyalini kullanır: 1. yakıt enjeksiyon miktarı ve 2. irtifa telafisi için enjeksiyon zamanlaması Tarama aleti veri ekranı • Hesaplanan barometrik basınç (kPa veya psi) • Çıkış gerilimi BARO sensöründe açık veya kısa devre ile ilgili bir DTC ayarlandığında \"kPa\" veya \"psi\" fiziksel veri parametresi varsayılan bir değere sabitlenecektir. Sayfa 142"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 143,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor 4.5V Sayfa 143 2.5V 0.5V Çıkış gerilimi (V) Sensör 2 Sensör 1 Pedal konumu (%) 0% 100% APP sensörü Gaz Pedalı (APP) Sensörü"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 144,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor • Gaz sensörleri gaz pedalına tek bir ünite olarak entegre edilmiştir • Pedal açısındaki değişikliklere göre çıkış voltajını değiştiren hall sensörleridir • ECM iki ayrı sinyal voltajını izleyerek birbirlerini teşhis eder ve İstenen hızlanma veya yavaşlama ve yakıt enjeksiyon miktarını hesaplar ekranı Tarama aleti veri • Hesaplanan gaz pedalı konumu (%) • Çıkış gerilimi Dikkat edin! APP sensörleri birbirleriyle korelasyon içinde değilse DTC P2138 verilecektir. Gaz Pedalı (APP) Sensörleri Sayfa 144 Lütfen unutmayın: Gaz pedalı değiştirilmişse \"APP sensörü öğrenme değeri sıfırlama\" işlemi gerçekleştirilmelidir. Lütfen atölye kılavuzuna bakın."
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 151,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor CKP ve CMP Sensörü İlişkisi • ECM tespit eder: 112 CKP sensör darbesi (56 x 2) ve 2 krank mili dönüşü başına 5 CMP sensör darbesi (720 º CA) • Her iki sensör rotoru mekanik olarak birbirine bağlıdır Bu nedenle, her bir darbenin ilişkisi her zaman sabittir CMP sensör sinyali mevcut Evet Hayır Evet Hayır CKP sensörü sinyali mevcut Evet Evet Hayır Hayır Motorun çalıştırılması mümkün Evet Hayır Evet Hayır Tarama aleti veri ekranı Krank ve eksantrik mili sinyalikorelasyon durumu parametresi Dikkat edin! CKP sensörü sinyal darbeleri ve CMP Sensörü sinyal darbeleri senkronizasyon dışında ise (yanlış zamanlama) DTC P0016 verilecektir. Sinyalin mevcudiyetine bağlı olarak motorun çalıştırılması mümkün olur veya olmaz:"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 158,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor O2 Sensör O2 sensörü: • Oksidasyon katalizörünün önüne monte edilir. • Egzoz gazındaki oksijen konsantrasyonunu tespit eder. • O2 sensörü aktif durumdayken ECM'ye egzoz gazındaki oksijen konsantrasyonuna göre üretilen bir voltaj sinyali verir. • Aktif durumunu korumak için dahili bir ısıtıcıya sahiptir. Motor kontrol modülü (ECM): • Emilen hava miktarı ve yakıt enjeksiyon miktarından hesaplanan hava-yakıt oranını O2 sensörünün sinyalinden elde edilen gerçek hava-yakıt oranı ile karşılaştırır ve emilen hava miktarını ve yakıt enjeksiyon miktarını düzeltir. • Uygun hava miktarının gerçek enjeksiyon miktarına dahil edilmesi için EGR'nin kontrolünü gerçekleştirir. Tarama Aleti Veri Ekranı Tarama aletinde aşağıdaki veriler gözlemlenebilir. • Lambda sensörü O2 Oran (%) • Lambda sensörü O2 Voltaj (V) Sayfa 158"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 170,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Ana Yakıt Filtresi Basınç Sensörü • Yakıt filtresi basınç sensörü ana yakıt filtresi gövdesine monte edilmiştir • Ana yakıt filtresindeki yakıt basıncı bir voltaj sinyaline dönüştürülür ve ECM'ye gönderilir • Bu voltaj sinyali tıkalı bir ana yakıt filtresini tespit etmek için kullanılır • Yüksek çıkış voltajı, ana yakıt filtresi gövdesi içinde yüksek basınç anlamına gelir, çıkış voltajı basınç düşüşüne göre azalır Tarama aleti veri ekranı • Yakıt filtresi basıncı (kPa & V) Sayfa 170"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 178,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor EDU Konektörü Konektör B Konektör A Sayfa 178 Pim Pin konfigürasyonu konektör A Pim Pin konfigürasyonu konektör A 1 PCV sürücüsü 16 - 2 - 17 - 3 PCV kontrolü 18 - 4 - 19 - 5 - 20 - 6 CKP sensörü blendaj topraklaması 21 Enjektör #3 sensör blendajı topraklaması 7 CMP sensör kalkanı topraklaması 22 Enjektör #2 sensör blendajı topraklaması 8 - 23 Enjektör #1 sensörü topraklaması 9 - 24 Enjektör #3 sensörü topraklaması 10 CKP sensörü topraklaması 25 Enjektör #4 sensörü topraklaması 11 CKP sensörü sinyal çıkışı 26 Enjektör #2 sensörü topraklaması 12 CKP sensörü sinyali 27 - 13 CMP sensörü topraklaması 28 - 14 CMP sensörü sinyal çıkışı 29 CMP sensörü 5 volt referans 15 CMP sensör sinyali 30 -"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 179,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor EDU Konektörü Konektör B Konektör A Sayfa 179 Pim Pin konfigürasyonu konektör A Pim Pin konfigürasyonu konektör A 31 Enjektör #4 şarj voltajı 46 Enjektör #1 şarj voltajı 32 Enjektör #2 şarj voltajı 47 Enjektör #3 şarj voltajı 33 Enjektör #2 solenoid kontrolü 48 Enjektör #1 solenoid kontrolü 34 Enjektör #4 solenoid kontrolü 49 Enjektör #3 solenoid kontrolü 35 Basınç düşürme valfi kontrolü 50 Basınç düşürme valfi tahriki 36 Enjektör #1 sensör blendajı topraklaması 51 - 37 Enjektör #4 sensör blendajı topraklaması 52 LIN 38 Enjektör #1 sensörü 5 volt referansı 53 Enjektör #1 sensörü yakıt basıncı sinyali 39 Enjektör #3 sensörü 5 volt referansı 54 Enjektör #3 sensörü yakıt basıncı sinyali 40 Enjektör #4 sensörü 5 volt referansı 55 Enjektör #4 sensörü yakıt basıncı sinyali 41 Enjektör #2 sensörü 5 volt referansı 56 Enjektör #2 sensörü yakıt basıncı sinyali 42 - 57 - 43 - 58 - 44 CKP sensörü 5 volt referansı 59 - 45 - 60 -"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 180,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Konektör B Konektör A Pim Pin konfigürasyonu konektör B Pim Pin konfigürasyonu konektör B 1 Ground 16 - 2 Ground 17 - 3 Ground 18 - 4 Akü voltajı 19 - 5 Akü voltajı 20 - 6 Akü voltajı 21 - 7 - 22 - 8 - 23 - 9 - 24 - 10 - 25 - 11 - 26 - 12 - 27 - 13 - 28 - 14 - 29 - 15 - 30 - Sayfa 180 EDU Konektörü"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 181,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Konektör B Konektör A Pim Pin konfigürasyonu konektör B Pim Pin konfigürasyonu konektör B 31 - 46 - 32 - 47 Kontak anahtarı AÇIK sinyali 33 - 48 Kontak anahtarı AÇIK sinyali 34 - 49 - 35 - 50 - 36 - 51 - 37 - 52 - 38 - 53 - 39 - 54 - 40 - 55 J1939 CAN Yüksek 41 - 56 J1939 CAN Düşük 42 - 57 ISO CAN Yüksek 43 - 58 ISO CAN Düşük 44 - 45 Case Ground Sayfa 181 EDU Konektörü"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 183,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Rölanti Hızı Kontrolü Bu kontrol, motor durumundaki değişikliklerden bağımsız olarak her zaman sabit rölanti hızı elde etmek için yapılır. ECM hedef rölanti devrini ayarlar ve yakıt enjeksiyon miktarını motor koşullarına göre kontrol eder:  gerçek motor hızı,  soğutma sıvısı sıcaklığı ve  motor yükü sabit rölanti hızına ulaşmak için. Tarama aleti veri ekranı • İstenen rölanti hızı Sayfa 183"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 202,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Rölanti Titreşim Kontrolü Krank mili hızı Krank açısı #1. silindir . #3 silindir . #4 silindir . #2. silindir . Dikkat! Aşırı yüksek veya düşük dengeleme oranına sahip bir silindir varsa, bu arızalı yakıt enjektörünü, zayıf veya hafifçe tutukluk yapmış silindiri gösterebilir. • Bu sistem, aşağıdaki nedenlerden dolayı silindirler arasındaki tork değişimlerinin neden olduğu motor titreşimlerini azaltmak için kullanılır  yakıt enjeksiyon miktarındaki değişimler veya  her silindirin enjektör performansı • ECM, silindirlerden gelen devir sinyallerine göre her silindir arasındaki enjeksiyon miktarını düzeltir. krank mili konum (CKP) sensörü • Silindirler arasındaki düzeltme miktarının normal aralığı ±5 mm'dir3 Sayfa 202 Tarama aleti veri ekranı • Her silindirin kompanzasyon oranı • Negatif dengeleme oranı yakıt enjeksiyon miktarının azaldığını gösterir ve bunun tersi de geçerlidir"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 203,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Yakıt Sistemiyle İlgili DTCS - P0087 Gerçek basınç Sayfa 203 Yakıt dağıtım borusu basıncı (MPa / psi) Olası nedenler şunlardır: • Yakıt kaybı veya daha az yakıt veya arızalı yakıt hattı (Yakıt sistemindeki hava, yakıtın besleme pompasına düzgün akışı kesintiye uğrar). • Arızalı enjektör sensörü veya sensör devresi • Arızalı yakıt besleme pompası • Arızalı yakıt enjektörü • Hatalı EDU İstenilen basınç Önceden belirlenmiş değerden daha fazla Zaman (2 trip) P0087 Yakıt Dağıtım Borusu/Sistem Basıncı -Çok Düşük: EDU gerçek yakıt basıncının istenen yakıt basıncından daha düşük olduğunu tespit ederseBu DTC verildiğinde yapılan işlem aşağıdaki gibidir: EGR kontrolünü engeller"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 204,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Yakıt Sistemiyle İlgili DTCS - P0088 Gerçek basınç İstenen basınç Sayfa 204 Zaman Olası nedenler şunlardır: • Hatalı dönüş boru devresi • Yakıt filtresi tıkanması • Arızalı enjektör sensörü veya sensör devresi • Arızalı basınç düşürme valfi • Arızalı yakıt besleme pompası • Arızalı yakıt enjektörü • Hatalı EDU Yakıt dağıtım borusu basıncı (MPa / psi) (2 trip) P0088 Yakıt Dağıtım Borusu/Sistem Basıncı - Çok Yüksek: EDU gerçek yakıt basıncının istenen yakıt basıncından daha yüksek olduğunu tespit ederseBu DTC verildiğinde yapılan işlem aşağıdaki gibidir. EGR kontrolünü engeller Önceden belirlenmiş değerden daha fazla"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 205,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Yakıt Sistemiyle İlgili DTCS - P0093 Zam an Yakıt dağıtım borusu basıncı (MPa / psi) Gerçek basınç DTC P0093 Yakıt Sisteminde Kaçak Tespit Edildi: EDU yakıt basıncının aşırı düşük olduğunu tespit eder Sayfa 205 Olası nedenler şunlardır: • Yakıt sızıntısı • Yakıt kaybı veya daha az yakıt veya arızalı yakıt hattı (Yakıt sisteminde hava var, yakıtın besleme pompasına düzgün akışı kesildi) • Arızalı enjektör sensörü veya sensör devresi • Arızalı yakıt besleme pompası • Arızalı yakıt enjektörü • Hatalı EDU (1 trip)"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 208,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Ön Isıtma (Kızdırma) Kontrol Sistemi • Kızdırma gösterge ışığı, motor soğutma suyu sıcaklığına bağlı olarak 0,5 saniye ile 11 saniye arasında yanar • 10 ºC (50 ºF) veya daha yüksek sıcaklıklarda 0,5 saniye yanar Parlama öncesi aşama: • Kızdırma rölesi, motor soğutma suyu sıcaklığına bağlı olarak 0,5 ila 17 saniye boyunca voltaj uygular • Motor soğutma suyu sıcaklığı 20 ºC (68 ºF) veya daha fazlaysa 0,5 saniye boyunca voltaj uygulanır Parlama aşamasından sonra: • Kızdırma rölesi, motor soğutma suyu sıcaklığına bağlı olarak 0,5 ila 18 saniye boyunca voltaj uygular • Motor soğutma suyu sıcaklığı 10 ºC (50 ºF) veya daha fazla ise 0,5 saniye boyunca voltaj uygulanır Tarama aleti veri ekranı • Kızdırma bujisi rölesi komutu Sayfa 208"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 213,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Egzoz Fren Solenoid Valfı Egzoz freni solenoid valfi Tarama aleti aktüatör testi • Egzoz freni testi Sayfa 213 Tarama aleti veri ekranı • Egzoz freni solenoid valfi röle komutu"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 215,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Motor Isınma Kontrol Sistemi Motoru daha hızlı ısıtmak ve düşük sıcaklıkta beyaz dumanı azaltmak için motor ısıtma sistemi benimsenmiştir. Egzoz basıncı motor yükünü artırır ve motordaki enerji silindir bloğu aracılığıyla soğutucuya iletilir. Aynı zamanda enjeksiyon miktarının artırılması egzoz sıcaklığını yükseltir, bu nedenle ısınma süresi de azaldı. ECM, aşağıdaki koşullar sağlandığında her bir valfi kapatmak için egzoz fren valfine ve emme gaz kelebeği valfine enerji verir: • Isınma anahtarı etkinleştirilir • Motor çalışıyor • Gaz pedalına basılmamış • Araç çalışmıyor • Motor soğutma suyu sıcaklığı yaklaşık 70 ºC (158 ºF) veya daha düşüktür İstenen motor rölanti devri aynı anda 1100 RPM'ye kadar yükselir. Tarama aleti veri ekranı • Isınma anahtarı durumu Sayfa 215"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 221,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor EGR Valfi • EGR valfi giriş manifolduna monte edilir • ECM, motorun çalışma durumuna bağlı olarak EGR valfinin açılma konumunu kontrol eder • EGR valfi, adım motoru ve valf parçasından oluşur • DC motor ile 60 adımda açılıp kapanabilir • EGR valfinin içindeki motor ECM'den gönderilen görev oranı sinyallerine göre kontrol edilir • Vana, görev oranı arttığında açılır ve görev oranı azaldığında kapanır • EGR valfi açık konumu, konum sensörleri tarafından 3 konumda algılanır • Konum sensörleri Hall IC sensörleridir • EGR valfi konumundaki değişikliklerle orantılı olarak, konum sensörleri çalışma durumuyla ilgili sinyaller verir Tarama aleti veri ekranı • Gerçek EGR valfi konumu (\"%\") • İstenen EGR valfi konumu (\"%\") Tarama aleti aktüatör testi • EGR Solenoid testi Sayfa 221"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 223,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor EGR Gaz Sıcaklık Sensörü • EGR gazı sıcaklık sensörü EGR soğutucu kanalına monte edilmiştir • Sıcaklık sensörü, EGR soğutucu çıkışındaki egzoz gazı sıcaklığını ölçer • Değişken bir dirençtir Tarama aleti veri ekranı • Hesaplanan EGR gazı sıcaklığı \"ºC\" veya \"ºF\" • Çıkış gerilimi EGR gazı sıcaklık sensöründe açık devre veya kısa devre ile ilgili bir DTC ayarlandığında \"ºC\" veya \"ºF\" fiziksel veri parametresi varsayılan bir değere sabitlenecektir. Bu DTC'yi diyagnoz etmekiçin,veri ekranındaki \"Volt \"u gözlemleyin. Egzoz gazı sıcaklığı Sensör direnci (Ω) Çıkış gerilimi (V) EGR sıcaklık sensörü Düşük Yüksek Yüksek Yüksek Düşük Düşük Sayfa 223"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 228,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Emme Gaz Kelebeği Valfi Tarama aleti aktüatör testi Emme gaz kelebeği valfinin yapışmasını kontrol etmek için Emme Gaz Kelebeği testi uygundur. Bu testin amacı, vananın komutla doğru şekilde hareket ettirilip ettirilmediğini kontrol etmektir. Konum farkı büyükse, yabancı maddeler, aşırı tortular, arızalı bir vana veya arızalı DC motor nedeniyle kısıtlanmış vana hareketi düşünülebilir. Tarama aleti veri ekranı • DC motor komutlu görev oranı • Gerçek emme gaz kelebeği valfi konumu (\"%\") • İstenen emme gaz kelebeği valfi konumu (\"%\") Solenoide KAPALI komutu verilirse Emme Gaz Kelebeği Konumu parametresi % 100'ün üzerinde gösterir. Sayfa 228"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 238,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Takviye Basınç Sensörü Tarama aleti veri ekranı • Gerçek mutlak takviye basıncı (\"kPa\" veya \"psi\") • İstenen mutlak takviye basıncı (\"kPa\" veya \"psi\") Takviye basınç sensöründe açık devre veya kısa devre ile ilgili bir DTC ayarlandığında \"kPa\" veya \"psi\" fiziksel veri parametresi varsayılan bir değere sabitlenir. Bu DTC'yi diyagnoz etmekiçin,veri ekranındaki \"Volt \"u gözlemleyin. Dikkat edin! Turbo şarjı nozulunun sıkışması durumu gibi takviye basıncı çok yüksekse, DTC P0234 verilecektir. Sayfa 238"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 239,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Şarj Havası Soğutucusu (CAC) Sıcaklık Sensörü CAC sıcaklık sensörü Sıcaklık (ºC) Sıcaklık (ºF) Direnç (Ω) 90 194 616.8 25 77 5,000 0 32 13,968 Sayfa 239"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 240,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Şarj Havası Soğutucusu (CAC) Sıcaklık Sensörü • CAC sıcaklık sensörü ara soğutucunun çıkış tarafına monte edilmiştir • Değişken bir dirençtir ve emme havası sıcaklığını ölçer Tarama aleti veri ekranı • Hesaplanan şarj havası soğutucusu çıkış sıcaklığı (\"ºC\" veya \"ºF\") • Çıkış gerilimi (V) CAC sıcaklık sensöründe açık devre veya kısa devre ile ilgili bir DTC ayarlandığında \"ºC\" veya \"ºF\" fiziksel veri parametresi varsayılan bir değere sabitlenecektir. Bu DTC'yi diyagnoz etmekiçin,veri ekranındaki \"Volt \"u gözlemleyin. Direnç Çıkış gerilimi CAC sıcaklık sensörü Düşük Düşük Yüksek Yüksek Sayfa 240"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 242,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 242 Turboşarj Çıkış Sıcaklık Sensörü • Turboşarj çıkış sıcaklık sensörü değişken bir dirençtir • Turboşarj çıkışının yakınındaki emme havası sıcaklığını ölçer • Bu sensör turboşarjı ve motoru korumak için kullanılır • Emme havası sıcaklığı yüksek olduğunda yakıt enjeksiyon miktarı azalacaktır Sıcaklık (ºC) Sıcaklık (ºF) Direnç (Ω) 250 482 587 - 642 100 212 3,483 - 4,110 -40 -40 113,200 - 169,300"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 243,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Veri Bağlantı Konektörü (DLC) Pim Açıklama 1 - 2 - 3 - 4 Ground 5 Ground 6 CAN yüksek (ISO CAN) 7 Anahtar Kelime (EHCU) 8 - 9 - 10 - 11 - 12 Diyagnostik talep anahtarı (ECM, SRS, IP- Cluster) 13 - 14 CAN düşük (ISO CAN) 15 Ek İletişim hattı (SRS) 16 Akü voltajı Sayfa 243"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 244,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor G-IDSS Tarama Aleti (ECM Menüsü) DTC • Diyagnostik Hata Kodlarını okuma ve silme Veri Görüntüleme • Veri parametrelerini sürekli olarak izleyin • Gerçek değerleri istenen değerlerle karşılaştırın Aktüatör Testi • Çeşitli elektronik kontrollü aktüatörlerin aktüatör testini gerçekleştirme Sayfa 244"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 245,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor G-IDSS Tarama Aleti (ECM Programlama • VIN'i ECM / EDU'ya programlayın • DPD rejenerasyon verilerini sıfırla Özel Fonksiyon • Sensör değişimlerinden sonra öğrenilen değerleri sıfırlama • 0 puanlık öğrenme Modül Bilgileri • Yazılım ve kalibrasyon numarasını okuyun Sayfa 245 Menüsü)"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 247,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Arıza Gösterge Işığı (MIL) • Arıza Gösterge Işığı gösterge paneli kümesinde bulunur • Açık komutu verildiğinde uyarı lambası motor sembolünü gösterecektir • Emisyonla ilgili bir arızanın (arıza çevrim tipi 1 & 2) meydana geldiğini gösterir • Kontrol motoru uyarı ışığı göstergeleri hakkında ayrıntılar için WSM'deki arıza sınıfına bakın Dikkat edin! EDU bir kontrol motoru uyarı ışığı talebi DTC(leri) verdiğinde EDU kontrol motoru uyarı ışığını yakmayı talep eder. ECM kontrol motoru uyarı lambası yanma talebi sinyalini algılarsa, DTC P06EC verilir. EDU DTC(ler)ini diyagnoz edin ve önce EDU'daki DTC(ler)i silin. Sayfa 247"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 249,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Arıza Teşhisi İlgili Açıklama Euro VI yönetmeliklerinde arızaya göre A, B1, B2 ve C olmak üzere 4 kategoriye ayrılan arıza sınıfları belirlenmiştir. Motor kontrol uyarı lambası ekran şekli sınıfa bağlı olarak değişir. Ayrıntılar için atölye kılavuzuna bakın. Buna ek olarak, geleneksel DTC tipi (A, B, C, D) gösterimleri aşağıdaki şekilde değiştirilmiştir. Önceki Yeni Işık Aydınlatma sürüş döngüsü (DCY) DTC Tip A Arıza Döngüsü Tip 1 1. DCY DTC Tip B Arıza Döngüsü Tip 2 2. DCY DTC Tip C Arıza Döngüsü Tip 3 1. DCY DTC Tip D Arıza Döngüsü Tip 4 Gösterge Yok - Arıza Döngüsü Tipi 5 2. DCY Sayfa 249"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 250,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 250 Arıza Sınıfı Arıza Sınıfı Tanımları OBD emisyonla ilgili bir arıza tespit ettiğinde, arızanın içeriğine ve ciddiyetine göre arızayı A, B1, B2 veya C Sınıfı olarak sınıflandırır. Her bir arıza sınıfı, yasalar tarafından belirlenen emisyon limitlerine göre standartlaştırılmıştır. Arıza Sınıf A Bir DTC kaydedilir. Bir arıza meydana geldiğinde, OBD eşik limitleri (OTL'ler) aşılır. Arıza Sınıf B1 Bir DTC kaydedilir. Bir arıza meydana geldiğinde, OBD eşik limitleri (OTL'ler) aşılabilir. Ancak, emisyonlar üzerindeki kesin etki tahmin edilemediğinden, koşullara göre gerçek emisyonlar OBD eşik sınırlarının (OTL'ler) üstünde veya altında olabilir. OBD sisteminin Sınıf A veya B1 arızalarını izlemesini engelleyen arızalar bu sınıfa dahildir."
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 251,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 251 Arıza Sınıfı Arıza Sınıfı B2 Bir DTC ayarlanır. Bir arıza meydana geldiğinde, emisyonları etkilediği varsayılsa da, OBD eĢik limitlerini (OTL'ler) aĢan bir seviye değildir. OBD sisteminin bu sınıftaki izlemeyi gerçekleştirme kabiliyetini kısıtlayan arızalar Sınıf B1 veya B2 olarak sınıflandırılacaktır. Arıza Sınıf C Bir arıza meydana geldiğinde, emisyonları etkilediği varsayılsa da, emisyon sınırlarını aşan bir seviye değildir. OBD sisteminin bu sınıftaki izlemeyi gerçekleştirme kabiliyetini kısıtlayan arızalar B1 veya B2 Sınıfı olarak sınıflandırılacaktır."
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 257,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 257 Diyagnostik Hata Kodu (DTC) Tip Tanımları (Arıza çevrimi 1 ve 2) 5 farklı DTC tipi mevcuttur (arıza çevrim tipi 1-5). Arıza döngüsü 1 ve 2 emisyonla ilgilidir. Arıza döngüsü 3, 4 ve 5 emisyonla ilgili değildir. DTC verildiğinde yapılan işlem (Arıza çevrimi tipi 1): • ECM, diyagnostik çalıştığında ve başarısız olduğunda kontrol motoru uyarı ışığını yakar • ECM, bir arıza tespit edildiğinde çalışma koşullarını kaydeder • ECM bu bilgiyi Çerçeveyi Dondur/Arıza Kayıtlarında saklar DTC verildiğinde yapılan işlem (Arıza çevrimi tipi 2) • Diyagnozun çalıştığı ve başarısız olduğu ikinci sürüş çevriminde ECM kontrol motoru uyarı lambasını yakar • ECM, bir arıza tespit edildiğinde çalışma koşullarını kaydeder • Diyagnostik ilk kez çalıştığında ve başarısız olduğunda, ECM bu bilgiyi Arıza Kayıtlarında saklar • Diyagnostik birbirini izleyen ikinci sürüş döngüsünde bir arıza rapor ederse, ECM arıza anındaki çalışma koşullarını kaydeder ve bu bilgiyi Çerçeveyi Dondur'da saklar ve Arıza Kayıtlarını günceller"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 258,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 258 Diyagnostik Hata Kodu (DTC) Tip Tanımları (Arıza çevrimi 1 ve 2) Kontrol motoru uyarı ışığını ve DTC'yi silme koşulu (Arıza çevrimi tipleri 1 ve 2): • Diyagnostik çalıştığında ve başarısız olmadığında, ECM arka arkaya 3 sürüş döngüsünden sonra kontrol motoru uyarı ışığını KAPATIR • Diyagnostik çalıştırıldığında ve geçtiğinde geçerli bir DTC silinir • Herhangi bir arıza bildirilmezse, DTC geçmişi 40 ardışık ısınma döngüsünden sonra silinir • Tarama aleti ile kontrol motoru uyarı ışığını ve DTC'yi silin"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 259,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 259 Diyagnostik Hata Kodu (DTC) Tip Tanımları (Arıza çevrim tipi 3) DTC verildiğinde yapılan işlem (Arıza çevrimi tipi 3): • ECM, diyagnostik çalıştığında ve başarısız olduğunda SVS gösterge ışığını yakar • ECM, bir arıza tespit edildiğinde çalışma koşullarını kaydeder • ECM bu bilgileri Arıza Kayıtlarında saklar SVS gösterge lambasının ve DTC'nin silinmesi için koşullar (Arıza çevrimi tip 3): • ECM, arıza teşhisi çalıştığında ve başarısız olmadığında 1 sürüş döngüsünden sonra SVS gösterge ışığını KAPATIR • Diyagnostik çalıştırıldığında ve geçtiğinde geçerli bir DTC silinir • Herhangi bir arıza bildirilmezse, DTC geçmişi 40 ardışık ısınma döngüsünden sonra silinir • SVS gösterge ışığını ve DTC'yi bir tarama aleti ile silin"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 260,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 260 Diyagnostik Hata Kodu (DTC) Tip Tanımları (Arıza çevrim tipi 4) DTC verildiğinde yapılan işlem (Arıza çevrimi tipi 4): • ECM kontrol motoru uyarı ışığını veya SVS gösterge ışığını yakmıyor • ECM, bir arıza tespit edildiğinde çalışma koşullarını kaydeder • ECM bu bilgileri Arıza Kayıtlarında saklar DTC'nin silinmesi için koşul (Arıza çevrimi tipi 4): • Diyagnostik çalıştırıldığında ve geçtiğinde geçerli bir DTC silinir • Herhangi bir arıza bildirilmezse, DTC geçmişi 40 ardışık ısınma döngüsünden sonra silinir • Tarama aleti ile temizleyin"
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "pdf_page": 261,
+    "tags": [
+      "4JZ1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "GENEL / PUBLIC 4JZ1 Motor Sayfa 261 Diyagnostik Hata Kodu (DTC) Tip Tanımları (Arıza çevrim tipi 4) DTC verildiğinde yapılan işlem (Arıza çevrim tipi 5): • ECM, diyagnostik çalıştığında ve başarısız olduğunda 2 ardışık sürüş döngüsünden sonra SVS gösterge ışığını yakar • ECM, bir arıza tespit edildiğinde çalışma koşullarını kaydeder • ECM bu bilgileri Arıza Kayıtlarında saklar SVS gösterge lambasının ve DTC'nin silinmesi için koşullar (Arıza çevrimi tipi 5): • ECM, diyagnostik çalıştığında ve başarısız olmadığında 2 sürüş döngüsünden sonra SVS gösterge ışığını KAPATIR • Diyagnostik çalıştırıldığında ve geçtiğinde geçerli bir DTC silinir • Herhangi bir arıza bildirilmezse, DTC geçmişi 40 ardışık ısınma döngüsünden sonra silinir • SVS gösterge ışığını ve DTC'yi bir tarama aleti ile silin"
+  },
+  {
+    "document_key": "ISUZU_4HK1_ENGINE_TM",
+    "pdf_page": 28,
+    "tags": [
+      "4HK1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "Item Engine model 4HK1 Type Diesel/ 4-cycle /water cooling, inline 4 cylinder OHC Shape of combustion chamber Direct injection type Cylinder liner type Dry type Cylinder bore x stroke 115 mm {4.53 in} × 125 mm {4.92 in} Displacement 5.193 L ｛316.88 cu・in｝ Compression ratio 17.5 Compression pressure ： 3.23 MPa { 32.9 kgf/cm2 / 468 psi } 3.23 MPa {32.9 kgf/cm2 / 468 psi} Idling rotation speed 800 r/min valve clearance Intake ： 0.4 mm { 0.016 in } While cool Exhaust ： 0.4 mm { 0.016 in } While cool Ignition method Compression ignition Injection order 1,3,4,2 Lubricant system Lubricating type Pressure type Oil pump type Gear type Lubrication oil amount ： 20 to 27 L { 5.2 to 7.1 US gal } Oil filter type Full-flow / partial-flow united filter (cartridge type) Oil cooling type Built-in type, water cooled Cooling system Cooling type Water cooling Radiator type Corrugated fin (pressure type) Water pump type Centrifugal, belt type Thermostat type 2 wax type unit Open valve temperature of the thermostat valve ： 82.0 ℃ { 180 °F } Without jiggle valve ： 85.0 ℃ { 185 °F } With jiggle valve Coolant container ： 14.5 L { 3.8 US gal } fuel system Injection pump type Electronic control common rail type Governor type Electronic type Timer type Electronic type Injection nozzle type Multi-hole type 7 holes, inner diameterφ0.14mm {0.0055 in} Charging system Generator type AC type Output 24 V/50 A Regulator type IC Starting system Starter type Reduction type Output 24 V/5.0 kW Preheat system type glow plug Glow plug standard voltage/current 23 V/3.5 A Cleaning system main specifications Maintenance Information (4HK1) 15B-3"
+  },
+  {
+    "document_key": "ISUZU_4HK1_ENGINE_TM",
+    "pdf_page": 29,
+    "tags": [
+      "4HK1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "Item Specifications water pump Centrifugal impeller method Pulley ratio 0.950 thermostat Wax pellet type Open valve temperatur ： 85.0 ℃ { 185 °F } With jiggle valve ： 82.0 ℃ { 180 °F } Without jiggle valve Full-open temperature ： 100.0 ℃ { 212 °F } With jiggle valve ： 95.0 ℃ { 203 °F } Without jiggle valve Electrical system main specifications generator Item Specifications Isuzu parts number 8980921161 Nominal output 24 V/50 A Rated rotation count 5,000 r/min Regulator type IC type Regulated voltage 28.5 V±1 weight ： 9.5 kg { 20.9 lb } starter Type (Manufacturer) Nikko Rating voltage 24V Output 5 KW Time 30 sec Number of pinion teeth 13 Rotational direction (facing the pinion) Right Weight (Approx.) ： 8.0 kg { 17.6 lb } No-load characteristics Current/voltage 85 A or less/24 V Revolution speed 3,300 r/min or more Load characteristics Current/voltage 400 A/18.5 V Torque 28.4N・m{2.9kgf・m} or more Revolution speed 1,250 r/min or more Locking characteristics Current/voltage 1,400 A or less/9 V Torque 88.2N・m{9.0kgf・m} or more glow plug Item Type Preheat device model glow plug Glow plug rated voltage/current 23 V/3.5 A 15B-4 Maintenance Information (4HK1)"
+  },
+  {
+    "document_key": "ISUZU_4HK1_ENGINE_TM",
+    "pdf_page": 93,
+    "tags": [
+      "4HK1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "HITACHI Construction Machinery Company The purpose of data list is for checking the status of the actual unit and equipment. This data is used in trouble diagnosis by comparing the each unit data with standard values, and checking whether the vehicle data is temporarily or always different from the reference values. This display menu is subject to change without notice. Non-operational P rotation Data display items Units Non operation P rotation reference value It varies depending on the actual machine condition Battery voltage V 28.3 - 28.5 Target engine rpm RPM 500 Engine rpm RPM 1,797 - 1,801 Accelerator pedal position sensor 1 (APP1) V 0..0 Accelerator pedal position sensor 2 (APP2) V 0..0 Accelerator pedal position (APP) ％ 0 Fuel rail pressure sensor V 2.0 - 2.1 Fuel rail pressure feedback Feedback mode Coolant temperature sensor V 0.4 - 0.5 Coolant temperature ℃ 80 - 83 Intake temperature sensor V 2.4 Intake air temperature ℃ 27 Fuel temperature sensor V 1.3 Fuel temperature ℃ 44 barometric pressure sensor V 1.9 Atmospheric pressure kPa 100 Boost temperature sensor voltage V 4.4 Boost pressure sensor kPa 118 - 119 First cylinder fuel correction amount mm3/st - Second cylinder fuel correction amount mm3/st - Third cylinder fuel correction amount mm3/st - Fourth cylinder fuel correction amount mm3/st - Engine mode Fuel mode EGR valve 1 drive duty ％ 0 EGR position 1 ON/OFF Reverse the polarity of either 1, 2, or 3 (Example: 1=ON, 2=ON, 3=OFF, etc) EGR position 2 ON/OFF Reverse the polarity of either 1, 2, or 3 (Example: 1=ON, 2=ON, 3=OFF, etc) EGR position 3 ON/OFF Reverse the polarity of either 1, 2, or 3 (Example: 1=ON, 2=ON, 3=OFF, etc) Ignition switch ON/OFF ON starter switch ON/OFF OFF glow relay ON/OFF OFF ON immediately after the starter switch ON Q adjustment compensation data 1 - This differs depending on the actual unit. Q adjustment compensation data 2 - This differs depending on the actual unit. Q adjustment compensation data 3 - This differs depending on the actual unit. 15B-68 Maintenance Information (4HK1)"
+  },
+  {
+    "document_key": "ISUZU_4HK1_ENGINE_TM",
+    "pdf_page": 94,
+    "tags": [
+      "4HK1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "Two pump relief Data display items Units Two Pump Relief reference value varies according to actual unit conditions Battery voltage V 28.4 - 28.5 Target engine rpm RPM 500 Engine rpm RPM 1,898 - 1,901 Accelerator pedal position sensor 1 (APP1) V 0..0 Accelerator pedal position sensor 2 (APP2) V 0..0 Accelerator pedal position (APP) ％ 0 Fuel rail pressure difference (actual – target) MPa - Fuel rail pressure sensor V 3.3 - 3.5 Fuel rail pressure feedback Feedback mode Coolant temperature sensor V 0.4 Coolant temperature ℃ 83 - 85 Intake temperature sensor V 2.2 Intake air temperature ℃ 27 Fuel temperature sensor V 1.3 Fuel temperature ℃ 43 - 44 barometric pressure sensor V 1.9 Atmospheric pressure kPa Approx. 100 Boost temperature sensor voltage V 4.3 Boost pressure sensor kPa 203 - 210 First cylinder fuel correction amount mm3/st - Second cylinder fuel correction amount mm3/st - Third cylinder fuel correction amount mm3/st - Fourth cylinder fuel correction amount mm3/st - Engine mode Fuel mode EGR valve 1 drive duty ％ 19 EGR position 1 ON/OFF Reverse the polarity of either 1, 2, or 3 (Example: 1=ON, 2=ON, 3=OFF, etc) EGR position 2 ON/OFF Reverse the polarity of either 1, 2, or 3 (Example: 1=ON, 2=ON, 3=OFF, etc) EGR position 3 ON/OFF Reverse the polarity of either 1, 2, or 3 (Example: 1=ON, 2=ON, 3=OFF, etc) Ignition switch ON/OFF ON starter switch ON/OFF OFF glow relay ON/OFF OFF ON immediately after the starter switch ON Q adjustment compensation data 1 - This differs depending on the actual unit. Q adjustment compensation data 2 - This differs depending on the actual unit. Q adjustment compensation data 3 - This differs depending on the actual unit. Maintenance Information (4HK1) 15B-69"
+  },
+  {
+    "document_key": "ISUZU_4HK1_ENGINE_TM",
+    "pdf_page": 224,
+    "tags": [
+      "4HK1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "DTC mapping table 1. DTC mapping table DTC Information (4HK1) 15E-95"
+  },
+  {
+    "document_key": "ISUZU_4HK1_ENGINE_TM",
+    "pdf_page": 225,
+    "tags": [
+      "4HK1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "SPN-FMI P code 636-7 P0016 Crankshaft Position - Camshaft Position Correlation 10023-12 P0045 Turbocharger Boost Control Solenoid Circuit 633-7 P0087 Fuel Rail/System Pressure - Too Low 157-16 P0088 Fuel Rail/System Pressure - Too High 157-0 157-15 P0089 Fuel Pressure Regulator Performance 1347-4 P0091 Fuel Pressure Regulator Control Circuit Low 1347-3 P0092 Fuel Pressure Regulator Control Circuit High 1239-1 P0093 Fuel System Leak Detected 132-4 P0102 Mass Air Flow Circuit Low Input 132-3 P0103 Mass Air Flow Circuit High Input 172-4 P0112 Intake Air Temperature Sensor Circuit Low 172-3 P0113 Intake Air Temperature Sensor Circuit High 110-4 P0117 Engine Coolant Temperature Sensor Circuit Low 110-3 P0118 Engine Coolant Temperature Sensor Circuit High 10022-4 P0122 Throttle Position Sensor Circuit Low 10022-3 P0123 Throttle Position Sensor Circuit High 174-4 P0182 Fuel Temperature Sensor Circuit Low 174-3 P0183 Fuel Temperature Sensor Circuit High 157-4 P0192 Fuel Rail Pressure Sensor Circuit Low 157-3 P0193 Fuel Rail Pressure Sensor Circuit High 651-5 P0201 Injector Circuit - Cylinder 1 652-5 P0202 Injector Circuit - Cylinder 2 653-5 P0203 Injector Circuit - Cylinder 3 654-5 P0204 Injector Circuit - Cylinder 4 110-0 P0217 Engine Coolant Over Temperature Condition 190-0 P0219 Engine Overspeed Condition 102-0 P0234 Turbocharger Overboost Condition 102-4 P0237 Turbocharger Boost Sensor Circuit Low Input 102-3 P0238 Turbocharger Boost Sensor Circuit High Input 723-2 P0335 Crankshaft Position Sensor Circuit 723-2 P0336 Crankshaft Position Sensor Circuit Range/Performance 636-2 P0340 Camshaft Position Sensor Circuit 10002-2 P0404 Exhaust Gas Recirculation Control 1 Circuit Range/Performance 10001-2 P0409 Exhaust Gas Recirculation 1 Sensor Circuit 1131-3 P041C Manifold Air Temperature Circuit High Input 1131-4 P041D Manifold Air Temperature Circuit Low Input 173-0 P0426 Catalyst Temperature 1 Too High 173-4 P0427 Catalyst Temperature Sensor Circuit Low Sensor 1 173-3 P0428 Catalyst Temperature Sensor Circuit High Sensor 1 10028-0 P042B Catalyst Temperature 2 Too High 10024-4 P042C Catalyst Temperature Sensor Circuit Low Sensor 2 10024-3 P042D Catalyst Temperature Sensor Circuit High Sensor 2 100-4 P0522 Oil Pressure Sensor Circuit Low Input 15E-96 DTC Information (4HK1)"
+  },
+  {
+    "document_key": "ISUZU_4HK1_ENGINE_TM",
+    "pdf_page": 226,
+    "tags": [
+      "4HK1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "100-3 P0523 Oil Pressure Sensor Circuit High Input 10012-2 P0560 System Voltage 158-3 P0563 System Voltage High 628-2 P0601 Internal Control Module Memory Check Sum Error 10032-2 P0602 Control Module Programming Error 10033-2 P0604 Internal Control Module Random Access Memory (RAM) 1077-2 P0606 ECM/PCM Processor 10007-2 10008-2 P060B Internal Control Module A/D Processing Performance 10022-2 P0638 Throttle Actuator Control Range/Performance 1079-2 P0641 Sensor Reference Voltage 1 Circuit 987-5 P0650 Malfunction Indicator Lamp (MIL) Control Circuit 1080-2 P0651 Sensor Reference Voltage 1 Circuit 1485-5 P0685 ECM/PCM Power Relay Control Circuit /Open 1485-6 P0687 ECM/PCM Power Relay Control Circuit High 10009-2 P0697 Sensor Reference Voltage 1 Circuit 1239-17 P1093 Fuel Rail Pressure (FRP) Too Low 105-4 P1112 Boost Temperature Sensor Circuit Low Input 105-3 P1113 Boost Temperature Sensor Circuit High Input 10005-1 P1261 Fuel Injector Group 1 Supply Voltage Circuit 10006-1 P1262 Fuel Injector Group 2 Supply Voltage Circuit 1381-4 P1293 Fuel Intake Pressure Sensor Circuit Low Input 1381-3 P1294 Fuel Intake Pressure Sensor Circuit High Input 10001-13 P1404 Exhaust Gas Recirculation (EGR) 1 Closed Position Performance 10026-0 P1455 PM Over Accumulation 10027-0 P1471 DPD Insufficient Regeneration 10013-2 P1621 Control Module Long Term Memory Performance 10010-2 P1655 Sensor Reference Voltage 1 Circuit 10025-5 P1669 DPD Lamp Control Circuit 91-4 P2122 Pedal Position Sensor 1 Circuit Low Input 91-3 P2123 Pedal Position Sensor 1 Circuit High Input 91-4 P2127 Pedal Position Sensor 2 Circuit Low Input 91-3 P2128 Pedal Position Sensor 2 Circuit High Input 91-2 P2138 Pedal Position Sensor 1 - 2 Voltage Correlation 10003-2 P2146 Fuel Injector Group 1 Supply Voltage Circuit 10004-2 P2149 Fuel Injector Group 2 Supply Voltage Circuit 108-4 P2228 Barometric Pressure Circuit Low 108-3 P2229 Barometric Pressure Circuit High 10026-15 P242F DPD Restriction 81-1 P2452 DPD Differential Pressure Sensor Circuit 81-0 P2453 DPD Differential Pressure Sensor Circuit Range/Performance 81-4 P2454 DPD Differential Pressure Sensor Circuit Low 81-3 P2455 DPD Differential Pressure Sensor Circuit High 81-2 P2456 DPD Differential Pressure Sensor Learned Position 10029-0 P2458 DPD Regeneration Duration DTC Information (4HK1) 15E-97"
+  },
+  {
+    "document_key": "ISUZU_4HK1_ENGINE_TM",
+    "pdf_page": 227,
+    "tags": [
+      "4HK1",
+      "PROJECT_RELEVANT"
+    ],
+    "text": "10040-19 U0001 CAN Bus Error (ISO-CAN) 639-19 U0073 CAN Bus Error (J1939) Control Module Communication Bus Off 639-2 U0101 Lost Communication With Transmission Control Module 10023-2 U0110 Lost Communication With VNT System 10023-19 U0411 VNT Communication 15E-98 DTC Information (4HK1)"
+  },
+  {
+    "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+    "pdf_page": 18,
+    "tags": [
+      "4HK1",
+      "SPEC/TROUBLESHOOTING"
+    ],
+    "text": "Engine Mechanical (4HK1-TC) 6A-15 Main Data and Specifications Item Engine model 4HK1-TCS Engine model 4HK1-TCN Type Diesel/4-cycle/water cooling type in-line OHC Diesel/4-cycle/water cooling type in-line OHC Combustion chamber type Direct injection type Direct injection type Cylinder liner type Dry type Dry type Number of cylinders -cylinder bore × strokes mm (in) 4-115 (4.53) × 125 (4.92) 4-115 (4.53) × 125 (4.92) Displacement cc (cu.in) 5193(317) 5193(317) Compression ratio 17.5 17.5 Compression pressure MPa (kg/cm2/ psi)/rpm 2.60 – 2.90 (26.5 – 29.5/377 – 421)/220 2.60 – 2.90 (26.5 – 29.5/377 – 421)/220 Idling speed rpm 650 (Smoother) 575 (MT) 650 (Smoother) 575 (MT) Valve clearance Intake 0.4 (0.016) (cold) 0.4 (0.016) (cold) mm (in) Exhaust 0.4 (0.016) (cold) 0.4 (0.016) (cold) Ignition type Compressed ignition Compressed ignition Injection order 1 - 3 - 4 - 2 1 - 3 - 4 - 2 Injection timing (TDC) 0° 0° Lubricating system Lubricating type Pressure type Pressure type Oil pump type Gear type Gear type Volume of lubricating oil Liters (US/Imp gal.) 13.0 (3.43/2.86) 13.0 (3.43/2.86) Oil filter type Full flow filter (cartridge type) Full flow filter (cartridge type) Oil cooling type Built-in-type, water cooling Built-in-type, water cooling Cooling system Cooling type Water cooling type Water cooling type Radiator type Corrugated fin(pressure type) Corrugated fin(pressure type) Water pump type Centrifugal, belt type Centrifugal, belt type Thermostat type 2 wax-type units 2 wax-type units Thermostat valve-opening temperature °C (°F) 82 (180), 85 (185) 82 (180), 85 (185) Volume of coolant Liters (US/Imp gal.) 18 (4.76/3.96) (incl. radiator) 18 (4.76/3.96) (incl. radiator) Fuel system Injection pump type Electronic control common rail type Electronic control common rail type Governor type Electronic type Electronic type Timer type Electronic type Electronic type"
+  },
+  {
+    "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+    "pdf_page": 19,
+    "tags": [
+      "4HK1",
+      "SPEC/TROUBLESHOOTING"
+    ],
+    "text": "6A-16 Engine Mechanical (4HK1-TC) Special Tool Injection nozzle type Multi-hole type 7-holes φ0.14 mm (0.0055 in) inside diameter Multi-hole type 7-holes φ0.14 mm (0.0055 in) inside diameter Charging system Generator type AC type AC type Power output V-A 24 - 80, 24 - 50 24 - 80, 24 - 50 Regulator type IC IC Starting system Starter type Reduction type Reduction type Power output V-kw 24 - 4.5 24 - 4.5 Preheat system type Glow plug Glow plug Glow plug standard voltage/ electric current V 24 24 Item Engine model 4HK1-TCS Engine model 4HK1-TCN Illustration Tool Number / Description / Remarks 5-8840-2008-0 Compression Gauge Set (J-26999-12 / Compression Gauge, EN-46722 / Gauge Adapter) 5884020080"
+  },
+  {
+    "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+    "pdf_page": 181,
+    "tags": [
+      "4HK1",
+      "SPEC/TROUBLESHOOTING"
+    ],
+    "text": "Cooling System 6B-7 Coolant scooping method • Measure the concentration using the coolant scoop. A List of Defective Phenomena • Engine overheats • Engine overcools Engine overheats Engine overcools Main Data and Specifications Main Data and Specifications Condition Possible Cause Correction Engine overheats. Low coolant level Add. Engine oil shortage or use of improper oil Add or change engine oil. Loose fan belt Adjust or replace fan belt. Too much fuel injection quantity. Diagnose the engine control system. Defective radiator cap Replace. Clogging of radiator Clean or replace. Clogging of exhaust system Clean or replace. Defective thermostat Replace. Defective water pump Replace. Defective cylinder head gasket Replace. Condition Possible Cause Correction Engine overcools Thermostat is defective. Replace. Cooling methods Forced circulation system Radiator Tubes with corrugated fins Radiation capacity kW (kcal/h) 127 (109200) Radiation area m2 (ft2) 18.15 (195.4) Frontal area m2 (ft2) 0.365 (3.93) Dry mass N (lb) 177 (39.7) Radiator cap Valve opening pressure kPa (kg/cm2 / psi) 108 ± 14.7 (1.1 ± 0.15 / 15.7 ± 2.1) Cooling water capacity Liters (US / Imp gal.) 3.2 (0.85 / 0.70) Water pump Centrifugal impeller system Pulley ratio 1.190 Thermostat Wax pellet system Valve opening temperature °C (°F) With jiggle valve 85 (185) Without jiggle valve 82 (180) Temperature when fully open °C (°F) With jiggle valve 100 (212) Without jiggle valve 95 (203) Cooling water total capacity Liters (US / Imp gal.) 18 (4.76 / 3.96)"
+  },
+  {
+    "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+    "pdf_page": 259,
+    "tags": [
+      "4HK1",
+      "SPEC/TROUBLESHOOTING"
+    ],
+    "text": "6D-18 Engine Electrical Main Data and Specifications Rated Voltage 24 V Rated Output 50/80 amp Rated Output at 5000 RPM More than 42/75 amp Regulated Voltage 28.0 – 29.0 V Brush Length Standard 25 mm (0.984 in) Limit 6.5 mm (0.256 in) Slip Ring Diameter Standard 31.7 mm (1.248 in) Limit 30.6 mm (1.205 in) Generator Pulley Direction (Viewed From Pulley Side) Clockwise Pulley Pulley Diameter 82 mm (3.23 in) Generator Weight (With Vacuum Pump) 50A: 7.4 kg (16.3 lb) 80A: 9.6 kg (21.2 lb) Maximum Vacuum Pump Output 90.7 kPa (0.29 kg/cm2 / 13.2 psi) Vacuum Pump Vane Standard Length 17.0 – 18.0 mm (0.669 – 0.709 in) Vacuum Pump Housing Inside Diameter Standard 69.5 – 69.6 mm (2.736 – 2.740 in)"
+  },
+  {
+    "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+    "pdf_page": 278,
+    "tags": [
+      "4HK1",
+      "SPEC/TROUBLESHOOTING"
+    ],
+    "text": "Engine Electrical 6D-37 A List of Defective Phenomena • The glow indicator lamp does not light up. • Preheating does not work. • The preheating time is too long or too short. Trouble Shooting 1. The glow indicator lamp does not light up. 2. Preheating does not work. 3. Preheating time is too long or too short. Main Data and Specifications N6A6429E Condition Possible Cause Correction The glow indicator lamp does not light up. Slow blow fuse has blown. Replace the slow blow fuse. Fuse is unavailable. Replace the fuse. Indicator valve is burnt out. Replace the indicator valve. Engine control system is faulty. Refer to Section 6E. Condition Possible Cause Correction Preheating does not work. Slow blow fuse has blown. Replace the slow blow fuse. Defective or faulty glow plug relay connector contact. Re-mount or replace the glow plug relay. Engine control system is faulty. Refer to Section 6E. Condition Possible Cause Correction The Preheating time is too long or too short. Thermosensor fault and break in circuit or short circuit. Replace the thermosensor. Repair the circuit. Fault in glow plug. Replace or tighten the glow plug. Engine control system is faulty. Refer to Section 6E. Preheating device model Glow plug Glow plug rated voltage (V) 24"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_CRS_2011",
+    "pdf_page": 25,
+    "tags": [
+      "4HK1",
+      "DTC_LIST"
+    ],
+    "text": "Operation Section 1–21 8. Diagnostic Trouble Codes (DTC) 8.1 DTC List DTC Detection Item P000F Rail pressure too low P0016 Crankshaft position-intake camshaft position correlation bank 1 P0027 Exhaust brake valve stick Exhaust throttle valve stick P003A Variable Geometry Turbo (VGT) module wiping too wide error P0045 VGT module motor circuit short and GND short/position control abnormal/power supply voltage high error P0046 VGT module control response abnormal P006E VGT module power supply voltage low error P0079 Exhaust throttle GND short P007C Charge Air Cooler (CAC) out temperature sensor circuit low voltage P007D CAC out temperature sensor circuit high voltage P0080 Exhaust throttle +B short P0087 Rail pressure low during power enrichment P0088 Rail pressure too high Fuel pressure regulator 1 performance P0089 Rail pressure exceeds high upper limit P0091 Rail fuel pressure regulator solenoid 1 control circuit P0092 Rail fuel pressure regulator solenoid 1 control circuit P0093 Rail fuel pressure low during idle or deceleration fuel cut-off P0097 Intake manifold temperature sensor 2 circuit low P0098 Intake manifold temperature sensor 2 circuit high P00AF VGT module memory access abnormal P0101 Mass Air Flow (MAF) meter rationality low MAF meter rationality high P0102 MAF meter circuit low P0103 MAF meter circuit high P0112 Intake air temperature sensor circuit low P0113 Intake air temperature sensor circuit high P0116 Engine coolant temperature sensor performance P0117 Engine coolant temperature sensor circuit low P0118 Engine coolant temperature sensor circuit high P011C CAC temperature outlet sensor surveillance P0126 Engine coolant temperature insufficient for stable operation https://truckmanualshub.com/"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_CRS_2011",
+    "pdf_page": 26,
+    "tags": [
+      "4HK1",
+      "DTC_LIST"
+    ],
+    "text": "Operation Section 1–22 P0128 Engine coolant temperature below thermostat regulating temperature P0171 Injector quantity lean performance P0172 Injector quantity rich performance P0181 Fuel temperature sensor intermediate hold P0182 Fuel temperature sensor A circuit low P0183 Fuel temperature sensor A circuit high P018B Rail pressure sub-sensor signal keeping the middle range Rail pressure sub-sensor performance 1 Rail pressure sub-sensor performance 2 P018C Rail pressure sub-sensor circuit low voltage P018D Rail pressure sub-sensor circuit high voltage P0191 Rail pressure sensor signal keeping the middle range Rail pressure sensor performance 1 Rail pressure sensor performance 2 P0192 Rail pressure sensor circuit low voltage P0193 Rail pressure sensor circuit high voltage P0201 TWV 1 output open load injector #1 coil open P0202 TWV 4 output open load injector #2 coil open P0203 TWV 2 output open load injector #3 coil open P0204 TWV 3 output open load injector #4 coil open P020A Injector #1 quantity increase failure Injector #1 quantity decrease failure P020B Injector #2 quantity increase failure Injector #2 quantity decrease failure P020C Injector #3 quantity increase failure Injector #3 quantity decrease failure P020D Injector #4 quantity increase failure Injector #4 quantity decrease failure P0219 Engine overrun Engine overrun 2 P0234 Turbo/supercharger engine overboost P0237 Turbo/supercharger boost sensor A circuit low P0238 Turbo/supercharger boost sensor A circuit high P0261 Injector #1 (TWV 1) load short (coil short/terminal short) P0264 Injector #4 (TWV 4) load short (coil short/terminal short) P0267 Injector #2 (TWV 2) load short (coil short/terminal short) P0270 Injector #3 (TWV 3) load short (coil short/terminal short) P0299 Turbo/supercharger engine underboost P02E2 ITHR DC motor output open load motor open load DTC Detection Item https://truckmanualshub.com/"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_CRS_2011",
+    "pdf_page": 27,
+    "tags": [
+      "4HK1",
+      "DTC_LIST"
+    ],
+    "text": "Operation Section 1–23 P02E3 ITHR DC motor output short to battery/short to GND motor short P02E7 Intake throttle stuck closed Intake throttle stuck open Intake throttle open learning error Intake throttle closed learning error P02E8 Intake throttle position too low P02E9 Intake throttle position too high P0300 Engine misfire detected P0301 Cylinder 1 misfire detected P0302 Cylinder 2 misfire detected P0303 Cylinder 3 misfire detected P0304 Cylinder 4 misfire detected P0335 Crankshaft position sensor A circuit P0336 Crankshaft position sensor A performance P0340 Intake camshaft position sensor circuit bank 1 P0341 Intake camshaft position sensor performance bank 1 P0381 Wait to start light control module internal circuit (short to BATT) Wait to start light control module internal circuit (open load/short to GND) P0401 MAF meter performance (Exhaust Gas Recirculation [EGR] negative deviation) P0402 MAF meter performance (EGR positive deviation) P0403 EGR duty error EGR brushless motor circuit too high EGR brushless motor circuit too low EGR brushless motor circuit too open P0404 EGR open position performance P0405 EGR brushless motor position sensor signal invalid low P0406 EGR brushless motor position sensor signal invalid high P040B EGR gas sensor performance P040C EGR gas temperature too low P040D EGR gas temperature too high P041B EGR gas sensor 2 performance P041C EGR gas temperature 2 too low P041D EGR gas temperature 2 too high P0420 DPF deterioration 2 P042E EGR closed position performance P046C EGR closed learning P0500 Vehicle speed sensor circuit P0506 Low target idle speed P0507 High target idle speed DTC Detection Item https://truckmanualshub.com/"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_CRS_2011",
+    "pdf_page": 28,
+    "tags": [
+      "4HK1",
+      "DTC_LIST"
+    ],
+    "text": "Operation Section 1–24 P0512 Starter switch short to BATT P0522 Oil pressure sensor signal too low P0523 Oil pressure sensor signal too high P0545 Exhaust gas temperature before oxidation catalyst too low P0546 Exhaust gas temperature before oxidation catalyst too high P0562 System low voltage status determination P0563 System high voltage status determination P0567 Cruise control resume switch determination P0568 Cruise control set switch determination P0571 Cruise control brake switch determination P0602 QR code error P0606 Engine ECU processor (main CPU fault) Engine ECU processor (watchdog IC fault) P062F Control module long term memory performance P0642 Battery 5 V reference 1 circuit low P0643 Battery 5 V reference 1 circuit high P064C Glow plug module control circuit Glow plug module INTST Glow plug module MEEPST P0650 Malfunction Indicator Lamp (MIL) control circuit monitoring (short to BATT) MIL control circuit monitoring (open load/short to GND) P0652 Battery 5 V reference 2 circuit low P0653 Battery 5 V reference 2 circuit high P0671 Cylinder 1 glow plug circuit P0672 Cylinder 2 glow plug circuit P0673 Cylinder 3 glow plug circuit P0674 Cylinder 4 glow plug circuit P0687 Main relay diagnostics; main relay stuck closed P0698 Battery 5 V reference 3 circuit low P0699 Battery 5 V reference 3 circuit high P0700 Transmission control module requested MIL illumination monitoring P1072 Compressor outlet temperature sensor circuit low voltage P1073 Compressor outlet temperature sensor circuit high voltage P1076 CAC in temperature sensor circuit low voltage P1077 CAC in temperature sensor circuit high voltage P1078 CAC temperature inlet sensor surveillance P1085 Supply pump protection Supply pump exchange P1102 Rail pressure sensor performance (correlation abnormal) DTC Detection Item https://truckmanualshub.com/"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_CRS_2011",
+    "pdf_page": 29,
+    "tags": [
+      "4HK1",
+      "DTC_LIST"
+    ],
+    "text": "Operation Section 1–25 P1125 Accelerator Pedal Position (APP) system P113A O2 signal of NOx sensor rationality P1236 CAC performance P1259 Rail fuel pressure low during power enrichment P1261 Capacitor charge-up circuit malfunction (insufficient charge) Capacitor charge-up circuit malfunction (excessive charge) P1463 DeNOx-DS error for SVS lighting request P1470 DPF exhaust presser performance P1471 DPF regeneration insufficiency P160B Q DATA cross check error P2002 DPF deterioration (II) P2032 Exhaust gas temperature before DPF too low P2033 Exhaust gas temperature before DPF too high P20C9 DeNOx-DS error for MIL lighting request P20CB Exhaust injector circuit GND short/open load P20CC Exhaust injector circuit BATT short Exhaust injector circuit load short P20CF Exhaust injector performance P20DE Exhaust injector pressure sensor performance high Exhaust injector pressure sensor performance low P20DF Exhaust injector pressure sensor circuit low voltage P20E0 Exhaust injector pressure sensor circuit high voltage P20E2 Exhaust gas temperature sensor surveillance P2122 Accelerator pedal position sensor no. 1 low range P2123 Accelerator pedal position sensor no. 1 high range P2127 Accelerator pedal position sensor no. 2 low range P2128 Accelerator pedal position sensor no. 2 high range P2138 Accelerator pedal position sensor no. 1 & 2 correlation check P2146 COM 1 output open load; Both TWV 1 and 3 (and 5) open load P2147 COM 1 output short to GND; TWV 1 or 3 (or 5) output short to GND P2148 COM 1 output short to BATT; TWV 1 or 3 (or 5) output short to BATT P2149 COM 2 output open load; Both TWV 2 or 4 (or 6) open load P2150 COM 2 output short to GND; TWV 2 or 4 (or 6) output short to GND P2151 COM 2 output short to BATT; TWV 2 or 4 (or 6) output short to BATT P2199 THA-THA 2 sensor surveillance P2227 Barometric pressure (BARO) sensor performance P2228 Barometric pressure (BARO) sensor circuit low voltage P2229 Barometric pressure (BARO) sensor circuit high voltage P2262 Turbo/supercharger engine underboost DTC Detection Item https://truckmanualshub.com/"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_CRS_2011",
+    "pdf_page": 30,
+    "tags": [
+      "4HK1",
+      "DTC_LIST"
+    ],
+    "text": "Operation Section 1–26 P2263 VGT slow response up side VGT slow response down side P226B Turbo/supercharger engine overboost P2413 EGR slow response ON EGR slow response OFF P2428 Exhaust gas temperature sensor before oxidation catalyst too high Exhaust gas temperature sensor before oxidation catalyst too low P244B DPF PM over accumulation P244C DPF deterioration P244D Exhaust gas temperature sensor before DPF too high Exhaust gas temperature sensor before DPF too low P2453 DPF pressure sensor performance P2454 Exhaust gas pressure reference too low P2455 Exhaust gas pressure reference too high P2457 EGR cooler inferiority P2459 DPF regeneration excessive frequency P2463 DPF trip over accumulation P254C Auxiliary engine RPM sensor circuit low P254D Auxiliary engine RPM sensor circuit high P2564 VGT hole IC sensor circuit low P2565 VGT hole IC sensor circuit high P256C Idle Air Control (IAC) valve control circuit low voltage P256D IAC valve control circuit high voltage P268A QR code not programmed U0001 CAN bus 2 reset counter overrun U0073 CAN bus reset counter overrun U0101 Lost CAN communication (CAN SOH) with TM control system U0106 Glow plug module communication failure U010C VGT module communication failure U010E DeNOx-DS communication time-out U0121 CAN ABS SOH diagnostic U0307 GPCM engine ID diagnostic DTC Detection Item https://truckmanualshub.com/"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "pdf_page": 33,
+    "tags": [
+      "4HK1/6HK1",
+      "DTC_OR_PIN"
+    ],
+    "text": "-31- 3-4. Engine ECU A. Diagnosis Codes a. 4HK1 DTC Code Code Description P0643 Analog Sensor Reference Voltage Output No.1 Too High P0642 Analog Sensor Reference Voltage Output No.1 Too Low P0653 Analog Sensor Reference Voltage Output No.2 Too High P0652 Analog Sensor Reference Voltage Output No.2 Too Low P0699 Analog Sensor Reference Voltage Output No.3 Too High P0698 Analog Sensor Reference Voltage Output No.3 Too Low P0118 Coolant Temp. Sensor Signal Too High P0117 Coolant Temp. Sensor Signal Too Low P0113 Intake Air Temp. Sensor Signal Too High P0112 Intake Air Temp. Sensor Signal Too Low P0183 Fuel Leak Temp. Sensor Signal Too High P0182 Fuel Leak Temp. Sensor Signal Too Low P0113 ATM Temp. Sensor Signal Too High P0112 ATM Temp. Sensor Signal Too Low P0193 C/Rail Press. Sensor Signal Too High P0192 C/Rail Press. Sensor Signal Too Low P2229 Atom Press. Sensor Signal Too High P2228 Atom Press. Sensor Signal Too Low P0238 Boost Pressure Sensor Signal Too High P0237 Boost Pressure Sensor Signal Too Low P0563 Ignition1 Voltage Too High P0562 Ignition1 Voltage Too Low P0103 MAF Sensor Signal Too High P0102 MAF Sensor Signal Too Low P1597 PTO Accelerator Sensor Signal Too High P1594 Idleup Signal Too High P1593 Idleup Signal Too Low P0406 EGR Position Signal Too High P0405 EGR Position Signal Too Low P0571 Cruise / Brake Switch Circuit Malfunction P0567 Cruise Resume / Accelerator Signal P0568 Cruise Set / Coast Signal Malfunction P0335 Crank Sensor No Pulse P0340 Cam Sensor No Pulse P0092 SCV (+) output short to BATT SCV (-) output short to BATT"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "pdf_page": 34,
+    "tags": [
+      "4HK1/6HK1",
+      "DTC_OR_PIN"
+    ],
+    "text": "-32- P0091 SCV (+) output open Load / short to GND SCV (-) output open Load / short to GND SCV coil open P1264 COM1 output short to BATT; TWV1 or 3 (or 5) output short to BATT P1263 COM1 output short to GND; TWV1 or 3 (or 5) output short to GND P2152 COM1 output open load; Both TWV1 or 3 (or 5) output open load P1266 COM2 output short to BATT; TWV2 or 4 (or 6) output short to BATT P1265 COM2 output short to GND; TWV2 or 4 (or 6) output short to GND P2155 COM2 output open load; Both TWV2 or 4 (or 6) output open load P0201 TWV1 output open load Injector#1 coil open P0202 TWV2 output open load Injector#3 coil open P0203 TWV3 output open load Injector#4 coil open P0204 TWV4 output open load Injector#2 coil open P1261 Capacitor charge-up circuit malfunction (insufficient charge) P1261 Capacitor charge-up circuit malfunction (excessive charge) P0088 Common rail pressure exceeds upper P0088 Common rail pressure exceeds hi upper limit P0382 Glow Controller Command Line Short to BATT P0382 Glow Controller Command Line Open Load / Short to GND P1094 C/Rail Press. Sensor Performance Invalid included fuel leak P0087 P/L (pressure limiter) activated P1404 EGR Position Error P0400 EGR Duty Error P0500 Vehicle Speed Sensor Malfunction P0606 CPU fault; -Main CPU fault P0606 CPU fault; -Watchdog IC fault P0602 EEPROM/EERPOM Emulation via Flash EPROM Write Error P0219 Engine overrun P0512 Starter Switch Short to BATT DTC Code Code Description"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "pdf_page": 35,
+    "tags": [
+      "4HK1/6HK1",
+      "DTC_OR_PIN"
+    ],
+    "text": "-33- P0686 Main relay diagnostics; Main relay stuck closed P0089 Supply pump control valve (suction control valve) stuck P0299 Boost Pressure Sensor exceeds lower limit P0234 Boost Pressure Sensor exceeds upper limit P2293 Supply pump protection P2294 Supply pump exchange P1093 Supply pump malfunction P2122 Accelerator Pedal Position Sensor 1 Low Voltage P2123 Accelerator Pedal Position Sensor 1 High Voltage P2127 Accelerator Pedal Position Sensor 2 Low Voltage P2128 Accelerator Pedal Position Sensor 2 High Voltage P2132 Accelerator Pedal Position Sensor 3 Low Voltage P2133 Accelerator Pedal Position Sensor 3 High Voltage P1125 Pedal Position Sensor Circuit Intermittent P2138 Accelerator Pedal Position Sensor 1, 2 Correlation Error P2140 Accelerator Pedal Position Sensor 2, 3 Correlation Error P2139 Accelerator Pedal Position Sensor 1, 3 Correlation Error U2104 CAN Bus Error U2106 CAN TCM SOH Diagnostic P0602 QR Code Not Programmed P0602 QR Code ERROR DTC Code Code Description"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "pdf_page": 36,
+    "tags": [
+      "4HK1/6HK1",
+      "DTC_OR_PIN"
+    ],
+    "text": "-34- b. 6HK1 DTC Code Code Description P0641 Analog Sensor Reference Voltage Output No.1 Too High P0641 Analog Sensor Reference Voltage Output No.1 Too Low P0651 Analog Sensor Reference Voltage Output No.2 Too High P0651 Analog Sensor Reference Voltage Output No.2 Too Low P1646 Analog Sensor Reference Voltage Output No.3 Too High P1646 Analog Sensor Reference Voltage Output No.3 Too Low P0118 Coolant Temp. Sensor Signal Too High P0117 Coolant Temp. Sensor Signal Too Low P0113 Intake Air Temp. Sensor Signal Too High P0112 Intake Air Temp. Sensor Signal Too Low P0183 Fuel Leak Temp. Sensor Signal Too High P0182 Fuel Leak Temp. Sensor Signal Too Low P0523 Oil Press. Sensor Signal Too High P0522 Oil Press. Sensor Signal Too Low P0463 Fuel Level Sensor1 Signal Too High P0462 Fuel Level Sensor1 Signal Too Low P1433 Fuel Level Sensor2 Signal Too High P1432 Fuel Level Sensor2 Signal Too Low P0193 C/Rail Press. Sensor Signal Too High P0192 C/Rail Press. Sensor Signal Too Low P0190 C/Rail Press. Sensor Signal keeping the middle range P0108 Atom Press. Sensor Signal Too High P0107 Atom Press. Sensor Signal Too Low P0238 Boost Pressure Sensor Signal Too High P0237 Boost Pressure Sensor Signal Too Low P0563 Ignition1 Voltage Too High P0562 Ignition1 Voltage Too Low P2003 MAF Sensor Signal Too High P2004 MAF Sensor Signal Too Low P2005 PTO Accelerator Sensor Signal Too High P2007 VNT Current Too High P2008 VNT Current Too Low P0704 Clutch Pedal Switch Circuit P0571 Cruise / Brake Switch Circuit Malfunction P0571 Cruise / Brake Switch Circuit Malfunction P0567 Cruise Resume / Accelerator Signal P0568 Cruise Set / Coast Signal Malfunction P0335 Crank Sensor No Pulse P0385 Cam Sensor No Pulse"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "pdf_page": 37,
+    "tags": [
+      "4HK1/6HK1",
+      "DTC_OR_PIN"
+    ],
+    "text": "-35- P0092 SCV (+) output short to BATT SCV (-) output short to BATT P0091 SCV (+) output open Load / short to GND SCV (-) output open Load / short to GND SCV coil open P1264 COM1 output short to BATT; TWV1 or 3 (or 5) output short to BATT P1263 COM1 output short to GND; TWV1 or 3 (or 5) output short to GND P2011 COM1 output open load; Both TWV1 or 3 (or 5) output open load P1266 COM2 output short to BATT; TWV2 or 4 (or 6) output short to BATT P1265 COM2 output short to GND; TWV2 or 4 (or 6) output short to GND P2012 COM2 output open load; Both TWV2 or 4 (or 6) output open load P0201 TWV1 output open load Injector#1 coil open P0202 TWV2 output open load Injector#5 coil open P0203 TWV3 output open load Injector#3 coil open P0204 TWV4 output open load Injector#6 coil open P0205 TWV5 output open load Injector#2 coil open P0206 TWV6 output open load Injector#4 coil open P1261 Capacitor charge-up circuit malfunction (insufficient charge) P1261 Capacitor charge-up circuit malfunction (excessive charge) P1088 Common rail pressure exceeds hi upper limit P0382 Glow Controller Command Line Short to BATT P0382 Glow Controller Command Line Open Load / Short to GND P0500 Vehicle Speed Sensor Malfunction P0087 C/Rail Press. Sensor Performance Invalid included fuel leak P1087 P/L (pressure limiter) activated P2565 VNT Position Signal Too high P2564 VNT Position Signal Too low P2900 VNT Position Stick P2901 EGR Brushless motor Position Sensor Signal Invalid P2902 EGR Brushless motor Performance Error DTC Code Code Description"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "pdf_page": 38,
+    "tags": [
+      "4HK1/6HK1",
+      "DTC_OR_PIN"
+    ],
+    "text": "-36- P2903 EGR Valve open/Close Stick P0606 CPU fault; -Main CPU fault P0606 CPU fault; -Watchdog IC fault P1621 EEPROM/EERPOM Emulation via Flash EPROM Write Error P0219 Engine overrun P0512 Starter Switch Short to BATT P2920 Main relay diagnostics; Main relay stuck closed P0088 Supply pump control valve (suction control valve) stuck P0234 Boost Pressure Sensor exceeds upper limit P0234 Boost Pressure Sensor exceeds upper limit (Long time) P2921 Supply pump protection P2922 Supply pump exchange P2923 Supply pump malfunction P1277 Accelerator Pedal Position Sensor 1 Low Voltage P1278 Accelerator Pedal Position Sensor 1 High Voltage P1282 Accelerator Pedal Position Sensor 2 Low Voltage P1283 Accelerator Pedal Position Sensor 2 High Voltage P1287 Accelerator Pedal Position Sensor 3 Low Voltage P1288 Accelerator Pedal Position Sensor 3 High Voltage P1125 Pedal Position Sensor Circuit Intermittent P1271 Accelerator Pedal Position Sensor 1, 2 Correlation Error P1272 Accelerator Pedal Position Sensor 2, 3 Correlation Error P1273 Accelerator Pedal Position Sensor 1, 3 Correlation Error U1300 Class2 Bus Short to Ground U1301 Class2 Bus Short to Battery U2104 CAN Bus Error P0461 Fuel Level Sensor Circuit Performance P0602 QR Code Not Programmed P0602 QR Code ERROR DTC Code Code Description"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "pdf_page": 43,
+    "tags": [
+      "4HK1/6HK1",
+      "DTC_OR_PIN"
+    ],
+    "text": "-41- C. ECU Connector Diagram a. 4HK1 ECU Connector Terminal Layout b. 4HK1 Terminal Connections )'9\u0004'322)'836\u00044-2\u0004%77-+21)28\u0004 \u0004\u0015\u0019\u00184-2 5\u0014\u0014\u0014\u0019\u0018\u0016) No. Terminal Name Content No. Terminal Name Content A-1 CASE-GND CASE GND A-31 APS1 ACCEL POSITION 1 SIG A-2 P-GND POWER GND A-32 APS2 ACCEL POSITION 2 SIG A-3 P-GND POWER GND A-33 APS3 ACCEL POSITION 3 SIG A-4 GND ECU SENSOR GND A-34 PACL PTO ACCEL SIG A-5 GND ECU SENSOR GND A-35 IDLUP IDLE UP SIG A-6 N/A (Q CONTROL RESISTOR 3) A-36 N/A (SP1) A-7 APS1-GND V5RTN1 A-37 N/A (SP2) A-8 APS2-GND V5RTN2 A-38 N/A (ATM TEMP SIG) A-9 APS3-GND V5RTN3 A-39 SPD SPEED INPUT A-10 PACL-GND PTO ACCEL GND A-40 ² ² A-11 IDLUP-GND IDLE UP GND A-41 N/A (ACG-F PULSE INPUT) A-12 N/A (SP3 GND) A-42 ² ² A-13 N/A (ATM TEMP GND) A-43 N/A (GLOW MONITOR2 FEEDBACK) A-14 ² ² A-44 N/A (GLOW MONITOR3 FEEDBACK) A-15 N/A (SP1-GND) A-45 AC-SW A/C CLUTCH REQUEST SW A-16 CAN1-SLD CAN1 SHIELD GND A-46 CRM-SW RUISE ENABLE (ON/OFF) SW A-17 CAN1H CAN1 HIGH A-47 CRR-SW CRUISE RESUME/ACCEL SW A-18 CAN1L CAN1 LOW A-48 CRS-SW CRUISE SET/COAST SW A-19 KWP2000 ISO14230 A-49 +B POWER A-20 CLASS2 J1850 A-50 +B POWER A-21 CLASS2 J1850 A-51 BATT BATTERY A-22 ² ² A-52 M-REL POWER MAINTAIN RELAY A-23 IG1-SW IGNITION 1 A-53 M-REL POWER MAINTAIN RELAY A-24 THWOUT THW PWM OUTPUT A-54 APS1-VCC VBREF1 A-25 ² ² A-55 APS2-VCC VBREF2 A-26 P-GND POWER GND A-56 APS3-VCC VBREF3 A-27 P-GND POWER GND A-57 ² ² A-28 TACHO TACHO A-58 PACL-VCC PTO ACCEL VCC A-29 N/A (Q CONTROL RESISTOR 1) A-59 IDLUP-VCC IDLE UP VCC A-30 N/A (Q CONTROL RESISTOR 2) A-60 N/A (SP1 VCC)"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "pdf_page": 44,
+    "tags": [
+      "4HK1/6HK1",
+      "DTC_OR_PIN"
+    ],
+    "text": "-42- No. Terminal Name Content No. Terminal Name Content A-61 N/A (ACG-L INPUT) A-79 GL-L GLOW LAMP A-62 BK1-SW BRAKE 1 SW A-80 MIL CHECK ENGINE LAMP A-63 BK2-SW BRAKE 2 SW A-81 CRM-L CRUISE MAIN LAMP A-64 CL-SW CLUTCH SW A-82 AT-TACHO AT-TACHO A-65 SHUTDOWN-SW ENGINE SHUTDOWN SW A-83 N/A (SP2 GND) A-66 DIAG CLEAR-SW DIAG CLEAR SW A-84 CRSET-L CRUISE SET LAMP A-67 EXB-SW EXHAUST BRAKE SW A-85 N/A (SP2) A-68 ² ² A-86 IGBC-SW IGNORE BRAKE/CLUTCH SW A-69 REF-SW REFRIGERATOR SW A-87 N/A (TORQUE LIMIT SW) A-70 N/A (GLOW MONITOR1 FEEDBACK) A-88 CCDIS-SW CAB CONTROL DISABLE SW A-71 N/A (TORQUE CUT SW) A-89 SSPA-SW SET SPEED A SW A-72 N/A (GLOW MONITOR4 FEEDBACK) A-90 SSPB-SW SET SPEED B SW A-73 +B POWER A-91 RSET-SW REMOTE SET SW A-74 GL-CONT GLOW CONTOROLLER A-92 RRES-SW REMOTE RESUME SW A-75 PTOEN-REL PTO ENGAGE RELAY A-93 PTOEN-SW PTO ENGAGE SW A-76 STAEN-REL STARTER ENABLE RELAY A-94 PTODIS-SW PTO DISABLE SW A-77 EXB-REL EXHAUST BRAKE RELAY A-95 PTOFB-SW PTO FEEDBACK SW A-78 N/A (EXHAUST BRAKE LAMP) A-96 STA-SW CRANKING REQUEST SW No. Terminal Name Content No. Terminal Name Content B-1 N/A (INTAKE DC MOTOR1) B-22 ² ² B-2 N/A (INTAKE DC MOTOR2) B-23 N/A (INCA-BAT) B-3 COMMON1 INJECTOR POWER1 B-24 PBOOST BOOST PRESSURE SIG. B-4 COMMON2 INJECTOR POWER2 B-25 PFUEL RAIL PRESSURE SIG. B-5 COMMON1 INJECTOR POWER1 B-26 PFUEL RAIL PRESSURE SIG. B-6 COMMON2 INJECTOR POWER2 B-27 N/A (OIL PRESSURE SIG.) B-7 EBM1 EGR DC MOTOR 1 B-28 MAF MAF SIGNAL B-8 EBM2 EGR DC MOTOR 2 B-29 INT INTAKE POSITION SIG. B-9 N/A (EGR BRUSHLESS MOTOR W) B-30 G CAM ANGLE B-10 ² ² B-31 NE+ CRANK POSITION+ B-11 N/A (INCA-GND) B-32 NE- CRANK POSITION- B-12 PB-GND BOOST PRESSURE GND B-33 SCVHI SCV HIGH SIDE B-13 PFUEL-GND RAIL PRESSURE GND B-34 SCVHI SCV HIGH SIDE B-14 POIL-GND OIL PRESSURE GND B-35 THW COOLANT TEMP. B-15 MAF-GND MAF GND B-36 N/A (ENGINE OIL TEMP.) B-16 INT-GND INTAKE POSITION GND B-37 THA INTAKE AIR TEMP. B-17 EGR-GND EGR POSITION GND B-38 N/A (EGR-U POSITION SIG.) B-18 G-SLD CAM ANGLE GND B-39 N/A (EGR-V POSITION SIG.) B-19 NE-SLD CRANK POSITION GND B-40 N/A (EGR-W POSITION SIG.) B-20 SCVLO SCV LOW SIDE B-41 THF1 FUEL TEMP B-21 SCVLO SCV LOW SIDE B-42 N/A (FUEL TEMP. #2)"
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "pdf_page": 45,
+    "tags": [
+      "4HK1/6HK1",
+      "DTC_OR_PIN"
+    ],
+    "text": "-43- < NOTE > N/A: Component is not mounted (circuit pattern only). Note that the VCC and GND and pin No. A-78 for sensors are connected inside ECU. No. Terminal Name Content No. Terminal Name Content B-43 TWV-D INJECTOR D(CYL2) B-51 G-VB CAM ANGLE VB B-44 ² ² B-52 N/A (LOW OIL LEVEL SW) B-45 TWV-B INJECTOR B(CYL3) B-53 EGR-POS EGR-POSITION SIG. (DC MOTOR) B-46 PB-VCC BOOST PRESSURE VCC B-54 ² ² B-47 PFUEL-VCC RAIL PRESSURE VCC B-55 ² ² B-48 POIL-VCC OIL PRESSURE VCC B-56 TWV-C INJECTOR C(CYL4) B-49 EGR-VCC EGR POSITION VCC B-57 ² ² B-50 INT-VCC INTAKE POSITION VCC B-58 TWV-A INJECTOR A(CYL1)"
+  }
+]

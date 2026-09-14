@@ -9,7 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.12" />
     <PackageReference Include="System.IO.Ports" Version="10.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\knowladge-base\dtcs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\..\Data\knowledge-base\isuzu-knowledge.db">
+      <Link>Data\isuzu-knowledge.db</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

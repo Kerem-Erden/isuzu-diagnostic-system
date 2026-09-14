@@ -1,0 +1,84 @@
+[
+  {
+    "operating_condition_key": "NON_OPERATIONAL_P_ROTATION",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "name": "Non-operational P rotation",
+    "description": "Reference condition used by the 4HK1 TM scan-tool data list; values vary with actual machine condition.",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 93,
+      "section": "15B-68 Data list"
+    }
+  },
+  {
+    "operating_condition_key": "TWO_PUMP_RELIEF",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "name": "Two Pump Relief",
+    "description": "Reference condition used by the 4HK1 TM scan-tool data list; values vary with actual unit conditions.",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 94,
+      "section": "15B-69 Data list"
+    }
+  },
+  {
+    "operating_condition_key": "ENGINE_OVERHEAT",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "name": "Engine overheat",
+    "description": "Normal overheat context for P0217 threshold.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 141
+    }
+  },
+  {
+    "operating_condition_key": "DPD_REGENERATION",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "name": "DPD regeneration",
+    "description": "DPD regeneration context changes the P0217 coolant-temperature threshold.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 141
+    }
+  },
+  {
+    "operating_condition_key": "IDLE_VIBRATION_CONTROL",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "name": "Idle vibration control",
+    "description": "Cylinder compensation is evaluated from crank-speed variation; normal correction range is ±5 mm3.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 202
+    }
+  },
+  {
+    "operating_condition_key": "ENGINE_WARMUP_CONTROL",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "name": "Engine warm-up control",
+    "description": "Warm-up switch enabled, engine running, accelerator not depressed, vehicle stationary, coolant approximately 70 °C or below; desired idle rises up to 1100 rpm.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 215
+    }
+  },
+  {
+    "operating_condition_key": "PRE_GLOW",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "name": "Pre-glow phase",
+    "description": "Glow relay applies voltage 0.5–17 s depending on coolant temperature; 0.5 s when coolant is 20 °C or higher.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 208
+    }
+  },
+  {
+    "operating_condition_key": "AFTER_GLOW",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "name": "After-glow phase",
+    "description": "Glow relay applies voltage 0.5–18 s depending on coolant temperature; 0.5 s when coolant is 10 °C or higher.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 208
+    }
+  }
+]

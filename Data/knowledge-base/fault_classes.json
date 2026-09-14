@@ -1,0 +1,38 @@
+[
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "fault_class": "A",
+    "description": "DTC is recorded; when fault occurs OBD threshold limits are exceeded.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 250
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "fault_class": "B1",
+    "description": "DTC is recorded; OBD threshold limits may be exceeded and monitor-impairing faults can be included.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 250
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "fault_class": "B2",
+    "description": "DTC is set; fault is assumed to affect emissions but not at a level exceeding OBD threshold limits.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 251
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "fault_class": "C",
+    "description": "Fault is assumed to affect emissions but not at a level exceeding emission limits.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 251
+    }
+  }
+]

@@ -1,14 +1,16 @@
-﻿using System.Configuration;
-using System.Data;
+﻿using IsuzuDiagnostic.Desktop.Data;
+using IsuzuDiagnostic.Desktop.Models;
 using System.Windows;
 
-namespace IsuzuDiagnostic.Desktop
-{
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
-    {
-    }
+namespace IsuzuDiagnostic.Desktop;
 
+public partial class App : Application
+{
+    protected override void OnStartup(StartupEventArgs e)
+    {
+        DatabaseInitializer.Initialize();
+
+        base.OnStartup(e);
+    }
 }
+

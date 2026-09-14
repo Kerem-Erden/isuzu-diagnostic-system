@@ -1,0 +1,105 @@
+[
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "fault_cycle_type": 1,
+    "emissions_related": true,
+    "indicator": "MIL",
+    "set_behavior": [
+      "MIL ON when diagnostic runs and fails",
+      "Capture operating conditions",
+      "Store freeze frame/fault record"
+    ],
+    "clear_behavior": [
+      "MIL OFF after 3 consecutive successful drive cycles",
+      "Current DTC clears when diagnostic runs and passes",
+      "History clears after 40 consecutive warm-up cycles",
+      "Can clear with scan tool"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 257,
+      "section": "DTC Type Definitions"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "fault_cycle_type": 2,
+    "emissions_related": true,
+    "indicator": "MIL",
+    "set_behavior": [
+      "First failure stored in fault records",
+      "MIL ON on second failing drive cycle",
+      "Freeze frame captured/updated on second consecutive failure"
+    ],
+    "clear_behavior": [
+      "MIL OFF after 3 consecutive successful drive cycles",
+      "Current DTC clears on pass",
+      "History clears after 40 warm-up cycles",
+      "Scan-tool clear supported"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 257,
+      "section": "DTC Type Definitions"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "fault_cycle_type": 3,
+    "emissions_related": false,
+    "indicator": "SVS",
+    "set_behavior": [
+      "SVS ON when diagnostic fails",
+      "Store operating conditions/fault record"
+    ],
+    "clear_behavior": [
+      "SVS OFF after 1 successful drive cycle",
+      "Current clears on pass",
+      "History clears after 40 warm-up cycles",
+      "Scan-tool clear supported"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 259
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "fault_cycle_type": 4,
+    "emissions_related": false,
+    "indicator": "NONE",
+    "set_behavior": [
+      "No MIL/SVS illumination",
+      "Store operating conditions/fault record"
+    ],
+    "clear_behavior": [
+      "Current clears on pass",
+      "History clears after 40 warm-up cycles",
+      "Scan-tool clear supported"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 260
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "fault_cycle_type": 5,
+    "emissions_related": false,
+    "indicator": "SVS",
+    "set_behavior": [
+      "SVS ON after 2 consecutive failing drive cycles",
+      "Store operating conditions/fault record"
+    ],
+    "clear_behavior": [
+      "SVS OFF after 2 successful drive cycles",
+      "Current clears on pass",
+      "History clears after 40 warm-up cycles",
+      "Scan-tool clear supported"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 261
+    }
+  }
+]

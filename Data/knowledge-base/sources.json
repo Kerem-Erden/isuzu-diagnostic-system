@@ -1,0 +1,153 @@
+[
+  {
+    "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+    "file_name": "4HK1 TC workshopmanual.pdf",
+    "title": "4HK1-TC Workshop Manual",
+    "publisher": "Isuzu",
+    "publication_year": 2007,
+    "role": "4HK1-TC workshop mechanical/electrical specifications and troubleshooting",
+    "canonical": true,
+    "size_bytes": 12278308,
+    "sha256": "0d4efbaa63f40510214c365c0bd8f3b901eb4783ced9416c548b738b7fd2a8ba",
+    "page_count": 301
+  },
+  {
+    "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+    "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+    "title": "4HK1-TC Service Training Manual",
+    "publisher": "Isuzu",
+    "publication_year": 2005,
+    "role": "NPR/NQR Euro 3 rich DTC run/set conditions and suspected causes",
+    "canonical": true,
+    "size_bytes": 3315277,
+    "sha256": "ba9d6716fbbe4d3c92d16f66971827cada94f2fab79fbfb8b07c970dfb9489fd",
+    "page_count": 121
+  },
+  {
+    "document_key": "ISUZU_4HK1_ENGINE_TM",
+    "file_name": "4hk1-engine-manual-tm-pdf.pdf",
+    "title": "4HK1 Engine Manual / Maintenance and DTC Information",
+    "publisher": "Hitachi Construction Machinery / Isuzu engine material",
+    "publication_year": null,
+    "role": "rich 4HK1 DTC information, SPN/FMI mapping, OEM diagnosis steps, live-data reference values",
+    "canonical": true,
+    "size_bytes": 5308946,
+    "sha256": "12be62350601ef6d9059d662ebad344192aba204fe51439c35e535a1ccffa50d",
+    "page_count": 353
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_CRS_2011",
+    "file_name": "Euro6 Isuzu N-Series 4HK1 Engine Service Manual.pdf",
+    "title": "Isuzu N-Series 4HK1 Engine Common Rail System (CRS) Service Manual",
+    "publisher": "DENSO",
+    "publication_year": 2011,
+    "document_code": "50000057E",
+    "role": "May-2010+ 4HK1 CRS system and broad modern DTC inventory",
+    "canonical": true,
+    "size_bytes": 840886,
+    "sha256": "e8a574869829b33b93436736b9f8e45e1aee8bb590d9fc2b374be94307f24c0e",
+    "page_count": 34
+  },
+  {
+    "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "file_name": "ISUZU 4HK1  6HK1 Type Engine 2004.pdf",
+    "title": "ISUZU 4HK1 / 6HK1 Common Rail System Service Manual",
+    "publisher": "DENSO",
+    "publication_year": 2004,
+    "role": "4HK1/6HK1 ECU, connector/pin and DTC inventory",
+    "canonical": true,
+    "size_bytes": 677164,
+    "sha256": "a210894c4d6ecc7e61ae0329e9f5bdb2d00adcfb12be448112d5a1216f0dbf60",
+    "page_count": 48
+  },
+  {
+    "document_key": "ISUZU_DTC_SPN_CHART",
+    "file_name": "truckmanualshub.com_Isuzu Engine Diagnostics Trouble Codes.pdf",
+    "title": "Isuzu Engine Diagnostic Chart",
+    "publisher": null,
+    "publication_year": null,
+    "role": "SPN/FMI to P-code mapping cross-reference",
+    "canonical": true,
+    "size_bytes": 438216,
+    "sha256": "f36e4f17526d477913c44995ae09bab85c7abc5fdf6491bd0aa882ad3b833f8f",
+    "page_count": 2
+  },
+  {
+    "document_key": "ISUZU_4JZ1_ITCE_2021",
+    "file_name": "4JZ1 Motor.pdf",
+    "title": "4JZ1 Motor",
+    "publisher": "Isuzu Training Center Europe (ITCE)",
+    "publication_year": 2021,
+    "role": "2021+ 4JZ1 Euro VI system, diagnostics, live-data, CAN/network, ECM/EDU pins",
+    "canonical": true,
+    "size_bytes": 15157783,
+    "sha256": "37f326ebfd4500b1ddd034814f95b2d70b287d71c6ed33766e91f5ffdf406efd",
+    "page_count": 268
+  },
+  {
+    "document_key": "EXCERPT_4HK1_WORKSHOP_MAIN_SPECS",
+    "file_name": "4hk1 referans degerleri.pdf",
+    "title": "4HK1 Main Data and Specifications excerpt",
+    "role": "excerpt/cross-validation",
+    "canonical": false,
+    "canonical_source_key": "ISUZU_4HK1_WORKSHOP_2007",
+    "size_bytes": 293517,
+    "sha256": "9931f3f626d4c279e1d49855a3e011263eb147fc3f300062f2940c3e3c029c0b",
+    "page_count": 2
+  },
+  {
+    "document_key": "EXCERPT_4HK1_WORKSHOP_ELECTRICAL",
+    "file_name": "4hk1 engine electrical referans.pdf",
+    "title": "4HK1 Engine Electrical reference excerpt",
+    "role": "excerpt/cross-validation",
+    "canonical": false,
+    "canonical_source_key": "ISUZU_4HK1_WORKSHOP_2007",
+    "size_bytes": 88412,
+    "sha256": "b43176ccbd1181bea87209a6253c53a66eac84fff9e4c7c4dd1b27beefc3d742",
+    "page_count": 1
+  },
+  {
+    "document_key": "EXCERPT_4HK1_TM_SPECS",
+    "file_name": "4hk1 referanslar.pdf",
+    "title": "4HK1 Maintenance Information specs excerpt",
+    "role": "excerpt/cross-validation",
+    "canonical": false,
+    "canonical_source_key": "ISUZU_4HK1_ENGINE_TM",
+    "size_bytes": 510748,
+    "sha256": "446ebf047c789922574faaed673ab237b87c5192bb3afd7892811c3bcd4121e3",
+    "page_count": 2
+  },
+  {
+    "document_key": "EXCERPT_4HK1_TM_LIVEDATA",
+    "file_name": "referans4hk1.pdf",
+    "title": "4HK1 live-data reference values excerpt",
+    "role": "excerpt/cross-validation",
+    "canonical": false,
+    "canonical_source_key": "ISUZU_4HK1_ENGINE_TM",
+    "size_bytes": 648850,
+    "sha256": "dcccde56399909f565dbe7f26f3fad3e57080555a714d05c2ff4ce9dcad599ff",
+    "page_count": 2
+  },
+  {
+    "document_key": "EXCERPT_4HK1_6HK1_DTC_LIST",
+    "file_name": "dtcler 4hk1 kodu ve ismi.pdf",
+    "title": "4HK1/6HK1 DTC code list excerpt",
+    "role": "excerpt/cross-validation",
+    "canonical": false,
+    "canonical_source_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+    "size_bytes": 1046917,
+    "sha256": "e79727f4feec9231cd839d8066a51af792fa2d2edd22bf3c4f672f236956622a",
+    "page_count": 6
+  },
+  {
+    "document_key": "EXCERPT_4HK1_TM_DTC",
+    "file_name": "tum dtcler ve dtc mapping table.pdf",
+    "title": "4HK1 DTC information and mapping excerpt",
+    "role": "scanned excerpt/cross-validation",
+    "canonical": false,
+    "canonical_source_key": "ISUZU_4HK1_ENGINE_TM",
+    "size_bytes": 62882775,
+    "sha256": "6d404ef7f3e3e0db9a91f8136a681352f26177b1a515e3c2392d2e3bcbf5d237",
+    "page_count": 222
+  }
+]

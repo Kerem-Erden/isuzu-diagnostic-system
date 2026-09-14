@@ -1,0 +1,3399 @@
+[
+  {
+    "code": "P0016",
+    "flash_code": "16",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 132,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0016",
+    "spn": 636,
+    "fmi": 7,
+    "description": "Crankshaft Position - Camshaft Position Correlation",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0045",
+    "flash_code": "33",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 133,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0045",
+    "spn": 10023,
+    "fmi": 12,
+    "description": "Turbocharger Boost Control Solenoid Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0087",
+    "flash_code": "225",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 134,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0087",
+    "flash_code": "227",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0087",
+    "spn": 633,
+    "fmi": 7,
+    "description": "Fuel Rail/System Pressure - Too Low",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0087",
+    "spn": 1239,
+    "fmi": 1,
+    "description": "No pump pressure feed (fuel leakage)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0088",
+    "flash_code": "118",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0088",
+    "flash_code": "118",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0088",
+    "flash_code": "118",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 135,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0088",
+    "spn": 157,
+    "fmi": 0,
+    "description": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0088",
+    "spn": 157,
+    "fmi": 0,
+    "description": "Common rail pressure fault (1st stage)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0088",
+    "spn": 157,
+    "fmi": 16,
+    "description": "Fuel Rail/System Pressure - Too High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0089",
+    "flash_code": "151",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0089",
+    "flash_code": "151",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 136,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0089",
+    "spn": 157,
+    "fmi": 2,
+    "description": "Common rail pressure fault (Excessive pressure feed in pump)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0089",
+    "spn": 157,
+    "fmi": 15,
+    "description": "Fuel Pressure Regulator Performance",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0090",
+    "flash_code": "247",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0090",
+    "spn": 1347,
+    "fmi": 0,
+    "description": "SCV drive system open circuit, +B short or ground short",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0091",
+    "flash_code": "247",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 137,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0091",
+    "spn": 1347,
+    "fmi": 4,
+    "description": "Fuel Pressure Regulator Control Circuit Low",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0092",
+    "flash_code": "247",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 138,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0092",
+    "spn": 1347,
+    "fmi": 3,
+    "description": "Fuel Pressure Regulator Control Circuit High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0093",
+    "flash_code": "227",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 139,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0093",
+    "spn": 1239,
+    "fmi": 1,
+    "description": "Fuel System Leak Detected",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0102",
+    "flash_code": "91",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 140,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0102",
+    "spn": 132,
+    "fmi": 4,
+    "description": "Mass Air Flow Circuit Low Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0103",
+    "flash_code": "91",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 141,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0103",
+    "spn": 132,
+    "fmi": 3,
+    "description": "Mass Air Flow Circuit High Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0107",
+    "flash_code": "71",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0107",
+    "spn": 108,
+    "fmi": 3,
+    "description": "Barometric pressure sensor fault (low voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0108",
+    "flash_code": "71",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0108",
+    "spn": 108,
+    "fmi": 4,
+    "description": "Barometric pressure sensor fault (high voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0112",
+    "flash_code": "22",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0112",
+    "flash_code": "22",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 142,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0112",
+    "spn": 172,
+    "fmi": 4,
+    "description": "Intake Air Temperature Sensor Circuit Low",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0112",
+    "spn": 172,
+    "fmi": 4,
+    "description": "Intake air temperature sensor fault (low voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0113",
+    "flash_code": "22",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0113",
+    "flash_code": "22",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 143,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0113",
+    "spn": 172,
+    "fmi": 3,
+    "description": "Intake Air Temperature Sensor Circuit High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0113",
+    "spn": 172,
+    "fmi": 3,
+    "description": "Intake air temperature sensor fault (high voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0117",
+    "flash_code": "23",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0117",
+    "flash_code": "23",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 144,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0117",
+    "spn": 110,
+    "fmi": 4,
+    "description": "Engine Coolant Temperature Sensor Circuit Low",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0117",
+    "spn": 110,
+    "fmi": 4,
+    "description": "Engine coolant temperature sensor fault (low voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0118",
+    "flash_code": "23",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0118",
+    "flash_code": "23",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 145,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0118",
+    "spn": 110,
+    "fmi": 3,
+    "description": "Engine Coolant Temperature Sensor Circuit High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0118",
+    "spn": 110,
+    "fmi": 3,
+    "description": "Engine coolant temperature sensor fault (high voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0122",
+    "flash_code": "43",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 146,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0122",
+    "spn": 10022,
+    "fmi": 4,
+    "description": "Throttle Position Sensor Circuit Low",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0123",
+    "flash_code": "43",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 147,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0123",
+    "spn": 10022,
+    "fmi": 3,
+    "description": "Throttle Position Sensor Circuit High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0182",
+    "flash_code": "211",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 110,
+      "printed_page": "Engine-109",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0182",
+    "flash_code": "211",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 148,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0182",
+    "spn": 174,
+    "fmi": 4,
+    "description": "Fuel Temperature Sensor Circuit Low",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0182",
+    "spn": 174,
+    "fmi": 4,
+    "description": "Fuel temperature sensor fault (low voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0183",
+    "flash_code": "211",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0183",
+    "flash_code": "211",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 149,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0183",
+    "spn": 174,
+    "fmi": 3,
+    "description": "Fuel Temperature Sensor Circuit High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0183",
+    "spn": 174,
+    "fmi": 3,
+    "description": "Fuel temperature sensor fault (high voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0192",
+    "flash_code": "245",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0192",
+    "flash_code": "245",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 150,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0192",
+    "spn": 157,
+    "fmi": 4,
+    "description": "Fuel Rail Pressure Sensor Circuit Low",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0192",
+    "spn": 157,
+    "fmi": 4,
+    "description": "Common rail pressure sensor fault (low voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0193",
+    "flash_code": "245",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0193",
+    "flash_code": "245",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 151,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0193",
+    "spn": 157,
+    "fmi": 3,
+    "description": "Fuel Rail Pressure Sensor Circuit High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0193",
+    "spn": 157,
+    "fmi": 3,
+    "description": "Common rail pressure sensor fault (high voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0201",
+    "flash_code": "271",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0201",
+    "flash_code": "271",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 152,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0201",
+    "spn": 651,
+    "fmi": 3,
+    "description": "Open circuit in injection nozzle #1 drive system",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0201",
+    "spn": 651,
+    "fmi": 5,
+    "description": "Injector Circuit - Cylinder 1",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0202",
+    "flash_code": "272",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0202",
+    "flash_code": "272",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 153,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0202",
+    "spn": 652,
+    "fmi": 3,
+    "description": "Open circuit in injection nozzle #2 drive system",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0202",
+    "spn": 652,
+    "fmi": 5,
+    "description": "Injector Circuit - Cylinder 2",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0203",
+    "flash_code": "273",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0203",
+    "flash_code": "273",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 154,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0203",
+    "spn": 653,
+    "fmi": 3,
+    "description": "Open circuit in injection nozzle #3 drive system",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0203",
+    "spn": 653,
+    "fmi": 5,
+    "description": "Injector Circuit - Cylinder 3",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0204",
+    "flash_code": "274",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0204",
+    "flash_code": "274",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 155,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0204",
+    "spn": 654,
+    "fmi": 3,
+    "description": "Open circuit in injection nozzle #4 drive system",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0204",
+    "spn": 654,
+    "fmi": 5,
+    "description": "Injector Circuit - Cylinder 4",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0205",
+    "spn": 655,
+    "fmi": 3,
+    "description": "Open circuit in injection nozzle #5 drive system",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0206",
+    "spn": 656,
+    "fmi": 3,
+    "description": "Open circuit in injection nozzle #6 drive system",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0217",
+    "flash_code": "542",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 156,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0217",
+    "spn": 110,
+    "fmi": 0,
+    "description": "Engine Coolant Over Temperature Condition",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0219",
+    "flash_code": "543",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0219",
+    "flash_code": "543",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 157,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0219",
+    "spn": 190,
+    "fmi": 0,
+    "description": "Engine Overspeed Condition",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0219",
+    "spn": 190,
+    "fmi": 0,
+    "description": "Overrun",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0234",
+    "flash_code": "42",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0234",
+    "flash_code": "42",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 158,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0234",
+    "spn": 102,
+    "fmi": 0,
+    "description": "Turbocharger Overboost Condition",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0236",
+    "flash_code": "65",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0237",
+    "flash_code": "32",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0237",
+    "flash_code": "32",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 159,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0237",
+    "spn": 102,
+    "fmi": 3,
+    "description": "Boost pressure sensor fault (low voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0237",
+    "spn": 102,
+    "fmi": 4,
+    "description": "Turbocharger Boost Sensor Circuit Low Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0238",
+    "flash_code": "32",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0238",
+    "flash_code": "32",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 160,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0238",
+    "spn": 102,
+    "fmi": 3,
+    "description": "Turbocharger Boost Sensor Circuit High Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0238",
+    "spn": 102,
+    "fmi": 4,
+    "description": "Boost pressure sensor fault (high voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0335",
+    "flash_code": "15",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0335",
+    "flash_code": "15",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 161,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0335",
+    "spn": 723,
+    "fmi": 2,
+    "description": "Crankshaft Position Sensor Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0335",
+    "spn": 723,
+    "fmi": 2,
+    "description": "Crank sensor fault (no signal)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0336",
+    "flash_code": "15",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 111,
+      "printed_page": "Engine-110",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0336",
+    "flash_code": "15",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 162,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0336",
+    "spn": 723,
+    "fmi": 2,
+    "description": "Crankshaft Position Sensor Circuit Range/Performance",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0336",
+    "spn": 723,
+    "fmi": 2,
+    "description": "Crank sensor fault (signal fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0340",
+    "flash_code": "14",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0340",
+    "flash_code": "14",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 163,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0340",
+    "spn": 636,
+    "fmi": 2,
+    "description": "Camshaft Position Sensor Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0340",
+    "spn": 636,
+    "fmi": 2,
+    "description": "Cam sensor fault (no signal)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0341",
+    "flash_code": "14",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0341",
+    "spn": 636,
+    "fmi": 2,
+    "description": "Cam sensor fault (signal fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0380",
+    "flash_code": "66",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0381",
+    "flash_code": "67",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0404",
+    "flash_code": "45",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 164,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0404",
+    "spn": 10002,
+    "fmi": 2,
+    "description": "Exhaust Gas Recirculation Control 1 Circuit Range/Performance",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0409",
+    "flash_code": "44",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 165,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0409",
+    "spn": 10001,
+    "fmi": 2,
+    "description": "Exhaust Gas Recirculation 1 Sensor Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P041C",
+    "flash_code": "27",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 166,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P041C",
+    "spn": 1131,
+    "fmi": 3,
+    "description": "Manifold Air Temperature Circuit High Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P041D",
+    "flash_code": "27",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 167,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P041D",
+    "spn": 1131,
+    "fmi": 4,
+    "description": "Manifold Air Temperature Circuit Low Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0426",
+    "flash_code": "143",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 168,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0426",
+    "spn": 173,
+    "fmi": 0,
+    "description": "Catalyst Temperature 1 Too High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0427",
+    "flash_code": "48",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 169,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0427",
+    "spn": 173,
+    "fmi": 4,
+    "description": "Catalyst Temperature Sensor Circuit Low Sensor 1",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0428",
+    "flash_code": "48",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 170,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0428",
+    "spn": 173,
+    "fmi": 3,
+    "description": "Catalyst Temperature Sensor Circuit High Sensor 1",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P042B",
+    "flash_code": "145",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 171,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P042B",
+    "spn": 10028,
+    "fmi": 0,
+    "description": "Catalyst Temperature 2 Too High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P042C",
+    "flash_code": "49",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 172,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P042C",
+    "spn": 10024,
+    "fmi": 4,
+    "description": "Catalyst Temperature Sensor Circuit Low Sensor 2",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P042D",
+    "flash_code": "49",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 173,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P042D",
+    "spn": 10024,
+    "fmi": 3,
+    "description": "Catalyst Temperature Sensor Circuit High Sensor 2",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0485",
+    "flash_code": "44",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0486",
+    "flash_code": "44",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0487",
+    "spn": 10001,
+    "fmi": 3,
+    "description": "EGR position fault (Brushless specification)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0488",
+    "flash_code": "45",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0488",
+    "spn": 10002,
+    "fmi": 2,
+    "description": "EGR valve control fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0500",
+    "flash_code": "25",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0501",
+    "flash_code": "25",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0522",
+    "flash_code": "294",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 174,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0522",
+    "spn": 100,
+    "fmi": 3,
+    "description": "Engine oil pressure sensor fault (low voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0522",
+    "spn": 100,
+    "fmi": 4,
+    "description": "Oil Pressure Sensor Circuit Low Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 225,
+      "printed_page": "15E-96",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0523",
+    "flash_code": "294",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 175,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0523",
+    "spn": 100,
+    "fmi": 3,
+    "description": "Oil Pressure Sensor Circuit High Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0523",
+    "spn": 100,
+    "fmi": 4,
+    "description": "Engine oil pressure sensor fault (high voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0560",
+    "flash_code": "155",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 176,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0560",
+    "spn": 10012,
+    "fmi": 2,
+    "description": "System Voltage",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0563",
+    "flash_code": "35",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 177,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0563",
+    "spn": 158,
+    "fmi": 3,
+    "description": "System Voltage High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0601",
+    "flash_code": "53",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0601",
+    "flash_code": "53",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 178,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0601",
+    "spn": 628,
+    "fmi": 2,
+    "description": "Internal Control Module Memory Check Sum Error",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0601",
+    "spn": 628,
+    "fmi": 2,
+    "description": "ROM fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0602",
+    "flash_code": "154",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 179,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0602",
+    "spn": 10032,
+    "fmi": 2,
+    "description": "Control Module Programming Error",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0603",
+    "flash_code": "54",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0603",
+    "spn": 10013,
+    "fmi": 2,
+    "description": "EEPROM fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0604",
+    "flash_code": "153",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 180,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0604",
+    "spn": 10033,
+    "fmi": 2,
+    "description": "Internal Control Module Random Access Memory (RAM)",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0606",
+    "flash_code": "51",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0606",
+    "flash_code": "51",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 181,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0606",
+    "flash_code": "52",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0606",
+    "spn": 1077,
+    "fmi": 2,
+    "description": "ECM/PCM Processor",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0606",
+    "spn": 1077,
+    "fmi": 2,
+    "description": "CPU monitoring IC fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0606",
+    "spn": 10007,
+    "fmi": 2,
+    "description": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0606",
+    "spn": 10007,
+    "fmi": 2,
+    "description": "CPU fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P060B",
+    "flash_code": "36",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 182,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P060B",
+    "spn": 10008,
+    "fmi": 2,
+    "description": "Internal Control Module A/D Processing Performance",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0611",
+    "flash_code": "34",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0611",
+    "spn": 10005,
+    "fmi": 1,
+    "description": "Charge circuit fault (bank 1)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0612",
+    "flash_code": "34",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0612",
+    "spn": 10006,
+    "fmi": 1,
+    "description": "Charge circuit fault (bank 2)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0615",
+    "flash_code": "19",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 112,
+      "printed_page": "Engine-111",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0638",
+    "flash_code": "61",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 183,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0638",
+    "spn": 10022,
+    "fmi": 2,
+    "description": "Throttle Actuator Control Range/Performance",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0641",
+    "flash_code": "55",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 184,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0641",
+    "spn": 1079,
+    "fmi": 2,
+    "description": "Sensor Reference Voltage 1 Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0650",
+    "flash_code": "77",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P0650",
+    "flash_code": "77",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 185,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0650",
+    "spn": 987,
+    "fmi": 3,
+    "description": "Check engine lamp fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P0650",
+    "spn": 987,
+    "fmi": 5,
+    "description": "Malfunction Indicator Lamp (MIL) Control Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0651",
+    "flash_code": "56",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 186,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0651",
+    "spn": 1080,
+    "fmi": 2,
+    "description": "Sensor Reference Voltage 1 Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0685",
+    "flash_code": "416",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 187,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0685",
+    "spn": 1485,
+    "fmi": 5,
+    "description": "ECM/PCM Power Relay Control Circuit /Open",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0687",
+    "flash_code": "416",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 188,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0687",
+    "spn": 1485,
+    "fmi": 6,
+    "description": "ECM/PCM Power Relay Control Circuit High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P0697",
+    "flash_code": "57",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 189,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P0697",
+    "spn": 10009,
+    "fmi": 2,
+    "description": "Sensor Reference Voltage 1 Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1093",
+    "flash_code": "227",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1093",
+    "flash_code": "227",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 190,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1093",
+    "spn": 1239,
+    "fmi": 17,
+    "description": "Fuel Rail Pressure (FRP) Too Low",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1093",
+    "spn": 1240,
+    "fmi": 1,
+    "description": "No pump pressure feed (fuel leakage)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1094",
+    "flash_code": "226",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1094",
+    "flash_code": "226",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1095",
+    "flash_code": "225",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1095",
+    "spn": 633,
+    "fmi": 7,
+    "description": "Pressure limiter open",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1112",
+    "flash_code": "295",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 191,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1112",
+    "spn": 105,
+    "fmi": 4,
+    "description": "Boost Temperature Sensor Circuit Low Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1112",
+    "spn": 105,
+    "fmi": 4,
+    "description": "Boost temperature sensor fault (low voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1113",
+    "flash_code": "295",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 192,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1113",
+    "spn": 105,
+    "fmi": 3,
+    "description": "Boost Temperature Sensor Circuit High Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1113",
+    "spn": 105,
+    "fmi": 3,
+    "description": "Boost temperature sensor fault (high voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1173",
+    "flash_code": "542",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1173",
+    "spn": 110,
+    "fmi": 0,
+    "description": "Overheat",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1220",
+    "flash_code": "28",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1225",
+    "flash_code": "31",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1261",
+    "flash_code": "158",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1261",
+    "flash_code": "34",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 193,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1261",
+    "spn": 10003,
+    "fmi": 2,
+    "description": "Injection nozzle common 1 drive system fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1261",
+    "spn": 10005,
+    "fmi": 1,
+    "description": "Fuel Injector Group 1 Supply Voltage Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1262",
+    "flash_code": "159",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1262",
+    "flash_code": "34",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 194,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1262",
+    "spn": 10004,
+    "fmi": 2,
+    "description": "Injection nozzle common 2 drive system fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1262",
+    "spn": 10006,
+    "fmi": 1,
+    "description": "Fuel Injector Group 2 Supply Voltage Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1271",
+    "flash_code": "24",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 113,
+      "printed_page": "Engine-112",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1271",
+    "spn": 91,
+    "fmi": 2,
+    "description": "Accelerator sensor 1-2 comparison fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1277",
+    "flash_code": "24",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1277",
+    "spn": 91,
+    "fmi": 3,
+    "description": "Accelerator sensor 1 fault (low voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1278",
+    "flash_code": "24",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1278",
+    "spn": 91,
+    "fmi": 4,
+    "description": "Accelerator sensor 1 fault (high voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1282",
+    "flash_code": "24",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1282",
+    "spn": 91,
+    "fmi": 3,
+    "description": "Accelerator sensor 2 fault (low voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1283",
+    "flash_code": "24",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1283",
+    "spn": 91,
+    "fmi": 4,
+    "description": "Accelerator sensor 2 fault (high voltage fault)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1293",
+    "flash_code": "211",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 195,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1293",
+    "spn": 1381,
+    "fmi": 4,
+    "description": "Fuel Intake Pressure Sensor Circuit Low Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1294",
+    "flash_code": "211",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 196,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1294",
+    "spn": 1381,
+    "fmi": 3,
+    "description": "Fuel Intake Pressure Sensor Circuit High Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1345",
+    "flash_code": "16",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1345",
+    "spn": 636,
+    "fmi": 7,
+    "description": "Cam sensor out of phase",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1404",
+    "flash_code": "45",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 197,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1404",
+    "spn": 10001,
+    "fmi": 13,
+    "description": "Exhaust Gas Recirculation (EGR) 1 Closed Position Performance",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1455",
+    "flash_code": "132",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 198,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1455",
+    "spn": 10026,
+    "fmi": 0,
+    "description": "PM Over Accumulation",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1471",
+    "flash_code": "149",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 199,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1471",
+    "spn": 10027,
+    "fmi": 0,
+    "description": "DPD Insufficient Regeneration",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1621",
+    "flash_code": "54",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 200,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1621",
+    "spn": 10013,
+    "fmi": 2,
+    "description": "Control Module Long Term Memory Performance",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1625",
+    "flash_code": "416",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1625",
+    "flash_code": "416",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1625",
+    "spn": 1485,
+    "fmi": 2,
+    "description": "Main relay system fault (Not enter)",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1630",
+    "flash_code": "36",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1630",
+    "spn": 10008,
+    "fmi": 2,
+    "description": "A/D conversion fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1631",
+    "flash_code": "55",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1631",
+    "spn": 1079,
+    "fmi": 2,
+    "description": "Voltage fault in 5-V power supply 1",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1632",
+    "flash_code": "55",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1632",
+    "spn": 1080,
+    "fmi": 2,
+    "description": "Voltage fault in 5-V power supply 2",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1633",
+    "flash_code": "55",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1633",
+    "spn": 10009,
+    "fmi": 2,
+    "description": "Voltage fault in 5-V power supply 3",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1634",
+    "flash_code": "55",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1634",
+    "spn": 10010,
+    "fmi": 2,
+    "description": "Voltage fault in 5-V power supply 4",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1635",
+    "flash_code": "55",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1635",
+    "spn": 10011,
+    "fmi": 2,
+    "description": "Voltage fault in 5-V power supply 5",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 2,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "P1655",
+    "flash_code": "57",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 201,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1655",
+    "spn": 10010,
+    "fmi": 2,
+    "description": "Sensor Reference Voltage 1 Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1669",
+    "flash_code": "75",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 202,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P1669",
+    "spn": 10025,
+    "fmi": 5,
+    "description": "DPD Lamp Control Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P1681",
+    "flash_code": "46",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P1682",
+    "flash_code": "46",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 114,
+      "printed_page": "Engine-113",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "P2122",
+    "flash_code": "121",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 203,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2122",
+    "spn": 91,
+    "fmi": 4,
+    "description": "Pedal Position Sensor 1 Circuit Low Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2123",
+    "flash_code": "121",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 204,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2123",
+    "spn": 91,
+    "fmi": 3,
+    "description": "Pedal Position Sensor 1 Circuit High Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2127",
+    "flash_code": "122",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 205,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2127",
+    "spn": 91,
+    "fmi": 4,
+    "description": "Pedal Position Sensor 2 Circuit Low Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2128",
+    "flash_code": "122",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 206,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2128",
+    "spn": 91,
+    "fmi": 3,
+    "description": "Pedal Position Sensor 2 Circuit High Input",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2138",
+    "flash_code": "124",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 207,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2138",
+    "spn": 91,
+    "fmi": 2,
+    "description": "Pedal Position Sensor 1 - 2 Voltage Correlation",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2146",
+    "flash_code": "158",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 208,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2146",
+    "spn": 10003,
+    "fmi": 2,
+    "description": "Fuel Injector Group 1 Supply Voltage Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2149",
+    "flash_code": "159",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 209,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2149",
+    "spn": 10004,
+    "fmi": 2,
+    "description": "Fuel Injector Group 2 Supply Voltage Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2228",
+    "flash_code": "71",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 210,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2228",
+    "spn": 108,
+    "fmi": 4,
+    "description": "Barometric Pressure Circuit Low",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2229",
+    "flash_code": "71",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 211,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2229",
+    "spn": 108,
+    "fmi": 3,
+    "description": "Barometric Pressure Circuit High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P242F",
+    "flash_code": "131",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 212,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P242F",
+    "spn": 10026,
+    "fmi": 15,
+    "description": "DPD Restriction",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2452",
+    "flash_code": "142",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 213,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2452",
+    "spn": 81,
+    "fmi": 1,
+    "description": "DPD Differential Pressure Sensor Circuit",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2453",
+    "flash_code": "141",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 214,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2453",
+    "spn": 81,
+    "fmi": 0,
+    "description": "DPD Differential Pressure Sensor Circuit Range/Performance",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2454",
+    "flash_code": "47",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 215,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2454",
+    "spn": 81,
+    "fmi": 4,
+    "description": "DPD Differential Pressure Sensor Circuit Low",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2455",
+    "flash_code": "47",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 216,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2455",
+    "spn": 81,
+    "fmi": 3,
+    "description": "DPD Differential Pressure Sensor Circuit High",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2456",
+    "flash_code": "47",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 217,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2456",
+    "spn": 81,
+    "fmi": 2,
+    "description": "DPD Differential Pressure Sensor Learned Position",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "P2458",
+    "flash_code": "139",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 218,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "P2458",
+    "spn": 10029,
+    "fmi": 0,
+    "description": "DPD Regeneration Duration",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 226,
+      "printed_page": "15E-97",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "U0001",
+    "flash_code": "84",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 219,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "U0001",
+    "spn": 10040,
+    "fmi": 19,
+    "description": "CAN Bus Error (ISO-CAN)",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 227,
+      "printed_page": "15E-98",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "U0073",
+    "flash_code": "84",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 220,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "U0073",
+    "spn": 639,
+    "fmi": 19,
+    "description": "CAN Bus Error (J1939) Control Module Communication Bus Off",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 227,
+      "printed_page": "15E-98",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "U0101",
+    "flash_code": "85",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 221,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "U0101",
+    "spn": 639,
+    "fmi": 2,
+    "description": "Lost Communication With Transmission Control Module",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 227,
+      "printed_page": "15E-98",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "U0110",
+    "flash_code": "87",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 222,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "U0110",
+    "spn": 10023,
+    "fmi": 2,
+    "description": "Lost Communication With VNT System",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 227,
+      "printed_page": "15E-98",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "U0411",
+    "flash_code": "87",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 223,
+      "section": "15E DTC Information"
+    }
+  },
+  {
+    "code": "U0411",
+    "spn": 10023,
+    "fmi": 19,
+    "description": "VNT Communication",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 227,
+      "printed_page": "15E-98",
+      "section": "DTC mapping table"
+    }
+  },
+  {
+    "code": "U2104",
+    "flash_code": "84",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 115,
+      "printed_page": "Engine-114",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "U2104",
+    "spn": 639,
+    "fmi": 2,
+    "description": "CAN Bus fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "U2106",
+    "flash_code": "85",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 115,
+      "printed_page": "Engine-114",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  },
+  {
+    "code": "U2106",
+    "spn": 639,
+    "fmi": 3,
+    "description": "CAN timeout fault",
+    "source": {
+      "document_key": "ISUZU_DTC_SPN_CHART",
+      "pdf_page": 1,
+      "section": "List of DTC"
+    }
+  },
+  {
+    "code": "U2108",
+    "flash_code": "89",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "file_name": "ISUZU 4HK-1 Service Manual.pdf",
+      "pdf_page": 115,
+      "printed_page": "Engine-114",
+      "section": "Diagnostic Trouble Code (DTC) List"
+    }
+  }
+]

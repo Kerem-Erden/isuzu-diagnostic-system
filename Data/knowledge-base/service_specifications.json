@@ -1,0 +1,1698 @@
+[
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Type",
+    "value_text": "Diesel/ 4-cycle /water cooling, inline 4 cylinder OHC",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Shape of combustion chamber",
+    "value_text": "Direct injection type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Cylinder liner type",
+    "value_text": "Dry type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Cylinder bore x stroke",
+    "value_text": "115 mm {4.53 in} × 125 mm {4.92 in}",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Displacement",
+    "value_text": "5.193 L ｛316.88 cu・in｝",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Compression ratio",
+    "value_text": "17.5",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Compression pressure",
+    "value_text": "： 3.23 MPa { 32.9 kgf/cm2 / 468 psi } 3.23 MPa {32.9 kgf/cm2 / 468 psi}",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Idling rotation speed",
+    "value_text": "800 r/min",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "valve clearance / Intake",
+    "value_text": "： 0.4 mm { 0.016 in } While cool",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Exhaust",
+    "value_text": "： 0.4 mm { 0.016 in } While cool",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Ignition method",
+    "value_text": "Compression ignition",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Injection order",
+    "value_text": "1,3,4,2",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Lubricating type",
+    "value_text": "Pressure type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Oil pump type",
+    "value_text": "Gear type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Lubrication oil amount",
+    "value_text": "： 20 to 27 L { 5.2 to 7.1 US gal }",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Oil filter type",
+    "value_text": "Full-flow / partial-flow united filter (cartridge type)",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Oil cooling type",
+    "value_text": "Built-in type, water cooled",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Cooling type",
+    "value_text": "Water cooling",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Radiator type",
+    "value_text": "Corrugated fin (pressure type)",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Water pump type",
+    "value_text": "Centrifugal, belt type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Thermostat type",
+    "value_text": "2 wax type unit",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Open valve temperature of the thermostat valve",
+    "value_text": "： 82.0 ℃ { 180 °F } Without jiggle valve",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Coolant container",
+    "value_text": "： 14.5 L { 3.8 US gal }",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Injection pump type",
+    "value_text": "Electronic control common rail type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Governor type",
+    "value_text": "Electronic type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Timer type",
+    "value_text": "Electronic type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Injection nozzle type",
+    "value_text": "Multi-hole type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Generator type",
+    "value_text": "AC type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Output",
+    "value_text": "24 V/50 A",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Regulator type",
+    "value_text": "IC",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Starter type",
+    "value_text": "Reduction type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Output",
+    "value_text": "24 V/5.0 kW",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Preheat system type",
+    "value_text": "glow plug",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Glow plug standard voltage/current",
+    "value_text": "23 V/3.5 A",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 28,
+      "printed_page": "15B-3",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "water pump",
+    "value_text": "Centrifugal impeller method",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Pulley ratio",
+    "value_text": "0.950",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "thermostat",
+    "value_text": "Wax pellet type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Open valve temperatur",
+    "value_text": "： 85.0 ℃ { 185 °F } With jiggle valve",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Full-open temperature",
+    "value_text": "： 100.0 ℃ { 212 °F } With jiggle valve",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Isuzu parts number",
+    "value_text": "8980921161",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Nominal output",
+    "value_text": "24 V/50 A",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Rated rotation count",
+    "value_text": "5,000 r/min",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Regulator type",
+    "value_text": "IC type",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Regulated voltage",
+    "value_text": "28.5 V±1",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "weight",
+    "value_text": "： 9.5 kg { 20.9 lb }",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Type (Manufacturer)",
+    "value_text": "Nikko",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Rating / voltage",
+    "value_text": "24V",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Output",
+    "value_text": "5 KW",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Time",
+    "value_text": "30 sec",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Number of pinion teeth",
+    "value_text": "13",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Rotational direction (facing the pinion)",
+    "value_text": "Right",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Weight (Approx.)",
+    "value_text": "： 8.0 kg { 17.6 lb }",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "No-load characteristics / Current/voltage",
+    "value_text": "85 A or less/24 V",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Revolution speed",
+    "value_text": "3,300 r/min or more",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Load characteristics / Current/voltage",
+    "value_text": "400 A/18.5 V",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Torque",
+    "value_text": "28.4N・m{2.9kgf・m} or more",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Revolution speed",
+    "value_text": "1,250 r/min or more",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Locking characteristics / Current/voltage",
+    "value_text": "1,400 A or less/9 V",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Torque",
+    "value_text": "88.2N・m{9.0kgf・m} or more",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Preheat device model",
+    "value_text": "glow plug",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "category": "Manual specification",
+    "specification_name": "Glow plug rated voltage/current",
+    "value_text": "23 V/3.5 A",
+    "unit": null,
+    "condition_text": null,
+    "notes": null,
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page": 29,
+      "printed_page": "15B-4",
+      "section": "Maintenance Information / Main specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Type Combustion chamber type Cylinder liner type Number of cylinders -cylinder mm (in) bore × strokes Displacement cc (cu.in) Compression ratio Compression pressure MPa (kg/cm2/ psi)/rpm Idling speed rpm",
+    "values": [
+      null,
+      "Diesel/4-cycle/water cooling type in-line OHC Direct injection type Dry type 4-115 (4.53) × 125 (4.92) 5193(317) 17.5 2.60 – 2.90 (26.5 – 29.5/377 – 421)/220 650 (Smoother) 575 (MT)",
+      "Diesel/4-cycle/water cooling type in-line OHC Direct injection type Dry type 4-115 (4.53) × 125 (4.92) 5193(317) 17.5 2.60 – 2.90 (26.5 – 29.5/377 – 421)/220 650 (Smoother) 575 (MT)"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 18,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Valve clearance mm (in)",
+    "values": [
+      "Intake",
+      "0.4 (0.016) (cold)",
+      "0.4 (0.016) (cold)"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 18,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "continued",
+    "values": [
+      "Exhaust",
+      "0.4 (0.016) (cold)",
+      "0.4 (0.016) (cold)"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 18,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Ignition type Injection order Injection timing (TDC)",
+    "values": [
+      null,
+      "Compressed ignition 1 - 3 - 4 - 2 0°",
+      "Compressed ignition 1 - 3 - 4 - 2 0°"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 18,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Lubricating system Lubricating type Oil pump type Volume of lubricating oil Liters (US/Imp gal.) Oil filter type Oil cooling type",
+    "values": [
+      null,
+      "Pressure type Gear type 13.0 (3.43/2.86) Full flow filter (cartridge type) Built-in-type, water cooling",
+      "Pressure type Gear type 13.0 (3.43/2.86) Full flow filter (cartridge type) Built-in-type, water cooling"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 18,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Cooling system Cooling type Radiator type Water pump type Thermostat type Thermostat valve-opening °C (°F) temperature Volume of coolant Liters (US/Imp gal.)",
+    "values": [
+      null,
+      "Water cooling type Corrugated fin(pressure type) Centrifugal, belt type 2 wax-type units 82 (180), 85 (185) 18 (4.76/3.96) (incl. radiator)",
+      "Water cooling type Corrugated fin(pressure type) Centrifugal, belt type 2 wax-type units 82 (180), 85 (185) 18 (4.76/3.96) (incl. radiator)"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 18,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Fuel system Injection pump type Governor type Timer type",
+    "values": [
+      null,
+      "Electronic control common rail type Electronic type Electronic type",
+      "Electronic control common rail type Electronic type Electronic type"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 18,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Injection nozzle type",
+    "values": [
+      "Multi-hole type 7-holes φ0.14 mm (0.0055 in) inside diameter",
+      "Multi-hole type 7-holes φ0.14 mm (0.0055 in) inside diameter"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 19,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Charging system Generator type Power output V-A Regulator type",
+    "values": [
+      "AC type 24 - 80, 24 - 50 IC",
+      "AC type 24 - 80, 24 - 50 IC"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 19,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Starting system Starter type Power output V-kw",
+    "values": [
+      "Reduction type 24 - 4.5",
+      "Reduction type 24 - 4.5"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 19,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Preheat system type Glow plug standard voltage/ V electric current",
+    "values": [
+      "Glow plug 24",
+      "Glow plug 24"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 19,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "Illustration",
+    "values": [
+      "Tool Number / Description / Remarks"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 19,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "continued",
+    "values": [
+      "5-8840-2008-0 Compression Gauge Set (J-26999-12 / Compression Gauge, EN-46722 / Gauge Adapter)"
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 19,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "category": "Engine mechanical",
+    "specification_name": "5884020080",
+    "values": [
+      null
+    ],
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 19,
+      "section": "Main Data and Specifications"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Motor tipi",
+    "values": [
+      "Dizel, dört çevrim"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 22,
+      "printed_page": "22",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Silindir düzeni /silindir sayısı",
+    "values": [
+      "Inline / dört silindir"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 22,
+      "printed_page": "22",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Yakıt enjeksiyon sırası",
+    "values": [
+      "1 - 3 - 4 - 2"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 22,
+      "printed_page": "22",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Toplam hacim(cc)",
+    "values": [
+      "2,999"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 22,
+      "printed_page": "22",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Bore x stroke (mm / in)",
+    "values": [
+      "95.4 x 104.9 / 3.76 x 4.13"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 22,
+      "printed_page": "22",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Sıkıştırma oranı",
+    "values": [
+      "17.3"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 22,
+      "printed_page": "22",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Marş sırasında sıkıştırma basıncı(MPa / psi)",
+    "values": [
+      "3,0 / 435'ten fazla"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 22,
+      "printed_page": "22",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Combustion chamber type",
+    "values": [
+      "Doğrudan enjeksiyon"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 22,
+      "printed_page": "22",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Silindir gömleği",
+    "values": [
+      "Astarsız tip"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 22,
+      "printed_page": "22",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Rölanti hızı (rpm)",
+    "values": [
+      "600 rpm"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 22,
+      "printed_page": "22",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Yakıt sistemi",
+    "values": [
+      "Common Rail yakıt sistemi"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 23,
+      "printed_page": "23",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Enjeksiyon pompası tipi",
+    "values": [
+      "Denso yakıt besleme pompası (HP5S tipi)"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 23,
+      "printed_page": "23",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Enjeksiyon nozul tipi",
+    "values": [
+      "G4S i-ART enjektör"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 23,
+      "printed_page": "23",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Enjeksiyon deliği sayısı",
+    "values": [
+      "10"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 23,
+      "printed_page": "23",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Enjeksiyon deliği çap",
+    "values": [
+      "0.112 / 0.00441"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 23,
+      "printed_page": "23",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Yakıt filtresi",
+    "values": [
+      "Su ile kartuş kağıt elemanı"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 23,
+      "printed_page": "23",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Valf sistemi",
+    "values": [
+      null
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 24,
+      "printed_page": "24",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Valf düzeni",
+    "values": [
+      "Çift Üstten Eksantrik Mili (DOHC)"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 24,
+      "printed_page": "24",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Sürücü tipi",
+    "values": [
+      "Dişli tahrik"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 24,
+      "printed_page": "24",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "BTDC'de emme supabı açıklığı (º)",
+    "values": [
+      "28"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 24,
+      "printed_page": "24",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "ABDC'de emme valfi kapanışı (º)",
+    "values": [
+      "56"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 24,
+      "printed_page": "24",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "BBDC'de egzoz valfi açık (º)",
+    "values": [
+      "43 (VVT çalışması: 73 - 43)"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 24,
+      "printed_page": "24",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "ATDC 'de egzoz valfi kapanışı (º)",
+    "values": [
+      "23 (VVT çalışması: -7 - 23)"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 24,
+      "printed_page": "24",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Intake valve clearance when cold (between camshaft & roller) (mm / in)",
+    "values": [
+      "0.15 / 0.006"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 24,
+      "printed_page": "24",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Exhaust valve clearance when cold (between camshaft & roller) (mm / in)",
+    "values": [
+      "0.15 / 0.006"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 24,
+      "printed_page": "24",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Soğutma sistemi",
+    "values": [
+      null,
+      null
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 25,
+      "printed_page": "25",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Soğutma yöntemi",
+    "values": [
+      "Su soğutmalı",
+      null
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 25,
+      "printed_page": "25",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Su kapasitesi (l) (Radyatör dahil)",
+    "values": [
+      "NLR, NMR modelleri",
+      "11.7"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 25,
+      "printed_page": "25",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "continued",
+    "values": [
+      "NNR, NPR modelleri",
+      "12.2"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 25,
+      "printed_page": "25",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Su pompası tipi",
+    "values": [
+      "Santrifüj çark tipi",
+      null
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 25,
+      "printed_page": "25",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Termostat tipi",
+    "values": [
+      "Wax pellet type, with jiggle valve",
+      null
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 25,
+      "printed_page": "25",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Termostat açılış sıcaklığı(ºC / ºF)",
+    "values": [
+      "82 / 180",
+      null
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 25,
+      "printed_page": "25",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Yağlama sistemi",
+    "values": [
+      null
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 26,
+      "printed_page": "26",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Yağlama yöntemi",
+    "values": [
+      "Basınç sirkülasyonu"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 26,
+      "printed_page": "26",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Yağ pompası tipi",
+    "values": [
+      "Dişli"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 26,
+      "printed_page": "26",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Yağ kapasitesi (l)",
+    "values": [
+      "9.4"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 26,
+      "printed_page": "26",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Yağ filtresi tipi",
+    "values": [
+      "Kağıt"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 26,
+      "printed_page": "26",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Yağ soğutucu tipi",
+    "values": [
+      "Su soğutmalı"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 26,
+      "printed_page": "26",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "EGR sistemi",
+    "values": [
+      "Elektrik kontrollü EGR valfi"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 26,
+      "printed_page": "26",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "Hava temizleyici tipi",
+    "values": [
+      "Kuru kağıt elemanı"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 26,
+      "printed_page": "26",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "category": "Engine main data and specifications",
+    "specification_name": "PCV sistemi",
+    "values": [
+      "Kapalı tip"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 26,
+      "printed_page": "26",
+      "section": "Motor Ana Verileri ve Teknik Özellikleri"
+    }
+  }
+]

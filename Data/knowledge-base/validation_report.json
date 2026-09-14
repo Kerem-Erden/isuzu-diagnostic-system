@@ -1,0 +1,1764 @@
+{
+  "schema_version": "2.0-draft",
+  "generated_at_utc": "2026-09-13T11:03:11.141603+00:00",
+  "counts": {
+    "source_documents": 13,
+    "applications": 7,
+    "global_dtcs": 317,
+    "dtc_profiles": 541,
+    "profiles_with_oem_diagnostic_steps": 92,
+    "profiles_with_possible_causes": 71,
+    "dtc_mappings": 317,
+    "live_parameters": 71,
+    "live_reference_records": 120,
+    "service_spec_records": 116,
+    "control_modules": 3,
+    "control_module_pins": 275,
+    "networks": 8,
+    "actuator_tests": 3,
+    "special_functions": 7,
+    "lifecycle_rules": 5,
+    "symptom_troubleshooting_rows": 171,
+    "project_relevant_page_index_rows": 544,
+    "raw_tables": 75,
+    "raw_source_fact_pages": 91,
+    "dtc_completeness_rows": 317,
+    "operating_conditions": 8,
+    "dtc_related_live_data": 152
+  },
+  "policies": {
+    "dtc_lookup": "Global Isuzu lookup by P/C/B/U code. Application/engine/module context enriches but does not gate recognition.",
+    "unknown_dtc": "If code is absent, show Unknown DTC and continue.",
+    "oem_vs_derived": "OEM causes/procedures remain labeled. Derived solution recommendations from v1 remain explicitly non-OEM.",
+    "reference_values": "Always retain application + operating-condition + source context. Do not collapse conflicting values globally.",
+    "provenance": "Every normalized record should carry source key/page/section where available. Numeric SQLite IDs are importer-generated, not stored in JSON."
+  },
+  "known_conflicts_and_variants": [
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0016",
+      "titles": [
+        "Crankshaft position-intake camshaft position correlation bank 1",
+        "Crankshaft Position - Camshaft Position Correlation",
+        "DTC P0016 (Flash Code 16) Crankshaft Position - Camshaft Position Correlation"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0027",
+      "titles": [
+        "Exhaust brake valve stick / Exhaust throttle valve stick",
+        "Exhaust brake valve stick Exhaust throttle valve stick"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0045",
+      "titles": [
+        "VGT module motor circuit short and GND short/position control abnormal/power supply / voltage high error",
+        "DTC P0045 (Flash Code 33) Turbocharger Boost Control Solenoid Circuit",
+        "Turbocharger Boost Control Solenoid Circuit",
+        "VGT module motor circuit short and GND short/position control abnormal/power supply voltage high error"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0087",
+      "titles": [
+        "Fuel Rail Pressure (FRP) Too Low",
+        "C/Rail Press. Sensor Performance Invalid included fuel leak",
+        "DTC P0087 (Flash Code 225) Fuel Rail/System Pressure - Too Low",
+        "Fuel Rail/System Pressure - Too Low",
+        "No pump pressure feed (fuel leakage)",
+        "P/L (pressure limiter) activated",
+        "Rail pressure low during power enrichment"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0088",
+      "titles": [
+        "Fuel Rail Pressure (FRP) Too High",
+        "Common rail pressure exceeds hi upper limit",
+        "Common rail pressure exceeds upper",
+        "Common rail pressure fault (1st stage)",
+        "Common rail pressure fault (2nd stage)",
+        "DTC P0088 (Flash Code 118) Fuel Rail/System Pressure - Too High",
+        "Fuel Rail/System Pressure - Too High",
+        "Rail pressure too high / Fuel pressure regulator 1 performance",
+        "Rail pressure too high Fuel pressure regulator 1 performance",
+        "Supply pump control valve (suction control valve) stuck"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0089",
+      "titles": [
+        "Fuel Pressure Regulator Performance (Fuel Rail Pressure Deviation)",
+        "Common rail pressure fault (Excessive pressure feed in pump)",
+        "DTC P0089 (Flash Code 151) Fuel Pressure Regulator Performance",
+        "Fuel Pressure Regulator Performance",
+        "Rail pressure exceeds high upper limit",
+        "Supply pump control valve (suction control valve) stuck"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0090",
+      "titles": [
+        "Fuel Pressure Regulator Solenoid Control Circuit Invalid (Suction Control Valve Solenoid Circuit Invalid)",
+        "SCV drive system open circuit, +B short or ground short"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0091",
+      "titles": [
+        "Rail fuel pressure regulator solenoid 1 control circuit",
+        "DTC P0091 (Flash Code 247) Fuel Pressure Regulator Control Circuit Low",
+        "Fuel Pressure Regulator Control Circuit Low",
+        "SCV (+) output open Load / short to GND SCV (-) output open Load / short to GND SCV coil open"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0092",
+      "titles": [
+        "Rail fuel pressure regulator solenoid 1 control circuit",
+        "DTC P0092 (Flash Code 247) Fuel Pressure Regulator Control Circuit High",
+        "Fuel Pressure Regulator Control Circuit High",
+        "SCV (+) output short to BATT SCV (-) output short to BATT"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0093",
+      "titles": [
+        "Rail fuel pressure low during idle or deceleration fuel cut-off",
+        "DTC P0093 (Flash Code 227) Fuel System Leak Detected",
+        "Fuel System Leak Detected"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0100",
+      "titles": [
+        "Unknown / title not available in extracted source",
+        "Mass Air Flow (MAF) performance"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0101",
+      "titles": [
+        "Mass Air Flow (MAF) meter rationality low / MAF meter rationality high",
+        "Mass Air Flow (MAF) meter rationality low MAF meter rationality high"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0102",
+      "titles": [
+        "MAF meter circuit low",
+        "DTC P0102 (Flash Code 91) Mass Air Flow Circuit Low Input",
+        "MAF Sensor Signal Too Low",
+        "Mass Air Flow Circuit Low Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0103",
+      "titles": [
+        "MAF meter circuit high",
+        "DTC P0103 (Flash Code 91) Mass Air Flow Circuit High Input",
+        "MAF Sensor Signal Too High",
+        "Mass Air Flow Circuit High Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0107",
+      "titles": [
+        "Barometric Pressure (BARO) Sensor Circuit Low Voltage",
+        "Atom Press. Sensor Signal Too Low",
+        "Barometric pressure sensor fault (low voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0108",
+      "titles": [
+        "Barometric Pressure (BARO) Sensor Circuit High Voltage",
+        "Atom Press. Sensor Signal Too High",
+        "Barometric pressure sensor fault (high voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0112",
+      "titles": [
+        "Intake Air Temperature (IAT) Sensor Circuit Low Voltage",
+        "ATM Temp. Sensor Signal Too Low",
+        "DTC P0112 (Flash Code 22) Intake Air Temperature Sensor Circuit Low",
+        "Intake Air Temp. Sensor Signal Too Low",
+        "Intake air temperature sensor circuit low",
+        "Intake air temperature sensor fault (low voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0113",
+      "titles": [
+        "Intake Air Temperature (IAT) Sensor Circuit High Voltage",
+        "ATM Temp. Sensor Signal Too High",
+        "DTC P0113 (Flash Code 22) Intake Air Temperature Sensor Circuit High",
+        "Intake Air Temp. Sensor Signal Too High",
+        "Intake air temperature sensor circuit high",
+        "Intake air temperature sensor fault (high voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0117",
+      "titles": [
+        "Engine Coolant Temperature (ECT) Sensor Circuit Low Voltage",
+        "Coolant Temp. Sensor Signal Too Low",
+        "DTC P0117 (Flash Code 23) Engine Coolant Temperature Sensor Circuit Low",
+        "Engine coolant temperature sensor circuit low",
+        "Engine coolant temperature sensor fault (low voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0118",
+      "titles": [
+        "Engine Coolant Temperature (ECT) Sensor Circuit High Voltage",
+        "Coolant Temp. Sensor Signal Too High",
+        "DTC P0118 (Flash Code 23) Engine Coolant Temperature Sensor Circuit High",
+        "Engine coolant temperature sensor circuit high",
+        "Engine coolant temperature sensor fault (high voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0122",
+      "titles": [
+        "DTC P0122 (Flash Code 43) Throttle Position Sensor Circuit Low",
+        "Throttle Position Sensor Circuit Low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0123",
+      "titles": [
+        "DTC P0123 (Flash Code 43) Throttle Position Sensor Circuit High",
+        "Throttle Position Sensor Circuit High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0126",
+      "titles": [
+        "Engine coolant temperature insufficient for stable operation",
+        "Engine coolant temperature insufficient for stable operation https://truckmanualshub.com/"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0182",
+      "titles": [
+        "Fuel Temperature Sensor Circuit Low Voltage",
+        "DTC P0182 (Flash Code 211) Fuel Temperature Sensor Circuit Low",
+        "Fuel Leak Temp. Sensor Signal Too Low",
+        "Fuel Temperature Sensor Circuit Low",
+        "Fuel temperature sensor A circuit low",
+        "Fuel temperature sensor fault (low voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0183",
+      "titles": [
+        "Fuel Temperature Sensor Circuit High Voltage",
+        "DTC P0183 (Flash Code 211) Fuel Temperature Sensor Circuit High",
+        "Fuel Leak Temp. Sensor Signal Too High",
+        "Fuel Temperature Sensor Circuit High",
+        "Fuel temperature sensor A circuit high",
+        "Fuel temperature sensor fault (high voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P018B",
+      "titles": [
+        "Rail pressure sub-sensor performance 1",
+        "Rail pressure sub-sensor signal keeping the middle range Rail pressure sub-sensor performance 1 Rail pressure sub-sensor performance 2"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P018C",
+      "titles": [
+        "Rail pressure sub-sensor performance 2 / Rail pressure sub-sensor circuit low voltage",
+        "Rail pressure sub-sensor circuit low voltage"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0191",
+      "titles": [
+        "Rail pressure sensor performance 1",
+        "Rail pressure sensor signal keeping the middle range Rail pressure sensor performance 1 Rail pressure sensor performance 2"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0192",
+      "titles": [
+        "Fuel Rail Pressure (FRP) Sensor Circuit Low Voltage",
+        "C/Rail Press. Sensor Signal Too Low",
+        "Common rail pressure sensor fault (low voltage fault)",
+        "DTC P0192 (Flash Code 245) Fuel Rail Pressure Sensor Circuit Low",
+        "Fuel Rail Pressure Sensor Circuit Low",
+        "Rail pressure sensor circuit low voltage"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0193",
+      "titles": [
+        "Fuel Rail Pressure (FRP) Sensor Circuit High Voltage",
+        "C/Rail Press. Sensor Signal Too High",
+        "Common rail pressure sensor fault (high voltage fault)",
+        "DTC P0193 (Flash Code 245) Fuel Rail Pressure Sensor Circuit High",
+        "Fuel Rail Pressure Sensor Circuit High",
+        "Rail pressure sensor circuit high voltage"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0201",
+      "titles": [
+        "Injector 1 Control Circuit (Cylinder 1 Injector Control Circuit)",
+        "DTC P0201 (Flash Code 271) Injector Circuit - Cylinder 1",
+        "Injector Circuit - Cylinder 1",
+        "Open circuit in injection nozzle #1 drive system",
+        "TWV 1 output open load injector #1 coil open",
+        "TWV1 output open load Injector#1 coil open"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0202",
+      "titles": [
+        "Injector 2 Control Circuit (Cylinder 2 Injector Control Circuit)",
+        "DTC P0202 (Flash Code 272) Injector Circuit - Cylinder 2",
+        "Injector Circuit - Cylinder 2",
+        "Open circuit in injection nozzle #2 drive system",
+        "TWV 4 output open load injector #2 coil open",
+        "TWV2 output open load Injector#3 coil open",
+        "TWV2 output open load Injector#5 coil open"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0203",
+      "titles": [
+        "Injector 3 Control Circuit (Cylinder 3 Injector Control Circuit)",
+        "DTC P0203 (Flash Code 273) Injector Circuit - Cylinder 3",
+        "Injector Circuit - Cylinder 3",
+        "Open circuit in injection nozzle #3 drive system",
+        "TWV 2 output open load injector #3 coil open",
+        "TWV3 output open load Injector#3 coil open",
+        "TWV3 output open load Injector#4 coil open"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0204",
+      "titles": [
+        "Injector 4 Control Circuit (Cylinder 4 Injector Control Circuit)",
+        "DTC P0204 (Flash Code 274) Injector Circuit - Cylinder 4",
+        "Injector Circuit - Cylinder 4",
+        "Open circuit in injection nozzle #4 drive system",
+        "TWV 3 output open load injector #4 coil open",
+        "TWV4 output open load Injector#2 coil open",
+        "TWV4 output open load Injector#6 coil open"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0205",
+      "titles": [
+        "TWV5 output open load Injector#2 coil open",
+        "Open circuit in injection nozzle #5 drive system"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0206",
+      "titles": [
+        "TWV6 output open load Injector#4 coil open",
+        "Open circuit in injection nozzle #6 drive system"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P020A",
+      "titles": [
+        "Injector #1 quantity increase failure / Injector #1 quantity decrease failure",
+        "Injector #1 quantity increase failure Injector #1 quantity decrease failure"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P020B",
+      "titles": [
+        "Injector #2 quantity increase failure / Injector #2 quantity decrease failure",
+        "Injector #2 quantity increase failure Injector #2 quantity decrease failure"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P020C",
+      "titles": [
+        "Injector #3 quantity increase failure / Injector #3 quantity decrease failure",
+        "Injector #3 quantity increase failure Injector #3 quantity decrease failure"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P020D",
+      "titles": [
+        "Injector #4 quantity increase failure / Injector #4 quantity decrease failure",
+        "Injector #4 quantity increase failure Injector #4 quantity decrease failure"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0217",
+      "titles": [
+        "Unknown / title not available in extracted source",
+        "DTC P0217 (Flash Code 542) Engine Coolant Over Temperature Condition",
+        "Engine Coolant Over Temperature Condition",
+        "Engine Coolant Overtemperature"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0219",
+      "titles": [
+        "Engine Overspeed",
+        "DTC P0219 (Flash Code 543) Engine Overspeed Condition",
+        "Engine Overspeed Condition",
+        "Engine overrun",
+        "Engine overrun / Engine overrun 2",
+        "Engine overrun Engine overrun 2",
+        "Overrun"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0234",
+      "titles": [
+        "Turbocharger Engine Overboost",
+        "Boost Pressure Sensor exceeds upper limit",
+        "Boost Pressure Sensor exceeds upper limit (Long time)",
+        "DTC P0234 (Flash Code 42) Turbocharger Overboost Condition",
+        "Turbo/supercharger engine overboost",
+        "Turbocharger Overboost",
+        "Turbocharger Overboost Condition"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0237",
+      "titles": [
+        "Turbocharger Boost Sensor Circuit Low Voltage",
+        "Boost Pressure Sensor Signal Too Low",
+        "Boost pressure sensor fault (low voltage fault)",
+        "DTC P0237 (Flash Code 32) Turbo Charger Boost Sensor Circuit Low",
+        "Turbo/supercharger boost sensor A circuit low",
+        "Turbocharger Boost Sensor Circuit Low Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0238",
+      "titles": [
+        "Turbocharger Boost Sensor Circuit High Voltage",
+        "Boost Pressure Sensor Signal Too High",
+        "Boost pressure sensor fault (high voltage fault)",
+        "DTC P0238 (Flash Code 32) Turbo Charger Boost Sensor Circuit High",
+        "Turbo/supercharger boost sensor A circuit high",
+        "Turbocharger Boost Sensor Circuit High Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0299",
+      "titles": [
+        "Turbo/supercharger engine underboost",
+        "Boost Pressure Sensor exceeds lower limit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P02E2",
+      "titles": [
+        "ITHR DC motor output open load motor open load",
+        "ITHR DC motor output open load motor open load DTC Detection Item https://truckmanualshub.com/"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0335",
+      "titles": [
+        "Crankshaft Position (CKP) Sensor No Pulse",
+        "Crank Sensor No Pulse",
+        "Crank sensor fault (no signal)",
+        "Crankshaft Position Sensor Circuit",
+        "Crankshaft position sensor A circuit",
+        "DTC P0335 (Flash Code 15) Crankshaft Position Sensor Circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0336",
+      "titles": [
+        "Crankshaft Position (CKP) Sensor Extra or Missing",
+        "Crank sensor fault (signal fault)",
+        "Crankshaft Position Sensor Circuit Range/Performance",
+        "Crankshaft position sensor A performance",
+        "DTC P0336 (Flash Code 15) Crankshaft Position Sensor Circuit Range/Performance"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0340",
+      "titles": [
+        "Camshaft Position (CMP) Sensor No Pulse",
+        "Cam Sensor No Pulse",
+        "Cam sensor fault (no signal)",
+        "Camshaft Position Sensor Circuit",
+        "DTC P0340 (Flash Code 14) Camshaft Position Sensor Circuit",
+        "Intake camshaft position sensor circuit bank 1"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0341",
+      "titles": [
+        "Camshaft Position (CMP) Sensor Pulse Faulty or Invalid",
+        "Cam sensor fault (signal fault)",
+        "Intake camshaft position sensor performance bank 1"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0381",
+      "titles": [
+        "Glow Indicator Lamp Control Circuit",
+        "Wait to start light control module internal circuit (short to BATT) / Wait to start light control module internal circuit (open load/short to GND)",
+        "Wait to start light control module internal circuit (short to BATT) Wait to start light control module internal circuit (open load/short to GND)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0382",
+      "titles": [
+        "Glow Controller Command Line Short to BATT",
+        "Glow Controller Command Line Open Load / Short to GND"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0402",
+      "titles": [
+        "MAF meter performance (EGR positive deviation) / EGR duty error",
+        "MAF meter performance (EGR positive deviation)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0403",
+      "titles": [
+        "EGR brushless motor circuit too high / EGR brushless motor circuit too low",
+        "EGR duty error EGR brushless motor circuit too high EGR brushless motor circuit too low EGR brushless motor circuit too open"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0404",
+      "titles": [
+        "EGR brushless motor circuit too open / EGR open position performance",
+        "DTC P0404 (Flash Code 45) Exhaust Gas Recirculation Control Circuit Range/Performance",
+        "EGR open position performance",
+        "Exhaust Gas Recirculation Control 1 Circuit Range/Performance"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0405",
+      "titles": [
+        "EGR brushless motor position sensor signal invalid low",
+        "EGR Position Signal Too Low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0406",
+      "titles": [
+        "EGR brushless motor position sensor signal invalid high",
+        "EGR Position Signal Too High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0409",
+      "titles": [
+        "DTC P0409 (Flash Code 44) Exhaust Gas Recirculation Sensor Circuit",
+        "Exhaust Gas Recirculation 1 Sensor Circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P041C",
+      "titles": [
+        "EGR gas temperature 2 too low",
+        "DTC P041C (Flash Code 27) Intake Manifold Temperature Sensor Circuit High",
+        "Manifold Air Temperature Circuit High Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P041D",
+      "titles": [
+        "EGR gas temperature 2 too high",
+        "DTC P041D (Flash Code 27) Intake Manifold Temperature Sensor Circuit Low",
+        "Manifold Air Temperature Circuit Low Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0426",
+      "titles": [
+        "DTC P0426 (Flash Code 143) Catalyst Temperature Sensor Circuit Range/Performance Sensor 1",
+        "Catalyst Temperature 1 Too High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0427",
+      "titles": [
+        "DTC P0427 (Flash Code 48) Catalyst Temperature Sensor Circuit Low Sensor 1",
+        "Catalyst Temperature Sensor Circuit Low Sensor 1"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0428",
+      "titles": [
+        "DTC P0428 (Flash Code 48) Catalyst Temperature Sensor Circuit High Sensor 1",
+        "Catalyst Temperature Sensor Circuit High Sensor 1"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P042B",
+      "titles": [
+        "DTC P042B (Flash Code 145) Catalyst Temperature Sensor Circuit Range/Performance Sensor 2",
+        "Catalyst Temperature 2 Too High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P042C",
+      "titles": [
+        "DTC P042C (Flash Code 49) Catalyst Temperature Sensor Circuit Low Sensor 2",
+        "Catalyst Temperature Sensor Circuit Low Sensor 2"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P042D",
+      "titles": [
+        "DTC P042D (Flash Code 49) Catalyst Temperature Sensor Circuit High Sensor 2",
+        "Catalyst Temperature Sensor Circuit High Sensor 2"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0488",
+      "titles": [
+        "Exhaust Gas Recirculation (EGR) Position Sensor Performance",
+        "EGR valve control fault"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0500",
+      "titles": [
+        "Vehicle Speed Sensor (VSS) Circuit No Pulse",
+        "Vehicle Speed Sensor Malfunction",
+        "Vehicle speed sensor circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0507",
+      "titles": [
+        "High target idle speed",
+        "High target idle speed DTC Detection Item https://truckmanualshub.com/"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0522",
+      "titles": [
+        "DTC P0522 (Flash Code 294) Oil Pressure Sensor Circuit Low",
+        "Engine oil pressure sensor fault (low voltage fault)",
+        "Oil Press. Sensor Signal Too Low",
+        "Oil Pressure Sensor Circuit Low Input",
+        "Oil pressure sensor signal too low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0523",
+      "titles": [
+        "DTC P0523 (Flash Code 294) Oil Pressure Sensor Circuit High",
+        "Engine oil pressure sensor fault (high voltage fault)",
+        "Oil Press. Sensor Signal Too High",
+        "Oil Pressure Sensor Circuit High Input",
+        "Oil pressure sensor signal too high"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0560",
+      "titles": [
+        "DTC P0560 (Flash Code 155) System Voltage",
+        "System Voltage"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0562",
+      "titles": [
+        "System low voltage status determination",
+        "Ignition1 Voltage Too Low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0563",
+      "titles": [
+        "System high voltage status determination",
+        "DTC P0563 (Flash Code 35) System Voltage High",
+        "Ignition1 Voltage Too High",
+        "System Voltage High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0567",
+      "titles": [
+        "Cruise control resume switch determination",
+        "Cruise Resume / Accelerator Signal"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0568",
+      "titles": [
+        "Cruise control set switch determination",
+        "Cruise Set / Coast Signal Malfunction"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0571",
+      "titles": [
+        "Cruise control brake switch determination",
+        "Cruise / Brake Switch Circuit Malfunction"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0601",
+      "titles": [
+        "ECM Program Code Checksum",
+        "DTC P0601 (Flash Code 53) Internal Control Module Memory Check Sum Error",
+        "Internal Control Module Memory Check Sum Error",
+        "ROM fault"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0602",
+      "titles": [
+        "QR code error",
+        "Control Module Programming Error",
+        "DTC P0602 (Flash Code 154) Control Module Programming Error",
+        "EEPROM/EERPOM Emulation via Flash EPROM Write Error",
+        "QR Code ERROR",
+        "QR Code Not Programmed"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0603",
+      "titles": [
+        "ECM Memory Failure",
+        "EEPROM fault"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0604",
+      "titles": [
+        "DTC P0604 (Flash Code 153) Internal Control Module Random Access Memory (RAM) Error",
+        "Internal Control Module Random Access Memory (RAM)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0606",
+      "titles": [
+        "Control Module Internal Performance",
+        "CPU fault",
+        "CPU fault; -Main CPU fault",
+        "CPU fault; -Watchdog IC fault",
+        "CPU monitoring IC fault",
+        "DTC P0606 (Flash Code 51) ECM/PCM Processor",
+        "ECM/PCM Processor",
+        "Engine ECU processor (main CPU fault) / Engine ECU processor (watchdog IC fault)",
+        "Engine ECU processor (main CPU fault) Engine ECU processor (watchdog IC fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P060B",
+      "titles": [
+        "DTC P060B (Flash Code 36) Internal Control Module A/D Processing Performance",
+        "Internal Control Module A/D Processing Performance"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0611",
+      "titles": [
+        "Fuel Injector Control Module Group 1",
+        "Charge circuit fault (bank 1)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0612",
+      "titles": [
+        "Fuel Injector Control Module Group 2",
+        "Charge circuit fault (bank 2)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0638",
+      "titles": [
+        "DTC P0638 (Flash Code 61) Throttle Actuator Control Range/Performance",
+        "Throttle Actuator Control Range/Performance"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0641",
+      "titles": [
+        "DTC P0641 (Flash Code 55) Sensor Reference Voltage 1 Circuit",
+        "Analog Sensor Reference Voltage Output No.1 Too High",
+        "Analog Sensor Reference Voltage Output No.1 Too Low",
+        "Sensor Reference Voltage 1 Circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0642",
+      "titles": [
+        "Battery 5 V reference 1 circuit low",
+        "Analog Sensor Reference Voltage Output No.1 Too Low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0643",
+      "titles": [
+        "Battery 5 V reference 1 circuit high",
+        "Analog Sensor Reference Voltage Output No.1 Too High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P064C",
+      "titles": [
+        "Glow plug module INTST / Glow plug module MEEPST",
+        "Glow plug module control circuit Glow plug module INTST Glow plug module MEEPST"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0650",
+      "titles": [
+        "Malfunction Indicator Lamp (MIL) Control Circuit",
+        "Check engine lamp fault",
+        "DTC P0650 (Flash Code 77) Malfunction Indicator Lamp (MIL) Control Circuit",
+        "Malfunction Indicator Lamp (MIL) control circuit monitoring (short to BATT) / MIL control circuit monitoring (open load/short to GND)",
+        "Malfunction Indicator Lamp (MIL) control circuit monitoring (short to BATT) MIL control circuit monitoring (open load/short to GND)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0651",
+      "titles": [
+        "DTC P0651 (Flash Code 56) Sensor Reference Voltage 2 Circuit",
+        "Analog Sensor Reference Voltage Output No.2 Too High",
+        "Analog Sensor Reference Voltage Output No.2 Too Low",
+        "Sensor Reference Voltage 1 Circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0652",
+      "titles": [
+        "Battery 5 V reference 2 circuit low",
+        "Analog Sensor Reference Voltage Output No.2 Too Low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0653",
+      "titles": [
+        "Battery 5 V reference 2 circuit high",
+        "Analog Sensor Reference Voltage Output No.2 Too High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0685",
+      "titles": [
+        "DTC P0685 (Flash Code 416) ECM/PCM Power Relay Control Circuit/Open",
+        "ECM/PCM Power Relay Control Circuit /Open"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0687",
+      "titles": [
+        "Main relay diagnostics; main relay stuck closed",
+        "DTC P0687 (Flash Code 416) ECM/PCM Power Relay Control Circuit High",
+        "ECM/PCM Power Relay Control Circuit High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0697",
+      "titles": [
+        "DTC P0697 (Flash Code 57) Sensor Reference Voltage 3 Circuit",
+        "Sensor Reference Voltage 1 Circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0698",
+      "titles": [
+        "Battery 5 V reference 3 circuit low",
+        "Analog Sensor Reference Voltage Output No.3 Too Low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P0699",
+      "titles": [
+        "Battery 5 V reference 3 circuit high",
+        "Analog Sensor Reference Voltage Output No.3 Too High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P06EC",
+      "titles": [
+        "Unknown / title not available in extracted source",
+        "EDU Engine Warning Lamp Request"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1085",
+      "titles": [
+        "Supply pump protection / Supply pump exchange",
+        "Supply pump protection Supply pump exchange"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1093",
+      "titles": [
+        "Fuel Rail Pressure (FRP) Too Low",
+        "DTC P1093 (Flash Code 227) Fuel Rail Pressure (FRP) Too Low",
+        "No pump pressure feed (fuel leakage)",
+        "Supply pump malfunction"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1094",
+      "titles": [
+        "Fuel Rail Pressure (FRP) Too Low",
+        "C/Rail Press. Sensor Performance Invalid included fuel leak"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1095",
+      "titles": [
+        "Fuel Rail Pressure (FRP) Too Low (Fuel Rail Pressure Limiter Activation)",
+        "Pressure limiter open"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1102",
+      "titles": [
+        "Rail pressure sensor performance (correlation abnormal)",
+        "Rail pressure sensor performance (correlation abnormal) DTC Detection Item https://truckmanualshub.com/"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1112",
+      "titles": [
+        "DTC P1112 (Flash Code 295) Boost Temperature Sensor Circuit Low",
+        "Boost Temperature Sensor Circuit Low Input",
+        "Boost temperature sensor fault (low voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1113",
+      "titles": [
+        "DTC P1113 (Flash Code 295) Boost Temperature Sensor Circuit High",
+        "Boost Temperature Sensor Circuit High Input",
+        "Boost temperature sensor fault (high voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1125",
+      "titles": [
+        "Pedal Position Sensor Circuit Intermittent",
+        "Accelerator Pedal Position (APP) system"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1173",
+      "titles": [
+        "Engine Overheat",
+        "Overheat"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1261",
+      "titles": [
+        "Injector Positive Voltage Circuit Group 1 Load Short",
+        "Capacitor charge-up circuit malfunction (excessive charge)",
+        "Capacitor charge-up circuit malfunction (insufficient charge)",
+        "Capacitor charge-up circuit malfunction (insufficient charge) Capacitor charge-up circuit malfunction (excessive charge)",
+        "DTC P1261 (Flash Code 34) Injector Positive Voltage Control Circuit Group 1",
+        "Fuel Injector Group 1 Supply Voltage Circuit",
+        "Injection nozzle common 1 drive system fault"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1262",
+      "titles": [
+        "Injector Positive Voltage Circuit Group 2 Load Short",
+        "DTC P1262 (Flash Code 34) Injector Positive Voltage Control Circuit Group 2",
+        "Fuel Injector Group 2 Supply Voltage Circuit",
+        "Injection nozzle common 2 drive system fault"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1271",
+      "titles": [
+        "Accelerator Pedal Position (APP) Sensor 1-2 Correlation",
+        "Accelerator Pedal Position Sensor 1, 2 Correlation Error",
+        "Accelerator sensor 1-2 comparison fault"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1277",
+      "titles": [
+        "Accelerator Pedal Position (APP) Sensor 1 Circuit Low Voltage",
+        "Accelerator Pedal Position Sensor 1 Low Voltage",
+        "Accelerator sensor 1 fault (low voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1278",
+      "titles": [
+        "Accelerator Pedal Position (APP) Sensor 1 Circuit High Voltage",
+        "Accelerator Pedal Position Sensor 1 High Voltage",
+        "Accelerator sensor 1 fault (high voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1282",
+      "titles": [
+        "Accelerator Pedal Position (APP) Sensor 2 Circuit Low Voltage",
+        "Accelerator Pedal Position Sensor 2 Low Voltage",
+        "Accelerator sensor 2 fault (low voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1283",
+      "titles": [
+        "Accelerator Pedal Position (APP) Sensor 2 Circuit High Voltage",
+        "Accelerator Pedal Position Sensor 2 High Voltage",
+        "Accelerator sensor 2 fault (high voltage fault)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1293",
+      "titles": [
+        "DTC P1293 (Flash Code 211) Fuel Pressure Sensor Circuit Low",
+        "Fuel Intake Pressure Sensor Circuit Low Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1294",
+      "titles": [
+        "DTC P1294 (Flash Code 211) Fuel Pressure Sensor Circuit High",
+        "Fuel Intake Pressure Sensor Circuit High Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1345",
+      "titles": [
+        "Crankshaft Position & Camshaft Position Signal Off Phase",
+        "Cam sensor out of phase"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1404",
+      "titles": [
+        "EGR Position Error",
+        "DTC P1404 (Flash Code 45) Exhaust Gas Recirculation (EGR) Closed Position Performance",
+        "Exhaust Gas Recirculation (EGR) 1 Closed Position Performance"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1455",
+      "titles": [
+        "DTC P1455 (Flash Code 132) PM Over Accumulation",
+        "PM Over Accumulation"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1463",
+      "titles": [
+        "Capacitor charge-up circuit malfunction (excessive charge) / DeNOx-DS error for SVS lighting request",
+        "DeNOx-DS error for SVS lighting request"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1471",
+      "titles": [
+        "DPF regeneration insufficiency",
+        "DPD Insufficient Regeneration",
+        "DTC P1471 (Flash Code 149) DPD Insufficient Regeneration"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1621",
+      "titles": [
+        "Unknown / title not available in extracted source",
+        "Control Module Long Term Memory Performance",
+        "Control module long-term memory / shutdown procedure warning",
+        "DTC P1621 (Flash Code 54) Control Module Long Term Memory Performance",
+        "EEPROM/EERPOM Emulation via Flash EPROM Write Error"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1625",
+      "titles": [
+        "ECM Main Relay Circuit",
+        "Main relay system fault (Not enter)"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1630",
+      "titles": [
+        "Control Module Internal Performance",
+        "A/D conversion fault"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1631",
+      "titles": [
+        "5 Volt Reference Circuit 1",
+        "Voltage fault in 5-V power supply 1"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1632",
+      "titles": [
+        "5 Volt Reference Circuit 2",
+        "Voltage fault in 5-V power supply 2"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1633",
+      "titles": [
+        "5 Volt Reference Circuit 3",
+        "Voltage fault in 5-V power supply 3"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1634",
+      "titles": [
+        "5 Volt Reference Circuit 4",
+        "Voltage fault in 5-V power supply 4"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1635",
+      "titles": [
+        "5 Volt Reference Circuit 5",
+        "Voltage fault in 5-V power supply 5"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1646",
+      "titles": [
+        "Analog Sensor Reference Voltage Output No.3 Too High",
+        "Analog Sensor Reference Voltage Output No.3 Too Low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1655",
+      "titles": [
+        "DTC P1655 (Flash Code 57) Sensor Reference Voltage Circuit",
+        "Sensor Reference Voltage 1 Circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P1669",
+      "titles": [
+        "DTC P1669 (Flash Code 75) DPD Lamp Control Circuit",
+        "DPD Lamp Control Circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P20CC",
+      "titles": [
+        "Exhaust injector circuit BATT short / Exhaust injector circuit load short",
+        "Exhaust injector circuit BATT short Exhaust injector circuit load short"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P20DE",
+      "titles": [
+        "Exhaust injector pressure sensor performance high / Exhaust injector pressure sensor performance low",
+        "Exhaust injector pressure sensor performance high Exhaust injector pressure sensor performance low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2122",
+      "titles": [
+        "Accelerator pedal position sensor no. 1 low range",
+        "Accelerator Pedal Position Sensor 1 Low Voltage",
+        "DTC P2122 (Flash Code 121) Pedal Position Sensor 1 Circuit Low Input",
+        "Pedal Position Sensor 1 Circuit Low Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2123",
+      "titles": [
+        "Accelerator pedal position sensor no. 1 high range",
+        "Accelerator Pedal Position Sensor 1 High Voltage",
+        "DTC P2123 (Flash Code 121) Pedal Position Sensor 1 Circuit High Input",
+        "Pedal Position Sensor 1 Circuit High Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2127",
+      "titles": [
+        "Accelerator pedal position sensor no. 2 low range",
+        "Accelerator Pedal Position Sensor 2 Low Voltage",
+        "DTC P2127 (Flash Code 122) Pedal Position Sensor 2 Circuit Low Input",
+        "Pedal Position Sensor 2 Circuit Low Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2128",
+      "titles": [
+        "Accelerator pedal position sensor no. 2 high range",
+        "Accelerator Pedal Position Sensor 2 High Voltage",
+        "DTC P2128 (Flash Code 122) Pedal Position Sensor 2 Circuit High Input",
+        "Pedal Position Sensor 2 Circuit High Input"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2138",
+      "titles": [
+        "Accelerator pedal position sensor no. 1 & 2 correlation check",
+        "Accelerator Pedal Position Sensor 1, 2 Correlation Error",
+        "Accelerator Pedal Position Sensor Correlation",
+        "DTC P2138 (Flash Code 124) Pedal Position Sensor 1 - 2 Voltage Correlation",
+        "Pedal Position Sensor 1 - 2 Voltage Correlation"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2146",
+      "titles": [
+        "COM 1 output open load; Both TWV 1 and 3 (and 5) open load",
+        "DTC P2146 (Flash Code 158) Fuel Injector Group 1 Supply Voltage Circuit",
+        "Fuel Injector Group 1 Supply Voltage Circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2149",
+      "titles": [
+        "COM 2 output open load; Both TWV 2 or 4 (or 6) open load",
+        "DTC P2149 (Flash Code 159) Fuel Injector Group 2 Supply Voltage Circuit",
+        "Fuel Injector Group 2 Supply Voltage Circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2228",
+      "titles": [
+        "Barometric pressure (BARO) sensor circuit low voltage",
+        "Atom Press. Sensor Signal Too Low",
+        "Barometric Pressure Circuit Low",
+        "DTC P2228 (Flash Code 71) Barometric Pressure Circuit Low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2229",
+      "titles": [
+        "Barometric pressure (BARO) sensor circuit high voltage",
+        "Atom Press. Sensor Signal Too High",
+        "Barometric Pressure Circuit High",
+        "DTC P2229 (Flash Code 71) Barometric Pressure Circuit High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2262",
+      "titles": [
+        "Turbo/supercharger engine underboost",
+        "Turbo/supercharger engine underboost DTC Detection Item https://truckmanualshub.com/"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2428",
+      "titles": [
+        "Exhaust gas temperature sensor before oxidation catalyst too high / Exhaust gas temperature sensor before oxidation catalyst too low",
+        "Exhaust gas temperature sensor before oxidation catalyst too high Exhaust gas temperature sensor before oxidation catalyst too low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P242F",
+      "titles": [
+        "DTC P242F (Flash Code 131) DPD Restriction",
+        "DPD Restriction"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P244D",
+      "titles": [
+        "Exhaust gas temperature sensor before DPF too high / Exhaust gas temperature sensor before DPF too low",
+        "Exhaust gas temperature sensor before DPF too high Exhaust gas temperature sensor before DPF too low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2452",
+      "titles": [
+        "DTC P2452 (Flash Code 142) DPD Differential Pressure Sensor Circuit",
+        "DPD Differential Pressure Sensor Circuit"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2453",
+      "titles": [
+        "DPF pressure sensor performance",
+        "DPD Differential Pressure Sensor Circuit Range/Performance",
+        "DTC P2453 (Flash Code 141) DPD Differential Pressure Sensor Circuit Range/Performance"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2454",
+      "titles": [
+        "Exhaust gas pressure reference too low",
+        "DPD Differential Pressure Sensor Circuit Low",
+        "DTC P2454 (Flash Code 47) DPD Differential Pressure Sensor Circuit Low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2455",
+      "titles": [
+        "Exhaust gas pressure reference too high",
+        "DPD Differential Pressure Sensor Circuit High",
+        "DTC P2455 (Flash Code 47) DPD Differential Pressure Sensor Circuit High"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2456",
+      "titles": [
+        "DTC P2456 (Flash Code 47) DPD Differential Pressure Sensor Learned Position",
+        "DPD Differential Pressure Sensor Learned Position"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2458",
+      "titles": [
+        "DTC P2458 (Flash Code 139) DPD Regeneration Duration",
+        "DPD Regeneration Duration"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2564",
+      "titles": [
+        "VGT hole IC sensor circuit low",
+        "VNT Position Signal Too low"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "P2565",
+      "titles": [
+        "VGT hole IC sensor circuit high",
+        "VNT Position Signal Too high"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "U0001",
+      "titles": [
+        "CAN bus 2 reset counter overrun",
+        "CAN Bus Error (ISO-CAN)",
+        "DTC U0001 (Flash Code 84) CAN-Bus Malfunction"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "U0073",
+      "titles": [
+        "CAN bus reset counter overrun",
+        "CAN Bus Error (J1939) Control Module Communication Bus Off",
+        "DTC U0073 (Flash Code 84) Control Module Communication Bus Off"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "U0101",
+      "titles": [
+        "Lost CAN communication (CAN SOH) with TM control system",
+        "DTC U0101 (Flash Code 85) Lost Communication with TCM",
+        "Lost Communication With Transmission Control Module"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "U0110",
+      "titles": [
+        "DTC U0110 (Flash Code 87) Lost Communication with VNT System",
+        "Lost Communication With VNT System"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "U0307",
+      "titles": [
+        "GPCM engine ID diagnostic",
+        "GPCM engine ID diagnostic DTC Detection Item https://truckmanualshub.com/"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "U0411",
+      "titles": [
+        "DTC U0411 (Flash code 87) Turbo Charger Control Module Signal Malfunction",
+        "VNT Communication"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "U2104",
+      "titles": [
+        "CAN Bus Reset Counter Overrun",
+        "CAN Bus Error",
+        "CAN Bus fault"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "MULTIPLE_TITLES",
+      "code": "U2106",
+      "titles": [
+        "Lost CAN Communications With Transmission Control System",
+        "CAN TCM SOH Diagnostic",
+        "CAN timeout fault"
+      ],
+      "note": "Preserved as source variants; do not overwrite silently."
+    },
+    {
+      "type": "APPLICATION_SPEC_CONFLICT",
+      "subject": "4HK1 idle speed",
+      "values": [
+        "800 r/min (4HK1 TM reference)",
+        "650 rpm Smoother / 575 rpm MT (2007 workshop TCS/TCN)"
+      ],
+      "resolution": "Keep application/source-specific; never collapse to a global 4HK1 value."
+    },
+    {
+      "type": "APPLICATION_SPEC_CONFLICT",
+      "subject": "4HK1 compression pressure",
+      "values": [
+        "3.23 MPa (4HK1 TM reference)",
+        "2.60–2.90 MPa @ 220 rpm (2007 workshop TCS/TCN)"
+      ],
+      "resolution": "Keep application/source-specific."
+    },
+    {
+      "type": "APPLICATION_SPEC_CONFLICT",
+      "subject": "4HK1 lubrication oil amount",
+      "values": [
+        "20–27 L (4HK1 TM reference)",
+        "13.0 L (2007 workshop TCS/TCN)"
+      ],
+      "resolution": "Keep application/source-specific."
+    }
+  ],
+  "known_limitations": [
+    "4JZ1 training manual is not a complete workshop-manual DTC catalog; only DTCs explicitly present in that source are enriched.",
+    "Some scanned excerpt PDFs have no text layer; their canonical parent manuals were used for normalized extraction and excerpts are retained for cross-validation.",
+    "Some DTC titles differ across generations; alternate titles are preserved rather than force-normalized.",
+    "OEM full diagnostic procedures are available for 92 DTCs in the 4HK1 TM source; other profiles may only have title/conditions/causes depending on source coverage."
+  ],
+  "coverage_summary": {
+    "FULL_OEM_PROCEDURE": 92,
+    "OEM_CAUSES": 38,
+    "CONTEXTUAL": 186,
+    "TITLE_ONLY": 1
+  }
+}

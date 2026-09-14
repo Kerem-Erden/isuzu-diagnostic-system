@@ -1,0 +1,45 @@
+[
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "test_key": "EXHAUST_BRAKE_TEST",
+    "display_name": "Exhaust Brake Test",
+    "related_live_parameters": [
+      "EXHAUST_BRAKE_RELAY_COMMAND"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 213
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "test_key": "EGR_SOLENOID_TEST",
+    "display_name": "EGR Solenoid Test",
+    "related_live_parameters": [
+      "EGR_ACTUAL_POSITION",
+      "EGR_DESIRED_POSITION"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 221
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "test_key": "INTAKE_THROTTLE_TEST",
+    "display_name": "Intake Throttle Test",
+    "description": "Used to check sticking and commanded movement; large position difference may indicate foreign matter, deposits, faulty valve or DC motor.",
+    "related_live_parameters": [
+      "INTAKE_THROTTLE_DUTY",
+      "INTAKE_THROTTLE_ACTUAL_POSITION",
+      "INTAKE_THROTTLE_DESIRED_POSITION"
+    ],
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 228
+    }
+  }
+]

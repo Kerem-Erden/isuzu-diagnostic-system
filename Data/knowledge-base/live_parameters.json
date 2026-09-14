@@ -1,0 +1,1379 @@
+[
+  {
+    "parameter_key": "APP_POSITION",
+    "display_name": "Accelerator pedal position (APP)",
+    "quantity_type": null,
+    "default_unit": "％",
+    "aliases": [
+      "Calculated Accelerator Pedal Position"
+    ],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      },
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 144,
+        "printed_page": "144",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "APP_SENSOR_1_VOLTAGE",
+    "display_name": "Accelerator pedal position sensor 1 (APP1)",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "APP_SENSOR_2_VOLTAGE",
+    "display_name": "Accelerator pedal position sensor 2 (APP2)",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "APP_SENSOR_VOLTAGE",
+    "display_name": "APP Sensor Output Voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 144,
+        "printed_page": "144",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "BAROMETRIC_PRESSURE",
+    "display_name": "Atmospheric pressure",
+    "quantity_type": null,
+    "default_unit": "kPa",
+    "aliases": [
+      "Calculated Barometric Pressure"
+    ],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      },
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 142,
+        "printed_page": "142",
+        "section": "Scan tool data display"
+      }
+    ],
+    "fallback_behaviors": [
+      {
+        "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+        "text": "Physical pressure may be fixed to a default on BARO open/short DTC; use output voltage."
+      }
+    ]
+  },
+  {
+    "parameter_key": "BARO_SENSOR_VOLTAGE",
+    "display_name": "barometric pressure sensor",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [
+      "BARO Sensor Output Voltage"
+    ],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      },
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 142,
+        "printed_page": "142",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "BATTERY_VOLTAGE",
+    "display_name": "Battery voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [
+      "Battery Voltage"
+    ],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      },
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 130,
+        "printed_page": "130",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "BOOST_PRESSURE",
+    "display_name": "Boost pressure sensor",
+    "quantity_type": null,
+    "default_unit": "kPa",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "BOOST_PRESSURE_ACTUAL_ABSOLUTE",
+    "display_name": "Actual Absolute Boost Pressure",
+    "quantity_type": null,
+    "default_unit": "kPa",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 238,
+        "printed_page": "238",
+        "section": "Scan tool data display"
+      }
+    ],
+    "fallback_behaviors": [
+      {
+        "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+        "text": "Physical boost value may be fixed to a default on sensor circuit DTC; use voltage."
+      }
+    ]
+  },
+  {
+    "parameter_key": "BOOST_PRESSURE_DESIRED_ABSOLUTE",
+    "display_name": "Desired Absolute Boost Pressure",
+    "quantity_type": null,
+    "default_unit": "kPa",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 238,
+        "printed_page": "238",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "BOOST_TEMPERATURE_SENSOR_VOLTAGE",
+    "display_name": "Boost temperature sensor voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "CAC_OUTLET_TEMPERATURE",
+    "display_name": "Calculated CAC Outlet Temperature",
+    "quantity_type": null,
+    "default_unit": "°C",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 240,
+        "printed_page": "240",
+        "section": "Scan tool data display"
+      }
+    ],
+    "fallback_behaviors": [
+      {
+        "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+        "text": "Physical temperature may be fixed to a default on circuit DTC; use voltage."
+      }
+    ]
+  },
+  {
+    "parameter_key": "CAC_TEMPERATURE_SENSOR_RESISTANCE",
+    "display_name": "CAC Temperature Sensor Resistance",
+    "quantity_type": null,
+    "default_unit": "Ω",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 239
+      }
+    ]
+  },
+  {
+    "parameter_key": "CAC_TEMPERATURE_SENSOR_VOLTAGE",
+    "display_name": "CAC Temperature Sensor Output Voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 240,
+        "printed_page": "240",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "CALCULATED_MAF",
+    "display_name": "Calculated Mass Air Flow",
+    "quantity_type": null,
+    "default_unit": "g/cyl",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 135,
+        "printed_page": "135",
+        "section": "Scan tool data display"
+      }
+    ],
+    "fallback_behaviors": [
+      {
+        "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+        "text": "Physical g/cyl value may be fixed to a default when a MAF open/short DTC is set; use voltage for diagnosis."
+      }
+    ]
+  },
+  {
+    "parameter_key": "CKP_CMP_CORRELATION_STATUS",
+    "display_name": "Crank/Cam Signal Correlation Status",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 151,
+        "printed_page": "151",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "CYLINDER_1_FUEL_CORRECTION",
+    "display_name": "First cylinder fuel correction amount",
+    "quantity_type": null,
+    "default_unit": "mm3/st",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "CYLINDER_2_FUEL_CORRECTION",
+    "display_name": "Second cylinder fuel correction amount",
+    "quantity_type": null,
+    "default_unit": "mm3/st",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "CYLINDER_3_FUEL_CORRECTION",
+    "display_name": "Third cylinder fuel correction amount",
+    "quantity_type": null,
+    "default_unit": "mm3/st",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "CYLINDER_4_FUEL_CORRECTION",
+    "display_name": "Fourth cylinder fuel correction amount",
+    "quantity_type": null,
+    "default_unit": "mm3/st",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "CYLINDER_COMPENSATION_RATIO",
+    "display_name": "Cylinder Compensation Ratio",
+    "quantity_type": null,
+    "default_unit": "mm3/st",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 202,
+        "printed_page": "202",
+        "section": "Scan tool data display"
+      }
+    ],
+    "fallback_behaviors": [
+      {
+        "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+        "text": "Normal correction range stated as ±5 mm3; negative means reduced injection quantity."
+      }
+    ]
+  },
+  {
+    "parameter_key": "DESIRED_IDLE_SPEED",
+    "display_name": "Desired Idle Speed",
+    "quantity_type": null,
+    "default_unit": "rpm",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 183,
+        "printed_page": "183",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "DPD_ACCUMULATION_STATUS",
+    "display_name": "DPD Accumulation Status",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "section": "OEM diagnostic procedures"
+      }
+    ]
+  },
+  {
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "display_name": "DPD Differential Pressure",
+    "quantity_type": null,
+    "default_unit": "kPa",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "section": "OEM diagnostic procedures"
+      }
+    ]
+  },
+  {
+    "parameter_key": "DPD_TIME_STATUS",
+    "display_name": "DPD Time Status",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "section": "OEM diagnostic procedures"
+      }
+    ]
+  },
+  {
+    "parameter_key": "ECT_SENSOR_RESISTANCE",
+    "display_name": "ECT Sensor Resistance",
+    "quantity_type": null,
+    "default_unit": "Ω",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 139
+      }
+    ]
+  },
+  {
+    "parameter_key": "ECT_SENSOR_VOLTAGE",
+    "display_name": "Coolant temperature sensor",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [
+      "ECT Sensor Output Voltage"
+    ],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      },
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 138,
+        "printed_page": "138",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "EGR_ACTUAL_POSITION",
+    "display_name": "Actual EGR Valve Position",
+    "quantity_type": null,
+    "default_unit": "%",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 221,
+        "printed_page": "221",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "EGR_DESIRED_POSITION",
+    "display_name": "Desired EGR Valve Position",
+    "quantity_type": null,
+    "default_unit": "%",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 221,
+        "printed_page": "221",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "EGR_DRIVE_DUTY",
+    "display_name": "EGR valve 1 drive duty",
+    "quantity_type": null,
+    "default_unit": "％",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "EGR_GAS_TEMPERATURE",
+    "display_name": "Calculated EGR Gas Temperature",
+    "quantity_type": null,
+    "default_unit": "°C",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 223,
+        "printed_page": "223",
+        "section": "Scan tool data display"
+      }
+    ],
+    "fallback_behaviors": [
+      {
+        "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+        "text": "Physical value may be fixed to a default on related open/short DTC; use voltage."
+      }
+    ]
+  },
+  {
+    "parameter_key": "EGR_GAS_TEMPERATURE_SENSOR_VOLTAGE",
+    "display_name": "EGR Gas Temperature Sensor Output Voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 223,
+        "printed_page": "223",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "EGR_POSITION_STATE_1",
+    "display_name": "EGR position 1",
+    "quantity_type": null,
+    "default_unit": "ON/OFF",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "EGR_POSITION_STATE_2",
+    "display_name": "EGR position 2",
+    "quantity_type": null,
+    "default_unit": "ON/OFF",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "EGR_POSITION_STATE_3",
+    "display_name": "EGR position 3",
+    "quantity_type": null,
+    "default_unit": "ON/OFF",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "ENGINE_COOLANT_TEMPERATURE",
+    "display_name": "Coolant temperature",
+    "quantity_type": null,
+    "default_unit": "℃",
+    "aliases": [
+      "Calculated Engine Coolant Temperature"
+    ],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      },
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 138,
+        "printed_page": "138",
+        "section": "Scan tool data display"
+      }
+    ],
+    "fallback_behaviors": [
+      {
+        "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+        "text": "May be fixed to a default when an ECT open/short DTC is set."
+      }
+    ]
+  },
+  {
+    "parameter_key": "ENGINE_MODE",
+    "display_name": "Engine mode",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "ENGINE_OIL_PRESSURE_SENSOR_VOLTAGE",
+    "display_name": "Engine Oil Pressure Sensor Output Voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 94,
+        "printed_page": "94",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "ENGINE_OIL_TEMPERATURE",
+    "display_name": "Calculated Engine Oil Temperature",
+    "quantity_type": null,
+    "default_unit": "°C",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 92,
+        "printed_page": "92",
+        "section": "Scan tool data display"
+      }
+    ],
+    "fallback_behaviors": [
+      {
+        "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+        "text": "Physical temperature may be fixed to a default on sensor circuit DTC; use voltage."
+      }
+    ]
+  },
+  {
+    "parameter_key": "ENGINE_OIL_TEMPERATURE_SENSOR_RESISTANCE",
+    "display_name": "Engine Oil Temperature Sensor Resistance",
+    "quantity_type": null,
+    "default_unit": "kΩ",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 91
+      }
+    ]
+  },
+  {
+    "parameter_key": "ENGINE_OIL_TEMPERATURE_SENSOR_VOLTAGE",
+    "display_name": "Engine Oil Temperature Sensor Output Voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 92,
+        "printed_page": "92",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "ENGINE_RPM",
+    "display_name": "Engine rpm",
+    "quantity_type": null,
+    "default_unit": "RPM",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "EXHAUST_BRAKE_RELAY_COMMAND",
+    "display_name": "Exhaust Brake Solenoid Valve Relay Command",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 213,
+        "printed_page": "213",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "FUEL_FILTER_PRESSURE",
+    "display_name": "Fuel Filter Pressure",
+    "quantity_type": null,
+    "default_unit": "kPa",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 170,
+        "printed_page": "170",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "FUEL_FILTER_PRESSURE_SENSOR_VOLTAGE",
+    "display_name": "Fuel Filter Pressure Sensor Voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 170,
+        "printed_page": "170",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "FUEL_RAIL_PRESSURE",
+    "display_name": "Fuel Rail Pressure",
+    "quantity_type": null,
+    "default_unit": "MPa",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "section": "OEM diagnostic procedures"
+      }
+    ]
+  },
+  {
+    "parameter_key": "FUEL_RAIL_PRESSURE_DIFFERENCE",
+    "display_name": "Fuel rail pressure difference (actual – target)",
+    "quantity_type": null,
+    "default_unit": "MPa",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "FUEL_RAIL_PRESSURE_FEEDBACK_MODE",
+    "display_name": "Fuel rail pressure feedback",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "FUEL_RAIL_PRESSURE_SENSOR_VOLTAGE",
+    "display_name": "Fuel rail pressure sensor",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "FUEL_TEMPERATURE",
+    "display_name": "Fuel temperature",
+    "quantity_type": null,
+    "default_unit": "℃",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "FUEL_TEMPERATURE_SENSOR_VOLTAGE",
+    "display_name": "Fuel temperature sensor",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "GLOW_RELAY_COMMAND",
+    "display_name": "glow relay",
+    "quantity_type": null,
+    "default_unit": "ON/OFF",
+    "aliases": [
+      "Glow Plug Relay Command"
+    ],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      },
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 208,
+        "printed_page": "208",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "IAT_SENSOR_CHARACTERISTIC",
+    "display_name": "IAT Sensor Characteristic",
+    "quantity_type": null,
+    "default_unit": "°C",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 136
+      }
+    ]
+  },
+  {
+    "parameter_key": "IAT_SENSOR_VOLTAGE",
+    "display_name": "Intake temperature sensor",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [
+      "IAT Sensor Output Voltage"
+    ],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      },
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 137,
+        "printed_page": "137",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "IGNITION_SWITCH",
+    "display_name": "Ignition switch",
+    "quantity_type": null,
+    "default_unit": "ON/OFF",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "IGNITION_VOLTAGE",
+    "display_name": "Ignition Voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 130,
+        "printed_page": "130",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "INTAKE_AIR_TEMPERATURE",
+    "display_name": "Intake air temperature",
+    "quantity_type": null,
+    "default_unit": "℃",
+    "aliases": [
+      "Calculated Intake Air Temperature"
+    ],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      },
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 137,
+        "printed_page": "137",
+        "section": "Scan tool data display"
+      }
+    ],
+    "fallback_behaviors": [
+      {
+        "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+        "text": "Fixed to 130 °C when an IAT open/short related DTC is set."
+      }
+    ]
+  },
+  {
+    "parameter_key": "INTAKE_THROTTLE_ACTUAL_POSITION",
+    "display_name": "Actual Intake Throttle Position",
+    "quantity_type": null,
+    "default_unit": "%",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 228,
+        "printed_page": "228",
+        "section": "Scan tool data display"
+      }
+    ],
+    "fallback_behaviors": [
+      {
+        "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+        "text": "OFF command may show >100%."
+      }
+    ]
+  },
+  {
+    "parameter_key": "INTAKE_THROTTLE_DESIRED_POSITION",
+    "display_name": "Desired Intake Throttle Position",
+    "quantity_type": null,
+    "default_unit": "%",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 228,
+        "printed_page": "228",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "INTAKE_THROTTLE_DUTY",
+    "display_name": "DC Motor Commanded Duty Ratio",
+    "quantity_type": null,
+    "default_unit": "%",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 228,
+        "printed_page": "228",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "LAMBDA_O2_RATIO",
+    "display_name": "Lambda Sensor O2 Ratio",
+    "quantity_type": null,
+    "default_unit": "%",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 158,
+        "printed_page": "158",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "LAMBDA_O2_VOLTAGE",
+    "display_name": "Lambda Sensor O2 Voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 158,
+        "printed_page": "158",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "MAF_SENSOR_VOLTAGE",
+    "display_name": "MAF Sensor Output Voltage",
+    "quantity_type": null,
+    "default_unit": "V",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 135,
+        "printed_page": "135",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "OVERHEAT_EVENT_COUNT",
+    "display_name": "Total Engine Coolant Overtemperature Events",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 141,
+        "printed_page": "141",
+        "section": "Scan tool data display"
+      }
+    ]
+  },
+  {
+    "parameter_key": "Q_ADJUSTMENT_COMPENSATION_DATA_1",
+    "display_name": "Q adjustment compensation data 1",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "Q_ADJUSTMENT_COMPENSATION_DATA_2",
+    "display_name": "Q adjustment compensation data 2",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "Q_ADJUSTMENT_COMPENSATION_DATA_3",
+    "display_name": "Q adjustment compensation data 3",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "STARTER_SWITCH",
+    "display_name": "starter switch",
+    "quantity_type": null,
+    "default_unit": "ON/OFF",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "TARGET_ENGINE_RPM",
+    "display_name": "Target engine rpm",
+    "quantity_type": null,
+    "default_unit": "RPM",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 93,
+        "printed_page": "15B-68",
+        "section": "Non-operational P rotation reference values"
+      },
+      {
+        "document_key": "ISUZU_4HK1_ENGINE_TM",
+        "pdf_page": 94,
+        "printed_page": "15B-69",
+        "section": "Two Pump Relief reference values"
+      }
+    ]
+  },
+  {
+    "parameter_key": "TURBO_OUTLET_TEMPERATURE_SENSOR_RESISTANCE",
+    "display_name": "Turbocharger Outlet Temperature Sensor Resistance",
+    "quantity_type": null,
+    "default_unit": "Ω",
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 242
+      }
+    ]
+  },
+  {
+    "parameter_key": "WARMUP_SWITCH_STATUS",
+    "display_name": "Warm-up Switch Status",
+    "quantity_type": null,
+    "default_unit": null,
+    "aliases": [],
+    "sources": [
+      {
+        "document_key": "ISUZU_4JZ1_ITCE_2021",
+        "pdf_page": 215,
+        "printed_page": "215",
+        "section": "Scan tool data display"
+      }
+    ]
+  }
+]

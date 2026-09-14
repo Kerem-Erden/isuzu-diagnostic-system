@@ -1,0 +1,1883 @@
+[
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Starter motor does not rotate",
+    "possible_cause": "Dead or weak battery",
+    "correction": "Charge or Replace battery",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Incomplete circuit",
+    "correction": "Connect Repair",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Starter relay",
+    "correction": "Replace starter relay",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Starter motor brushes stuck, worn, or broken",
+    "correction": "Replace brushes",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Starter motor internal damage",
+    "correction": "Repair motor",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Starter motor not meshed with flywheel",
+    "possible_cause": "Ring gear abrasion",
+    "correction": "Replace ring gear",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Pinion gear abrasion",
+    "correction": "Replace pinion gear",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Magnetic switch (starter motor) not properly adjusted",
+    "correction": "Adjust",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Starter motor pinion meshed with ring gear but does not rotate",
+    "possible_cause": "Dead or weak battery",
+    "correction": "Charge battery Replace battery",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Insufficient contact pressure between starter motor brushes and commutator",
+    "correction": "Adjust pressure",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Armature (starter motor) stuck",
+    "correction": "Repair armature",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Engine internal damage (Seizure)",
+    "correction": "Repair engine",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "No fuel flows in the supply pump.",
+    "possible_cause": "Air in fuel system",
+    "correction": "Air bleeding",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Air suction from fuel pump",
+    "correction": "Bleed air or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Running out of fuel",
+    "correction": "Add.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged strainer at fuel suction part",
+    "correction": "Clean or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged fuel pipe",
+    "correction": "Clean or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Malfunction of supply pump",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Severe cold weather = fuel is not for severe cold weather.",
+    "correction": "Replace with appropriate fuel.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged fuel filter",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Fuel flows in the supply pump.",
+    "possible_cause": "Loose connection of injection pipe",
+    "correction": "Further tighten each part.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Leakage in overflow valve",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Supply pump internal failure",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Poor connection or open circuit in wiring",
+    "correction": "Repair or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 13,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Shortage or instability of fuel injection amount",
+    "possible_cause": "Air in fuel system",
+    "correction": "Air bleeding",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged fuel pipe",
+    "correction": "Clean or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Malfunction of supply pump",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Stuck injector nozzle",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Poor connection or open circuit in wiring",
+    "correction": "Repair or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged fuel filter",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Bad injection timing",
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Poor injection condition of injector",
+    "possible_cause": "Stuck nozzle",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Faulty compression pressure",
+    "possible_cause": "Excessive valve clearance",
+    "correction": "Adjust.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Stuck valve stem (remains open)",
+    "correction": "Overhaul.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Faulty valve spring",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Worn valve seat",
+    "correction": "Overhaul.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Poor compression due to faulty piston rings etc.",
+    "correction": "Overhaul.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Faulty gasket",
+    "correction": "Overhaul.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Piston seizure",
+    "correction": "Overhaul.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Bad fuel",
+    "possible_cause": "Water in fuel",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Inferior fuel",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Air intake failure",
+    "possible_cause": "Clogged air intake pipe",
+    "correction": "Repair or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged air cleaner element",
+    "correction": "Clean or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Stuck throttle valve",
+    "correction": "Overhaul.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Fault detection by engine control system",
+    "possible_cause": "Fault in each sensor etc.",
+    "correction": "Repair or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Throttle valve or EGR valve failure",
+    "possible_cause": "Stuck intake throttle valve",
+    "correction": "Repair or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Stuck EGR valve",
+    "correction": "Repair or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Stuck exhaust brake valve",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Turbocharger malfunction",
+    "possible_cause": "Deformed or damaged turbine fin",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Nonsmooth or stuck turbine shaft",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Air leakage from compressor discharge side",
+    "correction": "Repair.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 14,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Bad injection timing",
+    "possible_cause": "Engine control system malfunction",
+    "correction": "System diagnosis",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Malfunction detected by engine control system",
+    "possible_cause": "Engine control system malfunction",
+    "correction": "System diagnosis",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Control unit malfunction",
+    "correction": "Replace unit",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective sensor",
+    "correction": "Replace sensor",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Insufficient compression pressure",
+    "possible_cause": "Excessive valve clearance",
+    "correction": "Adjust clearance",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Sticking valve stem (valve open)",
+    "correction": "Repair or replace valve",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Damaged valve spring",
+    "correction": "Replace spring",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Valve seat abrasion",
+    "correction": "Repair valve seat",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Compression leakage due to damaged piston ring",
+    "correction": "Replace piston ring",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Damaged gasket",
+    "correction": "Replace gasket",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Piston scoring",
+    "correction": "Replace piston",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Fuel condition",
+    "possible_cause": "Water in fuel",
+    "correction": "Drain existing fuel and replace with new fuel",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Excessive oil consumption",
+    "possible_cause": "Worn or damaged piston ring(s)",
+    "correction": "Replace ring(s)",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective valve stem oil seal",
+    "correction": "Replace oil seal",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective turbocharger oil seal",
+    "correction": "Replace turbocharger",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged turbocharger oil return pipe",
+    "correction": "Repair pipe",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Bad timing",
+    "possible_cause": "Engine control system malfunction",
+    "correction": "System diagnosis",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Malfunction detected by engine control system",
+    "possible_cause": "Defective sensor",
+    "correction": "Replace sensor",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Control unit malfunction",
+    "correction": "Replace unit",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Engine control system malfunction",
+    "correction": "System diagnosis",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Fuel condition",
+    "possible_cause": "Poor quality fuel",
+    "correction": "Drain existing fuel and replace with new fuel",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Poor engine aspiration",
+    "possible_cause": "Clogged intake pipes",
+    "correction": "Clean or replace pipes",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Engine control system malfunction",
+    "correction": "System diagnosis",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Engine break-down",
+    "possible_cause": "Foreign material in cylinders",
+    "correction": "Engine overhaul",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Scored pistons and/or bearings",
+    "correction": "Replace pistons and/or bearings",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 15,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Engine speed does not rise.",
+    "possible_cause": "Control unit failure",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Unstable engine revolution",
+    "possible_cause": "Control unit failure",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged fuel filter element",
+    "correction": "Replace element",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Injector failure",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Water in fuel",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Air in fuel system",
+    "correction": "Air bleeding",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Stuck exhaust brake valve",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Stuck intake throttle valve",
+    "correction": "Repair or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "No charging",
+    "possible_cause": "Open circuit, short circuit or poor contact",
+    "correction": "Repair or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Generator internal malfunction",
+    "correction": "Overhaul.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Insufficient charging",
+    "possible_cause": "Short circuit or poor connection",
+    "correction": "Connect or repair.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Generator internal malfunction",
+    "correction": "Overhaul.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Loose generator drive belt",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Faulty battery",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Excessive charging",
+    "possible_cause": "Shorted wiring",
+    "correction": "Connect or repair.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Generator internal malfunction",
+    "correction": "Overhaul.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Engine has less than normal power",
+    "possible_cause": "Air leakage from intake pipe rubber hose",
+    "correction": "Repair",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Air leakage from inlet cover",
+    "correction": "Repair",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged intercooler cooling section",
+    "correction": "Clean",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged air cleaner element",
+    "correction": "Clean or replace",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Exhaust brake valve stuck",
+    "correction": "Repair or replace",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Turbine and housing contact (Interference)",
+    "correction": "Replace",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Excessive carbon deposit near turbine exhaust port that interferes with turbine",
+    "correction": "Clean or repair",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Rough turbine shaft rotation",
+    "correction": "Repair or replace",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Damaged turbine fan",
+    "correction": "Repair or replace",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 16,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Blue exhaust smoke",
+    "possible_cause": "Oil leakage from turbocharger oil seal",
+    "correction": "Repair or replace",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged turbocharger oil return pipe",
+    "correction": "Repair",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged center housing oil passages",
+    "correction": "Repair or replace",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Engine oil deterioration",
+    "correction": "Change engine oil",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Noisy turbocharger operation",
+    "possible_cause": "Gas leakage from intake or exhaust system",
+    "correction": "Repair",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Turbine and housing contact (Interference)",
+    "correction": "Repair or replace",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Damaged turbine fan",
+    "correction": "Replace",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Turbine shaft bearing abrasion or scoring",
+    "correction": "Repair or replace",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Excessive rotating part wear",
+    "possible_cause": "Engine oil deterioration",
+    "correction": "Change engine oil",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged turbocharger oil feed pipe",
+    "correction": "Repair",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Low engine oil pressure",
+    "correction": "Repair",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 17,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Engine overheats.",
+    "possible_cause": "Low coolant level",
+    "correction": "Add.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Engine oil shortage or use of improper oil",
+    "correction": "Add or change engine oil.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Loose fan belt",
+    "correction": "Adjust or replace fan belt.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Too much fuel injection quantity.",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective radiator cap",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogging of radiator",
+    "correction": "Clean or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogging of exhaust system",
+    "correction": "Clean or replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective thermostat",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective water pump",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective cylinder head gasket",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Engine overcools",
+    "possible_cause": "Thermostat is defective.",
+    "correction": "Replace.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 181,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Starting trouble",
+    "possible_cause": "Empty fuel tank",
+    "correction": "Fill the tank.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged fuel tank breather",
+    "correction": "Clean the fuel tank breather.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Air in fuel system",
+    "correction": "Bleed air.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Fuel line is clogged or damaged. Loose connection of fuel line",
+    "correction": "Repair or replace the fuel line. Retighten the connection.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged fuel filter element",
+    "correction": "Replace the cartridge.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Feed pump malfunction",
+    "correction": "Replace the supply pump.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Open regulating valve",
+    "correction": "Replace the regulating valve.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Stuck injector nozzle",
+    "correction": "Replace the injector.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Hunting during idling",
+    "possible_cause": "Air in fuel system",
+    "correction": "Bleed air from the fuel system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Leakage or clogging in fuel system",
+    "correction": "Repair or replace the fuel system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Water in fuel system",
+    "correction": "Change fuel.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged fuel filter element",
+    "correction": "Replace the cartridge.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Stuck injector nozzle",
+    "correction": "Replace the injector.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Reduction in pressure to open injector valve, or poor injecting condition",
+    "correction": "Replace the injector.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Supply pump malfunction",
+    "correction": "Replace the supply pump.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Output shortage",
+    "possible_cause": "Clogged fuel tank or breather",
+    "correction": "Clean up the fuel tank or breather.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Air in fuel system",
+    "correction": "Bleed air from the fuel system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Leakage or clogging in fuel system",
+    "correction": "Repair or replace the fuel system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Water in fuel system",
+    "correction": "Change fuel.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Clogged fuel filter element",
+    "correction": "Replace the cartridge.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Stuck injector nozzle",
+    "correction": "Replace the injector.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Maximum engine speed is too low",
+    "possible_cause": "Fuel line is clogged or damaged.",
+    "correction": "Repair or replace the fuel line.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 207,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Engine does not stop.",
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 208,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Exhaust smoke is blue or black.",
+    "possible_cause": "Reduction in pressure to open injector valve, or poor injecting condition",
+    "correction": "Replace the injector.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 208,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective engine control system",
+    "correction": "Diagnose the engine control system.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 208,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "The glow indicator lamp does not light up.",
+    "possible_cause": "Slow blow fuse has blown.",
+    "correction": "Replace the slow blow fuse.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 278,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Fuse is unavailable.",
+    "correction": "Replace the fuse.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 278,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Indicator valve is burnt out.",
+    "correction": "Replace the indicator valve.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 278,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Engine control system is faulty.",
+    "correction": "Refer to Section 6E.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 278,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Preheating does not work.",
+    "possible_cause": "Slow blow fuse has blown.",
+    "correction": "Replace the slow blow fuse.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 278,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Defective or faulty glow plug relay connector contact.",
+    "correction": "Re-mount or replace the glow plug relay.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 278,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Engine control system is faulty.",
+    "correction": "Refer to Section 6E.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 278,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "The Preheating time is too long or too short.",
+    "possible_cause": "Thermosensor fault and break in circuit or short circuit.",
+    "correction": "Replace the thermosensor. Repair the circuit.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 278,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Fault in glow plug.",
+    "correction": "Replace or tighten the glow plug.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 278,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": null,
+    "possible_cause": "Engine control system is faulty.",
+    "correction": "Refer to Section 6E.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 278,
+      "section": "Trouble Shooting"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "condition": "Vibration or rattling noise from the exhaust system",
+    "possible_cause": "Loose or misaligned components",
+    "correction": "Match the joints and then re-tighten. Or, check for damage in the hanger, mounting brackets and clamps.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007",
+      "pdf_page": 287,
+      "section": "Trouble Shooting"
+    }
+  }
+]

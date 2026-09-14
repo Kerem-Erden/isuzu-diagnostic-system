@@ -1,0 +1,41 @@
+{
+  "policy": "Scanned excerpt PDFs are retained as evidence/cross-validation, while normalized records are extracted from canonical parent manuals when the content matches.",
+  "relationships": [
+    {
+      "excerpt": "4hk1 referans degerleri.pdf",
+      "canonical": "4HK1 TC workshopmanual.pdf",
+      "status": "MATCHED",
+      "details": "Excerpt pages 6A-15/6A-16 correspond to workshop main data/specifications."
+    },
+    {
+      "excerpt": "4hk1 engine electrical referans.pdf",
+      "canonical": "4HK1 TC workshopmanual.pdf",
+      "status": "MATCHED",
+      "details": "Excerpt 6D-18 corresponds to workshop engine-electrical main specifications."
+    },
+    {
+      "excerpt": "4hk1 referanslar.pdf",
+      "canonical": "4hk1-engine-manual-tm-pdf.pdf",
+      "status": "MATCHED",
+      "details": "Excerpt 15B-3/15B-4 corresponds to TM maintenance specifications."
+    },
+    {
+      "excerpt": "referans4hk1.pdf",
+      "canonical": "4hk1-engine-manual-tm-pdf.pdf",
+      "status": "MATCHED",
+      "details": "Excerpt 15B-68/15B-69 corresponds to TM Non-operational P rotation and Two Pump Relief data-list references."
+    },
+    {
+      "excerpt": "dtcler 4hk1 kodu ve ismi.pdf",
+      "canonical": "ISUZU 4HK1  6HK1 Type Engine 2004.pdf",
+      "status": "MATCHED",
+      "details": "Six image pages correspond to source pages -31 through -36; first 3 are 4HK1 and next 3 are 6HK1."
+    },
+    {
+      "excerpt": "tum dtcler ve dtc mapping table.pdf",
+      "canonical": "4hk1-engine-manual-tm-pdf.pdf",
+      "status": "MATCHED_WITH_OCR_CROSSCHECK",
+      "details": "OCR detected all 92 DTC codes in the canonical TM DTC-information set. Two extra OCR codes (P0082/P0341) occur as referenced codes in diagnostic text rather than additional DTC profile pages; canonical TM used for normalization."
+    }
+  ]
+}

@@ -1,0 +1,2267 @@
+[
+  {
+    "code": "P0016",
+    "parameter_key": "CKP_CMP_CORRELATION_STATUS",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "display_priority": 1,
+    "relation_role": "PRIMARY",
+    "reason": "Scan-tool correlation status is explicitly shown next to P0016 context.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 151
+    }
+  },
+  {
+    "code": "P0045",
+    "parameter_key": "BOOST_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 231,
+      "pdf_page_end": 232,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0045",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 231,
+      "pdf_page_end": 232,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0087",
+    "parameter_key": "FUEL_RAIL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 233,
+      "pdf_page_end": 235,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0087",
+    "parameter_key": "FUEL_RAIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 233,
+      "pdf_page_end": 235,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0087",
+    "parameter_key": "ENGINE_RPM",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 233,
+      "pdf_page_end": 235,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0088",
+    "parameter_key": "FUEL_RAIL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 236,
+      "pdf_page_end": 238,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0088",
+    "parameter_key": "FUEL_RAIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 236,
+      "pdf_page_end": 238,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0088",
+    "parameter_key": "ENGINE_RPM",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 236,
+      "pdf_page_end": 238,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0089",
+    "parameter_key": "FUEL_RAIL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 239,
+      "pdf_page_end": 240,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0089",
+    "parameter_key": "FUEL_RAIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 239,
+      "pdf_page_end": 240,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0089",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 239,
+      "pdf_page_end": 240,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0091",
+    "parameter_key": "FUEL_RAIL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 241,
+      "pdf_page_end": 241,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0091",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 241,
+      "pdf_page_end": 241,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0092",
+    "parameter_key": "FUEL_RAIL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 242,
+      "pdf_page_end": 242,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0092",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 242,
+      "pdf_page_end": 242,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0093",
+    "parameter_key": "FUEL_RAIL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 243,
+      "pdf_page_end": 245,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0093",
+    "parameter_key": "FUEL_RAIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 243,
+      "pdf_page_end": 245,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0093",
+    "parameter_key": "ENGINE_RPM",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 243,
+      "pdf_page_end": 245,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0093",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 4,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 243,
+      "pdf_page_end": 245,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0102",
+    "parameter_key": "ENGINE_RPM",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 246,
+      "pdf_page_end": 246,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0102",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 246,
+      "pdf_page_end": 246,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0103",
+    "parameter_key": "ENGINE_RPM",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 247,
+      "pdf_page_end": 247,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0103",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 247,
+      "pdf_page_end": 247,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0112",
+    "parameter_key": "INTAKE_AIR_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 248,
+      "pdf_page_end": 248,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0112",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 248,
+      "pdf_page_end": 248,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0112",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 248,
+      "pdf_page_end": 248,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0113",
+    "parameter_key": "INTAKE_AIR_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 249,
+      "pdf_page_end": 249,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0113",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 249,
+      "pdf_page_end": 249,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0113",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 249,
+      "pdf_page_end": 249,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0117",
+    "parameter_key": "ENGINE_COOLANT_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 250,
+      "pdf_page_end": 250,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0117",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 250,
+      "pdf_page_end": 250,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0118",
+    "parameter_key": "ENGINE_COOLANT_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 251,
+      "pdf_page_end": 251,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0118",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 251,
+      "pdf_page_end": 251,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0122",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 252,
+      "pdf_page_end": 252,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0123",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 253,
+      "pdf_page_end": 253,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0182",
+    "parameter_key": "FUEL_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 254,
+      "pdf_page_end": 254,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0182",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 254,
+      "pdf_page_end": 254,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0183",
+    "parameter_key": "FUEL_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 255,
+      "pdf_page_end": 255,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0183",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 255,
+      "pdf_page_end": 255,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0192",
+    "parameter_key": "FUEL_RAIL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 256,
+      "pdf_page_end": 256,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0192",
+    "parameter_key": "FUEL_RAIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 256,
+      "pdf_page_end": 256,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0192",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 256,
+      "pdf_page_end": 256,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0193",
+    "parameter_key": "FUEL_RAIL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 257,
+      "pdf_page_end": 257,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0193",
+    "parameter_key": "FUEL_RAIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 257,
+      "pdf_page_end": 257,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0193",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 257,
+      "pdf_page_end": 257,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0201",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 258,
+      "pdf_page_end": 259,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0202",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 260,
+      "pdf_page_end": 261,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0203",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 262,
+      "pdf_page_end": 263,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0204",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 264,
+      "pdf_page_end": 265,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0217",
+    "parameter_key": "ENGINE_COOLANT_TEMPERATURE",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "display_priority": 1,
+    "relation_role": "PRIMARY",
+    "reason": "DTC threshold is based on ECT.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 141
+    }
+  },
+  {
+    "code": "P0217",
+    "parameter_key": "ENGINE_COOLANT_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 266,
+      "pdf_page_end": 266,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0219",
+    "parameter_key": "ENGINE_RPM",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 267,
+      "pdf_page_end": 267,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0234",
+    "parameter_key": "BOOST_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 268,
+      "pdf_page_end": 268,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0234",
+    "parameter_key": "BOOST_PRESSURE_ACTUAL_ABSOLUTE",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "display_priority": 1,
+    "relation_role": "PRIMARY",
+    "reason": "Overboost DTC; actual boost is a scan-tool parameter.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 238
+    }
+  },
+  {
+    "code": "P0234",
+    "parameter_key": "BAROMETRIC_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 268,
+      "pdf_page_end": 268,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0234",
+    "parameter_key": "BOOST_PRESSURE_DESIRED_ABSOLUTE",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Compare desired and actual boost.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 238
+    }
+  },
+  {
+    "code": "P0237",
+    "parameter_key": "BOOST_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 269,
+      "pdf_page_end": 269,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0237",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 269,
+      "pdf_page_end": 269,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0238",
+    "parameter_key": "BOOST_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 270,
+      "pdf_page_end": 270,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0238",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 270,
+      "pdf_page_end": 270,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0404",
+    "parameter_key": "EGR_ACTUAL_POSITION",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 276,
+      "pdf_page_end": 276,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0404",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 276,
+      "pdf_page_end": 276,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0409",
+    "parameter_key": "EGR_ACTUAL_POSITION",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 277,
+      "pdf_page_end": 278,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0409",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 277,
+      "pdf_page_end": 278,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P041C",
+    "parameter_key": "INTAKE_AIR_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 279,
+      "pdf_page_end": 279,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P041D",
+    "parameter_key": "INTAKE_AIR_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 280,
+      "pdf_page_end": 280,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0427",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 282,
+      "pdf_page_end": 282,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0428",
+    "parameter_key": "ENGINE_COOLANT_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 283,
+      "pdf_page_end": 283,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0428",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 283,
+      "pdf_page_end": 283,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P042C",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 285,
+      "pdf_page_end": 285,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P042D",
+    "parameter_key": "ENGINE_COOLANT_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 286,
+      "pdf_page_end": 287,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P042D",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 286,
+      "pdf_page_end": 287,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0522",
+    "parameter_key": "ENGINE_OIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 288,
+      "pdf_page_end": 288,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0522",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 288,
+      "pdf_page_end": 288,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0523",
+    "parameter_key": "ENGINE_OIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 289,
+      "pdf_page_end": 289,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0523",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 289,
+      "pdf_page_end": 289,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0560",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 290,
+      "pdf_page_end": 290,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0604",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 294,
+      "pdf_page_end": 294,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0606",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 295,
+      "pdf_page_end": 295,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0638",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 297,
+      "pdf_page_end": 298,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0641",
+    "parameter_key": "FUEL_RAIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 299,
+      "pdf_page_end": 300,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0641",
+    "parameter_key": "INTAKE_AIR_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 299,
+      "pdf_page_end": 300,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0641",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 299,
+      "pdf_page_end": 300,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0651",
+    "parameter_key": "BAROMETRIC_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 302,
+      "pdf_page_end": 302,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0651",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 302,
+      "pdf_page_end": 302,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0685",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 303,
+      "pdf_page_end": 303,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0697",
+    "parameter_key": "ENGINE_OIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 305,
+      "pdf_page_end": 306,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0697",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 305,
+      "pdf_page_end": 306,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P0697",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 305,
+      "pdf_page_end": 306,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1093",
+    "parameter_key": "FUEL_RAIL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 307,
+      "pdf_page_end": 309,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1093",
+    "parameter_key": "FUEL_RAIL_PRESSURE_SENSOR_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 307,
+      "pdf_page_end": 309,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1093",
+    "parameter_key": "ENGINE_RPM",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 307,
+      "pdf_page_end": 309,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1093",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 4,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 307,
+      "pdf_page_end": 309,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1112",
+    "parameter_key": "INTAKE_AIR_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 310,
+      "pdf_page_end": 310,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1112",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 310,
+      "pdf_page_end": 310,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1113",
+    "parameter_key": "INTAKE_AIR_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 311,
+      "pdf_page_end": 311,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1113",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 311,
+      "pdf_page_end": 311,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1261",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 312,
+      "pdf_page_end": 312,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1262",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 313,
+      "pdf_page_end": 313,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1293",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 314,
+      "pdf_page_end": 314,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1294",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 315,
+      "pdf_page_end": 315,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1404",
+    "parameter_key": "EGR_ACTUAL_POSITION",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 316,
+      "pdf_page_end": 316,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1455",
+    "parameter_key": "BOOST_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 317,
+      "pdf_page_end": 318,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1455",
+    "parameter_key": "BAROMETRIC_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 317,
+      "pdf_page_end": 318,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1455",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 317,
+      "pdf_page_end": 318,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1471",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 319,
+      "pdf_page_end": 320,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1471",
+    "parameter_key": "DPD_ACCUMULATION_STATUS",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 319,
+      "pdf_page_end": 320,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1471",
+    "parameter_key": "DPD_TIME_STATUS",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 319,
+      "pdf_page_end": 320,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1655",
+    "parameter_key": "EGR_ACTUAL_POSITION",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 322,
+      "pdf_page_end": 323,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1655",
+    "parameter_key": "FUEL_TEMPERATURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 322,
+      "pdf_page_end": 323,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1655",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 322,
+      "pdf_page_end": 323,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P1669",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 324,
+      "pdf_page_end": 324,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2122",
+    "parameter_key": "APP_POSITION",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 325,
+      "pdf_page_end": 325,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2122",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 325,
+      "pdf_page_end": 325,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2123",
+    "parameter_key": "APP_POSITION",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 326,
+      "pdf_page_end": 326,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2123",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 326,
+      "pdf_page_end": 326,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2127",
+    "parameter_key": "APP_POSITION",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 327,
+      "pdf_page_end": 327,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2127",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 327,
+      "pdf_page_end": 327,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2128",
+    "parameter_key": "APP_POSITION",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 328,
+      "pdf_page_end": 328,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2128",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 328,
+      "pdf_page_end": 328,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2138",
+    "parameter_key": "APP_POSITION",
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "display_priority": 1,
+    "relation_role": "PRIMARY",
+    "reason": "APP correlation DTC; scan-tool displays calculated pedal position and voltage.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 144
+    }
+  },
+  {
+    "code": "P2138",
+    "parameter_key": "APP_POSITION",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 329,
+      "pdf_page_end": 329,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2138",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 329,
+      "pdf_page_end": 329,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2146",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 330,
+      "pdf_page_end": 331,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2149",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 332,
+      "pdf_page_end": 333,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2228",
+    "parameter_key": "BAROMETRIC_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 334,
+      "pdf_page_end": 334,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2228",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 334,
+      "pdf_page_end": 334,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2229",
+    "parameter_key": "BAROMETRIC_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 335,
+      "pdf_page_end": 335,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2229",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 335,
+      "pdf_page_end": 335,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P242F",
+    "parameter_key": "BOOST_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 336,
+      "pdf_page_end": 337,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P242F",
+    "parameter_key": "BAROMETRIC_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 336,
+      "pdf_page_end": 337,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P242F",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 336,
+      "pdf_page_end": 337,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2452",
+    "parameter_key": "ENGINE_RPM",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 338,
+      "pdf_page_end": 339,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2452",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 338,
+      "pdf_page_end": 339,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2452",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 338,
+      "pdf_page_end": 339,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2453",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 340,
+      "pdf_page_end": 341,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2453",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 340,
+      "pdf_page_end": 341,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2454",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 342,
+      "pdf_page_end": 342,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2454",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 342,
+      "pdf_page_end": 342,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2455",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 343,
+      "pdf_page_end": 343,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2455",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 343,
+      "pdf_page_end": 343,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2456",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 344,
+      "pdf_page_end": 344,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2456",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 344,
+      "pdf_page_end": 344,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2458",
+    "parameter_key": "DPD_DIFFERENTIAL_PRESSURE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 345,
+      "pdf_page_end": 346,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2458",
+    "parameter_key": "DPD_ACCUMULATION_STATUS",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 2,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 345,
+      "pdf_page_end": 346,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "P2458",
+    "parameter_key": "DPD_TIME_STATUS",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 3,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 345,
+      "pdf_page_end": 346,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "U0001",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 347,
+      "pdf_page_end": 347,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "U0073",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 348,
+      "pdf_page_end": 349,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "U0101",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 350,
+      "pdf_page_end": 350,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "U0110",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 351,
+      "pdf_page_end": 351,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  },
+  {
+    "code": "U0411",
+    "parameter_key": "BATTERY_VOLTAGE",
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "display_priority": 1,
+    "relation_role": "SUPPORTING",
+    "reason": "Parameter is explicitly referenced in the OEM DTC description/setting condition/diagnostic procedure.",
+    "relation_basis": "DERIVED_FROM_OEM_PROCEDURE_TEXT",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM",
+      "pdf_page_start": 352,
+      "pdf_page_end": 353,
+      "section": "1A Engine Control / DTC Diagnostics"
+    }
+  }
+]

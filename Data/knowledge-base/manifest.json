@@ -1,0 +1,114 @@
+{
+  "package": "isuzu-diagnostic-knowledge-v2",
+  "schema_version": "2.0-draft",
+  "generated_at_utc": "2026-09-13T11:03:11.141603+00:00",
+  "purpose": "Structured offline knowledge base seed for Isuzu diagnostic desktop/gateway project.",
+  "lookup_contract": {
+    "input": "vehicle-reported DTC code",
+    "primary_lookup": "dtcs.json by code",
+    "unknown_behavior": "Unknown DTC",
+    "context_enrichment": "dtc_profiles.json by application/module when available"
+  },
+  "files": [
+    {
+      "name": "sources.json",
+      "purpose": "Manual/source provenance and duplicate/excerpt relationships"
+    },
+    {
+      "name": "applications.json",
+      "purpose": "Vehicle/engine/generation applicability contexts"
+    },
+    {
+      "name": "dtcs.json",
+      "purpose": "Global canonical Isuzu DTC index"
+    },
+    {
+      "name": "dtc_profiles.json",
+      "purpose": "Application-specific conditions, causes, OEM procedures and actions"
+    },
+    {
+      "name": "dtc_mappings.json",
+      "purpose": "SPN/FMI and flash-code mappings"
+    },
+    {
+      "name": "dtc_related_live_data.json",
+      "purpose": "DTC-to-live-data relevance links explicitly supported by source context"
+    },
+    {
+      "name": "live_parameters.json",
+      "purpose": "Canonical scan-tool/live-data parameter catalog"
+    },
+    {
+      "name": "live_reference_values.json",
+      "purpose": "Condition/application-specific numeric/text/curve reference values"
+    },
+    {
+      "name": "service_specifications.json",
+      "purpose": "Mechanical/electrical/service reference specs; not ECU live data"
+    },
+    {
+      "name": "control_modules.json",
+      "purpose": "ECM/ECU/EDU metadata"
+    },
+    {
+      "name": "control_module_pins.json",
+      "purpose": "Connector pin/function data"
+    },
+    {
+      "name": "networks.json",
+      "purpose": "CAN/diagnostic network facts"
+    },
+    {
+      "name": "actuator_tests.json",
+      "purpose": "OEM scan-tool actuator tests"
+    },
+    {
+      "name": "special_functions.json",
+      "purpose": "Programming/reset/learning functions"
+    },
+    {
+      "name": "dtc_lifecycle_rules.json",
+      "purpose": "Euro VI DTC cycle/MIL/SVS/freeze-frame lifecycle rules"
+    },
+    {
+      "name": "fault_classes.json",
+      "purpose": "Euro VI fault class definitions"
+    },
+    {
+      "name": "symptom_troubleshooting.json",
+      "purpose": "Workshop condition/cause/correction rows"
+    },
+    {
+      "name": "source_page_index.json",
+      "purpose": "Searchable page-level project relevance index"
+    },
+    {
+      "name": "raw_tables.json",
+      "purpose": "Raw extracted relevant tables for future normalization/cross-check"
+    },
+    {
+      "name": "raw_source_facts.json",
+      "purpose": "Selected raw page text to prevent losing source detail"
+    },
+    {
+      "name": "validation_report.json",
+      "purpose": "Counts, conflicts, limitations and data policies"
+    },
+    {
+      "name": "dtc_completeness.json",
+      "purpose": "Per-code coverage matrix for titles/causes/OEM steps/mappings/live-data links"
+    },
+    {
+      "name": "import_contract.json",
+      "purpose": "Stable-key import order and table mapping contract"
+    },
+    {
+      "name": "operating_conditions.json",
+      "purpose": "Named conditions used by reference thresholds/values"
+    },
+    {
+      "name": "excerpt_cross_validation.json",
+      "purpose": "Deduplication and scanned-excerpt cross-validation notes"
+    }
+  ]
+}

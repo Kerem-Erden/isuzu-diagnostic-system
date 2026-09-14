@@ -1,0 +1,137 @@
+[
+  {
+    "application_key": "ISUZU_NR_2005_4HK1_TC_EURO3",
+    "manufacturer": "Isuzu",
+    "vehicle_family": "N-Series",
+    "vehicle_models": [
+      "NPR",
+      "NQR"
+    ],
+    "model_year_from": 2005,
+    "model_year_to": 2005,
+    "engine_family": "4HK1",
+    "engine_variant": "TC",
+    "engine_variants": [
+      "TCS",
+      "TCN"
+    ],
+    "emissions_generation": "Euro 3",
+    "markets": [
+      "General Export",
+      "Europe",
+      "Australia",
+      "Thailand",
+      "South Africa"
+    ],
+    "notes": "TCS/TCN output/transmission variants described in service-training manual.",
+    "source": {
+      "document_key": "ISUZU_4HK1_SERVICE_TRAINING_2005",
+      "section": "Applicability / General information"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2007_4HK1_TC",
+    "manufacturer": "Isuzu",
+    "vehicle_family": "N-Series",
+    "vehicle_models": null,
+    "model_year_from": 2007,
+    "model_year_to": 2007,
+    "engine_family": "4HK1",
+    "engine_variant": "TC",
+    "engine_variants": [
+      "TCS",
+      "TCN"
+    ],
+    "notes": "Workshop manual scope.",
+    "source": {
+      "document_key": "ISUZU_4HK1_WORKSHOP_2007"
+    }
+  },
+  {
+    "application_key": "ISUZU_4HK1_TM_REFERENCE",
+    "manufacturer": "Isuzu",
+    "vehicle_family": null,
+    "vehicle_models": null,
+    "engine_family": "4HK1",
+    "engine_variant": null,
+    "notes": "Application is not narrowed beyond the 4HK1 source/manual; preserve manual-specific reference values.",
+    "source": {
+      "document_key": "ISUZU_4HK1_ENGINE_TM"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2010PLUS_4HK1_US10_CRS",
+    "manufacturer": "Isuzu",
+    "vehicle_family": "N-Series",
+    "vehicle_models": null,
+    "model_year_from": 2010,
+    "model_year_to": null,
+    "production_start": "2010-05",
+    "engine_family": "4HK1",
+    "engine_variant": null,
+    "emissions_generation": "US10",
+    "system_generation": "200MPa common rail / G3 injector / DPF+SCR",
+    "notes": "DENSO manual states model change beginning May 2010.",
+    "source": {
+      "document_key": "DENSO_ISUZU_4HK1_CRS_2011"
+    }
+  },
+  {
+    "application_key": "ISUZU_ELF_2004_4HK1",
+    "manufacturer": "Isuzu",
+    "vehicle_family": "ELF/N-Series",
+    "vehicle_models": [
+      "ELF"
+    ],
+    "model_year_from": 2004,
+    "model_year_to": null,
+    "engine_family": "4HK1",
+    "engine_variant": null,
+    "system_generation": "DENSO CRS",
+    "source": {
+      "document_key": "DENSO_ISUZU_4HK1_6HK1_2004"
+    }
+  },
+  {
+    "application_key": "ISUZU_C560_2004_6HK1",
+    "manufacturer": "Isuzu",
+    "vehicle_family": "C-Series",
+    "vehicle_models": [
+      "C560"
+    ],
+    "model_year_from": 2004,
+    "model_year_to": null,
+    "engine_family": "6HK1",
+    "engine_variant": null,
+    "system_generation": "DENSO CRS",
+    "source": {
+      "document_key": "DENSO_ISUZU_4HK1_6HK1_2004"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "manufacturer": "Isuzu",
+    "vehicle_family": "N-Series",
+    "vehicle_models": [
+      "NLR",
+      "NMR",
+      "NNR",
+      "NPR"
+    ],
+    "model_year_from": 2021,
+    "model_year_to": null,
+    "engine_family": "4JZ1",
+    "engine_variant": "TCS",
+    "emissions_generation": "Euro VI",
+    "markets": [
+      "Europe",
+      "Israel",
+      "Turkey"
+    ],
+    "system_generation": "250MPa / DENSO HP5S / G4S i-ART / DPD+SCR",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 2
+    }
+  }
+]

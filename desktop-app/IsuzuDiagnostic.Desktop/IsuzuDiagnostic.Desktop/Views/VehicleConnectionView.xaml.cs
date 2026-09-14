@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 using IsuzuDiagnostic.Desktop.Catalogs;
 using IsuzuDiagnostic.Desktop.Models;
+using IsuzuDiagnostic.Desktop.Data;
 using IsuzuDiagnostic.Desktop.Communication.Protocol;
 using IsuzuDiagnostic.Desktop.Communication.Serial;
 
@@ -20,13 +21,17 @@ namespace IsuzuDiagnostic.Desktop.Views
 
         private readonly RequestIdGenerator _requestIdGenarator;
 
-        public VehicleConnectionView(SerialGatewayService serialGatewayService, RequestIdGenerator requestIdGenarator)
+        private readonly VehicleProfileRepository _vehicleProfileRepository;
+
+        public VehicleConnectionView(SerialGatewayService serialGatewayService, RequestIdGenerator requestIdGenarator, VehicleProfileRepository vehicleProfileRepository)
         {
             InitializeComponent();
 
             _serialGatewayService = serialGatewayService ?? throw new ArgumentNullException(nameof(serialGatewayService));
 
             _requestIdGenarator = requestIdGenarator ?? throw new ArgumentNullException(nameof(requestIdGenarator));
+
+            _vehicleProfileRepository = vehicleProfileRepository ?? throw new ArgumentNullException(nameof(vehicleProfileRepository));
 
             LoadVehicleCatalog();
 
@@ -96,6 +101,8 @@ namespace IsuzuDiagnostic.Desktop.Views
             }
 
             CreatedSession.MarkConnected();
+
+            _vehicleProfileRepository.Save(vehicleProfile);
 
             ContinueRequested?.Invoke(this, EventArgs.Empty);
         }

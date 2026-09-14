@@ -2,227 +2,286 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Grid Margin="40">
+    <Grid Margin="28">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="16"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="16"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
+        <!-- Compact horizontal header -->
+        <Border Grid.Row="0"
+                Padding="18"
+                Background="#F8F9FA"
+                BorderBrush="#D5D8DE"
+                BorderThickness="1"
+                CornerRadius="8">
 
-            <TextBlock Text="{Binding Code, Mode=OneWay}"
-                       FontSize="34"
-                       FontWeight="Bold"
-                       Foreground="#A5001E"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <TextBlock Text="{Binding Description, Mode=OneWay}"
-                       Margin="0,8,0,0"
-                       FontSize="17"
-                       TextWrapping="Wrap"/>
+                <TextBlock Grid.Column="0"
+                           Text="{Binding Code, Mode=OneWay}"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="#A5001E"
+                           VerticalAlignment="Center"/>
 
-        </StackPanel>
+                <Border Grid.Column="1"
+                        Margin="0,0,18,0"
+                        Padding="10,6"
+                        Background="#FFFFFF"
+                        BorderBrush="#D5D8DE"
+                        BorderThickness="1"
+                        CornerRadius="6"
+                        VerticalAlignment="Center">
 
+                    <TextBlock Text="{Binding Status, Mode=OneWay}"
+                               HorizontalAlignment="Center"
+                               FontWeight="SemiBold"/>
+                </Border>
+
+                <StackPanel Grid.Column="2"
+                            VerticalAlignment="Center">
+
+                    <TextBlock Text="{Binding Description, Mode=OneWay}"
+                               FontSize="19"
+                               FontWeight="SemiBold"
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Text="{Binding DetailedDescription, Mode=OneWay}"
+                               Margin="0,6,0,0"
+                               FontSize="13"
+                               Foreground="#59616D"
+                               TextWrapping="Wrap"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Two-column layout so wide desktop space is actually used -->
         <ScrollViewer Grid.Row="2"
-                      VerticalScrollBarVisibility="Auto">
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled">
 
-            <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="16"/>
+                    <ColumnDefinition Width="1.25*"/>
+                </Grid.ColumnDefinitions>
 
-                <Border Padding="20"
-                        Margin="0,0,0,14"
-                        Background="#F8F9FA"
-                        BorderBrush="#D5D8DE"
-                        BorderThickness="1"
-                        CornerRadius="8">
+                <!-- LEFT COLUMN -->
+                <StackPanel Grid.Column="0">
 
-                    <StackPanel>
+                    <Border Padding="18"
+                            Margin="0,0,0,14"
+                            Background="#F8F9FA"
+                            BorderBrush="#D5D8DE"
+                            BorderThickness="1"
+                            CornerRadius="8">
 
-                        <TextBlock Text="Status"
-                                   FontSize="17"
-                                   FontWeight="SemiBold"/>
+                        <StackPanel>
+                            <TextBlock Text="Possible Causes"
+                                       FontSize="16"
+                                       FontWeight="SemiBold"/>
 
-                        <TextBlock Text="{Binding Status, Mode=OneWay}"
-                                   Margin="0,8,0,0"/>
+                            <ItemsControl ItemsSource="{Binding PossibleCauses, Mode=OneWay}"
+                                          Margin="0,9,0,0">
 
-                    </StackPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,3">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="18"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
 
-                </Border>
+                                            <TextBlock Text="•"
+                                                       FontWeight="Bold"/>
 
-                <Border Padding="20"
-                        Margin="0,0,0,14"
-                        Background="#F8F9FA"
-                        BorderBrush="#D5D8DE"
-                        BorderThickness="1"
-                        CornerRadius="8">
+                                            <TextBlock Grid.Column="1"
+                                                       Text="{Binding Description, Mode=OneWay}"
+                                                       TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
 
-                    <StackPanel>
+                    <Border Padding="18"
+                            Margin="0,0,0,14"
+                            Background="#F8F9FA"
+                            BorderBrush="#D5D8DE"
+                            BorderThickness="1"
+                            CornerRadius="8">
 
-                        <TextBlock Text="Possible Causes"
-                                   FontSize="17"
-                                   FontWeight="SemiBold"/>
+                        <StackPanel>
+                            <TextBlock Text="Possible Solutions"
+                                       FontSize="16"
+                                       FontWeight="SemiBold"/>
 
-                        <ItemsControl ItemsSource="{Binding PossibleCauses, Mode=OneWay}"
-                                      Margin="0,10,0,0">
+                            <ItemsControl ItemsSource="{Binding PossibleSolutions, Mode=OneWay}"
+                                          Margin="0,9,0,0">
 
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,3">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="18"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
 
-                                    <TextBlock Text="{Binding Description, Mode=OneWay}"
-                                               Margin="0,3,0,3"
-                                               TextWrapping="Wrap"/>
+                                            <TextBlock Text="•"
+                                                       FontWeight="Bold"/>
 
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
+                                            <TextBlock Grid.Column="1"
+                                                       Text="{Binding Description, Mode=OneWay}"
+                                                       TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
 
-                        </ItemsControl>
-                    </StackPanel>
+                    <Border Padding="18"
+                            Background="#F8F9FA"
+                            BorderBrush="#D5D8DE"
+                            BorderThickness="1"
+                            CornerRadius="8">
 
-                </Border>
+                        <StackPanel>
+                            <TextBlock Text="Related Live Data"
+                                       FontSize="16"
+                                       FontWeight="SemiBold"/>
 
-                <Border Padding="20"
-                        Margin="0,0,0,14"
-                        Background="#F8F9FA"
-                        BorderBrush="#D5D8DE"
-                        BorderThickness="1"
-                        CornerRadius="8">
+                            <ItemsControl ItemsSource="{Binding RelatedLiveData, Mode=OneWay}"
+                                          Margin="0,9,0,0">
 
-                    <StackPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,3">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="80"/>
+                                            </Grid.ColumnDefinitions>
 
-                        <TextBlock Text="Diagnostic Steps"
-                                   FontSize="17"
-                                   FontWeight="SemiBold"/>  
+                                            <TextBlock Text="{Binding DisplayName, Mode=OneWay}"
+                                                       TextWrapping="Wrap"/>
 
-                        <ItemsControl ItemsSource="{Binding DiagnosticSteps, Mode=OneWay}"
-                                      Margin="0,10,0,0">
+                                            <TextBlock Grid.Column="1"
+                                                       Text="{Binding Unit, Mode=OneWay}"
+                                                       Foreground="#68707C"
+                                                       HorizontalAlignment="Right"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
 
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
+                <!-- RIGHT COLUMN -->
+                <StackPanel Grid.Column="2">
 
-                                    <Grid Margin="0,4,0,4">
+                    <Border Padding="18"
+                            Margin="0,0,0,14"
+                            Background="#F8F9FA"
+                            BorderBrush="#D5D8DE"
+                            BorderThickness="1"
+                            CornerRadius="8">
 
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="35"/>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="OEM Diagnostic Steps"
+                                       FontSize="16"
+                                       FontWeight="SemiBold"/>
 
-                                        <TextBlock Text="{Binding Order, Mode=OneWay}"
-                                                   FontWeight="SemiBold"/>
+                            <ItemsControl ItemsSource="{Binding DiagnosticSteps, Mode=OneWay}"
+                                          Margin="0,9,0,0">
 
-                                        <TextBlock Grid.Column="1"
-                                                   Text="{Binding Description, Mode=OneWay}"
-                                                   TextWrapping="Wrap"/>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="32"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
 
-                                    </Grid>
+                                            <TextBlock Text="{Binding Order, Mode=OneWay}"
+                                                       FontWeight="SemiBold"
+                                                       Foreground="#A5001E"/>
 
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
+                                            <TextBlock Grid.Column="1"
+                                                       Text="{Binding Description, Mode=OneWay}"
+                                                       TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
 
-                        </ItemsControl>
+                    <Border Padding="18"
+                            Background="#F8F9FA"
+                            BorderBrush="#D5D8DE"
+                            BorderThickness="1"
+                            CornerRadius="8">
 
-                    </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Confirm Resolution"
+                                       FontSize="16"
+                                       FontWeight="SemiBold"/>
 
-                </Border>
+                            <ItemsControl ItemsSource="{Binding ConfirmationSteps, Mode=OneWay}"
+                                          Margin="0,9,0,0">
 
-                <Border Padding="20"
-                        Margin="0,0,0,14"
-                        Background="#F8F9FA"
-                        BorderBrush="#D5D8DE"
-                        BorderThickness="1"
-                        CornerRadius="8">   
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="32"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
 
-                    <StackPanel>
+                                            <TextBlock Text="{Binding Order, Mode=OneWay}"
+                                                       FontWeight="SemiBold"
+                                                       Foreground="#A5001E"/>
 
-                        <TextBlock Text="Possible Solutions"
-                                   FontSize="17"
-                                   FontWeight="SemiBold"/>
-
-                        <ItemsControl ItemsSource="{Binding PossibleSolutions, Mode=OneWay}"
-                                      Margin="0,10,0,0">
-
-                            <ItemsControl.ItemTemplate>
-
-                                <DataTemplate>
-
-                                    <TextBlock Text="{Binding Description, Mode=OneWay}"
-                                               Margin="0,3,0,3"
-                                               TextWrapping="Wrap"/>
-
-                                </DataTemplate>
-
-                            </ItemsControl.ItemTemplate>
-
-                        </ItemsControl>
-
-                    </StackPanel>
-
-                </Border>
-
-                <Border Padding="20"
-                        Background="#F8F9FA"
-                        BorderBrush="#D5D8DE"
-                        BorderThickness="1"
-                        CornerRadius="8">
-
-                    <StackPanel>
-
-                        <TextBlock Text="Related Live Data"
-                                   FontSize="17"
-                                   FontWeight="SemiBold"/>
-
-                        <ItemsControl ItemsSource="{Binding RelatedLiveData, Mode=OneWay}"
-                                      Margin="0,10,0,0">
-
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-
-                                    <Grid Margin="0,3,0,3">
-
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="100"/>
-                                        </Grid.ColumnDefinitions>
-
-                                        <TextBlock Text="{Binding DisplayName, Mode=OneWay}"
-                                                   TextWrapping="Wrap"/>
-
-                                        <TextBlock Grid.Column="1"
-                                                   Text="{Binding Unit, Mode=OneWay}"
-                                                   Foreground="#68707C"/>
-
-                                    </Grid>
-
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-
-                        </ItemsControl>
-
-                    </StackPanel>
-
-                </Border>
-
-            </StackPanel>
-
+                                            <TextBlock Grid.Column="1"
+                                                       Text="{Binding Description, Mode=OneWay}"
+                                                       TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
         </ScrollViewer>
 
         <StackPanel Grid.Row="4"
-            Orientation="Horizontal">
+                    Orientation="Horizontal">
 
             <Button Width="190"
-            Height="40"
-            Content="Show Related Live Data"
-            Click="ShowRelatedLiveDataButton_Click"/>
+                    Height="40"
+                    Content="Show Related Live Data"
+                    Click="ShowRelatedLiveDataButton_Click"/>
 
             <Button Width="130"
-            Height="40"
-            Margin="10,0,0,0"
-            Content="Back"
-            Click="BackButton_Click"/>
-
+                    Height="40"
+                    Margin="10,0,0,0"
+                    Content="Back"
+                    Click="BackButton_Click"/>
         </StackPanel>
 
     </Grid>
-
 </UserControl>

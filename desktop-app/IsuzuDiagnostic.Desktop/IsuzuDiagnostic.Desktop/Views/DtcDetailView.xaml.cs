@@ -3,8 +3,6 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 
-using IsuzuDiagnostic.Desktop.Models;
-
 namespace IsuzuDiagnostic.Desktop.Views;
 
 public partial class DtcDetailView : UserControl

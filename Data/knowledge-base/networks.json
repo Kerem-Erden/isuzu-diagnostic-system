@@ -1,0 +1,100 @@
+[
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "network_key": "ISO_CAN",
+    "bitrate_bps": 500000,
+    "diagnostic": true,
+    "dlc_high_pin": 6,
+    "dlc_low_pin": 14,
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 126,
+      "section": "CAN Bus Communication"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "network_key": "SAE_J1939_CAN",
+    "bitrate_bps": 500000,
+    "diagnostic": false,
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 126,
+      "section": "CAN Bus Communication"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "network_key": "LOCAL_CAN",
+    "bitrate_bps": 250000,
+    "diagnostic": false,
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 126,
+      "section": "CAN Bus Communication"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "network_key": "ENGINE_LOCAL_CAN",
+    "bitrate_bps": 1000000,
+    "diagnostic": false,
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 126,
+      "section": "CAN Bus Communication"
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "network_key": "KEYWORD_COMMUNICATION",
+    "bitrate_bps": null,
+    "diagnostic": true,
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 126,
+      "section": "CAN Bus Communication"
+    }
+  },
+  {
+    "application_key": "ISUZU_ELF_2004_4HK1",
+    "network_key": "CAN1",
+    "bitrate_bps": null,
+    "ecu_pins": [
+      "A-17 CAN1H",
+      "A-18 CAN1L"
+    ],
+    "source": {
+      "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+      "pdf_page": 43,
+      "section": "4HK1 ECU Terminal Connections"
+    }
+  },
+  {
+    "application_key": "ISUZU_ELF_2004_4HK1",
+    "network_key": "ISO14230_KWP2000",
+    "bitrate_bps": null,
+    "ecu_pins": [
+      "A-19"
+    ],
+    "source": {
+      "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+      "pdf_page": 43,
+      "section": "4HK1 ECU Terminal Connections"
+    }
+  },
+  {
+    "application_key": "ISUZU_ELF_2004_4HK1",
+    "network_key": "J1850_CLASS2",
+    "bitrate_bps": null,
+    "ecu_pins": [
+      "A-20",
+      "A-21"
+    ],
+    "source": {
+      "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+      "pdf_page": 43,
+      "section": "4HK1 ECU Terminal Connections"
+    }
+  }
+]

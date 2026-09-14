@@ -2,74 +2,142 @@
 using System.Windows;
 using System.Windows.Controls;
 
-using IsuzuDiagnostic.Desktop.Catalogs;
+using IsuzuDiagnostic.Desktop.Data;
 using IsuzuDiagnostic.Desktop.Models;
 
-namespace IsuzuDiagnostic.Desktop.Views
+namespace IsuzuDiagnostic.Desktop.Views;
+
+public partial class DtcListView : UserControl
 {
-    public partial class DtcListView : UserControl
+    private readonly DtcKnowledgeRepository _knowledgeRepository = new();
+
+    /*
+     * TEMPORARY:
+     *
+     * These represent DTC codes returned by a simulated scan.
+     * The knowledge itself is NOT mocked anymore.
+     *
+     * When desktop Mode 03 communication is connected,
+     * this array disappears and the ECU response supplies the codes.
+     */
+    private readonly string[] _simulatedDetectedCodes =
     {
-        public event EventHandler? BackRequested;
+        "P1093",
+        "P0087"
+    };
 
-        public event Action<DiagnosticTroubleCode>? DtcDetailsRequested;
+    public event EventHandler? BackRequested;
 
-        public DtcListView()
+    public event Action<DiagnosticTroubleCode>? DtcDetailsRequested;
+
+    public DtcListView()
+    {
+        InitializeComponent();
+
+        LoadDetectedDtcs();
+    }
+
+    private void DetailsButton_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        if (sender is Button button &&
+            button.Tag is DiagnosticTroubleCode dtc)
         {
-            InitializeComponent();
+            DtcDetailsRequested?.Invoke(dtc);
+        }
+    }
 
-            LoadMockDtcs();
+    private void RescanButton_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        IReadOnlyList<DiagnosticTroubleCode> dtcs =
+            LoadDetectedDtcs();
+
+        MessageBox.Show(
+            $"{dtcs.Count} simulated DTC(s) detected.\n\n" +
+            "Diagnostic information is loaded from isuzu-knowledge.db.",
+            "DTC Scan",
+            MessageBoxButton.OK,
+            MessageBoxImage.Information);
+    }
+
+    private void ClearDtcMemoryButton_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        MessageBoxResult result = MessageBox.Show(
+            "Clear diagnostic trouble code memory?\n\n" +
+            "This is currently a simulated operation. " +
+            "No command will be sent to the vehicle ECU.",
+            "Clear DTC memory",
+            MessageBoxButton.YesNo,
+            MessageBoxImage.Warning);
+
+        if (result != MessageBoxResult.Yes)
+        {
+            return;
         }
 
-        private void DetailsButton_Click(object sender, RoutedEventArgs e)
+        MessageBox.Show(
+            "DTC clearing is not implemented yet.\n\n" +
+            "No command was sent to the vehicle ECU.",
+            "Clear DTC memory",
+            MessageBoxButton.OK,
+            MessageBoxImage.Information);
+
+        LoadDetectedDtcs();
+    }
+
+    private void BackButton_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        BackRequested?.Invoke(this, EventArgs.Empty);
+    }
+
+    private IReadOnlyList<DiagnosticTroubleCode> LoadDetectedDtcs()
+    {
+        List<DiagnosticTroubleCode> dtcs = [];
+
+        foreach (string code in _simulatedDetectedCodes)
         {
-            if (sender is Button button && button.Tag is DiagnosticTroubleCode dtc)
+            DtcKnowledgeDetails? knowledge =
+                _knowledgeRepository.FindByCode(code);
+
+            if (knowledge is null)
             {
-                DtcDetailsRequested?.Invoke(dtc);
-            }
-        }
-
-        private void RescanButton_Click(object sender, RoutedEventArgs e)
-        {
-            LoadMockDtcs();
-
-            MessageBox.Show($"{MockDtcCatalog.Items.Count} mock DTC(s) detected.");
-        }
-
-        private void ClearDtcMemoryButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBoxResult result = MessageBox.Show("Clear diagnostic trouble code memory?\n\n" +
-                                                      "This is currently a simulated operation." +
-                                                      "No command will be sent to the vehicle ECU.",
-                                                      "Clear DTC memory.",
-                                                      MessageBoxButton.YesNo,
-                                                      MessageBoxImage.Warning);
-
-            if (result != MessageBoxResult.Yes)
-            {
-                return;
+                dtcs.Add(CreateUnknownDtc(code));
+                continue;
             }
 
-            MessageBox.Show("DTC clearing is not implemented yet.\n\n" +
-                            "No command was sent to the vehicle ECU.",
-                            "Clear DTC memory.",
-                            MessageBoxButton.OK,
-                            MessageBoxImage.Information);
-
-            // Simulate the automatic rescan that will occur
-            // after a real DTC clear operation in the future.
-            LoadMockDtcs();
+            /*
+             * Mode 03 represents stored/confirmed emission-related DTCs.
+             * For this simulated scan we therefore use "Stored".
+             */
+            dtcs.Add(
+                DtcKnowledgeMapper.ToDiagnosticTroubleCode(
+                    knowledge,
+                    "Stored"));
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            BackRequested?.Invoke(this, EventArgs.Empty);
-        }
+        DtcItemsControl.ItemsSource = null;
+        DtcItemsControl.ItemsSource = dtcs;
 
-        private void LoadMockDtcs()
-        {
-            DtcItemsControl.ItemsSource = null;
+        return dtcs;
+    }
 
-            DtcItemsControl.ItemsSource = MockDtcCatalog.Items;
-        }
+    private static DiagnosticTroubleCode CreateUnknownDtc(
+        string code)
+    {
+        return new DiagnosticTroubleCode(
+            code: code,
+            description: "Unknown DTC",
+            status: "Stored",
+            possibleCauses: Array.Empty<DtcCause>(),
+            diagnosticSteps: Array.Empty<DiagnosticStep>(),
+            relatedLiveData: Array.Empty<RelatedLiveDataItem>(),
+            possibleSolutions: Array.Empty<DtcSolution>());
     }
 }

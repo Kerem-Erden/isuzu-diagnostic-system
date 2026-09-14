@@ -3,10 +3,10 @@ using System;
 using System.Windows.Threading;
 using System.Threading.Tasks;
 using System.Linq;
-using System.Threading.Tasks;
 
 using IsuzuDiagnostic.Desktop.Views;
 using IsuzuDiagnostic.Desktop.Models;
+using IsuzuDiagnostic.Desktop.Data;
 using IsuzuDiagnostic.Desktop.Communication.Serial;
 using IsuzuDiagnostic.Desktop.Communication.Protocol;
 
@@ -26,6 +26,8 @@ namespace IsuzuDiagnostic.Desktop
         private readonly DispatcherTimer _connectionWatchdogTimer;
 
         private readonly DispatcherTimer _reconnectTimer;
+
+        private readonly VehicleProfileRepository _vehicleProfileRepository = new VehicleProfileRepository();
 
         private DateTimeOffset _lastPongAt;
 
@@ -64,7 +66,7 @@ namespace IsuzuDiagnostic.Desktop
 
         private void ShowVehicleConnectionView()
         {
-            VehicleConnectionView view = new VehicleConnectionView(_serialGatewayService, _requestIdGenerator);
+            VehicleConnectionView view = new VehicleConnectionView(_serialGatewayService, _requestIdGenerator, _vehicleProfileRepository);
 
             view.ContinueRequested += VehicleConnectionView_ContinueRequested;
 

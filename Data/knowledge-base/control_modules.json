@@ -1,0 +1,34 @@
+[
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "module_name": "Engine Control Module",
+    "manufacturer": "TRANSTRON",
+    "connector_summary": "2 connectors, 105 + 91 pins",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 17
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "EDU",
+    "module_name": "Engine Driver Unit",
+    "manufacturer": "DENSO",
+    "connector_summary": "2 connectors, 60 + 32 pins",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 18
+    }
+  },
+  {
+    "application_key": "ISUZU_ELF_2004_4HK1",
+    "module_key": "ECU",
+    "module_name": "Engine ECU",
+    "manufacturer": "DENSO",
+    "source": {
+      "document_key": "DENSO_ISUZU_4HK1_6HK1_2004",
+      "pdf_page": 43
+    }
+  }
+]

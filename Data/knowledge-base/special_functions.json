@@ -1,0 +1,73 @@
+[
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "function_key": "READ_CLEAR_DTC",
+    "name": "Read/Clear DTCs",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 244
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "function_key": "DATA_DISPLAY",
+    "name": "Continuous Data Display",
+    "notes": "Monitor parameters continuously and compare actual with desired values.",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 244
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "function_key": "PROGRAM_VIN",
+    "name": "Program VIN to ECM/EDU",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 245
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "function_key": "RESET_DPD_REGEN_DATA",
+    "name": "Reset DPD regeneration data",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 245
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "function_key": "RESET_SENSOR_LEARNED_VALUES",
+    "name": "Reset learned values after sensor replacement",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 245
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "function_key": "ZERO_POINT_LEARNING",
+    "name": "Zero-point learning",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 245
+    }
+  },
+  {
+    "application_key": "ISUZU_N_2021PLUS_4JZ1_EURO6",
+    "module_key": "ECM",
+    "function_key": "READ_MODULE_INFO",
+    "name": "Read software and calibration number",
+    "source": {
+      "document_key": "ISUZU_4JZ1_ITCE_2021",
+      "pdf_page": 245
+    }
+  }
+]
