@@ -77,6 +77,8 @@ esp_err_t can_bus_run_loopback_test(void);
 
 esp_err_t can_bus_transmit(const can_bus_frame_t *frame, uint32_t timeout_ms);
 
+esp_err_t can_bus_run_transceiver_test(void);
+
 void can_bus_print_diagnostics(void);
 
 #endif

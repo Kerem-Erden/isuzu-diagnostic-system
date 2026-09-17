@@ -19,7 +19,8 @@
 #define RESPONSE_BUFFER_SIZE 128
 #define CAN_MAX_FRAMES_PER_CYCLE 8
 
-#define OBD_VEHICLE_TEST_ENABLED 1
+#define OBD_VEHICLE_TEST_ENABLED 0
+#define CAN_HARDWARE_SELF_TEST_ENABLED 0
 
 #define CAN_TEST_BITRATE CAN_BUS_BITRATE_500K
 #define CAN_AUTO_BITRATE_PROBE_ENABLED 1
@@ -599,6 +600,19 @@ void app_main(void)
 
     can_bus_bitrate_t detected_bitrate = CAN_BUS_BITRATE_500K;
     bool bitrate_detected = false;
+
+    #if CAN_HARDWARE_SELF_TEST_ENABLED
+
+    esp_err_t loopback_result = can_bus_run_loopback_test();
+
+    printf("\nCAN:LOOP:%s\n", loopback_result == ESP_OK ? "PASS" : esp_err_to_name(loopback_result));
+
+    esp_err_t transceiver_result = can_bus_run_transceiver_test();
+    printf("\nCAN:TRANSCEIVER:%s\n", transceiver_result == ESP_OK ? "PASS" : esp_err_to_name(transceiver_result));
+
+    fflush(stdout);
+
+    #endif
 
     #if CAN_AUTO_BITRATE_PROBE_ENABLED
         printf("\nCAN:PROBE:BEGIN\n");
