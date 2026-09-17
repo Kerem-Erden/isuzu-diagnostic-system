@@ -137,7 +137,7 @@ public sealed class SerialGatewayService : IDisposable
             serialPort = _serialPort;
             
         }
-            _serialPort.WriteLine(message.TrimEnd('\r', '\n'));
+            serialPort.WriteLine(message.TrimEnd('\r', '\n'));
 
     }
 
