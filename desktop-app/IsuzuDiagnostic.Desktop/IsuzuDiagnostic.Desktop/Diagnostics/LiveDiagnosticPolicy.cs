@@ -24,6 +24,16 @@ public sealed class LiveDiagnosticPolicy
             throw new ArgumentOutOfRangeException(nameof(warningMargin));
         }
 
+        if (hysteresis < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(hysteresis));
+        }
+
+        if (confirmationDuration < TimeSpan.Zero)
+        {
+            throw new ArgumentOutOfRangeException(nameof(confirmationDuration));
+        }
+
         if (criticalMargin < warningMargin)
             throw new ArgumentException("Critical margin must be greater than or equal to warning margin.", nameof(criticalMargin));
         
