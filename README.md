@@ -1,104 +1,71 @@
-# Isuzu Diognostic System 
+# Isuzu Diagnostic System
 
-ESP32 tabanli CAN/OBD-II arac ariza teshis, cozum onerisi sistemi ve Windows uygulamasi.
+ESP32 + CAN/OBD-II gateway and a Windows WPF diagnostic application. The MVP can run end-to-end against a clearly labelled simulation source; the vehicle profile implements physically addressed 11-bit ISO 15765 requests for one selected engine ECU.
 
-## Project Objective 
+> Safety status: simulation and host tests are implemented. Vehicle transmit/receive and Mode 04 are **not yet proven on a vehicle** because the current SN65HVD230 bench setup does not reproduce TX on CRX. Do not treat this prototype as a service tool until the hardware gate in [`docs/verification/week-4-verification.md`](docs/verification/week-4-verification.md) passes.
 
-Bu projenin amaci, ilk asamada Isuzu araclardan canlis teshis verilerini 
-ve Diagnostic Trouble Code (DTC) bilgilerini okuyabilen 
-bir sistem gelistirmektir.
+## MVP capabilities
 
-Aractan alinan veriler ESP32 uzerinden Windows masaustu uygulamasina
-aktarilacaktir. Uygulama, DTC aciklamalarini, muhtemel nedenlerini, onerilen 
-kontrol adimlarini ve ilgili canli verileri kullaniciya sunacaktir.
+- Explicit `SIMULATION` / `VEHICLE` source identity during handshake
+- Mode 01: RPM, coolant temperature, vehicle speed, calculated load, module voltage
+- Mode 03: bounded ISO-TP receive and counted stored-DTC decoding
+- Safe Mode 04 workflow: fresh scan → durable snapshot → confirmation → one clear request → rescan
+- DTC knowledge lookup with a safe `Unknown DTC` fallback
+- Live-data policy selection, two-second confirmation, hysteresis and transition logging
+- Request-ID correlation, bounded serial framing, watchdog and reconnect identity checks
+- SQLite diagnostic event history
+- Host regression tests and ESP-IDF simulation/vehicle build profiles
 
-## Planned Core Features
+## Quick demo (no vehicle)
 
-- ESP32 ile CAN/OBD-II haberlesmesi
-- Windows uygulamasi ile USB serial haberlesmesi
-- Canli motor verilerinin goruntulenmesi
-- DTC kodlarinin okunmasi
-- DTC aciklamalarinin ve cozum onerilerinin gosterilmesi
-- DTC kayitlarinin silinmesi
-- Okunan DTC ve DTC'lerin iliskili oldugu canli verilerin oncelikli gosterilmesi
-- Canli verilerin referans degerlerle karsilastirilmasi
-- Hysteresis ve sure tabanli uyari yontemi
-- Teshis ve uyari gecmisinin yerel olarak saklanmasi
+Requirements: Windows 10/11 and .NET 10 SDK.
 
-## Initial Technology Stack
-
-### Embedded Firmware
-
-- ESP32
-- C
-- ESP-IDF
-- ESP-IDF TWAI driver
-- SN65HVD230 CAN transceiver
-
-### Desktop Application
-
-- C#
-- .NET
-- Windows desktop user interface
-- USB Serial communication 
-
-### Data Storage
-
-- SQLite
-- Offline DTC and diagnostic database
-
-## Initial System Architecture
-
-```text
-Vehicle ECU
-    |
-    | CAN / OBD-II
-    v
-SN65HVD230 CAN Transceiver
-    |
-    v
-ESP32 Gateway
-    |
-    | USB Serial
-    v
-Windows Desktop Application
-    |
-    v
-SQLite Diagnostic Database
+```powershell
+git clone https://github.com/Kerem-Erden/isuzu-diagnostic-system.git
+cd isuzu-diagnostic-system
+dotnet run --project desktop-app/IsuzuDiagnostic.Desktop/IsuzuDiagnostic.Desktop/IsuzuDiagnostic.Desktop.csproj
 ```
 
-## Current Status
+Select `DEMO (no vehicle)`, create a vehicle profile and connect. The title and every diagnostic screen identify the source as simulation. Read DTCs, open the unknown `P3FFF`, inspect related live data, then clear: the simulation intentionally returns persistent `P0087` after the rescan.
 
-Week 2 desktop application integration has been completed.
+Full setup, firmware profiles and the demo recording script are in [`docs/setup-and-demo.md`](docs/setup-and-demo.md).
 
-Implemented so far:
+## Hardware wiring
 
-- ESP32 ↔ Windows USB serial communication
-- Request/response protocol with request IDs
-- PING/PONG gateway handshake
-- START / STOP / STATUS gateway commands
-- Live data streaming and parsing
-- Vehicle selection and diagnostic session management
-- Diagnostic dashboard navigation
-- Live Data screen with last-received timestamp
-- DTC list and DTC detail screens
-- Possible causes, diagnostic steps, solutions and related live-data metadata
-- Mock DTC rescan and clear-memory workflow
-- Vehicle Information screen
-- Developer Console
-- Automatic serial-port discovery
-- Connection heartbeat/watchdog
-- Connection-loss detection
-- Automatic gateway reconnection
+| SN65HVD230 | ESP32 |
+|---|---|
+| CTX | GPIO21 |
+| CRX | GPIO22 |
+| 3V3 | 3V3 |
+| GND | GND |
 
-Real vehicle CAN/OBD-II communication and ECU data reading are not implemented yet.
-The current DTC and live-data values are development/mock data used to validate
-the desktop and serial communication architecture.
+CANH/CANL connect to the vehicle only for an authorized, fused and supervised test. Disconnect the vehicle before enabling the bench GPIO/transceiver test. Verify module voltage, ground, continuity and termination with appropriate instruments.
 
-## Scope
+## Build and test
 
-Scope:
+```bash
+tests/firmware/run.sh
+dotnet run --project tests/desktop/IsuzuDiagnostic.Core.Tests.csproj -c Release
+```
 
-The first version will focus on isuzu vehicles, engines and diagnostic
-parameters. Support for additional vehicle manufacturers may be added in later
-versions.
+ESP-IDF 6.0.2:
+
+```bash
+cd firmware/esp32-gateway
+idf.py -D SDKCONFIG=sdkconfig.local -D SDKCONFIG_DEFAULTS=sdkconfig.defaults.simulation build flash monitor
+```
+
+The checked-in CI also compiles the WPF application on Windows and both firmware profiles. Vehicle Mode 04 is disabled by default in menuconfig; enable it only after the verification gate and use the explicit physical ECU ID.
+
+## Architecture
+
+```text
+Vehicle ECU ─ CAN ─ SN65HVD230 ─ TWAI ─ ESP32 ─ USB serial ─ WPF app ─ SQLite
+                                  └── simulation source ────────────┘
+```
+
+The serial contract is documented in [`docs/architecture/serial-protocol.md`](docs/architecture/serial-protocol.md). Scope is in [`docs/requirements/mvp-scope.md`](docs/requirements/mvp-scope.md).
+
+## Supported boundary
+
+This MVP supports a configured 11-bit OBD/ISO-TP engine ECU request ID (`0x7E0`–`0x7E7`, response ID + 8). It does not claim J1939, 29-bit addressing, automatic ECU discovery, manufacturer programming, ABS/airbag coverage or professional IDSS compatibility.

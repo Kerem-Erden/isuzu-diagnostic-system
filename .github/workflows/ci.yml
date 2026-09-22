@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  desktop-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet run --project tests/desktop/IsuzuDiagnostic.Core.Tests.csproj --configuration Release
+
+  desktop-wpf:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet build desktop-app/IsuzuDiagnostic.Desktop/IsuzuDiagnostic.Desktop/IsuzuDiagnostic.Desktop.csproj --configuration Release
+
+  firmware-host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: tests/firmware/run.sh
+
+  firmware-idf:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - profile: simulation
+            defaults: sdkconfig.defaults.simulation
+          - profile: vehicle
+            defaults: sdkconfig.defaults.vehicle
+          - profile: vehicle-clear
+            defaults: sdkconfig.defaults.vehicle-clear-ci
+    steps:
+      - uses: actions/checkout@v4
+      - uses: espressif/esp-idf-ci-action@v1
+        with:
+          esp_idf_version: v6.0.2
+          target: esp32
+          path: firmware/esp32-gateway
+          command: idf.py -B build-ci-${{ matrix.profile }} -D SDKCONFIG=sdkconfig.ci.${{ matrix.profile }} -D SDKCONFIG_DEFAULTS=${{ matrix.defaults }} build

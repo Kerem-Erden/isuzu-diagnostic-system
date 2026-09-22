@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 
 namespace IsuzuDiagnostic.Desktop.Communication.Protocol;
@@ -30,6 +30,9 @@ public static class GatewayProtocol
             GatewayCommand.Start => "START",
             GatewayCommand.Stop => "STOP",
             GatewayCommand.Status => "STATUS",
+            GatewayCommand.Info => "INFO",
+            GatewayCommand.ScanDtc => "SCAN_DTC",
+            GatewayCommand.ClearDtc => "CLEAR_DTC",
 
             _ => throw new ArgumentOutOfRangeException(nameof(command), command, "The gateway command is not supported.")
         };

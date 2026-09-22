@@ -280,12 +280,13 @@ namespace IsuzuDiagnostic.Desktop.Views
             {
                 ("RES|100|OK|PONG", true),
                 ("RES|101|ERR|UNKNOWN_COMMAND", true),
-                ("RES|102|OK|MODEL=NPR|ENGINE=4JZ1", true),
+                ("RES|102|OK|MODEL=NPR;ENGINE=4JZ1", true),
+                ("RES|103|OK|MODEL=NPR|ENGINE=4JZ1", false),
                 ("RES|0|OK|PONG", false),
                 ("RES|ABC|OK|PONG", false),
-                ("REQ|103|PING", false),
-                ("RES|104|WHAT|PONG", false),
-                ("RES|105|OK", false),
+                ("REQ|104|PING", false),
+                ("RES|105|WHAT|PONG", false),
+                ("RES|106|OK", false),
                 ("   ", false)
             };
 
@@ -338,6 +339,12 @@ namespace IsuzuDiagnostic.Desktop.Views
         )
         {
             ConsoleOutputTextBox.AppendText( message + Environment.NewLine);
+
+            const int maximumCharacters = 100_000;
+            if (ConsoleOutputTextBox.Text.Length > maximumCharacters)
+            {
+                ConsoleOutputTextBox.Text = ConsoleOutputTextBox.Text[^maximumCharacters..];
+            }
 
             ConsoleOutputTextBox.ScrollToEnd();
         }

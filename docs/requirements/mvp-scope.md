@@ -133,6 +133,8 @@ Aşağıdaki özellikler MVP kapsamında değildir:
 
 ## 5. MVP Completion Criteria
 
+The software/simulation MVP satisfies these criteria through the labelled demo source and automated builds. Vehicle MVP completion additionally requires the physical validation gate in `docs/verification/week-4-verification.md`; it is not yet complete.
+
 MVP aşağıdaki koşullar karşılandığında tamamlanmış kabul edilecektir:
 
 - ESP32 firmware'i karta başarıyla yüklenebilmelidir.
