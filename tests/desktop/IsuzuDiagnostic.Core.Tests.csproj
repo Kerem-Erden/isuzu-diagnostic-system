@@ -10,7 +10,7 @@
     <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Services\DtcWorkflow.cs" Link="Source\DtcWorkflow.cs" />
     <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayCommand.cs" Link="Source\GatewayCommand.cs" />
     <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayProtocol.cs" Link="Source\GatewayProtocol.cs" />
-    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayResponse.cs" Link="Source\GatewayResponse.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayResponce.cs" Link="Source\GatewayResponse.cs" />
     <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayResponseParser.cs" Link="Source\GatewayResponseParser.cs" />
     <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayResponseStatus.cs" Link="Source\GatewayResponseStatus.cs" />
     <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\LineFramer.cs" Link="Source\LineFramer.cs" />
