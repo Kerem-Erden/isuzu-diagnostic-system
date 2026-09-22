@@ -105,8 +105,9 @@ static class Program
         var demo = new DemoGateway();
         int id = 0;
         var audit = new Audit();
-        var flow = new DtcWorkflow((command, _) =>
+        var flow = new DtcWorkflow((command, cancellationToken) =>
         {
+            cancellationToken.ThrowIfCancellationRequested();
             string responseLine = demo.Handle($"REQ|{++id}|{command}");
             if (!GatewayResponseParser.TryParse(responseLine, out var response, out _) || response is null || !response.IsSuccess)
                 throw new IOException(responseLine);
