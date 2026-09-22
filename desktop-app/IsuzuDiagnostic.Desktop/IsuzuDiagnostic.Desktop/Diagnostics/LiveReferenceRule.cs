@@ -1,4 +1,4 @@
-﻿
+
 namespace IsuzuDiagnostic.Desktop.Diagnostics;
 
 public sealed class LiveReferenceRule
@@ -22,7 +22,7 @@ public sealed class LiveReferenceRule
             throw new ArgumentException("Parameter key cannot be empty.", nameof(parameterKey));
         }
 
-        if (hysteresis < 0)
+        if (!double.IsFinite(hysteresis) || hysteresis < 0)
         {
             throw new ArgumentOutOfRangeException(nameof(hysteresis));
         }
@@ -32,6 +32,11 @@ public sealed class LiveReferenceRule
             throw new ArgumentOutOfRangeException(nameof(confirmationDuration));
         }
 
+        double?[] limits = [warningMinimum, warningMaximum, criticalMinimum, criticalMaximum];
+        if (limits.Any(v => v.HasValue && !double.IsFinite(v.Value)) ||
+            warningMinimum > warningMaximum || criticalMinimum > criticalMaximum ||
+            criticalMinimum > warningMinimum || criticalMaximum < warningMaximum)
+            throw new ArgumentException("Invalid diagnostic threshold ordering.");
         ParameterKey = parameterKey.Trim();
 
         WarningMinimum = warningMinimum;

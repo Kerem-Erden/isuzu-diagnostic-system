@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Services\DtcWorkflow.cs" Link="Source\DtcWorkflow.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayCommand.cs" Link="Source\GatewayCommand.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayProtocol.cs" Link="Source\GatewayProtocol.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayResponse.cs" Link="Source\GatewayResponse.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayResponseParser.cs" Link="Source\GatewayResponseParser.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayResponseStatus.cs" Link="Source\GatewayResponseStatus.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\LineFramer.cs" Link="Source\LineFramer.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\LiveDataMessage.cs" Link="Source\LiveDataMessage.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\LiveDataParser.cs" Link="Source\LiveDataParser.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Simulation\DemoGateway.cs" Link="Source\DemoGateway.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Diagnostics\DiagnosticSeverity.cs" Link="Source\DiagnosticSeverity.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Diagnostics\LiveDataEvaluation.cs" Link="Source\LiveDataEvaluation.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Diagnostics\LiveDataRuleEvaluator.cs" Link="Source\LiveDataRuleEvaluator.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Diagnostics\LiveDiagnosticPolicy.cs" Link="Source\LiveDiagnosticPolicy.cs" />
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Diagnostics\LiveReferenceRule.cs" Link="Source\LiveReferenceRule.cs" />
+  </ItemGroup>
+</Project>

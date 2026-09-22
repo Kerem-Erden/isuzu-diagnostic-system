@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 
 namespace IsuzuDiagnostic.Desktop.Communication.Protocol;
@@ -31,7 +31,7 @@ public static class GatewayResponseParser
             StringSplitOptions.None
         );
 
-        if (fields.Length != 4)
+        if (normalizedLine.Length > 1024 || fields.Length != 4 || fields[3].Contains('|') || fields[3].Length == 0)
         {
             errorMessage =
                 "The gateway response must contain exactly four fields.";

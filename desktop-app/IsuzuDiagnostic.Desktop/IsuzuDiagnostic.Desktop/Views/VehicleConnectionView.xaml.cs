@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Threading.Tasks;
@@ -84,7 +84,10 @@ namespace IsuzuDiagnostic.Desktop.Views
 
             CreatedSession.MarkConnecting();
 
-            bool handshakeSucceeded = await TryConnectToGatewayAsync(serialPortName);
+            IsEnabled = false;
+            bool handshakeSucceeded;
+            try { handshakeSucceeded = await TryConnectToGatewayAsync(serialPortName); }
+            finally { IsEnabled = true; }
 
             if (!handshakeSucceeded)
             {
@@ -95,14 +98,15 @@ namespace IsuzuDiagnostic.Desktop.Views
                     _serialGatewayService.Disconnect();
                 }
 
-                MessageBox.Show("The ESP32 diagnostic gateway did not respond to PING.", "Gateway Connection Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Gateway handshake/source verification failed. Check the port and install the MVP firmware.", "Gateway Connection Failed", MessageBoxButton.OK, MessageBoxImage.Error);
 
                 return;
             }
 
             CreatedSession.MarkConnected();
 
-            _vehicleProfileRepository.Save(vehicleProfile);
+            try { _vehicleProfileRepository.Save(vehicleProfile); }
+            catch (Exception ex) { _serialGatewayService.Disconnect(); CreatedSession.MarkFaulted(); ShowValidationMessage("Cannot save session: " + ex.Message); return; }
 
             ContinueRequested?.Invoke(this, EventArgs.Empty);
         }
@@ -122,38 +126,10 @@ namespace IsuzuDiagnostic.Desktop.Views
                 // after opening the COM port.
                 await Task.Delay(750);
 
-                int requestId = _requestIdGenarator.GetNext();
-
-                string expectedResponse = $"RES|{requestId}|OK|PONG";
-
-                TaskCompletionSource<bool> pongReceived = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
-
-                void HandleReceivedLine(string line)
-                {
-                    if (string.Equals(line.Trim(), expectedResponse, StringComparison.Ordinal))
-                    {
-                        pongReceived.TrySetResult(true);
-                    }
-                }
-
-                _serialGatewayService.LineReceived += HandleReceivedLine;
-
-                try
-                {
-                    string request = GatewayProtocol.CreateRequest(requestId, GatewayCommand.Ping);
-
-                    _serialGatewayService.SendLine(request);
-
-                    Task timeoutTask = Task.Delay(3000);
-
-                    Task completeTask = await Task.WhenAny(pongReceived.Task, timeoutTask);
-
-                    return completeTask == pongReceived.Task;
-                }
-                finally
-                {
-                    _serialGatewayService.LineReceived -= HandleReceivedLine;
-                }
+                using var client = new GatewayRequestClient(_serialGatewayService, _requestIdGenarator);
+                if (await client.RequestAsync(GatewayCommand.Ping) != "PONG") return false;
+                _serialGatewayService.ApplyInfo(await client.RequestAsync(GatewayCommand.Info));
+                return true;
             }
             catch
             {

@@ -1,4 +1,4 @@
-﻿
+
 namespace IsuzuDiagnostic.Desktop.Diagnostics;
 
 public sealed class LiveDiagnosticPolicy
@@ -19,12 +19,12 @@ public sealed class LiveDiagnosticPolicy
             throw new ArgumentException("Parameter key cannot be empty.", nameof(parameterKey));
         }
 
-        if (warningMargin < 0)
+        if (!double.IsFinite(warningMargin) || warningMargin < 0)
         {
             throw new ArgumentOutOfRangeException(nameof(warningMargin));
         }
 
-        if (hysteresis < 0)
+        if (!double.IsFinite(hysteresis) || hysteresis < 0)
         {
             throw new ArgumentOutOfRangeException(nameof(hysteresis));
         }
@@ -34,7 +34,7 @@ public sealed class LiveDiagnosticPolicy
             throw new ArgumentOutOfRangeException(nameof(confirmationDuration));
         }
 
-        if (criticalMargin < warningMargin)
+        if (!double.IsFinite(criticalMargin) || criticalMargin < warningMargin)
             throw new ArgumentException("Critical margin must be greater than or equal to warning margin.", nameof(criticalMargin));
         
         

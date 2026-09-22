@@ -1,10 +1,11 @@
-﻿using System.Windows;
+using System.Windows;
 using System;
 using System.Windows.Threading;
 using System.Threading.Tasks;
 using System.Linq;
 
 using IsuzuDiagnostic.Desktop.Views;
+using IsuzuDiagnostic.Desktop.Services;
 using IsuzuDiagnostic.Desktop.Models;
 using IsuzuDiagnostic.Desktop.Data;
 using IsuzuDiagnostic.Desktop.Communication.Serial;
@@ -14,6 +15,8 @@ namespace IsuzuDiagnostic.Desktop
 {
     public partial class AppShellWindow : Window
     {
+        private DtcWorkflow? _dtcWorkflow;
+        private GatewayRequestClient _diagnosticClient;
         private object? _contentBeforeDeveloperConsole;
         private string? _titleBeforeDeveloperConsole = "Vehicle Connection";
 
@@ -37,9 +40,14 @@ namespace IsuzuDiagnostic.Desktop
 
         private bool _reconnectAttemptInProgress;
 
+        private string? _expectedGatewaySource;
+
+        private string? _expectedGatewayEcu;
+
         public AppShellWindow()
         {
             InitializeComponent();
+            _diagnosticClient = new GatewayRequestClient(_serialGatewayService, _requestIdGenerator);
 
             _connectionWatchdogTimer = new DispatcherTimer
             {
@@ -55,8 +63,6 @@ namespace IsuzuDiagnostic.Desktop
 
             _reconnectTimer.Tick += ReconnectTimer_Tick;
             
-            _serialGatewayService.LineReceived += SerialGatewayService_LineReceived;
-
             _serialGatewayService.CommunicationError += SerialGatewayService_CommunicationError;
 
             Closed += AppShellWindow_Closed;
@@ -90,6 +96,26 @@ namespace IsuzuDiagnostic.Desktop
             }
 
             _activeSession = connectionView.CreatedSession;
+            _expectedGatewaySource = _serialGatewayService.Source;
+            _expectedGatewayEcu = _serialGatewayService.Ecu;
+            var audit = new DiagnosticAuditLog(_activeSession.Id, _serialGatewayService.SourceDescription);
+            _dtcWorkflow = new DtcWorkflow((command, token) => _diagnosticClient.RequestAsync(command == "SCAN_DTC" ? GatewayCommand.ScanDtc : GatewayCommand.ClearDtc, token), audit);
+            try
+            {
+                audit.Write("SessionStarted", new { _activeSession.Vehicle, _activeSession.SerialPortName });
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("The diagnostic audit log could not be written. The session was not started.\n\n" + exception.Message,
+                    "Audit Log Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                _serialGatewayService.Disconnect();
+                _activeSession = null;
+                _dtcWorkflow = null;
+                _expectedGatewaySource = null;
+                _expectedGatewayEcu = null;
+                ShowVehicleConnectionView();
+                return;
+            }
 
             StartConnectionWatchdog();
 
@@ -127,7 +153,7 @@ namespace IsuzuDiagnostic.Desktop
 
             MainContent.Content = view;
 
-            PageTitleTextBlock.Text = "Diagnostic Dashboard";
+            PageTitleTextBlock.Text = "Diagnostic Dashboard — " + _serialGatewayService.SourceDescription;
         }
 
         private void DiagnosticDashboardView_EndSessionRequested(object? sender, EventArgs e)
@@ -149,6 +175,9 @@ namespace IsuzuDiagnostic.Desktop
             }
 
             _activeSession = null;
+            _dtcWorkflow = null;
+            _expectedGatewaySource = null;
+            _expectedGatewayEcu = null;
             _contentBeforeDeveloperConsole = null;
 
             ShowVehicleConnectionView();
@@ -210,7 +239,8 @@ namespace IsuzuDiagnostic.Desktop
 
         private void ShowDtcListView()
         {
-            DtcListView view = new DtcListView();
+            if (_activeSession is null || _dtcWorkflow is null) return;
+            DtcListView view = new DtcListView(_dtcWorkflow, _serialGatewayService);
 
             view.DtcDetailsRequested += DtcListView_DtcDetailsRequested;
 
@@ -237,6 +267,14 @@ namespace IsuzuDiagnostic.Desktop
             DtcDetailView view = new DtcDetailView(dtc);
 
             view.BackRequested += DtcDetailView_BackRequested;
+            view.RelatedLiveDataRequested += related =>
+            {
+                if (_activeSession is null) return;
+                var live = new LiveDataView(_activeSession, _serialGatewayService, _requestIdGenerator, related);
+                live.BackRequested += (_, _) => ShowDtcDetailsView(related);
+                MainContent.Content = live;
+                PageTitleTextBlock.Text = "Related Live Data — " + related.Code;
+            };
 
             MainContent.Content = view;
 
@@ -298,8 +336,6 @@ namespace IsuzuDiagnostic.Desktop
 
             _reconnectTimer.Tick -= ReconnectTimer_Tick;
 
-            _serialGatewayService.LineReceived -= SerialGatewayService_LineReceived;
-
             _serialGatewayService.CommunicationError -= SerialGatewayService_CommunicationError;
 
             if (_serialGatewayService.IsConnected)
@@ -307,6 +343,7 @@ namespace IsuzuDiagnostic.Desktop
                 _serialGatewayService.Disconnect();
             }
 
+            _diagnosticClient.Dispose();
             _serialGatewayService.Dispose();
         }
 
@@ -315,65 +352,10 @@ namespace IsuzuDiagnostic.Desktop
             Dispatcher.InvokeAsync(() =>
             {
                 HandleConnectionLost(errorMessage);
-
-                if (_activeSession is null)
-                {
-                    return;
-                }
-
-                if (_activeSession.State == DiagnosticSessionState.Faulted)
-                {
-                    return;
-                }
-
-                _activeSession.MarkFaulted();
-
-                if (_serialGatewayService.IsConnected)
-                {
-                    _serialGatewayService.Disconnect();
-                }
-
-                MessageBox.Show("Communication with the ESP32 wa lost.\n\n" + errorMessage,
-                                "Diagnostic Connection Error",
-                                MessageBoxButton.OK,
-                                MessageBoxImage.Error);
-
-                _activeSession = null;
-
-                ShowVehicleConnectionView();
             });
         }
 
-        private void SerialGatewayService_LineReceived(string line)
-        {
-            if (_activeSession?.State != DiagnosticSessionState.Connected)
-            {
-                return;
-            }
-
-            bool parsed = GatewayResponseParser.TryParse(line, out GatewayResponse? response, out _);
-
-            if (!parsed || response is null || !response.IsSuccess)
-            {
-                return;
-            }
-
-            if (!string.Equals(response.Payload, "PONG", StringComparison.Ordinal))
-            {
-                return;
-            }
-
-            Dispatcher.InvokeAsync(() =>
-            {
-                if (_activeSession?.State == DiagnosticSessionState.Connected)
-                {
-                    _lastPongAt = DateTimeOffset.Now;
-                }
-            });
-
-        } 
-
-        private async void ConnectionWatchdogTimer_Tick(object sender, EventArgs e)
+        private async void ConnectionWatchdogTimer_Tick(object? sender, EventArgs e)
         {
             if (_activeSession?.State != DiagnosticSessionState.Connected)
             {
@@ -406,15 +388,10 @@ namespace IsuzuDiagnostic.Desktop
 
             try
             {
-                int requestId = _requestIdGenerator.GetNext();
-
-                string request = GatewayProtocol.CreateRequest(requestId, GatewayCommand.Ping);
-
-                await Task.Run(() =>
-                {
-                    _serialGatewayService.SendLine(request);
-                });
-
+                string payload = await _diagnosticClient.RequestAsync(GatewayCommand.Ping);
+                if (!string.Equals(payload, "PONG", StringComparison.Ordinal))
+                    throw new InvalidOperationException("The heartbeat response was invalid.");
+                _lastPongAt = DateTimeOffset.Now;
             }
             catch (Exception exception)
             {
@@ -474,7 +451,7 @@ namespace IsuzuDiagnostic.Desktop
             _reconnectTimer.Start();
         }
 
-        private async void ReconnectTimer_Tick(object sender, EventArgs e)
+        private async void ReconnectTimer_Tick(object? sender, EventArgs e)
         {
             if (_activeSession is null)
             {
@@ -495,6 +472,7 @@ namespace IsuzuDiagnostic.Desktop
             }
 
             string expectedPortName = _activeSession.SerialPortName;
+            DiagnosticSession reconnectingSession = _activeSession;
 
             bool portIsAvailable = SerialGatewayService.GetAvailablePortNames().Any(portName => string.Equals(portName, expectedPortName, StringComparison.OrdinalIgnoreCase));
 
@@ -509,14 +487,14 @@ namespace IsuzuDiagnostic.Desktop
             {
                 bool reconnected = await TryReconnectToGatewayAsync(expectedPortName);
 
-                if (!reconnected)
+                if (!reconnected || !ReferenceEquals(_activeSession, reconnectingSession))
                 {
                     return;
                 }
 
                 _reconnectTimer.Stop();
 
-                _activeSession.MarkConnecting();
+                _activeSession.MarkConnected();
 
                 _connectionLossHandled = false;
 
@@ -548,44 +526,12 @@ namespace IsuzuDiagnostic.Desktop
 
                 await Task.Delay(750);
 
-                int requestId = _requestIdGenerator.GetNext();
-
-                string expectedRespose = $"RES|{requestId}|OK|PONG";
-
-                TaskCompletionSource<bool> pongReceived = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
-
-                void HandleReceivedLine(string line)
-                {
-                    if (string.Equals(line.Trim(), expectedRespose, StringComparison.Ordinal))
-                    {
-                        pongReceived.TrySetResult(true);
-                    }
-                }
-
-                _serialGatewayService.LineReceived += HandleReceivedLine;
-
-                try
-                {
-                    string request = GatewayProtocol.CreateRequest(requestId, GatewayCommand.Ping);
-
-                    await Task.Run(() =>
-                    {
-                        _serialGatewayService.SendLine(request);
-                    });
-
-                    Task timeoutTask = Task.Delay(3000);
-
-                    Task completedTask = await Task.WhenAny(pongReceived.Task, timeoutTask);
-
-                    if (completedTask == pongReceived.Task)
-                    {
-                        return true;
-                    }
-                }
-                finally
-                {
-                    _serialGatewayService.LineReceived -= HandleReceivedLine;
-                }
+                if (await _diagnosticClient.RequestAsync(GatewayCommand.Ping) != "PONG")
+                    throw new InvalidOperationException("Invalid heartbeat response.");
+                _serialGatewayService.ApplyInfo(await _diagnosticClient.RequestAsync(GatewayCommand.Info));
+                if (_serialGatewayService.Source != _expectedGatewaySource || _serialGatewayService.Ecu != _expectedGatewayEcu)
+                    throw new InvalidOperationException("Gateway source changed; start a new session.");
+                return true;
             }
             catch
             {

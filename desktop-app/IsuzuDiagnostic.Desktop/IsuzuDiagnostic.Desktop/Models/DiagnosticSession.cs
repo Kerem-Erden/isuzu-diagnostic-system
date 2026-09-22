@@ -1,9 +1,11 @@
-﻿using System;
+using System;
 
 namespace IsuzuDiagnostic.Desktop.Models;
 
 public sealed class DiagnosticSession
 {
+    public string Id { get; } = Guid.NewGuid().ToString("N");
+
     public VehicleProfile Vehicle { get; }
     
     public string SerialPortName { get; }

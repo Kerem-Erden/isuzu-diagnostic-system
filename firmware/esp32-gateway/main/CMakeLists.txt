@@ -14,3 +14,5 @@ idf_component_register(
         esp_driver_gpio
         esp_timer
 )
+
+target_compile_definitions(${COMPONENT_LIB} PRIVATE OBD_PHYSICAL_REQUEST_ID=${CONFIG_GATEWAY_ECU_REQUEST_ID})

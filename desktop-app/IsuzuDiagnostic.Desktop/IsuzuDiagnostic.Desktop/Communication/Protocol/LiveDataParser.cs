@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 
 namespace IsuzuDiagnostic.Desktop.Communication.Protocol
@@ -33,7 +33,7 @@ namespace IsuzuDiagnostic.Desktop.Communication.Protocol
                 return false;
             }
 
-            if (!double.TryParse(fields[2], NumberStyles.Float, CultureInfo.InvariantCulture, out double value))
+            if (!double.TryParse(fields[2], NumberStyles.Float, CultureInfo.InvariantCulture, out double value) || !double.IsFinite(value))
             {
                 return false;
             }

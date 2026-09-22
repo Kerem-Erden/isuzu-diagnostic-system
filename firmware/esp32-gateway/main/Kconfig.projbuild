@@ -1,0 +1,24 @@
+menu "Isuzu diagnostic gateway"
+choice GATEWAY_SOURCE
+    prompt "Diagnostic data source"
+    default GATEWAY_SIMULATION
+config GATEWAY_SIMULATION
+    bool "Simulation (no vehicle CAN transmissions)"
+config GATEWAY_VEHICLE
+    bool "Vehicle (11-bit ISO 15765, explicitly selected ECU)"
+endchoice
+config GATEWAY_BITRATE
+    int "Vehicle CAN bitrate (250000 or 500000)"
+    default 500000
+config GATEWAY_ECU_REQUEST_ID
+    hex "Physical ECU request ID (0x7E0 to 0x7E7); response = request + 8"
+    range 0x7E0 0x7E7
+    default 0x7E0
+config GATEWAY_ALLOW_CLEAR
+    bool "Permit explicit Mode 04 after a fresh scan and RPM=0 / speed=0 checks"
+    depends on GATEWAY_VEHICLE
+    default n
+config GATEWAY_BENCH_TEST
+    bool "GPIO-only bench test; vehicle must be disconnected"
+    default n
+endmenu

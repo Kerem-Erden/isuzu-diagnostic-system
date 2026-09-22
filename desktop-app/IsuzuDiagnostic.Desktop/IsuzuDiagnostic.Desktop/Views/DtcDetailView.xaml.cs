@@ -1,4 +1,4 @@
-﻿using IsuzuDiagnostic.Desktop.Models;
+using IsuzuDiagnostic.Desktop.Models;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -8,6 +8,7 @@ namespace IsuzuDiagnostic.Desktop.Views;
 public partial class DtcDetailView : UserControl
 {
     public event EventHandler? BackRequested;
+    public event Action<DiagnosticTroubleCode>? RelatedLiveDataRequested;
 
     public readonly DiagnosticTroubleCode _dtc;
 
@@ -34,11 +35,6 @@ public partial class DtcDetailView : UserControl
 
     private void ShowRelatedLiveDataButton_Click( object sender, RoutedEventArgs e )
     {
-        MessageBox.Show("The related live-data parameters for this DTC are listed above.\n\n" +
-                        "Filtered live-data navigation will be enabled when real ECU/CAN " +
-                        "parameter reading is implemented.",
-                        "Related Live Data",
-                        MessageBoxButton.OK,
-                        MessageBoxImage.Information);
+        RelatedLiveDataRequested?.Invoke(_dtc);
     }
 }

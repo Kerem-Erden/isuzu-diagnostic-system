@@ -1,10 +1,12 @@
-﻿
+
 namespace IsuzuDiagnostic.Desktop.Diagnostics;
 
 public sealed class LiveDataRuleEvaluator
 {
     private sealed class ParameterState
     {
+        public DateTimeOffset? LastSampleAt { get; set; }
+
         public DiagnosticSeverity CurrentSeverity { get; set; } = DiagnosticSeverity.Normal;
 
         public DiagnosticSeverity? CandidateSeverity { get; set; }
@@ -19,11 +21,15 @@ public sealed class LiveDataRuleEvaluator
     public LiveDataEvaluation Evaluate(LiveReferenceRule rule, double value, DateTimeOffset timestamp)
     {
         ArgumentNullException.ThrowIfNull(rule);
+        if (!double.IsFinite(value)) throw new ArgumentOutOfRangeException(nameof(value));
 
         lock (_syncRoot)
         {
             ParameterState state = GetOrCreateState(rule.ParameterKey);
 
+            if (state.LastSampleAt is { } last && (timestamp < last || timestamp - last > TimeSpan.FromSeconds(2)))
+            { state.CandidateSeverity = null; state.CandidateSince = null; }
+            state.LastSampleAt = timestamp;
             DiagnosticSeverity previousSeverity = state.CurrentSeverity;
 
             DiagnosticSeverity detectedSeverity = DetermineSeverity(rule, value, state.CurrentSeverity);
