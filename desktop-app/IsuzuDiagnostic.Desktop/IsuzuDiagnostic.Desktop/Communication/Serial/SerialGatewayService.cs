@@ -13,7 +13,10 @@ public sealed class SerialGatewayService : IDisposable
     private SerialPort? _serialPort;
     private DemoGateway? _demo;
     private System.Threading.Timer? _demoTimer;
+    private System.Threading.Timer? _serialReadTimer;
     private Task _portCloseTask = Task.CompletedTask;
+    private int _serialReadBusy;
+    private string _lastReceivedLine = "(none)";
     public string Source { get; private set; } = "UNKNOWN";
     public string Ecu { get; private set; } = "UNKNOWN";
     public bool CanClear { get; private set; }
@@ -22,6 +25,7 @@ public sealed class SerialGatewayService : IDisposable
     public event Action<string>? LineReceived;
     public event Action<string>? CommunicationError;
     public event Action? Disconnected;
+    public string LastReceivedLine { get { lock (_syncRoot) return _lastReceivedLine; } }
     public bool IsConnected { get { lock (_syncRoot) return _demo != null || _serialPort?.IsOpen == true; } }
     public string? ConnectedPortName { get { lock (_syncRoot) return _demo != null ? DemoPort : _serialPort?.PortName; } }
     public static IReadOnlyList<string> GetAvailablePortNames() => SerialPort.GetPortNames().OrderBy(x => x, StringComparer.OrdinalIgnoreCase).Append(DemoPort).ToArray();
@@ -40,7 +44,7 @@ public sealed class SerialGatewayService : IDisposable
             if (IsConnected) throw new InvalidOperationException("Already connected.");
             if (!_portCloseTask.IsCompleted)
                 throw new IOException("The previous serial connection is still closing. Wait a moment and try again.");
-            _framer.Reset(); Source = "UNKNOWN"; Ecu = "UNKNOWN"; CanClear = false;
+            _framer.Reset(); _lastReceivedLine = "(none)"; Source = "UNKNOWN"; Ecu = "UNKNOWN"; CanClear = false;
             if (portName == DemoPort)
             {
                 var demo = new DemoGateway(); _demo = demo;
@@ -54,10 +58,14 @@ public sealed class SerialGatewayService : IDisposable
             }
             var port = new SerialPort(portName.Trim(), baudRate, Parity.None, 8, StopBits.One)
             { NewLine = "\n", Encoding = Encoding.ASCII, ReadTimeout = 500, WriteTimeout = 500, DtrEnable = false, RtsEnable = false };
-            port.DataReceived += Receive;
             port.ErrorReceived += Error;
-            try { port.Open(); _serialPort = port; }
-            catch { port.DataReceived -= Receive; port.ErrorReceived -= Error; port.Dispose(); throw; }
+            try
+            {
+                port.Open();
+                _serialPort = port;
+                _serialReadTimer = new System.Threading.Timer(PollSerial, port, 0, 20);
+            }
+            catch { port.ErrorReceived -= Error; port.Dispose(); throw; }
         }
     }
     public void SendLine(string message)
@@ -75,19 +83,22 @@ public sealed class SerialGatewayService : IDisposable
         }
         if (demoResponse != null) LineReceived?.Invoke(demoResponse);
     }
-    private void Receive(object sender, SerialDataReceivedEventArgs e)
+    private void PollSerial(object? state)
     {
+        if (System.Threading.Interlocked.Exchange(ref _serialReadBusy, 1) != 0) return;
         try
         {
             IReadOnlyList<string> lines;
             lock (_syncRoot)
             {
-                if (sender is not SerialPort port || !ReferenceEquals(port, _serialPort)) return;
+                if (state is not SerialPort port || !ReferenceEquals(port, _serialPort) || !port.IsOpen || port.BytesToRead == 0) return;
                 lines = _framer.Feed(port.ReadExisting());
+                if (lines.Count > 0) _lastReceivedLine = lines[^1];
             }
             foreach (string line in lines) LineReceived?.Invoke(line);
         }
-        catch (Exception ex) { lock (_syncRoot) { if (!ReferenceEquals(sender, _serialPort)) return; } CommunicationError?.Invoke(ex.Message); }
+        catch (Exception ex) { lock (_syncRoot) { if (!ReferenceEquals(state, _serialPort)) return; } CommunicationError?.Invoke(ex.Message); }
+        finally { System.Threading.Interlocked.Exchange(ref _serialReadBusy, 0); }
     }
     private void Error(object sender, SerialErrorReceivedEventArgs e)
     {
@@ -98,18 +109,21 @@ public sealed class SerialGatewayService : IDisposable
     {
         SerialPort? port;
         System.Threading.Timer? timer;
+        System.Threading.Timer? serialReadTimer;
         bool hadConnection;
         TaskCompletionSource<bool>? closeCompletion = null;
         lock (_syncRoot)
         {
             port = _serialPort;
             timer = _demoTimer;
+            serialReadTimer = _serialReadTimer;
             hadConnection = port != null || timer != null || _demo != null;
             _serialPort = null;
             _demoTimer = null;
+            _serialReadTimer = null;
             _demo = null;
             _framer.Reset(); CanClear = false;
-            if (port != null) { port.DataReceived -= Receive; port.ErrorReceived -= Error; }
+            if (port != null) port.ErrorReceived -= Error;
             if (port != null)
             {
                 closeCompletion = new(TaskCreationOptions.RunContinuationsAsynchronously);
@@ -118,6 +132,7 @@ public sealed class SerialGatewayService : IDisposable
         }
         if (hadConnection) Disconnected?.Invoke();
         timer?.Dispose();
+        serialReadTimer?.Dispose();
         // SerialPort.Close can block indefinitely in a USB driver after an
         // unplug/VM hand-off. Never execute it on the WPF UI thread.
         if (port != null)

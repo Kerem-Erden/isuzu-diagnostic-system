@@ -147,6 +147,8 @@ namespace IsuzuDiagnostic.Desktop.Views
             catch (Exception exception)
             {
                 _lastConnectionError = exception.Message;
+                if (exception is TimeoutException)
+                    _lastConnectionError += "\nLast serial line: " + _serialGatewayService.LastReceivedLine;
                 return false;
             }
         }
