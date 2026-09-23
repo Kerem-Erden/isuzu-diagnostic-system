@@ -12,6 +12,7 @@ public sealed class SerialGatewayService : IDisposable
     private SerialPort? _serialPort;
     private DemoGateway? _demo;
     private System.Threading.Timer? _demoTimer;
+    private Task _portCloseTask = Task.CompletedTask;
     public string Source { get; private set; } = "UNKNOWN";
     public string Ecu { get; private set; } = "UNKNOWN";
     public bool CanClear { get; private set; }
@@ -36,6 +37,8 @@ public sealed class SerialGatewayService : IDisposable
         lock (_syncRoot)
         {
             if (IsConnected) throw new InvalidOperationException("Already connected.");
+            if (!_portCloseTask.IsCompleted)
+                throw new IOException("The previous serial connection is still closing. Wait a moment and try again.");
             _framer.Reset(); Source = "UNKNOWN"; Ecu = "UNKNOWN"; CanClear = false;
             if (portName == DemoPort)
             {
@@ -94,17 +97,42 @@ public sealed class SerialGatewayService : IDisposable
     {
         SerialPort? port;
         System.Threading.Timer? timer;
+        bool hadConnection;
+        TaskCompletionSource<bool>? closeCompletion = null;
         lock (_syncRoot)
         {
-            port = _serialPort; _serialPort = null;
-            timer = _demoTimer; _demoTimer = null; _demo = null;
+            port = _serialPort;
+            timer = _demoTimer;
+            hadConnection = port != null || timer != null || _demo != null;
+            _serialPort = null;
+            _demoTimer = null;
+            _demo = null;
             _framer.Reset(); CanClear = false;
             if (port != null) { port.DataReceived -= Receive; port.ErrorReceived -= Error; }
+            if (port != null)
+            {
+                closeCompletion = new(TaskCreationOptions.RunContinuationsAsynchronously);
+                _portCloseTask = closeCompletion.Task;
+            }
         }
-        Disconnected?.Invoke();
+        if (hadConnection) Disconnected?.Invoke();
         timer?.Dispose();
-        // Close outside the lock: SerialPort can wait for an event handler.
-        if (port != null) { try { port.Close(); } catch { } finally { port.Dispose(); } }
+        // SerialPort.Close can block indefinitely in a USB driver after an
+        // unplug/VM hand-off. Never execute it on the WPF UI thread.
+        if (port != null)
+        {
+            _ = Task.Run(() =>
+            {
+                try { port.Close(); }
+                catch { }
+                finally
+                {
+                    try { port.Dispose(); }
+                    catch { }
+                    closeCompletion!.TrySetResult(true);
+                }
+            });
+        }
     }
     public void Dispose() => Disconnect();
 }

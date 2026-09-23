@@ -23,6 +23,8 @@ namespace IsuzuDiagnostic.Desktop.Views
 
         private readonly VehicleProfileRepository _vehicleProfileRepository;
 
+        private string _lastConnectionError = "No gateway response was received.";
+
         public VehicleConnectionView(SerialGatewayService serialGatewayService, RequestIdGenerator requestIdGenarator, VehicleProfileRepository vehicleProfileRepository)
         {
             InitializeComponent();
@@ -93,12 +95,18 @@ namespace IsuzuDiagnostic.Desktop.Views
             {
                 CreatedSession.MarkFaulted();
 
+                // Show the actual failed stage before releasing the serial
+                // handle. Some Windows USB-serial drivers can block in Close.
+                MessageBox.Show(
+                    "Gateway handshake/source verification failed.\n\n" + _lastConnectionError,
+                    "Gateway Connection Failed",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+
                 if (_serialGatewayService.IsConnected)
                 {
                     _serialGatewayService.Disconnect();
                 }
-
-                MessageBox.Show("Gateway handshake/source verification failed. Check the port and install the MVP firmware.", "Gateway Connection Failed", MessageBoxButton.OK, MessageBoxImage.Error);
 
                 return;
             }
@@ -113,6 +121,7 @@ namespace IsuzuDiagnostic.Desktop.Views
 
         private async Task<bool> TryConnectToGatewayAsync(string serialPortName)
         {
+            _lastConnectionError = "No gateway response was received.";
             try
             {
                 if (_serialGatewayService.IsConnected)
@@ -120,19 +129,24 @@ namespace IsuzuDiagnostic.Desktop.Views
                     _serialGatewayService.Disconnect();
                 }
 
-                _serialGatewayService.Connect(serialPortName);
+                // SerialPort.Open enters the Windows USB-serial driver and can
+                // block during a VM hand-off or a failing CP210x reset. Keep it
+                // off the WPF dispatcher so the window remains responsive.
+                await Task.Run(() => _serialGatewayService.Connect(serialPortName));
 
                 // Give the ESP32 serial gateway a short time to become ready
                 // after opening the COM port.
                 await Task.Delay(750);
 
                 using var client = new GatewayRequestClient(_serialGatewayService, _requestIdGenarator);
-                if (await client.RequestAsync(GatewayCommand.Ping) != "PONG") return false;
+                if (await client.RequestAsync(GatewayCommand.Ping) != "PONG")
+                    throw new InvalidOperationException("PING returned an unexpected response.");
                 _serialGatewayService.ApplyInfo(await client.RequestAsync(GatewayCommand.Info));
                 return true;
             }
-            catch
+            catch (Exception exception)
             {
+                _lastConnectionError = exception.Message;
                 return false;
             }
         }

@@ -522,7 +522,7 @@ namespace IsuzuDiagnostic.Desktop
                     _serialGatewayService.Disconnect();
                 }
 
-                _serialGatewayService.Connect(serialPortName);
+                await Task.Run(() => _serialGatewayService.Connect(serialPortName));
 
                 await Task.Delay(750);
 

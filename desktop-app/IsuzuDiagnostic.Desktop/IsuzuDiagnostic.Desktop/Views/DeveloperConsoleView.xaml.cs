@@ -75,7 +75,7 @@ namespace IsuzuDiagnostic.Desktop.Views
          
         }
 
-        private void ConnectButton_Click(object sender, RoutedEventArgs e)
+        private async void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
             if (SerialPortComboBox.SelectedItem is not string portName)  
             {
@@ -86,7 +86,7 @@ namespace IsuzuDiagnostic.Desktop.Views
 
             try
             {
-                _serialGatewayService.Connect(portName, 115200 );
+                await Task.Run(() => _serialGatewayService.Connect(portName, 115200));
           
                 AppendConsoleLine($"[APP] Connected to {portName} at 115200 baud." );
    
