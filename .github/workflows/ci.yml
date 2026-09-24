@@ -42,8 +42,6 @@ jobs:
             defaults: sdkconfig.defaults.simulation
           - profile: vehicle
             defaults: sdkconfig.defaults.vehicle
-          - profile: vehicle-clear
-            defaults: sdkconfig.defaults.vehicle-clear-ci
     steps:
       - uses: actions/checkout@v4
       - uses: espressif/esp-idf-ci-action@v1
