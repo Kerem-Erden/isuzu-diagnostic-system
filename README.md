@@ -1,6 +1,6 @@
 # Isuzu Diagnostic System
 
-ESP32 + CAN/OBD-II gateway and a Windows WPF diagnostic application. The MVP can run end-to-end against a clearly labelled simulation source; the vehicle profile implements physically addressed 11-bit ISO 15765 requests for one selected engine ECU.
+ESP32 + CAN/OBD-II gateway and a Windows WPF diagnostic application. The MVP implements Mode 01 live data, Mode 03 stored-DTC reading and guarded Mode 04 clearing against one physically addressed 11-bit ISO 15765 engine ECU, plus a clearly labelled simulation source.
 
 > Safety status: simulation and host tests are implemented. Vehicle transmit/receive and Mode 04 are **not yet proven on a vehicle** because the current SN65HVD230 bench setup does not reproduce TX on CRX. Do not treat this prototype as a service tool until the hardware gate in [`docs/verification/week-4-verification.md`](docs/verification/week-4-verification.md) passes.
 
@@ -55,7 +55,7 @@ cd firmware/esp32-gateway
 idf.py -D SDKCONFIG=sdkconfig.local -D SDKCONFIG_DEFAULTS=sdkconfig.defaults.simulation build flash monitor
 ```
 
-The checked-in CI also compiles the WPF application on Windows and both firmware profiles. Vehicle Mode 04 is disabled by default in menuconfig; enable it only after the verification gate and use the explicit physical ECU ID.
+The checked-in CI also compiles the WPF application on Windows and both firmware profiles. The MVP vehicle profile enables guarded Mode 04: it still requires a fresh successful scan, RPM=0, speed=0, a durable desktop snapshot and explicit user confirmation before sending one clear request.
 
 ## Architecture
 

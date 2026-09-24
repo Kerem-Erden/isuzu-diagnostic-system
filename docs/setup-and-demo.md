@@ -22,14 +22,13 @@ cd firmware/esp32-gateway
 idf.py -D SDKCONFIG=sdkconfig.local -D SDKCONFIG_DEFAULTS=sdkconfig.defaults.simulation build flash monitor
 ```
 
-Vehicle profile (Mode 04 remains a deliberate build/menuconfig choice):
+MVP vehicle profile (Mode 01 live data, Mode 03 stored DTCs and guarded Mode 04 clear):
 
 ```bash
-idf.py -D SDKCONFIG=sdkconfig.vehicle -D SDKCONFIG_DEFAULTS=sdkconfig.defaults.vehicle menuconfig
-idf.py -D SDKCONFIG=sdkconfig.vehicle build flash monitor
+idf.py -p /dev/ttyUSB0 -B build-mvp-vehicle -D SDKCONFIG=sdkconfig.mvp.vehicle -D SDKCONFIG_DEFAULTS=sdkconfig.defaults.vehicle build flash monitor
 ```
 
-Before vehicle use, set the bitrate and physical engine ECU request ID. The implementation accepts request IDs `0x7E0`–`0x7E7` and expects the response at request + 8. Do not guess this on a customer vehicle.
+The checked-in MVP profile uses the verified passive-bus bitrate of 500 kbit/s and physical engine ECU request ID `0x7E0` (response `0x7E8`). Mode 04 is accepted only after a successful DTC scan less than 30 seconds old and successful RPM=0 / speed=0 checks. The desktop saves the pre-clear list, asks for confirmation, sends one clear request and rescans.
 
 ## Repeatable MVP demo
 
