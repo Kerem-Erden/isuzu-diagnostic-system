@@ -35,6 +35,7 @@ static class Program
     {
         ParserAndFramer();
         WarningStateMachine();
+        DemoLiveDataLifecycle();
         await DtcWorkflowChecks();
         await DemoEndToEnd();
         Console.WriteLine("ALL DESKTOP CORE TESTS PASSED");
@@ -98,6 +99,24 @@ static class Program
         await Check.Throws<IOException>(() => auditFailure.ClearAsync(_ => Task.FromResult(true), CancellationToken.None), "audit failure blocks clear");
         await Check.Throws<FormatException>(() => Task.FromResult(DtcWorkflow.ParseCodes("DTCS=P1093,BAD")), "malformed DTC list rejected");
         Check.True(DtcWorkflow.ParseCodes("DTCS=").Count == 0, "explicit empty DTC list accepted");
+    }
+
+    private static void DemoLiveDataLifecycle()
+    {
+        var demo = new DemoGateway();
+        Check.True(demo.Handle("REQ|1|STATUS") == "RES|1|OK|STATE=IDLE", "demo starts idle");
+        Check.True(demo.Tick().Count == 0, "idle demo produces no live data");
+        Check.True(demo.Handle("REQ|2|START") == "RES|2|OK|STREAMING", "demo start acknowledged");
+        Check.True(demo.Handle("REQ|3|STATUS") == "RES|3|OK|STATE=STREAMING", "demo reports streaming after start");
+        var lines = demo.Tick();
+        Check.True(lines.Count == 5 && lines.All(line => LiveDataParser.TryParse(line, out _)), "demo stream produces five valid live messages");
+        Check.True(demo.Handle("REQ|4|STOP") == "RES|4|OK|STOPPED", "demo stop acknowledged");
+        Check.True(demo.Handle("REQ|5|STATUS") == "RES|5|OK|STATE=IDLE", "demo reports idle after stop");
+        Check.True(demo.Tick().Count == 0 && demo.Tick().Count == 0, "stopped demo produces no live data on successive ticks");
+        Check.True(demo.Handle("REQ|6|START") == "RES|6|OK|STREAMING", "demo restart acknowledged");
+        Check.True(demo.Handle("REQ|7|STATUS") == "RES|7|OK|STATE=STREAMING", "demo reports streaming after restart");
+        lines = demo.Tick();
+        Check.True(lines.Count == 5 && lines.All(line => LiveDataParser.TryParse(line, out _)), "restarted demo resumes valid live data");
     }
 
     private static async Task DemoEndToEnd()
