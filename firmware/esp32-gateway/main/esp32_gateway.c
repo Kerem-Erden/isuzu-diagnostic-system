@@ -40,9 +40,13 @@ static bool command(const char *name,char *out,size_t cap,void *context)
     if(!s_ready){snprintf(out,cap,"CAN_NOT_READY");return false;}
     if(strcmp(name,"SCAN_DTC")==0) {
         s_scan_at=-1;
+        printf("DBG|SCAN|BEGIN;SOURCE=VEHICLE;BITRATE=%d;TX=%03X;RX=%03X\n",CONFIG_GATEWAY_BITRATE,OBD_PHYSICAL_REQUEST_ID,OBD_PHYSICAL_RESPONSE_ID);
+        can_bus_print_diagnostics();
         obd_dtc_list_t list;esp_err_t result=obd_request_dtcs(100);
         if(result==ESP_OK) result=obd_wait_dtc_response(&list,1500);
-        if(result!=ESP_OK){snprintf(out,cap,"SCAN_%s",esp_err_to_name(result));can_bus_print_diagnostics();return false;}
+        obd_print_diagnostics();
+        can_bus_print_diagnostics();
+        if(result!=ESP_OK){obd_diagnostics_t diag=obd_get_diagnostics();snprintf(out,cap,"SCAN_%s;STAGE=%s;NRC=%02X",esp_err_to_name(result),diag.stage,diag.nrc);return false;}
         size_t used=5;snprintf(out,cap,"DTCS=");
         for(uint8_t i=0;i<list.count;++i){int n=snprintf(out+used,cap-used,"%s%s",i?",":"",list.dtcs[i].code);if(n<0||(size_t)n>=cap-used)return false;used+=(size_t)n;}
         s_scan_at=esp_timer_get_time();return true;

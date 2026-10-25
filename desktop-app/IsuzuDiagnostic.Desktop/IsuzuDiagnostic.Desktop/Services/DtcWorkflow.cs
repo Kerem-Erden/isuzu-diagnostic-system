@@ -27,7 +27,11 @@ public sealed class DtcWorkflow
     private async Task<IReadOnlyList<string>> ScanCore(CancellationToken token)
     {
         var codes = ParseCodes(await _request("SCAN_DTC", token));
-        _audit.Write("DtcScan", new { codes });
+        try { _audit.Write("DtcScan", new { codes }); }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException($"Gateway scan returned {codes.Count} stored code(s), but local scan history could not be saved: {ex.Message}", ex);
+        }
         return codes;
     }
     public async Task<IReadOnlyList<string>> ScanAsync(CancellationToken token)

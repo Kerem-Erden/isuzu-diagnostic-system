@@ -32,21 +32,31 @@ public partial class DtcListView : UserControl
         if (_busy || _lifetime == null) return;
         var token = _lifetime.Token;
         Busy(true); StatusText.Text = "Reading stored codes…";
-        try { var codes = await _workflow.ScanAsync(token); if (!token.IsCancellationRequested) { ShowCodes(codes); StatusText.Text = $"{codes.Count} stored code(s)."; } }
+        try { var codes = await _workflow.ScanAsync(token); if (!token.IsCancellationRequested) { string warning = ShowCodes(codes); StatusText.Text = $"{codes.Count} stored code(s)." + warning; } }
         catch (Exception ex) { StatusText.Text = "Scan failed; previous results are not a current scan. " + ex.Message; }
         finally { Busy(false); }
     }
-    private void ShowCodes(IReadOnlyList<string> codes)
+    private string ShowCodes(IReadOnlyList<string> codes)
     {
         var entries = new List<DiagnosticTroubleCode>();
+        string warning = string.Empty;
         foreach (string code in codes)
         {
-            var details = _knowledge.FindByCode(code);
-            entries.Add(details == null
-                ? new DiagnosticTroubleCode(code, "Unknown DTC", "Stored", Array.Empty<DtcCause>(), Array.Empty<DiagnosticStep>(), Array.Empty<RelatedLiveDataItem>(), Array.Empty<DtcSolution>())
-                : DtcKnowledgeMapper.ToDiagnosticTroubleCode(details, "Stored"));
+            try
+            {
+                var details = _knowledge.FindByCode(code);
+                entries.Add(details == null
+                    ? new DiagnosticTroubleCode(code, "Unknown DTC", "Stored", Array.Empty<DtcCause>(), Array.Empty<DiagnosticStep>(), Array.Empty<RelatedLiveDataItem>(), Array.Empty<DtcSolution>())
+                    : DtcKnowledgeMapper.ToDiagnosticTroubleCode(details, "Stored"));
+            }
+            catch (Exception ex)
+            {
+                entries.Add(new DiagnosticTroubleCode(code, "DTC description unavailable", "Stored", Array.Empty<DtcCause>(), Array.Empty<DiagnosticStep>(), Array.Empty<RelatedLiveDataItem>(), Array.Empty<DtcSolution>()));
+                warning = " Gateway codes received; knowledge lookup failed: " + ex.Message;
+            }
         }
         DtcItemsControl.ItemsSource = entries;
+        return warning;
     }
     private async void RescanButton_Click(object sender, RoutedEventArgs e) => await Scan();
     private async void ClearDtcMemoryButton_Click(object sender, RoutedEventArgs e)
@@ -62,7 +72,7 @@ public partial class DtcListView : UserControl
                 string effect = _gateway.IsSimulation ? "SIMULATION: no vehicle will be changed." : "VEHICLE: Mode 04 will erase emission-related diagnostic information, including freeze-frame/readiness data. Engine must be stopped and vehicle stationary.";
                 return Task.FromResult(MessageBox.Show($"{effect}\n\n{codes.Count} stored code(s) have been saved locally.\nSend clear once, then rescan?", "Confirm DTC clear", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes);
             }, token);
-            if (!token.IsCancellationRequested) { ShowCodes(result.Codes); StatusText.Text = result.Message; }
+            if (!token.IsCancellationRequested) { string warning = ShowCodes(result.Codes); StatusText.Text = result.Message + warning; }
         }
         catch (Exception ex) { StatusText.Text = "Clear not started: " + ex.Message; }
         finally { Busy(false); }
@@ -70,6 +80,11 @@ public partial class DtcListView : UserControl
     private void DetailsButton_Click(object sender, RoutedEventArgs e)
     { if (!_busy && sender is Button { Tag: DiagnosticTroubleCode dtc }) DtcDetailsRequested?.Invoke(dtc); }
     private void BackButton_Click(object sender, RoutedEventArgs e) { if (!_busy) BackRequested?.Invoke(this, EventArgs.Empty); }
+    private void CopyDiagnosticsButton_Click(object sender, RoutedEventArgs e)
+    {
+        try { Clipboard.SetText(_gateway.GetDiagnosticTrace() + "\nDTC screen: " + StatusText.Text); }
+        catch (Exception ex) { MessageBox.Show("Diagnostic log could not be copied: " + ex.Message); }
+    }
     private void HistoryButton_Click(object sender, RoutedEventArgs e)
     {
         try

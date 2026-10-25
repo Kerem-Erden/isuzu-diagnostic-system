@@ -111,6 +111,7 @@ static void test_multiframe_and_filters(void)
     const uint8_t bad_next[8]={0x22,0x03,0xFF,0xC1,0x23,0,0,0};
     enqueue(OBD_PHYSICAL_RESPONSE_ID,first); enqueue(OBD_PHYSICAL_RESPONSE_ID,bad_next);
     assert(obd_wait_dtc_response(&list,100)==ESP_FAIL);
+    assert(!strcmp(obd_get_diagnostics().stage,"ISO_TP_SEQUENCE"));
     puts("PASS: ISO-TP target filtering, flow control and CF sequence validation");
 }
 
@@ -122,6 +123,7 @@ static void test_negative_timeout_and_clear(void)
     enqueue(OBD_PHYSICAL_RESPONSE_ID,negative);
     obd_dtc_list_t list;
     assert(obd_wait_dtc_response(&list,100)==ESP_FAIL);
+    assert(!strcmp(obd_get_diagnostics().stage,"NEGATIVE_RESPONSE") && obd_get_diagnostics().nrc==0x22);
 
     reset_fake();
     assert(obd_request_dtcs(100)==ESP_OK);
@@ -136,12 +138,60 @@ static void test_negative_timeout_and_clear(void)
     puts("PASS: negative response, absolute timeout and one-shot Mode 04");
 }
 
+static void test_scan_diagnostics(void)
+{
+    reset_fake();
+    assert(obd_request_dtcs(100)==ESP_OK);
+    const uint8_t empty[8]={2,0x43,0,0,0,0,0,0};
+    const uint8_t pending[8]={3,0x7F,3,0x78,0,0,0,0};
+    enqueue(OBD_PHYSICAL_RESPONSE_ID,pending);
+    enqueue(OBD_PHYSICAL_RESPONSE_ID,empty);
+    obd_dtc_list_t list;
+    assert(obd_wait_dtc_response(&list,100)==ESP_OK && list.count==0);
+    assert(!strcmp(obd_get_diagnostics().stage,"COMPLETE") && obd_get_diagnostics().nrc==0x78);
+    assert(tx_count==1);
+
+    reset_fake();
+    assert(obd_request_dtcs(100)==ESP_OK);
+    enqueue(OBD_PHYSICAL_RESPONSE_ID,pending);
+    assert(obd_wait_dtc_response(&list,5)==ESP_ERR_TIMEOUT && now_us==6000);
+    assert(obd_get_diagnostics().nrc==0x78);
+
+    reset_fake();tx_result=ESP_FAIL;
+    assert(obd_request_dtcs(100)==ESP_FAIL && tx_count==1);
+    assert(!strcmp(obd_get_diagnostics().stage,"CAN_TX"));
+
+    reset_fake();
+    assert(obd_request_dtcs(100)==ESP_OK);
+    const uint8_t malformed[8]={4,0x43,2,0x01,0x0A,0,0,0};
+    enqueue(OBD_PHYSICAL_RESPONSE_ID,malformed);
+    assert(obd_wait_dtc_response(&list,100)==ESP_FAIL);
+    assert(!strcmp(obd_get_diagnostics().stage,"MODE03_DECODE"));
+
+    reset_fake();
+    assert(obd_request_dtcs(100)==ESP_OK);
+    const uint8_t first[8]={0x10,0x0A,0x43,4,0x01,0x0A,0x04,0x01};
+    enqueue(OBD_PHYSICAL_RESPONSE_ID,first);tx_result=ESP_FAIL;
+    assert(obd_wait_dtc_response(&list,100)==ESP_FAIL && tx_count==2);
+    assert(!strcmp(obd_get_diagnostics().stage,"FLOW_CONTROL_TX"));
+
+    reset_fake();
+    assert(obd_request_dtcs(100)==ESP_OK);
+    enqueue(0x7E9,empty);
+    enqueue(OBD_PHYSICAL_RESPONSE_ID,empty);
+    assert(obd_wait_dtc_response(&list,100)==ESP_OK && obd_get_diagnostics().ignored_frames==1);
+    assert(tx_count==1);
+    obd_print_diagnostics();
+    puts("PASS: scan stages, pending deadline, empty DTCs and ignored IDs without extra transmissions");
+}
+
 int main(void)
 {
     test_gateway();
     test_pid_and_single_frame_dtc();
     test_multiframe_and_filters();
     test_negative_timeout_and_clear();
+    test_scan_diagnostics();
     puts("ALL FIRMWARE PROTOCOL TESTS PASSED (host mocks, no vehicle)");
     return 0;
 }

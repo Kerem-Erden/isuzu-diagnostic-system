@@ -10,6 +10,7 @@ public sealed class SerialGatewayService : IDisposable
     public const string DemoPort = "DEMO (no vehicle)";
     private readonly object _syncRoot = new();
     private readonly LineFramer _framer = new();
+    private readonly GatewayDiagnosticTrace _diagnostics = new();
     private SerialPort? _serialPort;
     private DemoGateway? _demo;
     private System.Threading.Timer? _demoTimer;
@@ -26,6 +27,7 @@ public sealed class SerialGatewayService : IDisposable
     public event Action<string>? CommunicationError;
     public event Action? Disconnected;
     public string LastReceivedLine { get { lock (_syncRoot) return _lastReceivedLine; } }
+    public string GetDiagnosticTrace() => $"Gateway source: {SourceDescription}\nPort: {ConnectedPortName ?? "disconnected"}\n{_diagnostics.Snapshot()}";
     public bool IsConnected { get { lock (_syncRoot) return _demo != null || _serialPort?.IsOpen == true; } }
     public string? ConnectedPortName { get { lock (_syncRoot) return _demo != null ? DemoPort : _serialPort?.PortName; } }
     public static IReadOnlyList<string> GetAvailablePortNames() => SerialPort.GetPortNames().OrderBy(x => x, StringComparer.OrdinalIgnoreCase).Append(DemoPort).ToArray();
@@ -45,6 +47,7 @@ public sealed class SerialGatewayService : IDisposable
             if (!_portCloseTask.IsCompleted)
                 throw new IOException("The previous serial connection is still closing. Wait a moment and try again.");
             _framer.Reset(); _lastReceivedLine = "(none)"; Source = "UNKNOWN"; Ecu = "UNKNOWN"; CanClear = false;
+            _diagnostics.Record("CONNECT", portName);
             if (portName == DemoPort)
             {
                 var demo = new DemoGateway(); _demo = demo;
@@ -74,6 +77,7 @@ public sealed class SerialGatewayService : IDisposable
         string? demoResponse = null;
         lock (_syncRoot)
         {
+            _diagnostics.Record("TX", message);
             if (_demo != null) demoResponse = _demo.Handle(message);
             else
             {
@@ -81,7 +85,7 @@ public sealed class SerialGatewayService : IDisposable
                 _serialPort.WriteLine(message);
             }
         }
-        if (demoResponse != null) LineReceived?.Invoke(demoResponse);
+        if (demoResponse != null) { _diagnostics.Record("RX", demoResponse); LineReceived?.Invoke(demoResponse); }
     }
     private void PollSerial(object? state)
     {
@@ -95,9 +99,9 @@ public sealed class SerialGatewayService : IDisposable
                 lines = _framer.Feed(port.ReadExisting());
                 if (lines.Count > 0) _lastReceivedLine = lines[^1];
             }
-            foreach (string line in lines) LineReceived?.Invoke(line);
+            foreach (string line in lines) { _diagnostics.Record("RX", line); LineReceived?.Invoke(line); }
         }
-        catch (Exception ex) { lock (_syncRoot) { if (!ReferenceEquals(state, _serialPort)) return; } CommunicationError?.Invoke(ex.Message); }
+        catch (Exception ex) { lock (_syncRoot) { if (!ReferenceEquals(state, _serialPort)) return; } _diagnostics.Record("ERROR", ex.Message); CommunicationError?.Invoke(ex.Message); }
         finally { System.Threading.Interlocked.Exchange(ref _serialReadBusy, 0); }
     }
     private void Error(object sender, SerialErrorReceivedEventArgs e)
@@ -130,7 +134,7 @@ public sealed class SerialGatewayService : IDisposable
                 _portCloseTask = closeCompletion.Task;
             }
         }
-        if (hadConnection) Disconnected?.Invoke();
+        if (hadConnection) { _diagnostics.Record("DISCONNECT", "Gateway disconnected"); Disconnected?.Invoke(); }
         timer?.Dispose();
         serialReadTimer?.Dispose();
         // SerialPort.Close can block indefinitely in a USB driver after an

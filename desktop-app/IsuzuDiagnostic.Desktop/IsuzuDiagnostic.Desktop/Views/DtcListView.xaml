@@ -24,6 +24,7 @@
                        Foreground="#68707C"/>
 
             <TextBlock x:Name="StatusText" TextWrapping="Wrap" Margin="0,8,0,0"/>
+            <Button Content="Copy diagnostic log" HorizontalAlignment="Left" Margin="0,8,0,0" Padding="12,6" Click="CopyDiagnosticsButton_Click"/>
         </StackPanel>
 
         <ScrollViewer Grid.Row="2"

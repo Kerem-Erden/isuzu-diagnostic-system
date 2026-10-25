@@ -34,6 +34,7 @@ static class Program
     public static async Task Main()
     {
         ParserAndFramer();
+        DiagnosticTraceChecks();
         WarningStateMachine();
         DemoLiveDataLifecycle();
         await DtcWorkflowChecks();
@@ -68,6 +69,27 @@ static class Program
         Check.True(evaluator.Evaluate(rule, 82, t.AddSeconds(9)).Severity == DiagnosticSeverity.Normal, "fresh recovery confirmed");
     }
 
+    private static void DiagnosticTraceChecks()
+    {
+        var trace = new GatewayDiagnosticTrace();
+        trace.Record("TX", "REQ|7|SCAN_DTC");
+        trace.Record("RX", "DBG|OBD|STAGE=NEGATIVE_RESPONSE;NRC=22");
+        trace.Record("RX", "RES|7|ERR|SCAN_ESP_FAIL;STAGE=NEGATIVE_RESPONSE;NRC=22");
+        for (int i = 0; i < 300; i++) trace.Record("RX", "LIVE:RPM:1800");
+        var lines = trace.Snapshot().Split(Environment.NewLine);
+        Check.True(lines.Length == 3 && lines[0].Contains("REQ|7|SCAN_DTC") && lines[2].Contains("RES|7|ERR|"), "live traffic preserves correlated scan diagnostics");
+        var framer = new LineFramer();
+        var framed = framer.Feed("DBG|OBD|STAGE=RX_WAIT\r\nRES|7|OK|DTCS=\r\n");
+        Check.True(framed.Count == 2 && !GatewayResponseParser.TryParse(framed[0], out _, out _) && GatewayResponseParser.TryParse(framed[1], out var response, out _) && response?.Payload == "DTCS=", "diagnostic lines do not corrupt an empty scan response");
+        for (int i = 0; i < 260; i++) trace.Record("RX", $"SYS:{i}");
+        lines = trace.Snapshot().Split(Environment.NewLine);
+        Check.True(lines.Length == 256 && lines[0].EndsWith("SYS:4") && lines[^1].EndsWith("SYS:259"), "diagnostic trace retains only the latest 256 records");
+        trace.Record("ERROR", new string('X', 2000) + "\r\nINJECTED");
+        Check.True(trace.Snapshot().Split(Environment.NewLine).Length == 256 && !trace.Snapshot().Contains("INJECTED"), "oversized diagnostic records are bounded");
+        trace.Record("ERROR", "first\r\nsecond");
+        Check.True(trace.Snapshot().Split(Environment.NewLine).Length == 256 && trace.Snapshot().EndsWith("first  second"), "diagnostic records cannot inject additional lines");
+    }
+
     private static async Task DtcWorkflowChecks()
     {
         var audit = new Audit();
@@ -99,6 +121,21 @@ static class Program
         await Check.Throws<IOException>(() => auditFailure.ClearAsync(_ => Task.FromResult(true), CancellationToken.None), "audit failure blocks clear");
         await Check.Throws<FormatException>(() => Task.FromResult(DtcWorkflow.ParseCodes("DTCS=P1093,BAD")), "malformed DTC list rejected");
         Check.True(DtcWorkflow.ParseCodes("DTCS=").Count == 0, "explicit empty DTC list accepted");
+
+        var scanAuditFailure = new DtcWorkflow((_, _) => Task.FromResult("DTCS=P1093"), new Audit { FailOn = "DtcScan" });
+        try
+        {
+            await scanAuditFailure.ScanAsync(CancellationToken.None);
+            throw new Exception("FAILED: scan audit failure identifies local storage");
+        }
+        catch (InvalidOperationException ex)
+        {
+            Check.True(ex.Message.Contains("Gateway scan returned 1 stored code(s)") && ex.InnerException is IOException, "scan audit failure identifies local storage after acquisition");
+        }
+        commands.Clear();
+        var failBeforeClear = new DtcWorkflow((command, _) => { commands.Add(command); return Task.FromResult("DTCS=P1093"); }, new Audit { FailOn = "DtcScan" });
+        await Check.Throws<InvalidOperationException>(() => failBeforeClear.ClearAsync(_ => Task.FromResult(true), CancellationToken.None), "scan audit failure still blocks clearing");
+        Check.True(commands.SequenceEqual(["SCAN_DTC"]), "failed scan audit sends no clear command");
     }
 
     private static void DemoLiveDataLifecycle()

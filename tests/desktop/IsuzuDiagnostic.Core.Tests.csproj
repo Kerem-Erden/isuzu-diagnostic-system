@@ -7,6 +7,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayDiagnosticTrace.cs" Link="Source\GatewayDiagnosticTrace.cs" />
     <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Services\DtcWorkflow.cs" Link="Source\DtcWorkflow.cs" />
     <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayCommand.cs" Link="Source\GatewayCommand.cs" />
     <Compile Include="..\..\desktop-app\IsuzuDiagnostic.Desktop\IsuzuDiagnostic.Desktop\Communication\Protocol\GatewayProtocol.cs" Link="Source\GatewayProtocol.cs" />
