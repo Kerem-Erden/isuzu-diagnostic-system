@@ -30,6 +30,8 @@ Select `DEMO (no vehicle)`, create a vehicle profile and connect. The title and 
 
 Full setup, firmware profiles and the demo recording script are in [`docs/setup-and-demo.md`](docs/setup-and-demo.md).
 
+For the read-only diagnostic firmware profile and copying scan evidence from the desktop, see [`docs/dtc-scan-diagnostics.md`](docs/dtc-scan-diagnostics.md).
+
 ## Hardware wiring
 
 | SN65HVD230 | ESP32 |

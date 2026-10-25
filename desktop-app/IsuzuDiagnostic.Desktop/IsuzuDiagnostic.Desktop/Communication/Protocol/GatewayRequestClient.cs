@@ -24,7 +24,8 @@ public sealed class GatewayRequestClient : IDisposable
         try
         {
             await Task.Run(() => { token.ThrowIfCancellationRequested(); _transport.SendLine(GatewayProtocol.CreateRequest(id, command)); }, token);
-            return await completion.Task.WaitAsync(TimeSpan.FromSeconds(5), token);
+            try { return await completion.Task.WaitAsync(TimeSpan.FromSeconds(5), token); }
+            catch (TimeoutException ex) { throw new TimeoutException($"Gateway request {id} ({command}) timed out. Copy the diagnostic log to inspect raw replies.", ex); }
         }
         finally { _pending.TryRemove(id, out _); }
     }

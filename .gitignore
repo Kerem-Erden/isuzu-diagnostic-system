@@ -12,6 +12,8 @@ firmware/esp32-gateway/build/
 firmware/esp32-gateway/sdkconfig.old
 firmware/esp32-gateway/sdkconfig.ci.*
 firmware/esp32-gateway/build-ci-*/
+firmware/esp32-gateway/build-diagnostic/
+firmware/esp32-gateway/sdkconfig.diagnostic
 
 # Visual Studio generated files
 .vs/
